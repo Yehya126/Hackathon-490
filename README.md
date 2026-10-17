@@ -11,7 +11,7 @@ tests/test_data_utils.py
 
 mohammad/data/                  Mohammad's train/validation/test files
 yehya/data/                     Yehya's train/validation/test files
-aya/data/                       Aya's train/validation/test files
+Merchandise/data/               Aya's train/validation/test files
 ```
 
 Each member's `data` folder contains `train.csv`, `validation.csv`, and

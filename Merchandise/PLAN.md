@@ -1,6 +1,6 @@
 # Within-Branch Sales Forecasting & Anomaly Detection — Plan
 
-Owner: Aya · Workspace: `aya/` · Status: **core system built and evaluated**
+Owner: Aya · Workspace: `Merchandise/` · Status: **core system built and evaluated**
 
 ## Scope
 
@@ -30,7 +30,7 @@ the 132 rows removed from the raw file were exact duplicates):
 | Product lifecycle | All 135 series sell throughout the period | No launch/discontinuation handling needed |
 | Prices | ±5% month-to-month changes on every product | Price ratio used as an input |
 
-**Split.** The shared `aya/data/` files were cut by transaction count, so boundary
+**Split.** The shared `Merchandise/data/` files were cut by transaction count, so boundary
 days fall in two splits. We use a whole-day split instead and leave the shared
 files untouched:
 
@@ -41,7 +41,7 @@ files untouched:
 ## Folder layout
 
 ```
-aya/
+Merchandise/
   PLAN.md, README.md
   run_pipeline.py          full run: validate → test → forecast tomorrow → outputs + report
   eda.py                   exploration printout + figures
