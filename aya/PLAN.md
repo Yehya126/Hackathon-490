@@ -1,170 +1,130 @@
-# Within-Branch Demand Forecasting & Anomaly Detection — Implementation Plan
+# Within-Branch Sales Forecasting & Anomaly Detection — Plan
 
-Owner: Aya · Workspace: `aya/`
+Owner: Aya · Workspace: `aya/` · Status: **core system built and evaluated**
 
-## What the data tells us up front
+## Scope
 
-Measured on `cleaned_stories_transactions.csv` (51,045 lines, 2026-01-01 → 2026-06-30):
+1. **Expected units sold.** For every product at every branch, the model gives the
+   expected number of units sold tomorrow. It does not recommend prep quantities.
+   Deciding how much to make is left to the branch.
+2. **Within-branch anomaly alerts.** These compare actual sales with that expectation
+   and flag unusual drops, spikes, possible stockouts and sustained shifts, with an
+   estimate of the profit impact.
+
+Each branch is judged only against its own history. Branches are never compared
+with each other.
+
+## What the data tells us
+
+Measured on `cleaned_stories_transactions.csv` (51,045 lines, 2026-01-01 → 2026-06-30;
+the 132 rows removed from the raw file were exact duplicates):
 
 | Fact | Value | Consequence |
 |---|---|---|
-| Series (branch × product) | 3 × 45 = 135 | Small enough for one global model + per-series thresholds |
-| Median daily units per series | ~2 (10th pct ≈ 1, 90th ≈ 3.8) | Low-count, intermittent demand → count/Tweedie models, not plain regression |
-| Days with zero sales | 21% of branch-product-days | Must fill missing days with 0 before modelling |
-| Branch volume | Harbour 3.2 · Garden 2.2 · Uptown 1.2 units/product/day | Evaluate and threshold per branch, never pooled |
-| Weekday effect | Tue 1.52×, Sat 0.70× the average | Weekday is a primary feature |
-| Trend | Monthly units 7.2k (Jan) → 11.0k (Jun), +52% | Need trend-aware features; a static average will under-forecast |
-| Discounts | Mean 0.7%, max 15% | Minor driver, include as a feature |
+| Series (branch × product) | 3 × 45 = 135 | One global model across all series |
+| Mean daily units per series | ~2 (10th pct ≈ 1, 90th ≈ 3.8) | Low counts → Poisson objective; product-level error is dominated by chance |
+| Days with zero sales | 21% of branch-product-days | Missing days filled with 0 |
+| Variance vs mean | ≈ 1.26 × mean | Mildly overdispersed → negative binomial spread for alerts |
+| Weekday effect | Tue ≈ 1.65×, Sat ≈ 0.70× an average day, steady every month and in every branch | Weekday pattern is a core input |
+| Trend | Monthly units +52% Jan → Jun (≈ 8% per month) | Model must extend growth beyond the training range |
+| Product lifecycle | All 135 series sell throughout the period | No launch/discontinuation handling needed |
+| Prices | ±5% month-to-month changes on every product | Price ratio used as an input |
 
-**Split issue:** the existing `aya/data/` splits were cut by transaction count from the raw
-file, so boundary days (May 16, Jun 9) fall in two splits. Daily forecasting needs
-whole-day splits. We will leave the shared files untouched and build a day-level split:
+**Split.** The shared `aya/data/` files were cut by transaction count, so boundary
+days fall in two splits. We use a whole-day split instead and leave the shared
+files untouched:
 
 - Train: 2026-01-01 → 2026-05-15
-- Validation: 2026-05-16 → 2026-06-08
-- Test: 2026-06-09 → 2026-06-30 (touched once, at the end)
+- Validation: 2026-05-16 → 2026-06-08 (all model choices made here)
+- Test: 2026-06-09 → 2026-06-30 (final evaluation)
 
 ## Folder layout
 
 ```
 aya/
-  PLAN.md
-  notebooks/01_eda.ipynb          exploration + figures
-  src/panel.py                    transactions → daily branch×product panel
-  src/features.py                 lag/rolling/calendar features (leak-safe)
-  src/forecast.py                 baselines + LightGBM models
-  src/inventory.py                prep-quantity recommendation
-  src/anomaly.py                  scoring, flags, financial impact
-  outputs/                        forecasts.csv, prep_plan.csv, alerts.csv, report
-  tests/                          unit tests for panel, features, anomaly logic
+  PLAN.md, README.md
+  run_pipeline.py          full run: validate → test → forecast tomorrow → outputs + report
+  eda.py                   exploration printout + figures
+  evaluate_forecast.py     validation: first model, NB check, anomaly injection tests
+  compare_models.py        validation: raw vs linear-tree vs baseline-offset LightGBM
+  src/panel.py             transactions → daily branch × product panel, day-level split
+  src/features.py          leak-safe features + baseline (level × weekday × growth)
+  src/forecast.py          baselines, LightGBM model, negative binomial helpers, accuracy
+  src/anomaly.py           alert scoring, flags, profit impact, synthetic injection
+  src/report.py            HTML report
+  src/product_classes.csv  product type (fresh / made to order / packaged), used as a model input
+  tests/                   panel, no-leak features
+  outputs/                 forecast + category forecast CSVs, test results, alerts, report
 ```
 
-## Phase 1 — Forecast-oriented EDA
+## Work done
 
-1. Compare raw vs cleaned files (132 rows removed) and document what cleaning did.
-2. Build the daily panel; plot per-branch total units, weekday profile, monthly trend.
-3. Product lifecycle: products launched or dropped mid-period per branch (these need
-   special handling — no history ≠ zero demand).
-4. Price/cost changes over time per product; discount frequency.
-5. Distribution of daily counts per series (mean vs variance → Poisson vs overdispersed).
-6. Look for obvious existing outlier days (data is synthetic — injected events are
-   likely and useful later as sanity checks for the anomaly detector).
-7. Hour-of-day profile per branch (useful later for intraday prep, optional).
+| # | Step | Status |
+|---|---|---|
+| 1 | Daily panel + whole-day split, unit tests | ✅ |
+| 2 | Forecast-oriented EDA (weekday, trend, sparsity, dispersion, lifecycle, prices, outlier days) | ✅ |
+| 3 | Baselines (same weekday last week, weekday average) + LightGBM | ✅ |
+| 4 | Fix busy-day under-forecast: baseline-offset model, chosen on validation | ✅ |
+| 5 | Anomaly alerts at product-day, category-day and product 7-day levels, with profit impact | ✅ |
+| 6 | Alert validation with planted synthetic anomalies | ✅ |
+| 7 | HTML report per branch + test-period evaluation | ✅ |
+| 8 | Independent review for data leaks and bugs; fixes applied | ✅ |
 
-Deliverable: `01_eda.ipynb` + a short findings section appended to this plan.
+## How the model works
 
-## Phase 2 — Data preparation
+1. **Baseline:** recent 28-day level × the branch's weekday pattern (fitted on
+   training days) × recent branch growth. This carries the trend and the weekday
+   effect.
+2. **LightGBM** (Poisson objective, `log(baseline)` as offset), one model for all
+   135 series, learns product-specific adjustments on top of the baseline. Inputs
+   are recent sales (lags 1/7/14/28, rolling means), branch traffic, calendar,
+   price ratio and product type, all using data up to the previous day only.
+3. **Output:** expected units sold per product, branch and day, plus totals per
+   category and per branch.
 
-- `panel.py`: aggregate to `Branch, Product, Date → units, revenue, gross_profit, avg_price,
-  avg_discount, avg_unit_cost`; reindex to the full date grid, fill units with 0.
-- `features.py` (all computed from the past only, valid for the forecast horizon):
-  - lags: t−1, t−7, t−14, t−28 (for horizon *h*, only lags ≥ *h*)
-  - rolling means/std over 7, 14, 28 days; same-weekday mean of last 4 weeks
-  - calendar: weekday, day of month, week of year, days since start (trend)
-  - price, discount, unit margin
-  - identifiers: branch, product, category (categorical)
-  - series-level: branch-product share of branch volume (fit on train only)
-- Fit any scaling/encoding on train only.
+## Results (test period, Jun 9 – 30)
 
-## Phase 3 — Demand forecasting
-
-Horizons: **next day** (primary — "what to prepare tomorrow") and **next 7 days**.
-
-Models, in order (each must beat the previous to stay):
-
-1. Seasonal naive: same weekday last week.
-2. Weekday-adjusted moving average: last-4-same-weekday mean × recent trend ratio.
-3. **LightGBM global model, Tweedie/Poisson objective**, one model across all 135 series
-   with branch/product features — shares weekday and trend structure across series
-   while still learning each product's level within its branch.
-4. Quantile LightGBM (P10, P50, P90) — gives the uncertainty band used by both
-   inventory and anomaly detection.
-
-Evaluation (per branch, then per product):
-- MAE, WAPE, bias (systematic over/under-forecast)
-- Interval coverage: share of actuals inside P10–P90 (target ≈ 80%)
-- Rolling-origin backtest across the validation window (re-forecast each day)
-
-## Phase 4 — Inventory preparation recommendation
-
-Turn the forecast distribution into "how many to prepare" using the newsvendor rule:
-prepare the quantile at critical ratio `underage / (underage + overage)`, where
-underage (missed sale) = unit gross margin = price − cost. Overage depends on
-whether the product is wasted if unsold, so each product gets a shelf-life class
-(kept in `src/product_classes.csv`, editable by the team):
-
-| Class | Products | Overage cost | Resulting quantile |
+| | Same weekday last week | First model (raw LightGBM) | **Final model** |
 |---|---|---|---|
-| **Fresh, prepared ahead** | Bakery, Breakfast, Sandwiches, Meals, Desserts, Fresh Orange Juice | Full unit cost (binned at close) | `margin / price` — typically P50–P65 |
-| **Made to order** | Hot Coffee, Cold Coffee, Matcha & Tea, Lemonade, Peach Iced Tea | Small — only ingredients are stocked, and they keep | High, e.g. P90 → read as ingredient/staffing need, not finished units |
-| **Packaged / shelf-stable** | Still Water, Sparkling Water | Holding cost only (≈ 5% of cost) | ≈ P95 → read as a reorder level, not daily prep |
+| Product-level error (WAPE) | 66% | 49% | **49%** |
+| Bias | −0.6% | −3.3% | **−0.3%** |
+| Tuesday bias | — | −8.8% | **−1.1%** |
 
-High-margin fresh items get prepared more generously; low-margin ones more tightly.
-Output `prep_plan.csv`: branch, product, class, date, P50 forecast, recommended quantity.
+- Error on each branch's daily total: Harbour 7%, Garden 11%, Uptown 16%.
+- Product-level error is near the floor. Even a perfect expected value would leave
+  about 47–51% WAPE, because a product selling ~2.5 units/day swings by ±1–2 units by
+  chance.
+- Alerts: 57 over 22 days (≈ 0.9 per branch per day).
+- Detection tests on validation found:
+  - single-day spikes: 100% caught
+  - sustained 7-day drops: 95% caught
+  - single-day product drops: not reliably detectable at these volumes, which is why
+    the category and 7-day checks exist
 
-**Business evaluation:** simulate the validation period — profit, waste units and
-missed sales under (a) the naive baseline and (b) our recommendation. This is the
-headline number for the pitch.
+## Decisions
 
-## Phase 5 — Within-branch anomaly detection
-
-For each branch-product-day, compare actual units with that series' own forecast:
-
-1. **Score:** probability of seeing a value this extreme under the forecast
-   distribution (negative binomial with dispersion fitted per series on validation
-   residuals; fall back to quantile-band position if the fit is poor).
-2. **Flag types:**
-   - Demand drop / demand spike — single day outside the calibrated band
-   - Possible stockout — zero or near-zero sales after a run of normal days
-     (especially if sales stop at a specific time of day)
-   - Sustained shift — CUSUM on residuals over several days (catches slow decline
-     that single-day checks miss)
-3. **Noise control:** with ~2 units/day, single-unit swings are normal. Require a
-   minimum absolute gap (e.g. ≥ 3 units) as well as a low probability, and also run
-   detection at category and branch-total level where counts are larger.
-4. **Financial impact:** `(expected − actual) × unit gross margin` for drops (lost
-   profit); for spikes, the margin gained and stockout risk for the next day.
-5. **Ranking:** severity = probability score × financial impact → top alerts per
-   branch per day, with a one-line explanation
-   (e.g. "Uptown · Iced Latte sold 0 vs expected 6 (P10 = 3) · est. lost profit $14").
-
-**Validating without labels:** inject synthetic anomalies (drops, spikes, zeroed
-days) into a copy of the validation period and measure precision/recall; tune
-thresholds per branch on that.
-
-## Phase 6 — Outputs and presentation
-
-- `forecasts.csv`, `prep_plan.csv`, `alerts.csv`
-- A one-page HTML report or small dashboard per branch:
-  tomorrow's prep list, products trending up/down, today's ranked alerts, and the
-  simulated profit/waste improvement.
-
-## Phase 7 — Final evaluation
-
-Run the frozen pipeline once on the test window (Jun 9–30). Report forecast
-accuracy, interval coverage, simulated profit gain and anomaly results. No tuning
-after this step.
+| Decision | Why |
+|---|---|
+| Negative binomial spread instead of quantile LightGBM | Fits the data better than Poisson, gives a probability for any count, and avoids crossing quantiles. Used for alerts. |
+| Baseline-offset LightGBM instead of raw | Raw tree models can't predict above training values, so they under-forecast a growing business on its busiest days. Offset removed the bias on validation. |
+| Prep recommendations removed | Scope narrowed to expected units sold. Prep quantities, two-batch prep and the waste/profit simulation were built, then removed (still in git history: commit `4f9aba8`). |
+| Alerts need both a low probability and a ≥ 3-unit gap | At ~2 units/day, one-unit swings are normal. This keeps false alerts below 1% of normal days. |
+| No tuning on test | All choices were made on validation. The test period was scored for the first model and again after the offset change; neither run tuned anything. |
 
 ## Known limitations
 
-- **Sales ≠ demand.** There is no stock data, so stockout days look like low demand
-  and will bias forecasts down. Mitigation: exclude flagged stockout days from training.
-- Six months of history — no yearly seasonality or holidays can be learned.
-- Shelf-life classes are assumptions from product names; desserts and cookies may
-  last more than one day.
+- **Sales ≠ demand.** There is no stock data, so a day a product ran out looks like
+  low demand. The model predicts sales, not true demand.
+- Six months of history, so there is no yearly seasonality or holiday effect.
+- Wednesdays are over-forecast by 12% on test (3 days only, and validation showed
+  no such bias). Watch this if more data arrives.
+- The EDA figures above were computed on the full file, test period included. They
+  were used to understand the data, not to tune the model.
 
-## Time-boxed order of work (a few hours)
+## Possible next steps
 
-Must-have core, in order — stop at any step and still have something to show:
-
-| # | Step | Time |
-|---|---|---|
-| 1 | Environment (`numpy, scikit-learn, lightgbm, matplotlib`), daily panel + day-level split | 20 min |
-| 2 | Lean EDA: weekday/trend/sparsity plots, outlier days (skip lifecycle & price deep-dives) | 25 min |
-| 3 | Seasonal-naive baseline + LightGBM Tweedie + P10/P50/P90 quantile models, next-day horizon only | 50 min |
-| 4 | Prep quantities by shelf-life class + profit/waste simulation vs baseline | 30 min |
-| 5 | Anomaly flags (drop/spike/stockout), financial impact, ranked alerts | 40 min |
-| 6 | One-page HTML report per branch + final test-set run | 30 min |
-
-Cut if short on time: 7-day horizon, CUSUM sustained-shift detection, synthetic
-anomaly injection, unit tests beyond the panel/split logic.
+- Save the trained model and retrain weekly instead of on every run.
+- Retrain daily through the test period (rolling-origin evaluation).
+- Product-specific weekday patterns (small expected gain, ~0.5–1 point).
+- External data (weather, holidays, local events) for the biggest remaining gains.
+- Stock / waste records, to forecast true demand and to evaluate stockout alerts.
