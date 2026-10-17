@@ -13,7 +13,7 @@ sys.path.insert(0, str(PROJECT_ROOT))
 from data_utils import load_data, split_data
 
 
-MEMBERS = ("mohammad", "yehya", "aya")
+MEMBERS = ("mohammad", "yehya", "aya", "PricingOptimization")
 SPLIT_NAMES = ("train", "validation", "test")
 DERIVED_COLUMNS = ("Transaction Timestamp",)
 
