@@ -4,6 +4,33 @@ Models that turn six months of Stories coffee shop transactions
 (Jan–Jun 2026, branches Garden, Harbour and Uptown) into insights and
 recommendations for management.
 
+## Open the website
+
+From the repository root:
+
+```powershell
+python start_website.py
+```
+
+Open **http://127.0.0.1:8000/**. Keep the terminal running; Ctrl+C stops it.
+If port 8000 is occupied, run `python start_website.py --port 8001`.
+Only Python is needed to serve the page—no npm install or model training.
+
+**Website folder: [`interface/`](interface/). Main page: [`interface/index.html`](interface/index.html).**
+
+| File | Purpose |
+|---|---|
+| `start_website.py` | Starts the local website |
+| `interface/index.html` | Page layout and sidebar |
+| `interface/style.css`, `typography.css`, `workflow.css` | Appearance |
+| `interface/app.js`, `synced.js`, `workflow.js` | Pages, model views and controls |
+| `interface/data.js` | Saved model results displayed by the website |
+| `interface/build_data.py` | Refreshes displayed results from model output files |
+
+After new model outputs arrive, run `python interface/build_data.py`, then refresh
+the browser. This refresh needs pandas and the exported model files locally;
+it does not train models. Simply opening the website uses the existing `data.js`.
+
 ## Modules
 
 | Folder | What it does |

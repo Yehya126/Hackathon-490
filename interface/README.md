@@ -1,5 +1,32 @@
 # Stories Studio
 
+**Website entry point: `interface/index.html`.**
+
+From the repository root, run `python start_website.py`, then open
+http://127.0.0.1:8000/. Keep that terminal running. Stop with Ctrl+C.
+Use `--port 8001` if needed. The launcher serves this folder only and needs
+no packages beyond Python. See the root README for the file map.
+
+Workflow additions: Home has a four-step navigation guide. Pricing shows a
+scenario comparison chart; Branch analysis shows the largest cost differences.
+Forecast, pricing and branch tables support search, sorting, ten-row pagination,
+reset and export of the visible rows. Pricing also filters raise/cut/keep.
+Charts summarize the selected branch; table search filters only the table.
+These presentation controls do not change model scores or execute decisions.
+
+Latest sync: `Merchandise` replaces `aya`. Pricing reads the 135 published rows
+in `PricingOptimization/outputs/price_recommendations.csv`; its gains are
+scenario estimates based on assumed price sensitivity, not measured uplift.
+Branch comparisons now read `cleaned_predictor_results.csv`. The decision engine
+is implemented but untrained, with no generated real decisions to show.
+Regenerate `data.js` with `python interface/build_data.py` after pulling changes.
+
+The build reads Marketing_Expert, Merchandise, PricingOptimization, the branch
+predictor and Yehya's decision registry. `synced.js` adapts their contracts.
+Registry entries are action definitions, not generated decisions. The manual
+import schema below remains available for Yehya's decisions; committed forecast
+and branch outputs take precedence in their views.
+
 Local interface. Open `index.html`, or run `python -m http.server 8000 --directory interface`.
 Refresh Mohammad's real data with `python interface/build_data.py`. No training runs.
 
