@@ -1,43 +1,38 @@
-# Coffee Shop Product Recommender
+# Stories Coffee — Business Intelligence
 
-This repository contains one source dataset and identical chronological splits
-for the three team members.
+Models that turn six months of Stories coffee shop transactions
+(Jan–Jun 2026, branches Garden, Harbour and Uptown) into insights and
+recommendations for management.
 
-```text
-stories_transactions.csv       Original data (do not edit)
-data_utils.py                   Shared splitting and basket helpers
-scripts/create_team_workspaces.py
-tests/test_data_utils.py
+## Modules
 
-mohammad/data/                  Mohammad's train/validation/test files
-yehya/data/                     Yehya's train/validation/test files
-Merchandise/data/               Aya's train/validation/test files
-```
+| Folder | What it does |
+|---|---|
+| [Marketing_Expert](Marketing_Expert/README.md) | Product pairings, category patterns and dine-in habits |
+| [Merchandise](Merchandise/README.md) | 14-day sales forecast per branch and product, plus unusual-sales alerts |
+| [PricingOptimization](PricingOptimization/README.md) | Suggested price per product at each branch |
+| [branch-analysis-model](branch-analysis-model/README.md) | Compares how each product performs across branches |
+| [decision-model](decision-model/README_decision_rl.md) | Turns model outputs into proposed actions (in progress) |
+| [interface](interface/README.md) | Local web page that shows the results |
 
-Each member's `data` folder contains `train.csv`, `validation.csv`, and
-`test.csv`. The files are identical across members. Transactions are split
-chronologically 70%/15%/15%, and all rows from one transaction stay together.
+Each folder's README explains how to run it.
 
-To regenerate the splits:
+## Data
+
+- `stories_transactions.csv` — original data. Do not edit.
+- `cleaned_stories_transactions.csv` — cleaned copy.
+- Each module's `data/` folder holds `train.csv`, `validation.csv` and
+  `test.csv`. They are split by date (70% / 15% / 15%) and are the same
+  in every folder.
+
+Regenerate the splits and run the shared tests:
 
 ```powershell
 python scripts/create_team_workspaces.py
-```
-
-To run the tests:
-
-```powershell
 python -m unittest discover -s tests -v
 ```
 
-Modeling rules:
+## Rules
 
-- Develop with training and validation data only.
+- Build with train and validation data only.
 - Keep test data untouched until final evaluation.
-- Fit preprocessing on training data only.
-- Feed only boolean product baskets to FP-Growth.
-- Use branch and profit after rule generation for filtering and ranking.
-
-Mohammad's model implementation and commands are documented in
-[mohammad/README.md](mohammad/README.md). Training and final test evaluation are
-separate, explicit commands.
