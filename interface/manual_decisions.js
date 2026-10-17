@@ -43,12 +43,13 @@ const manualDecisions = [
   limit:'This is a historical alert, not evidence of a current incident.',
   sources:['Merchandise/outputs/alerts_test.csv — 2026-06-09 / Harbour / Matcha & Tea']}
 ];
-decisions=function(){
- if(external.yehya)return originalDecisions();
+function manualDecisionView(){
  const rows=manualDecisions.filter(r=>branch==='Overall'||r.branch===branch||r.branch==='Overall');
  return title('Manual review / all model outputs','Actions worth testing.','A reviewed shortlist. Not output from the decision engine.')+
  `<p class="notice">No actions have been applied. Evidence spans different historical periods. Benefits are unproven or scenario-based. The PPO decision engine remains untrained.</p>`+
  rows.map(r=>`<article class="card decision section"><div class="row">${badge(r.kind)}<span class="muted">${esc(r.branch)}</span></div><h2>${esc(r.title)}</h2><p>${esc(r.evidence)}</p><p class="muted">${esc(r.context)}</p><h3>Next step</h3><p>${esc(r.next)}</p><details><summary>Evidence & limits</summary><p>${esc(r.limit)}</p><ul>${r.sources.map(s=>`<li class="muted">${esc(s)}</li>`).join('')}</ul></details></article>`).join('')+
  `<p class="notice">Manual shortlist based on exported results. Do not sum suggested benefits: actions can overlap or change one another’s effects. Imported Yehya decisions replace this temporary view.</p>`;
 };
+const decisionsWithCommittedResults=decisions;
+decisions=function(){return decisionsWithCommittedResults()+`<details class="section"><summary>Supplementary LLM review · historical candidates</summary>${manualDecisionView()}</details>`;};
 render();

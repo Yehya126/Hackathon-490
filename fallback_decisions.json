@@ -1,0 +1,447 @@
+{
+  "schema_version": "1.0.0",
+  "name": "Stories Coffee deterministic fallback decisions",
+  "generated_on": "2026-10-17",
+  "purpose": "Human-approved decisions to use only when the primary RL decision pipeline is unavailable, fails validation, or cannot produce a supported decision in time.",
+  "activation": {
+    "use_when": [
+      "The RL pipeline is unavailable or times out.",
+      "The RL output fails schema, evidence, capability, or reconciliation checks.",
+      "The RL output contains an unsupported decision type.",
+      "The RL output proposes no usable action and a supported fallback candidate exists."
+    ],
+    "human_approval_required": true,
+    "automatic_execution_allowed": false,
+    "prefer_no_action_over_unsupported_action": true
+  },
+  "freshness_policy": {
+    "decision_date": "2026-10-17",
+    "merchandise_forecast_period": {
+      "start": "2026-07-01",
+      "end": "2026-07-14",
+      "is_current": false
+    },
+    "rule": "Any decision using forecast quantities must remain pending until Merchandise outputs are regenerated for the intended decision date.",
+    "historical_examples_may_be_used_for_demo": true
+  },
+  "source_files": {
+    "branch_analysis": "branch-analysis-model/outputs/predictor_output.csv",
+    "merchandise_forecast": "Merchandise/outputs/forecast_next_14_days.csv",
+    "merchandise_alerts": "Merchandise/outputs/alerts_test.csv",
+    "marketing_combinations": "Marketing_Expert/artifacts/full_data/products.csv",
+    "marketing_dine_in": "Marketing_Expert/artifacts/full_data/dine_in.csv",
+    "allowed_primary_decisions": "decision-model/config/decisions.json"
+  },
+  "deterministic_rules": [
+    {
+      "rule_id": "RULE-CROSS-SELL",
+      "decision_id": "cross_sell",
+      "eligible_when": [
+        "The result is branch-specific rather than Overall.",
+        "Marketing assessment is Priority to review.",
+        "Transactions are at least 30.",
+        "Confidence is at least 0.05.",
+        "Lift is at least 1.10.",
+        "Both products exist in a fresh Merchandise forecast."
+      ],
+      "action": "Recommend the model-provided directional pairing for an owner-approved, single-branch cross-sell pilot.",
+      "prohibited_claims": [
+        "Do not invent a discount or campaign intensity.",
+        "Do not claim incremental sales or profit.",
+        "Do not run overlapping pilots simultaneously when their effects cannot be separated."
+      ]
+    },
+    {
+      "rule_id": "RULE-BUNDLE-REVIEW",
+      "decision_id": "bundle_create",
+      "eligible_when": [
+        "The combination passes RULE-CROSS-SELL eligibility.",
+        "Historical original-price gross profit is positive.",
+        "The owner explicitly chooses bundle review instead of directional cross-selling."
+      ],
+      "action": "Review the exact products as a possible bundle without assigning a bundle price or discount.",
+      "prohibited_claims": [
+        "Do not invent bundle uptake, substitution, price, duration, or profit uplift."
+      ]
+    },
+    {
+      "rule_id": "RULE-DINE-IN-REVIEW",
+      "decision_id": "dine_in_merchandising_review",
+      "registry_decision_id": null,
+      "eligible_when": [
+        "The Marketing dine-in assessment is Priority to review.",
+        "The branch-specific dine-in advantage is at least 0.05.",
+        "The product has a fresh positive Merchandise forecast."
+      ],
+      "action": "Review the product for a limited dine-in menu-placement or signage pilot.",
+      "prohibited_claims": [
+        "Do not claim that placement causes additional demand.",
+        "Do not infer online-channel behavior."
+      ]
+    },
+    {
+      "rule_id": "RULE-COST-AUDIT",
+      "decision_id": "branch_cost_variance_review",
+      "eligible_when": [
+        "The branch difference is systematic across products or materially affects gross margin.",
+        "The finding is complete and traceable to Branch Analysis evidence."
+      ],
+      "action": "Review cost recording, recipes, portion definitions, and supplier invoices before considering an operational change.",
+      "prohibited_claims": [
+        "Do not assume supplier failure, waste, staffing, or inventory problems.",
+        "Do not record a possible cost reduction as achieved."
+      ]
+    },
+    {
+      "rule_id": "RULE-ANOMALY-INVESTIGATION",
+      "decision_id": "sales_anomaly_investigation",
+      "registry_decision_id": null,
+      "eligible_when": [
+        "The alert is fresh.",
+        "The signal repeats at least twice or is a severe category-level alert.",
+        "The signal has not already been resolved."
+      ],
+      "action": "Ask the branch to investigate the product or category and record the explanation.",
+      "prohibited_claims": [
+        "Do not call a sales drop a stockout without inventory evidence.",
+        "Do not change staffing, preparation quantity, or price from an anomaly alone."
+      ]
+    },
+    {
+      "rule_id": "RULE-NO-ACTION",
+      "decision_id": "stop",
+      "eligible_when": [
+        "Evidence is weak, stale, conflicting, incomplete, or outside the allowed decisions.",
+        "A required response model or fresh forecast is unavailable."
+      ],
+      "action": "Make no additional supported decision and state the missing evidence."
+    }
+  ],
+  "fallback_decisions": [
+    {
+      "fallback_id": "FB-GARDEN-CROSSSELL-001",
+      "decision_id": "cross_sell",
+      "status": "pending_fresh_forecast",
+      "priority": 1,
+      "scope": "branch",
+      "branch": "Garden",
+      "products": [
+        "Chocolate Cookie",
+        "Classic Matcha"
+      ],
+      "rule_direction": "Chocolate Cookie -> Classic Matcha",
+      "recommended_action": "Offer Classic Matcha as an optional add-on when a customer selects Chocolate Cookie, using a limited pilot with no automatic discount.",
+      "evidence": {
+        "assessment": "Priority to review",
+        "transactions": 34,
+        "confidence": 0.0667976424,
+        "lift": 1.196889378,
+        "historical_original_price_gross_profit_usd": 5.05,
+        "historical_forecast_units_14d": {
+          "Chocolate Cookie": 44.1,
+          "Classic Matcha": 64.6
+        }
+      },
+      "limitations": [
+        "The forecast quantities are expired and must be refreshed.",
+        "Association does not establish incremental demand or profit."
+      ]
+    },
+    {
+      "fallback_id": "FB-GARDEN-CROSSSELL-002",
+      "decision_id": "cross_sell",
+      "status": "pending_fresh_forecast",
+      "priority": 2,
+      "scope": "branch",
+      "branch": "Garden",
+      "products": [
+        "Pistachio Cookie",
+        "Iced Matcha"
+      ],
+      "rule_direction": "Pistachio Cookie -> Iced Matcha",
+      "recommended_action": "Offer Iced Matcha as an optional add-on when a customer selects Pistachio Cookie, if the higher-priority Garden pilot is not running.",
+      "evidence": {
+        "assessment": "Priority to review",
+        "transactions": 31,
+        "confidence": 0.0775,
+        "lift": 1.193286207,
+        "historical_original_price_gross_profit_usd": 5.02,
+        "historical_forecast_units_14d": {
+          "Pistachio Cookie": 39.5,
+          "Iced Matcha": 64.2
+        }
+      },
+      "limitations": [
+        "The forecast quantities are expired and must be refreshed.",
+        "Association does not establish incremental demand or profit."
+      ]
+    },
+    {
+      "fallback_id": "FB-HARBOUR-CROSSSELL-001",
+      "decision_id": "cross_sell",
+      "status": "pending_fresh_forecast",
+      "priority": 1,
+      "scope": "branch",
+      "branch": "Harbour",
+      "products": [
+        "Cinnamon Roll",
+        "Strawberry Matcha"
+      ],
+      "rule_direction": "Cinnamon Roll -> Strawberry Matcha",
+      "recommended_action": "Offer Strawberry Matcha as an optional add-on with Cinnamon Roll in one limited Harbour pilot.",
+      "evidence": {
+        "assessment": "Priority to review",
+        "transactions": 38,
+        "confidence": 0.0555555556,
+        "lift": 1.234617544,
+        "historical_original_price_gross_profit_usd": 8.02,
+        "historical_forecast_units_14d": {
+          "Cinnamon Roll": 87.5,
+          "Strawberry Matcha": 83.9
+        }
+      },
+      "limitations": [
+        "The forecast quantities are expired and must be refreshed.",
+        "Only one overlapping Harbour pairing should be piloted at a time."
+      ]
+    },
+    {
+      "fallback_id": "FB-HARBOUR-CROSSSELL-002",
+      "decision_id": "cross_sell",
+      "status": "pending_fresh_forecast",
+      "priority": 2,
+      "scope": "branch",
+      "branch": "Harbour",
+      "products": [
+        "Chocolate Croissant",
+        "Strawberry Matcha"
+      ],
+      "rule_direction": "Chocolate Croissant -> Strawberry Matcha",
+      "recommended_action": "Use this as the second-choice Harbour cross-sell pilot if the Cinnamon Roll pairing is unavailable.",
+      "evidence": {
+        "assessment": "Priority to review",
+        "transactions": 35,
+        "confidence": 0.0511695906,
+        "lift": 1.19230252,
+        "historical_original_price_gross_profit_usd": 7.73,
+        "historical_forecast_units_14d": {
+          "Chocolate Croissant": 81.6,
+          "Strawberry Matcha": 83.9
+        }
+      },
+      "limitations": [
+        "The forecast quantities are expired and must be refreshed.",
+        "Do not run concurrently with another Strawberry Matcha pilot."
+      ]
+    },
+    {
+      "fallback_id": "FB-HARBOUR-CROSSSELL-003",
+      "decision_id": "cross_sell",
+      "status": "pending_fresh_forecast",
+      "priority": 3,
+      "scope": "branch",
+      "branch": "Harbour",
+      "products": [
+        "Classic Matcha",
+        "Pistachio Cookie"
+      ],
+      "rule_direction": "Classic Matcha -> Pistachio Cookie",
+      "recommended_action": "Use this as an alternative Harbour cross-sell pilot when the Strawberry Matcha pairings are not selected.",
+      "evidence": {
+        "assessment": "Priority to review",
+        "transactions": 43,
+        "confidence": 0.0696920583,
+        "lift": 1.240033,
+        "historical_original_price_gross_profit_usd": 6.94,
+        "historical_forecast_units_14d": {
+          "Classic Matcha": 71.4,
+          "Pistachio Cookie": 58.2
+        }
+      },
+      "limitations": [
+        "The forecast quantities are expired and must be refreshed.",
+        "Association does not establish incremental demand or profit."
+      ]
+    },
+    {
+      "fallback_id": "FB-UPTOWN-NO-BUNDLE-001",
+      "decision_id": "stop",
+      "status": "ready",
+      "priority": 1,
+      "scope": "branch",
+      "branch": "Uptown",
+      "recommended_action": "Make no bundle or cross-sell recommendation because Marketing Expert found no branch-specific Priority to review combination.",
+      "evidence": {
+        "priority_combinations": 0,
+        "tentative_combinations": 16
+      },
+      "limitations": [
+        "Tentative combinations may be shown for exploration but must not be promoted to a fallback decision automatically."
+      ]
+    },
+    {
+      "fallback_id": "FB-GARDEN-DINEIN-001",
+      "decision_id": "dine_in_merchandising_review",
+      "registry_decision_id": null,
+      "status": "pending_fresh_forecast_and_owner_review",
+      "priority": 1,
+      "scope": "branch_product",
+      "branch": "Garden",
+      "product": "Chicken Salad Bowl",
+      "recommended_action": "Review Chicken Salad Bowl for a limited dine-in menu-placement or signage pilot.",
+      "evidence": {
+        "transactions": 173,
+        "dine_in_share": 0.6416,
+        "branch_baseline": 0.5869,
+        "advantage": 0.0547,
+        "historical_forecast_units_14d": 19.2
+      },
+      "limitations": [
+        "This decision type is not in the primary registry and must remain a manual fallback review.",
+        "The forecast is expired and placement impact is unknown."
+      ]
+    },
+    {
+      "fallback_id": "FB-HARBOUR-DINEIN-001",
+      "decision_id": "dine_in_merchandising_review",
+      "registry_decision_id": null,
+      "status": "pending_fresh_forecast_and_owner_review",
+      "priority": 1,
+      "scope": "branch_product",
+      "branch": "Harbour",
+      "product": "Tiramisu Cup",
+      "recommended_action": "Review Tiramisu Cup for a limited dine-in menu-placement or signage pilot.",
+      "evidence": {
+        "transactions": 398,
+        "dine_in_share": 0.666,
+        "branch_baseline": 0.59,
+        "advantage": 0.076,
+        "historical_forecast_units_14d": 48.6
+      },
+      "limitations": [
+        "This decision type is not in the primary registry and must remain a manual fallback review.",
+        "The forecast is expired and placement impact is unknown."
+      ]
+    },
+    {
+      "fallback_id": "FB-UPTOWN-DINEIN-001",
+      "decision_id": "dine_in_merchandising_review",
+      "registry_decision_id": null,
+      "status": "pending_fresh_forecast_and_owner_review",
+      "priority": 1,
+      "scope": "branch_product",
+      "branch": "Uptown",
+      "product": "Iced Matcha",
+      "recommended_action": "Review Iced Matcha for a limited dine-in menu-placement or signage pilot.",
+      "evidence": {
+        "transactions": 411,
+        "dine_in_share": 0.659,
+        "branch_baseline": 0.603,
+        "advantage": 0.057,
+        "historical_forecast_units_14d": 40.9
+      },
+      "limitations": [
+        "This decision type is not in the primary registry and must remain a manual fallback review.",
+        "The forecast is expired and placement impact is unknown."
+      ]
+    },
+    {
+      "fallback_id": "FB-UPTOWN-DINEIN-002",
+      "decision_id": "dine_in_merchandising_review",
+      "registry_decision_id": null,
+      "status": "pending_fresh_forecast_and_owner_review",
+      "priority": 2,
+      "scope": "branch_product",
+      "branch": "Uptown",
+      "product": "Coffee Frappe",
+      "recommended_action": "Use Coffee Frappe as the alternative Uptown dine-in pilot because it has the largest dine-in advantage, if fresh demand remains sufficient.",
+      "evidence": {
+        "transactions": 170,
+        "dine_in_share": 0.724,
+        "branch_baseline": 0.603,
+        "advantage": 0.121,
+        "historical_forecast_units_14d": 18.4
+      },
+      "limitations": [
+        "This decision type is not in the primary registry and must remain a manual fallback review.",
+        "The forecast is expired and its historical forecast volume is lower than Iced Matcha."
+      ]
+    },
+    {
+      "fallback_id": "FB-GARDEN-COST-REVIEW-001",
+      "decision_id": "branch_cost_variance_review",
+      "status": "ready_for_owner_review",
+      "priority": 1,
+      "scope": "branch",
+      "branch": "Garden",
+      "recommended_action": "Audit Garden unit-cost recording, recipes, portion definitions, and supplier invoices against comparable products in Harbour and Uptown.",
+      "evidence": {
+        "test_period_units": 2684,
+        "test_period_revenue_usd": 15079.58,
+        "test_period_cogs_usd": 8014.46,
+        "test_period_gross_profit_usd": 7065.12,
+        "test_period_gross_margin": 0.4685223329,
+        "comparison_gross_margin": {
+          "Harbour": 0.65,
+          "Uptown": 0.628
+        },
+        "pattern": "The cost difference is systematic across many products rather than an isolated product residual."
+      },
+      "limitations": [
+        "Gross-margin differences also reflect product mix.",
+        "The review does not prove supplier, waste, recipe, or accounting failure.",
+        "Do not record savings until invoices and operational records confirm them."
+      ]
+    },
+    {
+      "fallback_id": "FB-HARBOUR-ANOMALY-001",
+      "decision_id": "sales_anomaly_investigation",
+      "registry_decision_id": null,
+      "status": "historical_example_requires_fresh_confirmation",
+      "priority": 1,
+      "scope": "branch_product",
+      "branch": "Harbour",
+      "product": "Americano",
+      "recommended_action": "If the sustained drop repeats in current data, ask Harbour to investigate availability, local demand, data capture, and execution before changing any business setting.",
+      "evidence": {
+        "historical_repeated_alerts": 2,
+        "historical_estimated_profit_impact_usd": -81.24,
+        "last_historical_alert_date": "2026-06-29"
+      },
+      "limitations": [
+        "The alerts are historical and cannot trigger a current action without fresh confirmation.",
+        "Sales data alone cannot distinguish demand loss from availability problems."
+      ]
+    },
+    {
+      "fallback_id": "FB-HARBOUR-ANOMALY-002",
+      "decision_id": "sales_anomaly_investigation",
+      "registry_decision_id": null,
+      "status": "historical_example_requires_fresh_confirmation",
+      "priority": 2,
+      "scope": "branch_product",
+      "branch": "Harbour",
+      "product": "Turkey & Cheese Sandwich",
+      "recommended_action": "If repeated product alerts continue in current data, investigate the product locally and document the cause.",
+      "evidence": {
+        "historical_repeated_alerts": 2,
+        "last_historical_alert_date": "2026-06-16"
+      },
+      "limitations": [
+        "Historical net impact was small and mixed, so this is lower priority than the Americano review.",
+        "No operational change is supported without current evidence."
+      ]
+    }
+  ],
+  "explicitly_disallowed_fallbacks": [
+    "staffing changes",
+    "preparation quantity changes",
+    "inventory level changes",
+    "supplier replacement",
+    "automatic procurement reductions",
+    "automatic price changes",
+    "invented discounts",
+    "company-wide promotions",
+    "causal revenue or profit claims"
+  ]
+}

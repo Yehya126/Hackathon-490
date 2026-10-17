@@ -51,9 +51,9 @@ dine_in_candidates["dine_in_orders_per_month"] = (
 Six months is correct for this export only. Recalculate the period if the source
 data changes. Check JSON `provenance.source_sha256` to identify the input snapshot.
 The current local folder is exactly `Marketing_Expert` (case matters on Linux).
-Some scripts still import `mohammad` and write to that old path after the folder
-rename. Fix those references before retraining; reading these existing exports
-does not require running or importing the model code.
+Reading these existing exports does not require running or importing the model
+code. All scripts use that package name and the repository's canonical `data/`
+splits.
 
 ## Product and category fields
 
@@ -99,7 +99,7 @@ This table supports in-store promotion ideas, not online-channel inference.
 1. Select the relevant branch. Use Overall only as an explicitly labeled fallback;
    never treat Overall and branch rows as separate corroborating evidence.
 2. Treat review tiers as candidate filters, not final business decisions.
-3. Join exact product names and branch to Aya's demand/pricing outputs. Confirm
+3. Join exact product names and branch to Merchandise demand outputs. Confirm
    availability, forecast date, price assumptions and margins before proposing an offer.
 4. Use YY's branch signals as context: an anomaly may change whether or when to
    try a promotion. It does not establish a causal explanation by itself.
@@ -130,7 +130,7 @@ The current interface accepts this JSON through **Connect model output**:
       "branch": "Garden",
       "title": "Short proposed action",
       "reason": "Evidence and tradeoff, in plain English",
-      "sources": ["Marketing_Expert", "aya", "branch-analysis-model"],
+      "sources": ["Marketing_Expert", "Merchandise", "branch-analysis-model"],
       "status": "Proposed",
       "next_step": "Small pilot and the result to measure"
     }

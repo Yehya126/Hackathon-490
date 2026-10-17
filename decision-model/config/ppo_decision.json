@@ -1,7 +1,8 @@
 {
   "frequency": "weekly",
   "planning_horizon_weeks": 8,
-  "max_new_actions_per_week": 3,
+  "max_new_actions_per_week": 10,
+  "minimum_actions_before_stop": 3,
   "candidate_proposals_per_step": 64,
   "integer_parameter_proposals": {
     "method": "dynamic_feasible_sampling",
@@ -19,12 +20,15 @@
     "positive_final_price": true,
     "valid_discount_rate": true,
     "no_conflicting_actions": true,
+    "require_positive_marginal_net_profit": true,
+    "minimum_marginal_net_profit_usd": 0.0,
+    "stop_early_when_no_profitable_candidate_remains": true,
     "action_budget_usd": null,
     "require_human_approval": true
   },
   "training": {
     "enabled": false,
-    "split_manifest": "config/split_manifest.json",
+    "split_manifest": "../data/split_manifest.json",
     "seed": 42,
     "smoke_test_timesteps": 1000,
     "full_training_timesteps": 100000,

@@ -4,7 +4,7 @@ df = pd.read_csv("stories_transactions.csv")
 
 print(df.head(10))
 print(df.info())
-print(df.describe(include="all"))
+print(df.describe(include="all"))wha
 
 summary = pd.DataFrame({
     "Type": df.dtypes,

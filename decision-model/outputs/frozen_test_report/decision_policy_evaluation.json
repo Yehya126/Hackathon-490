@@ -1,0 +1,69 @@
+{
+  "status": "completed_stop_only_no_validated_intervention",
+  "parallel_rollout_workers": 4,
+  "training_timesteps": 1024,
+  "reward_scale_train_only_usd": 6178.54,
+  "checkpoint": "C:\\Users\\user\\Desktop\\Hackathon-490\\decision-model\\outputs\\checkpoints\\maskable_ppo_stop_only.zip",
+  "validation": {
+    "total_reward": 0.0,
+    "actions": [],
+    "recommended": "stop"
+  },
+  "final_test": {
+    "total_reward": 0.0,
+    "actions": [],
+    "recommended": "stop",
+    "actual_business_as_usual_revenue_usd": 46130.5,
+    "actual_business_as_usual_gross_profit_usd": 27054.85,
+    "policy_revenue_usd": 46130.5,
+    "policy_gross_profit_usd": 27054.85,
+    "revenue_improvement_usd": 0.0,
+    "gross_profit_improvement_usd": 0.0,
+    "improvement_pct": 0.0,
+    "interpretation": "STOP was the only supported action, so policy and baseline are identical."
+  },
+  "supplied_artifact_audit": {
+    "branch_analysis": {
+      "path": "C:\\Users\\user\\Desktop\\Hackathon-490\\branch-analysis-model\\outputs\\decision_model_input.json",
+      "sha256": "1f304f234f640903d9eeb1eac2f9d58e73aec60a618b1428651e4f1e14f3f45d",
+      "data_window": {
+        "split": "test",
+        "start_date": "2026-06-09",
+        "end_date": "2026-06-30",
+        "source_rows": 7698,
+        "transactions": 5084
+      },
+      "action_conditioned": false
+    },
+    "marketing_expert": {
+      "path": "C:\\Users\\user\\Desktop\\Hackathon-490\\Marketing_Expert\\artifacts\\full_data",
+      "model_sha256": "d44feefc3c967fb01c94269380123313316618d1ce4fb234df7f3f0836be7166",
+      "training_scope": "Entire source dataset; no independent evaluation",
+      "provenance": {
+        "source_sha256": "8375e91c2bebf84261e2b92b67ebf76c42f1af434322a7f2ac2b7f1ab3bb5c71",
+        "rows": 51177,
+        "transactions": 33887,
+        "evaluation": "None. All observations used for fitting, including former validation/test periods."
+      },
+      "validated_owner_review_candidates": 0,
+      "action_conditioned": false
+    },
+    "merchandise": {
+      "path": "C:\\Users\\user\\Desktop\\Hackathon-490\\Merchandise\\outputs",
+      "summary_sha256": "78194ee8061d065dc688455c2812486cbf2774d02a7c4f1f33e206858704126f",
+      "test_period": [
+        "2026-06-09",
+        "2026-06-30"
+      ],
+      "model": "LightGBM (offset mode) + negative binomial",
+      "business_as_usual_only": true,
+      "action_conditioned": false
+    }
+  },
+  "limitations": [
+    "No supplied model estimates action-conditioned demand or causal intervention effects.",
+    "Branch decision input is TEST-derived and Marketing full_data includes former TEST; both were audited only after policy freeze.",
+    "Merchandise forecasts business-as-usual units and cannot score bundle/cross-sell/price interventions.",
+    "The zero improvement is an exact no-action comparison, not evidence that candidate interventions have zero effect."
+  ]
+}

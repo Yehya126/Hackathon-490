@@ -11,6 +11,7 @@
     "interaction_group": "pricing_review",
     "executor": "branch_price_variance_review",
     "decision_kind": "review",
+    "changes_revenue": false,
     "required_target_fields": [
       "branch_id",
       "product_id"
@@ -42,6 +43,7 @@
     "interaction_group": "cost_review",
     "executor": "branch_cost_variance_review",
     "decision_kind": "review",
+    "changes_revenue": false,
     "required_target_fields": [
       "branch_id",
       "product_id"
@@ -81,6 +83,7 @@
     "interaction_group": "pricing",
     "executor": "price_change",
     "decision_kind": "intervention",
+    "changes_revenue": true,
     "required_target_fields": [
       "branch_id",
       "product_id"
@@ -119,6 +122,7 @@
     "interaction_group": "product_combination",
     "executor": "bundle_create",
     "decision_kind": "recommendation",
+    "changes_revenue": true,
     "required_target_fields": [
       "branch_id",
       "bundle_product_ids"
@@ -152,6 +156,7 @@
     "interaction_group": "product_combination",
     "executor": "cross_sell",
     "decision_kind": "recommendation",
+    "changes_revenue": true,
     "required_target_fields": [
       "branch_id",
       "bundle_product_ids"
@@ -184,6 +189,7 @@
     "interaction_group": "none",
     "executor": "stop",
     "decision_kind": "control",
+    "changes_revenue": false,
     "evidence_sources": [],
     "required_evidence": [],
     "guardrails": [

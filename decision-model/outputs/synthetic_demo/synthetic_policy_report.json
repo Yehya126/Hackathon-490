@@ -1,0 +1,238 @@
+{
+  "status": "synthetic_demo_only_unvalidated_intervention_effects",
+  "parallel_rollout_workers": 4,
+  "training_timesteps": 8192,
+  "reward_scale_train_only_usd": 6178.54,
+  "minimum_actions_before_stop": 3,
+  "maximum_actions_per_week": 10,
+  "assumptions": {
+    "status": "synthetic_only_unvalidated_intervention_effects",
+    "price_elasticity": -1.2,
+    "bundle_uptake_rate": 0.06,
+    "bundle_substitution_rate": 0.02,
+    "cross_sell_acceptance_rate": 0.04,
+    "cross_sell_cannibalization_rate": 0.01,
+    "bundle_implementation_cost_usd": 25.0,
+    "cross_sell_implementation_cost_usd": 10.0,
+    "review_implementation_cost_usd": 0.0,
+    "evidence_utility_weight": 0.0,
+    "action_count_penalty": 0.05,
+    "negative_net_profit_penalty_multiplier": 25.0,
+    "notes": [
+      "Rates and costs are demonstration assumptions, not effects learned from Stories transactions.",
+      "Branch variance reviews are excluded because they do not change revenue.",
+      "Marketing association is candidate evidence only and is not treated as causal uplift."
+    ]
+  },
+  "training_candidate_source": "Marketing_Expert TRAIN-only product_candidate_model",
+  "validation_candidate_source": "Marketing_Expert TRAIN-to-VALIDATION comparison",
+  "action_eligibility": "Only registry decisions with changes_revenue=true",
+  "validated_marketing_combinations": 3,
+  "validation": {
+    "actions": [
+      {
+        "type": "cross_sell",
+        "scope": "branch",
+        "target": {
+          "branch": "Harbour",
+          "products": [
+            "Chocolate Croissant",
+            "Strawberry Matcha"
+          ]
+        },
+        "parameters": {},
+        "implementation_cost_usd": 10.0,
+        "evidence": {
+          "branch": "Harbour",
+          "products": [
+            "Chocolate Croissant",
+            "Strawberry Matcha"
+          ],
+          "support": 0.0019673421207948,
+          "confidence": 0.0495049504950495,
+          "lift": 1.084627859337658,
+          "gross_profit_usd": 7.140000000000001,
+          "rule_direction": "Strawberry Matcha -> Chocolate Croissant",
+          "consequent_product": "Chocolate Croissant",
+          "assessment": "Promising on TRAIN and VALIDATION; not proven",
+          "learning_value_score": 0.47264424718333914
+        }
+      },
+      {
+        "type": "bundle_create",
+        "scope": "branch",
+        "target": {
+          "branch": "Garden",
+          "products": [
+            "Chocolate Croissant",
+            "Strawberry Matcha"
+          ]
+        },
+        "parameters": {},
+        "implementation_cost_usd": 25.0,
+        "evidence": {
+          "branch": "Garden",
+          "products": [
+            "Chocolate Croissant",
+            "Strawberry Matcha"
+          ],
+          "support": 0.0019673421207948,
+          "confidence": 0.0495049504950495,
+          "lift": 1.084627859337658,
+          "gross_profit_usd": 7.140000000000001,
+          "rule_direction": "Strawberry Matcha -> Chocolate Croissant",
+          "consequent_product": "Chocolate Croissant",
+          "assessment": "Promising on TRAIN and VALIDATION; not proven",
+          "learning_value_score": 0.47264424718333914
+        }
+      },
+      {
+        "type": "bundle_create",
+        "scope": "branch",
+        "target": {
+          "branch": "Uptown",
+          "products": [
+            "Chocolate Croissant",
+            "Strawberry Matcha"
+          ]
+        },
+        "parameters": {},
+        "implementation_cost_usd": 25.0,
+        "evidence": {
+          "branch": "Uptown",
+          "products": [
+            "Chocolate Croissant",
+            "Strawberry Matcha"
+          ],
+          "support": 0.0019673421207948,
+          "confidence": 0.0495049504950495,
+          "lift": 1.084627859337658,
+          "gross_profit_usd": 7.140000000000001,
+          "rule_direction": "Strawberry Matcha -> Chocolate Croissant",
+          "consequent_product": "Chocolate Croissant",
+          "assessment": "Promising on TRAIN and VALIDATION; not proven",
+          "learning_value_score": 0.47264424718333914
+        }
+      }
+    ],
+    "action_count": 3,
+    "synthetic_baseline_revenue_usd": 12989.8216,
+    "synthetic_policy_revenue_usd": 13009.592932,
+    "synthetic_revenue_change_usd": 19.771332000000257,
+    "synthetic_baseline_gross_profit_usd": 7679.07,
+    "synthetic_policy_gross_profit_usd": 7689.494651999999,
+    "synthetic_gross_profit_change_usd": 10.424651999999696,
+    "synthetic_implementation_costs_usd": 60.0,
+    "synthetic_net_incremental_profit_usd": -49.575348000000304,
+    "evidence_utility": 1.4179327415500174,
+    "reward": -0.3505949140088124,
+    "simulator_support": "synthetic_only_unvalidated_intervention_effects"
+  },
+  "final_test_synthetic": {
+    "actions": [
+      {
+        "type": "cross_sell",
+        "scope": "branch",
+        "target": {
+          "branch": "Harbour",
+          "products": [
+            "Chocolate Croissant",
+            "Strawberry Matcha"
+          ]
+        },
+        "parameters": {},
+        "implementation_cost_usd": 10.0,
+        "evidence": {
+          "branch": "Harbour",
+          "products": [
+            "Chocolate Croissant",
+            "Strawberry Matcha"
+          ],
+          "support": 0.0019673421207948,
+          "confidence": 0.0495049504950495,
+          "lift": 1.084627859337658,
+          "gross_profit_usd": 7.140000000000001,
+          "rule_direction": "Strawberry Matcha -> Chocolate Croissant",
+          "consequent_product": "Chocolate Croissant",
+          "assessment": "Promising on TRAIN and VALIDATION; not proven",
+          "learning_value_score": 0.47264424718333914
+        }
+      },
+      {
+        "type": "bundle_create",
+        "scope": "branch",
+        "target": {
+          "branch": "Garden",
+          "products": [
+            "Chocolate Croissant",
+            "Strawberry Matcha"
+          ]
+        },
+        "parameters": {},
+        "implementation_cost_usd": 25.0,
+        "evidence": {
+          "branch": "Garden",
+          "products": [
+            "Chocolate Croissant",
+            "Strawberry Matcha"
+          ],
+          "support": 0.0019673421207948,
+          "confidence": 0.0495049504950495,
+          "lift": 1.084627859337658,
+          "gross_profit_usd": 7.140000000000001,
+          "rule_direction": "Strawberry Matcha -> Chocolate Croissant",
+          "consequent_product": "Chocolate Croissant",
+          "assessment": "Promising on TRAIN and VALIDATION; not proven",
+          "learning_value_score": 0.47264424718333914
+        }
+      },
+      {
+        "type": "bundle_create",
+        "scope": "branch",
+        "target": {
+          "branch": "Uptown",
+          "products": [
+            "Chocolate Croissant",
+            "Strawberry Matcha"
+          ]
+        },
+        "parameters": {},
+        "implementation_cost_usd": 25.0,
+        "evidence": {
+          "branch": "Uptown",
+          "products": [
+            "Chocolate Croissant",
+            "Strawberry Matcha"
+          ],
+          "support": 0.0019673421207948,
+          "confidence": 0.0495049504950495,
+          "lift": 1.084627859337658,
+          "gross_profit_usd": 7.140000000000001,
+          "rule_direction": "Strawberry Matcha -> Chocolate Croissant",
+          "consequent_product": "Chocolate Croissant",
+          "assessment": "Promising on TRAIN and VALIDATION; not proven",
+          "learning_value_score": 0.47264424718333914
+        }
+      }
+    ],
+    "action_count": 3,
+    "synthetic_baseline_revenue_usd": 14756.505909090909,
+    "synthetic_policy_revenue_usd": 14778.99309090909,
+    "synthetic_revenue_change_usd": 22.487181818181853,
+    "synthetic_baseline_gross_profit_usd": 8686.98090909091,
+    "synthetic_policy_gross_profit_usd": 8698.928381818181,
+    "synthetic_gross_profit_change_usd": 11.947472727271816,
+    "synthetic_implementation_costs_usd": 60.0,
+    "synthetic_net_incremental_profit_usd": -48.052527272728184,
+    "evidence_utility": 1.4179327415500174,
+    "reward": -0.3444331803012046,
+    "simulator_support": "synthetic_only_unvalidated_intervention_effects"
+  },
+  "limitations": [
+    "All intervention effects and implementation costs are synthetic assumptions.",
+    "Review-only actions are excluded from the PPO candidate pool.",
+    "The reported uplift is simulated and is not an observed TEST improvement.",
+    "A controlled experiment is required before business deployment."
+  ],
+  "checkpoint": "C:\\Users\\user\\Desktop\\Hackathon-490\\decision-model\\outputs\\synthetic_demo\\maskable_ppo_synthetic_3_to_10.zip"
+}
