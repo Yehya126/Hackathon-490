@@ -1,23 +1,26 @@
 # Registry-driven PPO decision engine
 
-This directory contains the untrained M1-M4 implementation from
-`CODEX_PPO_DECISION_PLAN_v2.md`. Importing any module is side-effect free: it
+This directory contains the untrained registry-driven decision engine.
+Importing any module is side-effect free: it
 does not load a data split, fit a scaler/model, run an environment, or start PPO.
 
 ## Current status
 
-- The existing split is fingerprinted in `config/split_manifest.json`; see
+- The existing split is fingerprinted in the shared `../data/split_manifest.json`; see
   `CAPABILITY_AUDIT.md` for the model and leakage audit.
 - `config/decisions.json` is the editable top-level registry array. Unknown
   metadata is preserved, so compatible registry additions do not require PPO
-  core edits. It mirrors the current `decision_registry.json` revision, including
-  evidence requirements and decision kinds. Required fields and integer
+  core edits. It is the single canonical decision registry and includes evidence
+  requirements and decision kinds. Required fields and integer
   parameters are validated strictly.
 - Integer proposals come from runtime simulator/operational support intervals.
   There is no fixed value grid. The finite candidate count only limits the
   number presented in one PPO step.
-- The environment selects zero to three new actions using a real STOP action,
-  evaluates the joint portfolio against the same-seed no-new-action forecast,
+- The environment selects up to ten new actions. STOP is normally masked until
+  three actions have been selected, then becomes available; if no feasible
+  candidate remains earlier, an emergency STOP prevents an invalid all-false
+  action mask.
+  It evaluates the joint portfolio against the same-seed no-new-action forecast,
   gives one weekly reward, and carries multi-week actions forward.
 - Product forecasts reconcile units, effective price, revenue, COGS, and gross
   profit and can be exported at SKU/category/branch/company levels.

@@ -26,6 +26,9 @@ class ProposalContext:
     evidence_by_target: Mapping[tuple[str, str, Target], Mapping[str, object]] = field(
         default_factory=dict
     )
+    implementation_costs_usd: Mapping[tuple[str, str, Target], float] = field(
+        default_factory=dict
+    )
 
 
 @dataclass(frozen=True)
@@ -86,6 +89,7 @@ class CandidateGenerator:
         validator: ActionValidator,
         proposals_per_step: int,
         seed: int = 42,
+        revenue_changing_only: bool = False,
     ) -> None:
         if proposals_per_step < 1:
             raise ValueError("proposals_per_step must be positive")
@@ -93,6 +97,7 @@ class CandidateGenerator:
         self.validator = validator
         self.proposals_per_step = proposals_per_step
         self.seed = seed
+        self.revenue_changing_only = revenue_changing_only
 
     def generate(
         self,
@@ -111,6 +116,10 @@ class CandidateGenerator:
             item
             for item in self.registry.enabled(include_stop=False)
             if self.validator.supports_definition(item, context.integer_domains)
+            and (
+                not self.revenue_changing_only
+                or item.metadata.get("changes_revenue") is True
+            )
         ]
         template_count = max(
             1,
@@ -157,6 +166,11 @@ class CandidateGenerator:
                             },
                             evidence=dict(
                                 context.evidence_by_target.get((definition.id, scope, target), {})
+                            ),
+                            implementation_cost_usd=float(
+                                context.implementation_costs_usd.get(
+                                    (definition.id, scope, target), 0.0
+                                )
                             ),
                         )
                         if self.validator.validate(action, state, portfolio, context.integer_domains).valid:

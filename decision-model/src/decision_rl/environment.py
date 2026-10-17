@@ -42,11 +42,16 @@ _EnvironmentBase = gym.Env if gym is not None else object
 class EnvironmentConfig:
     planning_horizon_weeks: int = 8
     max_new_actions_per_week: int = 3
+    minimum_actions_before_stop: int = 0
     seed: int = 42
 
     def __post_init__(self) -> None:
         if self.planning_horizon_weeks < 1 or self.max_new_actions_per_week < 1:
             raise ValueError("Planning horizon and max actions must be positive")
+        if self.minimum_actions_before_stop < 0:
+            raise ValueError("minimum_actions_before_stop must be nonnegative")
+        if self.minimum_actions_before_stop > self.max_new_actions_per_week:
+            raise ValueError("minimum_actions_before_stop cannot exceed max_new_actions_per_week")
 
 
 ContextProvider = Callable[[BusinessState], ProposalContext]
@@ -126,7 +131,13 @@ class WeeklyDecisionEnv(_EnvironmentBase):
     def action_masks(self) -> np.ndarray:
         if self._pool is None:
             raise RuntimeError("reset() must be called before action_masks()")
-        masks = [True]
+        # Keep an emergency STOP when no feasible candidate remains. Without
+        # this escape hatch a strict minimum could create an all-false mask.
+        stop_allowed = (
+            len(self._selected) >= self.config.minimum_actions_before_stop
+            or not self._pool.candidates
+        )
+        masks = [stop_allowed]
         masks.extend([True] * len(self._pool.candidates))
         masks.extend([False] * (self.encoder.schema.max_candidates - len(self._pool.candidates)))
         return np.asarray(masks, dtype=bool)

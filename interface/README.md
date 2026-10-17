@@ -17,15 +17,16 @@ These presentation controls do not change model scores or execute decisions.
 Latest sync: `Merchandise` replaces `aya`. Pricing reads the 135 published rows
 in `PricingOptimization/outputs/price_recommendations.csv`; its gains are
 scenario estimates based on assumed price sensitivity, not measured uplift.
-Branch comparisons now read `cleaned_predictor_results.csv`. The decision engine
-is implemented but untrained, with no generated real decisions to show.
-Regenerate `data.js` with `python interface/build_data.py` after pulling changes.
+Branch comparisons read `branch-analysis-model/outputs/predictor_output.csv`.
+Decisions read the frozen real evaluation and the separately labeled synthetic
+review report. Regenerate `data.js` with `python interface/build_data.py` after
+any model output changes.
 
 The build reads Marketing_Expert, Merchandise, PricingOptimization, the branch
-predictor and Yehya's decision registry. `synced.js` adapts their contracts.
-Registry entries are action definitions, not generated decisions. The manual
-import schema below remains available for Yehya's decisions; committed forecast
-and branch outputs take precedence in their views.
+predictor, and the decision model's exported results. `synced.js` adapts their
+contracts. Registry entries supply labels and guardrails only; they are never
+shown as generated recommendations. The manual import schema remains a fallback
+when no committed decision output exists.
 
 Local interface. Open `index.html`, or run `python -m http.server 8000 --directory interface`.
 Refresh Mohammad's real data with `python interface/build_data.py`. No training runs.
@@ -51,8 +52,44 @@ YY: `{ "model": "yy", "signals": [{ "branch": "Garden", "title": "Signal title",
 
 Yehya: `{ "model": "yehya", "decisions": [{ "branch": "Garden", "title": "Proposed action", "reason": "Decision rationale", "sources": ["Mohammad", "Aya", "YY"], "status": "Proposed", "next_step": "Pilot action" }] }`
 
-Final decisions are rendered only from Yehya's output. The interface does not
-substitute its own decisions or invent forecasts. Current Mohammad results are
-full-data descriptive analysis, not independent validation. Forecast intervals,
-time horizons and value estimates should be supplied by model authors before
-using them to support business claims.
+Final decisions are rendered only from the decision model output. The interface
+does not substitute its own decisions or invent forecasts. Current Mohammad
+results are full-data descriptive analysis, not independent validation.
+Forecast intervals, time horizons and value estimates are displayed only when
+the source model supplies them.
+
+## Decision output format
+
+`interface/build_data.py` reads:
+
+- `decision-model/outputs/frozen_test_report/decision_policy_evaluation.json`
+  for the real frozen status and measured business-as-usual totals.
+- `decision-model/outputs/synthetic_demo/synthetic_policy_report.json` for
+  explicitly synthetic review proposals and their assumptions.
+- `decision-model/config/decisions.json` only for matching labels and guardrails.
+
+The adapter writes `window.STORIES_DATA.decision_output` with this shape:
+
+```text
+decision_output
+├── real_evaluation
+│   ├── status, recommended, actions
+│   └── actual_revenue_usd, actual_gross_profit_usd, interpretation
+├── synthetic_demo
+│   ├── status, action_count, actions
+│   ├── simulated_* metrics, assumptions, limitations
+│   └── each action: branch, products, explanation, evidence,
+│       optional expected_impact/period, guardrails, next_step
+└── artifact_sources
+```
+
+Null impact or period fields are omitted from the visible decision card. The UI
+labels synthetic proposals and never treats simulated uplift as a measured
+result. Refresh and launch with:
+
+```powershell
+python interface/build_data.py
+python start_website.py
+```
+
+This integration is review-only. It never executes actions or changes prices.

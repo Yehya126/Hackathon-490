@@ -44,8 +44,16 @@ function enhanceTable(page){
  $('#result-export').onclick=()=>{const csvCell=v=>'"'+(/^[=+@-]/.test(v)?'\u0027':'')+v.replaceAll('"','""')+'"';const lines=[[...table.querySelectorAll('thead th')],...filteredRows.slice(offset,offset+10).map(r=>[...r.cells])].map(cells=>cells.map(c=>csvCell(c.innerText.replaceAll('\n',' '))).join(',')).join('\r\n');const url=URL.createObjectURL(new Blob([lines],{type:'text/csv;charset=utf-8'}));const a=document.createElement('a');a.href=url;a.download=`stories-${page}-${branch}.csv`;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000)};
  refresh();
 }
+function enhanceDecisions(page){
+ if(page!=='decisions')return;
+ const input=$('#decision-search');
+ if(input)input.oninput=event=>{decisionSearch=event.target.value;decisionOffset=0;render();requestAnimationFrame(()=>{const next=$('#decision-search');next?.focus();next?.setSelectionRange(decisionSearch.length,decisionSearch.length)})};
+ $('#decision-prev')?.addEventListener('click',()=>{decisionOffset=Math.max(0,decisionOffset-decisionPageSize);render()});
+ $('#decision-next')?.addEventListener('click',()=>{decisionOffset+=decisionPageSize;render()});
+ document.querySelectorAll('[data-decision-detail]').forEach(button=>button.addEventListener('click',()=>showDecisionDetail(button.dataset.decisionDetail)));
+}
 const workflowRender=render;
-render=function(){workflowRender();const page=location.hash.slice(1)||'overview';addVisuals(page);enhanceTable(page);document.querySelectorAll('nav a').forEach(a=>{if(a.classList.contains('active'))a.setAttribute('aria-current','page');else a.removeAttribute('aria-current')});
+render=function(){workflowRender();const page=location.hash.slice(1)||'overview';addVisuals(page);enhanceTable(page);enhanceDecisions(page);document.querySelectorAll('nav a').forEach(a=>{if(a.classList.contains('active'))a.setAttribute('aria-current','page');else a.removeAttribute('aria-current')});
  const next={forecast:['Explore product pairings','#combinations'],combinations:['Compare price options','#pricing'],branches:['Review decision progress','#decisions'],pricing:['Review decision progress','#decisions']}[page];
  if(next)$('#content').insertAdjacentHTML('beforeend',`<div class="next-step"><span class="muted">Continue exploring</span><a href="${next[1]}">${next[0]} ↗</a></div>`);
 };

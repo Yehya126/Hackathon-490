@@ -7,7 +7,7 @@ assumptions, not estimates from Stories transactions.
 from __future__ import annotations
 
 import random
-from dataclasses import dataclass, replace
+from dataclasses import asdict, dataclass, replace
 from datetime import timedelta
 from math import isfinite
 from typing import Any, Callable, Iterable, Mapping
@@ -19,17 +19,33 @@ from .schemas import BusinessState, CandidateAction, ForecastRow, NextWeekForeca
 class SyntheticResponseProfile:
     price_elasticity: float = -1.2
     promotion_units_lift_per_pct: float = 0.005
+    bundle_uptake_rate: float = 0.06
+    bundle_substitution_rate: float = 0.02
+    cross_sell_acceptance_rate: float = 0.04
+    cross_sell_cannibalization_rate: float = 0.01
     weekly_noise_stddev: float = 0.0
 
     def __post_init__(self) -> None:
         if not all(isfinite(value) for value in (
             self.price_elasticity,
             self.promotion_units_lift_per_pct,
+            self.bundle_uptake_rate,
+            self.bundle_substitution_rate,
+            self.cross_sell_acceptance_rate,
+            self.cross_sell_cannibalization_rate,
             self.weekly_noise_stddev,
         )):
             raise ValueError("Synthetic coefficients must be finite")
         if self.weekly_noise_stddev < 0:
             raise ValueError("weekly_noise_stddev must be nonnegative")
+        for name in (
+            "bundle_uptake_rate",
+            "bundle_substitution_rate",
+            "cross_sell_acceptance_rate",
+            "cross_sell_cannibalization_rate",
+        ):
+            if not 0 <= getattr(self, name) <= 1:
+                raise ValueError(f"{name} must be between zero and one")
 
 
 @dataclass
@@ -80,12 +96,32 @@ def _preparation(row: _MutableProduct, action: CandidateAction, _profile: Synthe
     row.units = min(row.units, float(row.prepared_units))
 
 
+def _bundle_create(row: _MutableProduct, _action: CandidateAction, profile: SyntheticResponseProfile) -> None:
+    row.units *= max(0.0, 1 + profile.bundle_uptake_rate - profile.bundle_substitution_rate)
+
+
+def _cross_sell(row: _MutableProduct, action: CandidateAction, profile: SyntheticResponseProfile) -> None:
+    consequent = action.evidence.get("consequent_product")
+    if consequent == row.source.product_id:
+        row.units *= 1 + profile.cross_sell_acceptance_rate
+    else:
+        row.units *= 1 - profile.cross_sell_cannibalization_rate
+
+
+def _review_only(_row: _MutableProduct, _action: CandidateAction, _profile: SyntheticResponseProfile) -> None:
+    return None
+
+
 _DEFAULT_EXECUTORS: Mapping[str, SyntheticExecutor] = {
     "price_change": _price_change,
     "discount_change": _discount_change,
     "promotion": _promotion,
     "procurement_scenario": _procurement,
     "preparation_change": _preparation,
+    "bundle_create": _bundle_create,
+    "cross_sell": _cross_sell,
+    "branch_price_variance_review": _review_only,
+    "branch_cost_variance_review": _review_only,
 }
 
 _CAPABILITIES_BY_EXECUTOR = {
@@ -94,6 +130,10 @@ _CAPABILITIES_BY_EXECUTOR = {
     "promotion": "promotion_response_and_cost",
     "procurement_scenario": "validated_operational_cost_intervention",
     "preparation_change": "inventory_waste_and_stockout",
+    "bundle_create": "bundle_uptake_substitution_and_price_response",
+    "cross_sell": "cross_sell_response_and_cannibalization",
+    "branch_price_variance_review": "branch_variance_review_workflow",
+    "branch_cost_variance_review": "branch_variance_review_workflow",
 }
 
 
@@ -193,7 +233,7 @@ class SyntheticSimulator:
                 "Sales are treated as demand except where preparation caps synthetic units.",
             ),
             scenario_id=scenario_id,
-            metadata={"seed": seed},
+            metadata={"seed": seed, "synthetic_response_profile": asdict(self.profile)},
         )
 
     def advance_state(

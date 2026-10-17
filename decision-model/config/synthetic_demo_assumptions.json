@@ -1,0 +1,18 @@
+{
+  "status": "synthetic_only_unvalidated_intervention_effects",
+  "price_elasticity": -1.2,
+  "bundle_uptake_rate": 0.06,
+  "bundle_substitution_rate": 0.02,
+  "cross_sell_acceptance_rate": 0.04,
+  "cross_sell_cannibalization_rate": 0.01,
+  "bundle_implementation_cost_usd": 25.0,
+  "cross_sell_implementation_cost_usd": 10.0,
+  "review_implementation_cost_usd": 0.0,
+  "evidence_utility_weight": 0.0,
+  "action_count_penalty": 0.005,
+  "notes": [
+    "Rates and costs are demonstration assumptions, not effects learned from Stories transactions.",
+    "Branch variance reviews are excluded because they do not change revenue.",
+    "Marketing association is candidate evidence only and is not treated as causal uplift."
+  ]
+}

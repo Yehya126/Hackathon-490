@@ -17,6 +17,7 @@ class DecisionModelConfig:
     frequency: str
     planning_horizon_weeks: int
     max_new_actions_per_week: int
+    minimum_actions_before_stop: int
     candidate_proposals_per_step: int
     discount_factor_gamma: float
     reward_objective: str
@@ -51,6 +52,13 @@ def load_config(path: str | Path) -> DecisionModelConfig:
     for name in ("planning_horizon_weeks", "max_new_actions_per_week", "candidate_proposals_per_step"):
         if isinstance(raw[name], bool) or not isinstance(raw[name], int) or raw[name] < 1:
             raise ConfigurationError(f"{name} must be a positive integer")
+    minimum_actions = raw.get("minimum_actions_before_stop", 0)
+    if isinstance(minimum_actions, bool) or not isinstance(minimum_actions, int) or minimum_actions < 0:
+        raise ConfigurationError("minimum_actions_before_stop must be a nonnegative integer")
+    if minimum_actions > raw["max_new_actions_per_week"]:
+        raise ConfigurationError(
+            "minimum_actions_before_stop cannot exceed max_new_actions_per_week"
+        )
     constraints = raw["constraints"]
     if not isinstance(constraints, dict) or not isinstance(constraints.get("require_human_approval"), bool):
         raise ConfigurationError("constraints.require_human_approval must be boolean")
@@ -61,6 +69,7 @@ def load_config(path: str | Path) -> DecisionModelConfig:
         frequency=str(raw["frequency"]),
         planning_horizon_weeks=raw["planning_horizon_weeks"],
         max_new_actions_per_week=raw["max_new_actions_per_week"],
+        minimum_actions_before_stop=minimum_actions,
         candidate_proposals_per_step=raw["candidate_proposals_per_step"],
         discount_factor_gamma=float(raw["discount_factor_gamma"]),
         reward_objective=str(raw["reward_objective"]),

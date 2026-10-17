@@ -1,4 +1,4 @@
-"""Create identical, reproducible dataset splits for each team member."""
+"""Create one canonical, reproducible train/validation/test split."""
 
 from __future__ import annotations
 
@@ -13,13 +13,6 @@ sys.path.insert(0, str(PROJECT_ROOT))
 from data_utils import load_data, split_data
 
 
-MEMBERS = (
-    "Marketing_Expert",
-    "Merchandise",
-    "PricingOptimization",
-    "branch-analysis-model",
-    "decision-model",
-)
 SPLIT_NAMES = ("train", "validation", "test")
 DERIVED_COLUMNS = ("Transaction Timestamp",)
 
@@ -41,13 +34,12 @@ def main() -> None:
         "splits": {},
     }
 
-    # Write each canonical split once, then copy its exact bytes for the other
-    # members so checksums—not merely transaction memberships—are identical.
-    first_member = PROJECT_ROOT / MEMBERS[0] / "data"
-    first_member.mkdir(parents=True, exist_ok=True)
+    # Write each canonical split once. Every model reads this shared directory.
+    data_dir = PROJECT_ROOT / "data"
+    data_dir.mkdir(parents=True, exist_ok=True)
     for split_name in SPLIT_NAMES:
         frame = getattr(splits, split_name).drop(columns=list(DERIVED_COLUMNS), errors="ignore")
-        output = first_member / f"{split_name}.csv"
+        output = data_dir / f"{split_name}.csv"
         frame.to_csv(output, index=True, index_label="Source Row ID", date_format="%Y-%m-%d")
         manifest["splits"][split_name] = {
             "rows": len(frame),
@@ -57,26 +49,16 @@ def main() -> None:
             "sha256": sha256(output),
         }
 
-    for member in MEMBERS[1:]:
-        member_data = PROJECT_ROOT / member / "data"
-        member_data.mkdir(parents=True, exist_ok=True)
-        for split_name in SPLIT_NAMES:
-            source = first_member / f"{split_name}.csv"
-            destination = member_data / source.name
-            destination.write_bytes(source.read_bytes())
-
     manifest_text = json.dumps(manifest, indent=2) + "\n"
-    for member in MEMBERS:
-        (PROJECT_ROOT / member / "split_manifest.json").write_text(manifest_text, encoding="utf-8")
+    (data_dir / "split_manifest.json").write_text(manifest_text, encoding="utf-8")
 
-    for member in MEMBERS:
-        for split_name in SPLIT_NAMES:
-            path = PROJECT_ROOT / member / "data" / f"{split_name}.csv"
-            expected = manifest["splits"][split_name]["sha256"]
-            if sha256(path) != expected:
-                raise RuntimeError(f"Checksum mismatch: {path}")
+    for split_name in SPLIT_NAMES:
+        path = data_dir / f"{split_name}.csv"
+        expected = manifest["splits"][split_name]["sha256"]
+        if sha256(path) != expected:
+            raise RuntimeError(f"Checksum mismatch: {path}")
 
-    print(f"Created identical splits for: {', '.join(MEMBERS)}")
+    print(f"Created canonical splits in {data_dir}")
 
 
 if __name__ == "__main__":

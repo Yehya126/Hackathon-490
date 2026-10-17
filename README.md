@@ -16,6 +16,23 @@ Open **http://127.0.0.1:8000/**. Keep the terminal running; Ctrl+C stops it.
 If port 8000 is occupied, run `python start_website.py --port 8001`.
 Only Python is needed to serve the page—no npm install or model training.
 
+## Shared data
+
+This repository contains one source dataset and one canonical chronological split
+shared by all models.
+
+```text
+stories_transactions.csv       Original data (do not edit)
+data/                           Shared train/validation/test files and manifest
+data_utils.py                   Shared splitting and basket helpers
+scripts/create_team_workspaces.py
+tests/test_data_utils.py
+```
+
+The shared `data/` folder contains `train.csv`, `validation.csv`, and `test.csv`.
+Transactions are split chronologically 70%/15%/15%, and all rows from one
+transaction stay together.
+
 **Website folder: [`interface/`](interface/). Main page: [`interface/index.html`](interface/index.html).**
 
 | File | Purpose |
@@ -44,6 +61,13 @@ it does not train models. Simply opening the website uses the existing `data.js`
 
 Each folder's README explains how to run it.
 
+## Fallback decisions
+
+If the primary RL decision pipeline is unavailable or fails validation, use
+[`fallback_decisions.json`](fallback_decisions.json). It contains deterministic,
+human-approved fallback rules and candidate decisions. Forecast-dependent entries
+must be refreshed before use when their evidence period has expired.
+
 ## Data
 
 - `stories_transactions.csv` — original data. Do not edit.
@@ -63,3 +87,10 @@ python -m unittest discover -s tests -v
 
 - Build with train and validation data only.
 - Keep test data untouched until final evaluation.
+- Fit preprocessing on training data only.
+- Feed only boolean product baskets to FP-Growth.
+- Use branch and profit after rule generation for filtering and ranking.
+
+The combination model is documented in
+[Marketing_Expert/README.md](Marketing_Expert/README.md). Training and final test
+evaluation are separate, explicit commands.

@@ -5,9 +5,9 @@ train, tune, or execute a policy.
 
 ## Existing split
 
-The files in `decision-model/data/` are the existing transaction-level
+The files in the repository's shared `data/` directory are the existing transaction-level
 chronological 70/15/15 split. Their immutable counts, boundaries, and SHA-256
-fingerprints are recorded in `config/split_manifest.json`. Calendar dates overlap
+fingerprints are recorded in `data/split_manifest.json`. Calendar dates overlap
 at the two boundaries because transactions are the split unit, but the checked
 timestamps remain ordered: TRAIN ends 2026-05-16 11:18:42, VALIDATION starts
 2026-05-16 18:02:38; VALIDATION ends 2026-06-09 07:56:07, and TEST starts
@@ -15,7 +15,7 @@ timestamps remain ordered: TRAIN ends 2026-05-16 11:18:42, VALIDATION starts
 
 ## Available specialist components
 
-- `aya/` forecasts business-as-usual daily branch-product units and reports
+- `Merchandise/` forecasts business-as-usual daily branch-product units and reports
   uncertainty/anomalies. It is not action-conditioned, it predicts sales rather
   than latent demand, and it uses a whole-day split that differs from the shared
   transaction split. An adapter must be explicitly chosen before use.

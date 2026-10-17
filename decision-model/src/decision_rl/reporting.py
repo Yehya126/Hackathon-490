@@ -150,6 +150,7 @@ def build_portfolio_report(
             "action_implementation_costs_usd": comparison.implementation_costs_usd,
             "net_incremental_profit_usd": comparison.net_incremental_profit_usd,
             "risk": comparison.risk,
+            "evidence_utility": comparison.evidence_utility,
             "reward": comparison.reward,
         },
         "simulator_support": comparison.policy.simulator_support,

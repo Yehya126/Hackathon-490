@@ -11,11 +11,13 @@ import pandas as pd
 from Marketing_Expert.model import DEFAULTS, combination_table, evaluate_table, fit_model
 
 WORKSPACE = Path(__file__).resolve().parent
+DATA_DIR = ROOT / 'data'
+SPLIT_MANIFEST = DATA_DIR / 'split_manifest.json'
 
 
 def read_split(name):
-    path = WORKSPACE / 'data' / f'{name}.csv'
-    manifest = json.loads((WORKSPACE / 'split_manifest.json').read_text())
+    path = DATA_DIR / f'{name}.csv'
+    manifest = json.loads(SPLIT_MANIFEST.read_text())
     if hashlib.sha256(path.read_bytes()).hexdigest() != manifest['splits'][name]['sha256']:
         raise ValueError(f'{name} differs from the shared split manifest')
     return pd.read_csv(path)
@@ -48,13 +50,13 @@ def main():
             raise ValueError('Invalid thresholds: lift must exceed 1; profit must be nonnegative')
         model = fit_model(read_split('train'), limits['support'], args.min_branch_transactions, args.max_length)
         model['thresholds'] = limits
-        model['split_manifest'] = json.loads((WORKSPACE / 'split_manifest.json').read_text())
+        model['split_manifest'] = json.loads(SPLIT_MANIFEST.read_text())
         save(artifact, model)
     else:
         model = json.loads(artifact.read_text(encoding='utf-8'))
         if model.get('version') != 2:
             raise ValueError('This command requires a combination-table model (version 2)')
-        if model['split_manifest'] != json.loads((WORKSPACE / 'split_manifest.json').read_text()):
+        if model['split_manifest'] != json.loads(SPLIT_MANIFEST.read_text()):
             raise ValueError('Splits changed since training')
     if args.command in ('train', 'export'):
         table = combination_table(model)

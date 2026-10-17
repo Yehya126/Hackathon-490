@@ -296,7 +296,6 @@ class PredictorEngine:
             self.output_dir / "holdout_predictions.csv", index=False
         )
         predictor_frame.to_csv(self.output_dir / "predictor_output.csv", index=False)
-        predictor_frame.to_csv(self.output_dir / "cleaned_predictor_results.csv", index=False)
         _write_json(self.output_dir / "predictor_output.json", predictor_payload)
         _write_json(self.output_dir / "decision_model_input.json", decision_input_payload)
         _write_json(self.output_dir / "trained_models.json", model_artifact)

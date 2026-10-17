@@ -12,6 +12,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "src"))
 
 from decision_rl.candidate_proposals import CandidateGenerator, ProposalContext
+from decision_rl.config import load_config
 from decision_rl.environment import EnvironmentConfig, InvalidEnvironmentAction, WeeklyDecisionEnv
 from decision_rl.observation import ObservationEncoder, ObservationSchema
 from decision_rl.registry import RegistryValidationError, load_decisions
@@ -134,6 +135,44 @@ class CandidateAndValidityTests(unittest.TestCase):
         self.assertEqual(len(pool.candidates), 1)
         self.assertEqual(pool.candidates[0].parameters["change_pct"], 7)
         self.assertEqual({item.decision_id for item in pool.candidates}, {"price_change"})
+
+    def test_revenue_only_generator_excludes_review_actions(self) -> None:
+        registry = load_decisions(REGISTRY_PATH)
+        runtime_domains = {
+            ("price_change", "change_pct"): IntegerDomain(7, 7, "bounded experiment"),
+        }
+        simulator = SyntheticSimulator(SyntheticResponseProfile())
+        validator = ActionValidator(registry, simulator.supported_capabilities, {})
+        generator = CandidateGenerator(
+            registry,
+            validator,
+            proposals_per_step=8,
+            seed=11,
+            revenue_changing_only=True,
+        )
+        target = Target(branch_id="Garden", product_id="Iced Latte")
+        context = ProposalContext(
+            targets_by_scope={"product": (target,)},
+            integer_domains=runtime_domains,
+            sourced_parameter_values={
+                ("price_change", "change_pct", target): (7,),
+            },
+            evidence_by_target={
+                ("price_change", "product", target): price_evidence(7),
+                ("branch_price_variance_review", "product", target): {
+                    "observation": {"listed_unit_price_usd": 10.0},
+                    "model_expectation": {"expected_listed_unit_price_usd": 9.0},
+                    "residual_signals": {"price_residual_pct": 11.1},
+                    "prediction_quality": {"complete": True},
+                },
+            },
+        )
+        pool = generator.generate(product_state(), context)
+        self.assertEqual({item.decision_id for item in pool.candidates}, {"price_change"})
+        self.assertTrue(registry.get("price_change").metadata["changes_revenue"])
+        self.assertFalse(
+            registry.get("branch_price_variance_review").metadata["changes_revenue"]
+        )
 
 
 class SimulatorAndRewardTests(unittest.TestCase):
@@ -275,6 +314,32 @@ class EnvironmentTests(unittest.TestCase):
         _observation, reward, _terminated, _truncated, info = env.step(0)
         self.assertGreater(reward, 0.0)
         self.assertTrue(info["calendar_advanced"])
+
+        strict_env = WeeklyDecisionEnv(
+            initial_state_provider=product_state,
+            context_provider=lambda _state: context,
+            scenario_provider=lambda _state, week: {"id": f"strict-week-{week}"},
+            simulator=simulator,
+            candidate_generator=generator,
+            observation_encoder=encoder,
+            reward_config=RewardConfig(scale=100.0),
+            config=EnvironmentConfig(
+                planning_horizon_weeks=2,
+                max_new_actions_per_week=10,
+                minimum_actions_before_stop=3,
+            ),
+        )
+        strict_env.reset(seed=7)
+        self.assertFalse(strict_env.action_masks()[0])
+        strict_env.step(1)
+        # The sole candidate now conflicts with the selected portfolio, so the
+        # emergency STOP prevents an invalid all-false mask before the minimum.
+        self.assertTrue(strict_env.action_masks()[0])
+
+    def test_repository_config_sets_three_before_stop_and_ten_maximum(self) -> None:
+        config = load_config(ROOT / "config" / "ppo_decision.json")
+        self.assertEqual(config.minimum_actions_before_stop, 3)
+        self.assertEqual(config.max_new_actions_per_week, 10)
 
 
 class SplitGuardTests(unittest.TestCase):

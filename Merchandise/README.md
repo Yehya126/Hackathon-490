@@ -2,8 +2,8 @@
 
 For each branch, the model gives the **expected number of units sold** for every
 product for each of the **next 14 days**. Separately, it flags unusual sales by
-comparing actual sales with the expected amount. Every branch is judged against its own history. See `PLAN.md`
-for the original design.
+comparing actual sales with the expected amount. Every branch is judged against
+its own history.
 
 ## Run
 
