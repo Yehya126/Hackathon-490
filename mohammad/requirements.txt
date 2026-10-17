@@ -1,0 +1,2 @@
+-r ../requirements.txt
+mlxtend>=0.23,<0.24
