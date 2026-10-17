@@ -1,0 +1,9 @@
+{
+  "predictor_schema_version": "1.0.0",
+  "primary_method": "huber",
+  "structural_model_fingerprint": "0016454a9deb4e80bfb7ba1b2412682a0019af82990c44e299e2a43d44087e1f",
+  "training_only_model_fit": true,
+  "validation_use": "Held-out method comparison and stability diagnostics; no test-driven tuning.",
+  "decision_policy_included": false,
+  "protocol_sha256": "1e8f3105398ba523c8702d399b083bb96dbc6203ca05f1f6152c6486510ecde7"
+}

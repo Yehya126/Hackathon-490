@@ -1,0 +1,4627 @@
+{
+  "schema_version": "1.0.0",
+  "generated_at_utc": "2026-10-17T13:58:08.494669+00:00",
+  "training_split": "train",
+  "primary_method": "huber",
+  "structural_fingerprint": "0016454a9deb4e80bfb7ba1b2412682a0019af82990c44e299e2a43d44087e1f",
+  "models": {
+    "cost": {
+      "huber": {
+        "target": "unit_cost",
+        "method": "huber",
+        "reference_branch": "Garden",
+        "reference_product": "Almond Croissant",
+        "branch_effects": {
+          "Garden": 0.0,
+          "Harbour": -0.3577060612328708,
+          "Uptown": -0.39887398989472456
+        },
+        "branch_multipliers": {
+          "Garden": 1.0,
+          "Harbour": 0.6992785898872419,
+          "Uptown": 0.6710752582897647
+        },
+        "product_effects": {
+          "Almond Croissant": 0.0,
+          "Americano": -0.9751813745058385,
+          "Avocado Toast": 0.7839340792363156,
+          "Banana Bread": -0.19360484420983506,
+          "Blueberry Muffin": -0.3763670915842241,
+          "Brownie": 0.2170741621365049,
+          "Butter Croissant": -0.5159046034176642,
+          "Cappuccino": -0.5330655437845588,
+          "Caramel Latte": -0.020455797957066556,
+          "Chai Latte": -0.2539993015685328,
+          "Cheesecake Slice": 0.4785353674281834,
+          "Chicken Pesto Sandwich": 0.9962284487028484,
+          "Chicken Salad Bowl": 1.085140805011391,
+          "Chocolate Cookie": -0.7417360242986374,
+          "Chocolate Croissant": -0.1883909459716605,
+          "Cinnamon Roll": 0.15979123323448696,
+          "Classic Matcha": 0.17401296217573867,
+          "Coffee Frappe": 0.2822879226069427,
+          "Cold Brew": -0.4980899382936676,
+          "Egg Sandwich": 0.4889776351902946,
+          "English Breakfast Tea": -1.2032687474151607,
+          "Espresso": -1.0773855464709934,
+          "Flat White": -0.43173940392812343,
+          "Fresh Orange Juice": 0.10520357792919914,
+          "Frozen Yoghurt Cup": 0.3432276409127429,
+          "Granola Yoghurt": 0.5541364998876547,
+          "Halloumi Wrap": 0.7740258377744998,
+          "Iced Americano": -0.7966901364028419,
+          "Iced Latte": -0.14088982601951652,
+          "Iced Matcha": 0.27411362834590175,
+          "Iced Mocha": 0.15570250439793437,
+          "Lemonade": -0.4911256559077161,
+          "Mint Tea": -1.1094608047863055,
+          "Peach Iced Tea": -0.5091986010156061,
+          "Pistachio Cookie": -0.480879790419523,
+          "Quinoa Bowl": 0.9470015607209654,
+          "Soup of the Day": 0.3799762677163585,
+          "Spanish Latte": 0.03650220814174876,
+          "Sparkling Water": -0.3459734785108007,
+          "Still Water": -1.0773855464709932,
+          "Strawberry Matcha": 0.5104764007551763,
+          "Tiramisu Cup": 0.401902676596861,
+          "Tuna Sandwich": 0.6698004847124501,
+          "Turkey & Cheese Sandwich": 0.9054508086227031,
+          "Vanilla Latte": -0.10415329647553778
+        },
+        "intercept": 1.004100289745444,
+        "rmse": 0.0015158079264153508,
+        "mae": 0.0008740596318425192,
+        "r_squared": 0.9999942565235674,
+        "iterations": 31,
+        "observations": 135,
+        "residuals": [
+          {
+            "branch": "Garden",
+            "product": "Almond Croissant",
+            "observed": 2.73,
+            "fitted": 2.729450453216696,
+            "log_residual": 0.00020131945142431995,
+            "multiplicative_residual": 0.0002013397175451015
+          },
+          {
+            "branch": "Harbour",
+            "product": "Almond Croissant",
+            "observed": 1.91,
+            "fitted": 1.9086462640924646,
+            "log_residual": 0.0007090135459651981,
+            "multiplicative_residual": 0.0007092649554834018
+          },
+          {
+            "branch": "Uptown",
+            "product": "Almond Croissant",
+            "observed": 1.83,
+            "fitted": 1.8316666678815094,
+            "log_residual": -0.0009103329973899621,
+            "multiplicative_residual": -0.000909918770011342
+          },
+          {
+            "branch": "Garden",
+            "product": "Americano",
+            "observed": 1.03,
+            "fitted": 1.0293411272125508,
+            "log_residual": 0.0006398870019388818,
+            "multiplicative_residual": 0.0006400917733009326
+          },
+          {
+            "branch": "Harbour",
+            "product": "Americano",
+            "observed": 0.72,
+            "fitted": 0.7197962119501368,
+            "log_residual": 0.00028307902122909345,
+            "multiplicative_residual": 0.0002831190918761717
+          },
+          {
+            "branch": "Uptown",
+            "product": "Americano",
+            "observed": 0.69,
+            "fitted": 0.69076536281244,
+            "log_residual": -0.001108606735713058,
+            "multiplicative_residual": -0.0011079924582841905
+          },
+          {
+            "branch": "Garden",
+            "product": "Avocado Toast",
+            "observed": 5.980000000000001,
+            "fitted": 5.97769097599499,
+            "log_residual": 0.0003861989807809607,
+            "multiplicative_residual": 0.00038627356520848366
+          },
+          {
+            "branch": "Harbour",
+            "product": "Avocado Toast",
+            "observed": 4.18,
+            "fitted": 4.180071316475467,
+            "log_residual": -1.706121222389001e-05,
+            "multiplicative_residual": -1.70610666822002e-05
+          },
+          {
+            "branch": "Uptown",
+            "product": "Avocado Toast",
+            "observed": 4.01,
+            "fitted": 4.011480515692233,
+            "log_residual": -0.00036913776855729274,
+            "multiplicative_residual": -0.00036906964559368927
+          },
+          {
+            "branch": "Garden",
+            "product": "Banana Bread",
+            "observed": 2.25,
+            "fitted": 2.2490219785913035,
+            "log_residual": 0.00043477068071973157,
+            "multiplicative_residual": 0.00043486520719082655
+          },
+          {
+            "branch": "Harbour",
+            "product": "Banana Bread",
+            "observed": 1.57,
+            "fitted": 1.5726929178147413,
+            "log_residual": -0.0017137649425214563,
+            "multiplicative_residual": -0.0017122972859082708
+          },
+          {
+            "branch": "Uptown",
+            "product": "Banana Bread",
+            "observed": 1.51,
+            "fitted": 1.5092630051825164,
+            "log_residual": 0.0004881951859485034,
+            "multiplicative_residual": 0.0004883143726128747
+          },
+          {
+            "branch": "Garden",
+            "product": "Blueberry Muffin",
+            "observed": 1.87,
+            "fitted": 1.8733592284560936,
+            "log_residual": -0.0017947672947246085,
+            "multiplicative_residual": -0.0017931576630189072
+          },
+          {
+            "branch": "Harbour",
+            "product": "Blueberry Muffin",
+            "observed": 1.31,
+            "fitted": 1.3099999996270286,
+            "log_residual": 2.847110325276958e-10,
+            "multiplicative_residual": 2.8471092150539334e-10
+          },
+          {
+            "branch": "Uptown",
+            "product": "Blueberry Muffin",
+            "observed": 1.26,
+            "fitted": 1.2571650281056872,
+            "log_residual": 0.0022525126968912235,
+            "multiplicative_residual": 0.0022550515094941215
+          },
+          {
+            "branch": "Garden",
+            "product": "Brownie",
+            "observed": 3.39,
+            "fitted": 3.3911681595814516,
+            "log_residual": -0.0003445304895899337,
+            "multiplicative_residual": -0.0003444711457762928
+          },
+          {
+            "branch": "Harbour",
+            "product": "Brownie",
+            "observed": 2.37,
+            "fitted": 2.371371288702631,
+            "log_residual": -0.0005784355020383991,
+            "multiplicative_residual": -0.0005782682404749107
+          },
+          {
+            "branch": "Uptown",
+            "product": "Brownie",
+            "observed": 2.28,
+            "fitted": 2.2757290485951485,
+            "log_residual": 0.0018749809791249739,
+            "multiplicative_residual": 0.0018767398550756376
+          },
+          {
+            "branch": "Garden",
+            "product": "Butter Croissant",
+            "observed": 1.6299999999999997,
+            "fitted": 1.6293736649267638,
+            "log_residual": 0.00038432849089087284,
+            "multiplicative_residual": 0.0003844023545476194
+          },
+          {
+            "branch": "Harbour",
+            "product": "Butter Croissant",
+            "observed": 1.14,
+            "fitted": 1.1393861188093948,
+            "log_residual": 0.0005386373114949217,
+            "multiplicative_residual": 0.000538782402620841
+          },
+          {
+            "branch": "Uptown",
+            "product": "Butter Croissant",
+            "observed": 1.09,
+            "fitted": 1.0934323530412684,
+            "log_residual": -0.0031440001920029076,
+            "multiplicative_residual": -0.003139062998933295
+          },
+          {
+            "branch": "Garden",
+            "product": "Cappuccino",
+            "observed": 1.5999999999999999,
+            "fitted": 1.6016506375980017,
+            "log_residual": -0.0010311167151497713,
+            "multiplicative_residual": -0.0010305852969767493
+          },
+          {
+            "branch": "Harbour",
+            "product": "Cappuccino",
+            "observed": 1.12,
+            "fitted": 1.1199999993515326,
+            "log_residual": 5.789888846141622e-10,
+            "multiplicative_residual": 5.789888568585866e-10
+          },
+          {
+            "branch": "Uptown",
+            "product": "Cappuccino",
+            "observed": 1.08,
+            "fitted": 1.0748281153160453,
+            "log_residual": 0.0048002850699677135,
+            "multiplicative_residual": 0.0048118248957733645
+          },
+          {
+            "branch": "Garden",
+            "product": "Caramel Latte",
+            "observed": 2.67,
+            "fitted": 2.6741845474204884,
+            "log_residual": -0.001566019376219363,
+            "multiplicative_residual": -0.0015647938077141266
+          },
+          {
+            "branch": "Harbour",
+            "product": "Caramel Latte",
+            "observed": 1.8699999999999999,
+            "fitted": 1.8699999994184513,
+            "log_residual": 3.109884572083388e-10,
+            "multiplicative_residual": 3.1098856823064125e-10
+          },
+          {
+            "branch": "Uptown",
+            "product": "Caramel Latte",
+            "observed": 1.8,
+            "fitted": 1.7945790858747017,
+            "log_residual": 0.0030161630084660773,
+            "multiplicative_residual": 0.0030207162046893554
+          },
+          {
+            "branch": "Garden",
+            "product": "Chai Latte",
+            "observed": 2.12,
+            "fitted": 2.1172138193804675,
+            "log_residual": 0.001315100507009892,
+            "multiplicative_residual": 0.0013159656308816547
+          },
+          {
+            "branch": "Harbour",
+            "product": "Chai Latte",
+            "observed": 1.4800000000000002,
+            "fitted": 1.4805222941061553,
+            "log_residual": -0.00035283916801670534,
+            "multiplicative_residual": -0.000352776927597942
+          },
+          {
+            "branch": "Uptown",
+            "product": "Chai Latte",
+            "observed": 1.42,
+            "fitted": 1.4208098106954063,
+            "log_residual": -0.0005701266690174012,
+            "multiplicative_residual": -0.0005699641776897302
+          },
+          {
+            "branch": "Garden",
+            "product": "Cheesecake Slice",
+            "observed": 4.4,
+            "fitted": 4.404539251343145,
+            "log_residual": -0.0010311162494118786,
+            "multiplicative_residual": -0.001030584831718806
+          },
+          {
+            "branch": "Harbour",
+            "product": "Cheesecake Slice",
+            "observed": 3.08,
+            "fitted": 3.0799999967822425,
+            "log_residual": 1.04472652751042e-09,
+            "multiplicative_residual": 1.04472652751042e-09
+          },
+          {
+            "branch": "Uptown",
+            "product": "Cheesecake Slice",
+            "observed": 2.96,
+            "fitted": 2.955777315742507,
+            "log_residual": 0.0014276010570661857,
+            "multiplicative_residual": 0.0014286205645475114
+          },
+          {
+            "branch": "Garden",
+            "product": "Chicken Pesto Sandwich",
+            "observed": 7.39,
+            "fitted": 7.391485565074544,
+            "log_residual": -0.0002010034881818612,
+            "multiplicative_residual": -0.00020098328833417778
+          },
+          {
+            "branch": "Harbour",
+            "product": "Chicken Pesto Sandwich",
+            "observed": 5.17,
+            "fitted": 5.168707603117232,
+            "log_residual": 0.0002500113049159758,
+            "multiplicative_residual": 0.0002500425603468859
+          },
+          {
+            "branch": "Uptown",
+            "product": "Chicken Pesto Sandwich",
+            "observed": 4.959999999999999,
+            "fitted": 4.960243084727467,
+            "log_residual": -4.900781673211618e-05,
+            "multiplicative_residual": -4.900661586870747e-05
+          },
+          {
+            "branch": "Garden",
+            "product": "Chicken Salad Bowl",
+            "observed": 8.08,
+            "fitted": 8.07878180740905,
+            "log_residual": 0.00015077777616889776,
+            "multiplicative_residual": 0.0001507891437091402
+          },
+          {
+            "branch": "Harbour",
+            "product": "Chicken Salad Bowl",
+            "observed": 5.65,
+            "fitted": 5.649319150291703,
+            "log_residual": 0.0001205116343854229,
+            "multiplicative_residual": 0.00012051889620412481
+          },
+          {
+            "branch": "Uptown",
+            "product": "Chicken Salad Bowl",
+            "observed": 5.42,
+            "fitted": 5.42147058807368,
+            "log_residual": -0.00027128941055587497,
+            "multiplicative_residual": -0.00027125261491123265
+          },
+          {
+            "branch": "Garden",
+            "product": "Chocolate Cookie",
+            "observed": 1.3,
+            "fitted": 1.3000000012731103,
+            "log_residual": -9.793156285908822e-10,
+            "multiplicative_residual": -9.793156285908822e-10
+          },
+          {
+            "branch": "Harbour",
+            "product": "Chocolate Cookie",
+            "observed": 0.9100000000000001,
+            "fitted": 0.9090621677436733,
+            "log_residual": 0.0010311163148228886,
+            "multiplicative_residual": 0.001031648098011262
+          },
+          {
+            "branch": "Uptown",
+            "product": "Chocolate Cookie",
+            "observed": 0.87,
+            "fitted": 0.8723978366310469,
+            "log_residual": -0.002752342885589787,
+            "multiplicative_residual": -0.002748558662532541
+          },
+          {
+            "branch": "Garden",
+            "product": "Chocolate Croissant",
+            "observed": 2.26,
+            "fitted": 2.2607787730542985,
+            "log_residual": -0.00034453048958915655,
+            "multiplicative_residual": -0.00034447114577551563
+          },
+          {
+            "branch": "Harbour",
+            "product": "Chocolate Croissant",
+            "observed": 1.58,
+            "fitted": 1.580914192468419,
+            "log_residual": -0.0005784355020372889,
+            "multiplicative_residual": -0.0005782682404738004
+          },
+          {
+            "branch": "Uptown",
+            "product": "Chocolate Croissant",
+            "observed": 1.5200000000000002,
+            "fitted": 1.5171526990634308,
+            "log_residual": 0.0018749809791261396,
+            "multiplicative_residual": 0.0018767398550767478
+          },
+          {
+            "branch": "Garden",
+            "product": "Cinnamon Roll",
+            "observed": 3.2,
+            "fitted": 3.2023711602239957,
+            "log_residual": -0.0007407131742500628,
+            "multiplicative_residual": -0.0007404389139670231
+          },
+          {
+            "branch": "Harbour",
+            "product": "Cinnamon Roll",
+            "observed": 2.24,
+            "fitted": 2.239349589217007,
+            "log_residual": 0.00029040411988823234,
+            "multiplicative_residual": 0.0002904462912467487
+          },
+          {
+            "branch": "Uptown",
+            "product": "Cinnamon Roll",
+            "observed": 2.15,
+            "fitted": 2.1490320534870113,
+            "log_residual": 0.00045030905436493907,
+            "multiplicative_residual": 0.00045041045870775065
+          },
+          {
+            "branch": "Garden",
+            "product": "Classic Matcha",
+            "observed": 3.25,
+            "fitted": 3.2482398074637864,
+            "log_residual": 0.000541744420463397,
+            "multiplicative_residual": 0.0005418911904746526
+          },
+          {
+            "branch": "Harbour",
+            "product": "Classic Matcha",
+            "observed": 2.27,
+            "fitted": 2.2714245521788827,
+            "log_residual": -0.0006273591950005653,
+            "multiplicative_residual": -0.0006271624463669578
+          },
+          {
+            "branch": "Uptown",
+            "product": "Classic Matcha",
+            "observed": 2.18,
+            "fitted": 2.1798133677808558,
+            "log_residual": 8.561477453949973e-05,
+            "multiplicative_residual": 8.561843958898585e-05
+          },
+          {
+            "branch": "Garden",
+            "product": "Coffee Frappe",
+            "observed": 3.6199999999999997,
+            "fitted": 3.619689368511616,
+            "log_residual": 8.581348529279609e-05,
+            "multiplicative_residual": 8.581716737521283e-05
+          },
+          {
+            "branch": "Harbour",
+            "product": "Coffee Frappe",
+            "observed": 2.53,
+            "fitted": 2.531171277442644,
+            "log_residual": -0.00046284838008725515,
+            "multiplicative_residual": -0.0004627412822997279
+          },
+          {
+            "branch": "Uptown",
+            "product": "Coffee Frappe",
+            "observed": 2.43,
+            "fitted": 2.4290839779026476,
+            "log_residual": 0.00037703489479490315,
+            "multiplicative_residual": 0.0003771059813846289
+          },
+          {
+            "branch": "Garden",
+            "product": "Cold Brew",
+            "observed": 1.66,
+            "fitted": 1.6586605042056632,
+            "log_residual": 0.0008072509166754394,
+            "multiplicative_residual": 0.0008075768313891007
+          },
+          {
+            "branch": "Harbour",
+            "product": "Cold Brew",
+            "observed": 1.16,
+            "fitted": 1.1598657784825979,
+            "log_residual": 0.00011571489936759716,
+            "multiplicative_residual": 0.00011572159459483089
+          },
+          {
+            "branch": "Uptown",
+            "product": "Cold Brew",
+            "observed": 1.11,
+            "fitted": 1.1130860262748468,
+            "log_residual": -0.002776346232809007,
+            "multiplicative_residual": -0.0027724957478575396
+          },
+          {
+            "branch": "Garden",
+            "product": "Egg Sandwich",
+            "observed": 4.45,
+            "fitted": 4.450773605206742,
+            "log_residual": -0.0001738287575898667,
+            "multiplicative_residual": -0.00017381365024671247
+          },
+          {
+            "branch": "Harbour",
+            "product": "Egg Sandwich",
+            "observed": 3.11,
+            "fitted": 3.112330690556327,
+            "log_residual": -0.0007491375117250065,
+            "multiplicative_residual": -0.0007488569782763133
+          },
+          {
+            "branch": "Uptown",
+            "product": "Egg Sandwich",
+            "observed": 2.99,
+            "fitted": 2.9868040467033823,
+            "log_residual": 0.0010694523615808471,
+            "multiplicative_residual": 0.0010700244296726336
+          },
+          {
+            "branch": "Garden",
+            "product": "English Breakfast Tea",
+            "observed": 0.82,
+            "fitted": 0.8194118454956132,
+            "log_residual": 0.0007175189458782649,
+            "multiplicative_residual": 0.0007177764241752538
+          },
+          {
+            "branch": "Harbour",
+            "product": "English Breakfast Tea",
+            "observed": 0.57,
+            "fitted": 0.5729971598550749,
+            "log_residual": -0.0052443992509538795,
+            "multiplicative_residual": -0.005230671397800757
+          },
+          {
+            "branch": "Uptown",
+            "product": "English Breakfast Tea",
+            "observed": 0.55,
+            "fitted": 0.5498870158616613,
+            "log_residual": 0.00020544680882084165,
+            "multiplicative_residual": 0.0002054679144618543
+          },
+          {
+            "branch": "Garden",
+            "product": "Espresso",
+            "observed": 0.9300000000000002,
+            "fitted": 0.9293356929548159,
+            "log_residual": 0.0007145638907140456,
+            "multiplicative_residual": 0.0007148192523114272
+          },
+          {
+            "branch": "Harbour",
+            "product": "Espresso",
+            "observed": 0.65,
+            "fitted": 0.6498645529013264,
+            "log_residual": 0.0002084018659659348,
+            "multiplicative_residual": 0.00020842358314343556
+          },
+          {
+            "branch": "Uptown",
+            "product": "Espresso",
+            "observed": 0.62,
+            "fitted": 0.6236541901875504,
+            "log_residual": -0.005876554322725935,
+            "multiplicative_residual": -0.005859321151119867
+          },
+          {
+            "branch": "Garden",
+            "product": "Flat White",
+            "observed": 1.77,
+            "fitted": 1.772446659884505,
+            "log_residual": -0.00138133923158279,
+            "multiplicative_residual": -0.001380385621683189
+          },
+          {
+            "branch": "Harbour",
+            "product": "Flat White",
+            "observed": 1.24,
+            "fitted": 1.2394340009743887,
+            "log_residual": 0.00045655503249569795,
+            "multiplicative_residual": 0.00045665926960736236
+          },
+          {
+            "branch": "Uptown",
+            "product": "Flat White",
+            "observed": 1.19,
+            "fitted": 1.189445100086825,
+            "log_residual": 0.0004664112008419541,
+            "multiplicative_residual": 0.00046651998745850243
+          },
+          {
+            "branch": "Garden",
+            "product": "Fresh Orange Juice",
+            "observed": 3.03,
+            "fitted": 3.0322468145253803,
+            "log_residual": -0.0007412481533655146,
+            "multiplicative_residual": -0.0007409734968201187
+          },
+          {
+            "branch": "Harbour",
+            "product": "Fresh Orange Juice",
+            "observed": 2.12,
+            "fitted": 2.120385276651389,
+            "log_residual": -0.00018171775785125188,
+            "multiplicative_residual": -0.00018170124817951105
+          },
+          {
+            "branch": "Uptown",
+            "product": "Fresh Orange Juice",
+            "observed": 2.04,
+            "fitted": 2.0348658142559355,
+            "log_residual": 0.0025199300762064336,
+            "multiplicative_residual": 0.0025231077686278525
+          },
+          {
+            "branch": "Garden",
+            "product": "Frozen Yoghurt Cup",
+            "observed": 3.85,
+            "fitted": 3.8471319808621605,
+            "log_residual": 0.0007452176415059242,
+            "multiplicative_residual": 0.0007454953851613322
+          },
+          {
+            "branch": "Harbour",
+            "product": "Frozen Yoghurt Cup",
+            "observed": 2.69,
+            "fitted": 2.690217026687403,
+            "log_residual": -8.067581156834258e-05,
+            "multiplicative_residual": -8.067255736254886e-05
+          },
+          {
+            "branch": "Uptown",
+            "product": "Frozen Yoghurt Cup",
+            "observed": 2.58,
+            "fitted": 2.5817150877318884,
+            "log_residual": -0.0006645418299363604,
+            "multiplicative_residual": -0.0006643210709184055
+          },
+          {
+            "branch": "Garden",
+            "product": "Granola Yoghurt",
+            "observed": 4.75,
+            "fitted": 4.750437835213781,
+            "log_residual": -9.21715865489503e-05,
+            "multiplicative_residual": -9.216733887873474e-05
+          },
+          {
+            "branch": "Harbour",
+            "product": "Granola Yoghurt",
+            "observed": 3.32,
+            "fitted": 3.3218794707552948,
+            "log_residual": -0.0005659454718309753,
+            "multiplicative_residual": -0.000565785354899706
+          },
+          {
+            "branch": "Uptown",
+            "product": "Granola Yoghurt",
+            "observed": 3.19,
+            "fitted": 3.187901297255558,
+            "log_residual": 0.0006581170583790374,
+            "multiplicative_residual": 0.0006583336649252924
+          },
+          {
+            "branch": "Garden",
+            "product": "Halloumi Wrap",
+            "observed": 5.92,
+            "fitted": 5.918755028380916,
+            "log_residual": 0.0002103213759705458,
+            "multiplicative_residual": 0.00021034349506177108
+          },
+          {
+            "branch": "Harbour",
+            "product": "Halloumi Wrap",
+            "observed": 4.14,
+            "fitted": 4.138858670134229,
+            "log_residual": 0.00027572155014987665,
+            "multiplicative_residual": 0.00027575956483016917
+          },
+          {
+            "branch": "Uptown",
+            "product": "Halloumi Wrap",
+            "observed": 3.97,
+            "fitted": 3.9719300594245666,
+            "log_residual": -0.0004860429261202004,
+            "multiplicative_residual": -0.00048592482639175927
+          },
+          {
+            "branch": "Garden",
+            "product": "Iced Americano",
+            "observed": 1.23,
+            "fitted": 1.230487156715436,
+            "log_residual": -0.0003959839582760305,
+            "multiplicative_residual": -0.0003959055669759959
+          },
+          {
+            "branch": "Harbour",
+            "product": "Iced Americano",
+            "observed": 0.86,
+            "fitted": 0.8604533238223319,
+            "log_residual": -0.000526981844315072,
+            "multiplicative_residual": -0.0005268430137710389
+          },
+          {
+            "branch": "Uptown",
+            "product": "Iced Americano",
+            "observed": 0.8300000000000001,
+            "fitted": 0.8257494865150494,
+            "log_residual": 0.005134258360629029,
+            "multiplicative_residual": 0.00514746125109844
+          },
+          {
+            "branch": "Garden",
+            "product": "Iced Latte",
+            "observed": 2.37,
+            "fitted": 2.370759727074983,
+            "log_residual": -0.0003205085788877682,
+            "multiplicative_residual": -0.0003204572215002033
+          },
+          {
+            "branch": "Harbour",
+            "product": "Iced Latte",
+            "observed": 1.6600000000000001,
+            "fitted": 1.6578215189104566,
+            "log_residual": 0.0013131998753951324,
+            "multiplicative_residual": 0.0013140624999097295
+          },
+          {
+            "branch": "Uptown",
+            "product": "Iced Latte",
+            "observed": 1.59,
+            "fitted": 1.590958196189816,
+            "log_residual": -0.0006024575990628,
+            "multiplicative_residual": -0.000602276157922188
+          },
+          {
+            "branch": "Garden",
+            "product": "Iced Matcha",
+            "observed": 3.59,
+            "fitted": 3.5902215658092205,
+            "log_residual": -6.171559115841774e-05,
+            "multiplicative_residual": -6.171368679053213e-05
+          },
+          {
+            "branch": "Harbour",
+            "product": "Iced Matcha",
+            "observed": 2.51,
+            "fitted": 2.5105650739218373,
+            "log_residual": -0.00022510371478257074,
+            "multiplicative_residual": -0.00022507838084229181
+          },
+          {
+            "branch": "Uptown",
+            "product": "Iced Matcha",
+            "observed": 2.41,
+            "fitted": 2.4093088645929055,
+            "log_residual": 0.00028681930594243177,
+            "multiplicative_residual": 0.000286860442532344
+          },
+          {
+            "branch": "Garden",
+            "product": "Iced Mocha",
+            "observed": 3.19,
+            "fitted": 3.1893042646163168,
+            "log_residual": 0.0002181226533748415,
+            "multiplicative_residual": 0.00021814644385043103
+          },
+          {
+            "branch": "Harbour",
+            "product": "Iced Mocha",
+            "observed": 2.23,
+            "fitted": 2.230212188882265,
+            "log_residual": -9.514743848015872e-05,
+            "multiplicative_residual": -9.514291210621639e-05
+          },
+          {
+            "branch": "Uptown",
+            "product": "Iced Mocha",
+            "observed": 2.14,
+            "fitted": 2.1402631831420424,
+            "log_residual": -0.00012297521489368357,
+            "multiplicative_residual": -0.0001229676537518598
+          },
+          {
+            "branch": "Garden",
+            "product": "Lemonade",
+            "observed": 1.67,
+            "fitted": 1.670252201414799,
+            "log_residual": -0.00015100740906415222,
+            "multiplicative_residual": -0.00015099600801926627
+          },
+          {
+            "branch": "Harbour",
+            "product": "Lemonade",
+            "observed": 1.17,
+            "fitted": 1.1679716041614023,
+            "log_residual": 0.001735176204807537,
+            "multiplicative_residual": 0.0017366824941382752
+          },
+          {
+            "branch": "Uptown",
+            "product": "Lemonade",
+            "observed": 1.12,
+            "fitted": 1.1208649274734843,
+            "log_residual": -0.0007719586360001307,
+            "multiplicative_residual": -0.0007716607525883878
+          },
+          {
+            "branch": "Garden",
+            "product": "Mint Tea",
+            "observed": 0.9,
+            "fitted": 0.9000000005552684,
+            "log_residual": -6.169648680831585e-10,
+            "multiplicative_residual": -6.169649235943098e-10
+          },
+          {
+            "branch": "Harbour",
+            "product": "Mint Tea",
+            "observed": 0.63,
+            "fitted": 0.6293507312868051,
+            "log_residual": 0.001031116677173538,
+            "multiplicative_residual": 0.001031648460735779
+          },
+          {
+            "branch": "Uptown",
+            "product": "Mint Tea",
+            "observed": 0.6,
+            "fitted": 0.6039677328334151,
+            "log_residual": -0.006591118830404863,
+            "multiplicative_residual": -0.0065694450509817814
+          },
+          {
+            "branch": "Garden",
+            "product": "Peach Iced Tea",
+            "observed": 1.64,
+            "fitted": 1.6403369675189985,
+            "log_residual": -0.00020544689373097613,
+            "multiplicative_residual": -0.00020542579096305413
+          },
+          {
+            "branch": "Harbour",
+            "product": "Peach Iced Tea",
+            "observed": 1.15,
+            "fitted": 1.1470525215865999,
+            "log_residual": 0.0025663148781913947,
+            "multiplicative_residual": 0.0025696106829729004
+          },
+          {
+            "branch": "Uptown",
+            "product": "Peach Iced Tea",
+            "observed": 1.1,
+            "fitted": 1.1007895541600612,
+            "log_residual": -0.0007175190307884827,
+            "multiplicative_residual": -0.0007172616755648509
+          },
+          {
+            "branch": "Garden",
+            "product": "Pistachio Cookie",
+            "observed": 1.69,
+            "fitted": 1.6874533506546179,
+            "log_residual": 0.0015080296090610457,
+            "multiplicative_residual": 0.0015091672575091586
+          },
+          {
+            "branch": "Harbour",
+            "product": "Pistachio Cookie",
+            "observed": 1.18,
+            "fitted": 1.1799999995462627,
+            "log_residual": 3.8452305228808825e-10,
+            "multiplicative_residual": 3.8452308004366387e-10
+          },
+          {
+            "branch": "Uptown",
+            "product": "Pistachio Cookie",
+            "observed": 1.13,
+            "fitted": 1.1324081931424763,
+            "log_residual": -0.002128876706947405,
+            "multiplicative_residual": -0.00212661225612798
+          },
+          {
+            "branch": "Garden",
+            "product": "Quinoa Bowl",
+            "observed": 7.04,
+            "fitted": 7.036436411520729,
+            "log_residual": 0.0005063197035415357,
+            "multiplicative_residual": 0.0005064479049987636
+          },
+          {
+            "branch": "Harbour",
+            "product": "Quinoa Bowl",
+            "observed": 4.92,
+            "fitted": 4.920429331679459,
+            "log_residual": -8.725872932191514e-05,
+            "multiplicative_residual": -8.725492238970123e-05
+          },
+          {
+            "branch": "Uptown",
+            "product": "Quinoa Bowl",
+            "observed": 4.72,
+            "fitted": 4.721978382300777,
+            "log_residual": -0.0004190609742209528,
+            "multiplicative_residual": -0.0004189731804349339
+          },
+          {
+            "branch": "Garden",
+            "product": "Soup of the Day",
+            "observed": 3.9899999999999998,
+            "fitted": 3.9911386154054056,
+            "log_residual": -0.0002853265600304411,
+            "multiplicative_residual": -0.00028528585827869435
+          },
+          {
+            "branch": "Harbour",
+            "product": "Soup of the Day",
+            "observed": 2.79,
+            "fitted": 2.7909177830252108,
+            "log_residual": -0.0003289003956574721,
+            "multiplicative_residual": -0.00032884631385166063
+          },
+          {
+            "branch": "Uptown",
+            "product": "Soup of the Day",
+            "observed": 2.68,
+            "fitted": 2.678354377203436,
+            "log_residual": 0.0006142269556873581,
+            "multiplicative_residual": 0.0006144156316918448
+          },
+          {
+            "branch": "Garden",
+            "product": "Spanish Latte",
+            "observed": 2.83,
+            "fitted": 2.830922125236389,
+            "log_residual": -0.0003257862320464877,
+            "multiplicative_residual": -0.0003257331694744847
+          },
+          {
+            "branch": "Harbour",
+            "product": "Spanish Latte",
+            "observed": 1.98,
+            "fitted": 1.979603231815896,
+            "log_residual": 0.00020040805212184765,
+            "multiplicative_residual": 0.00020042813515708247
+          },
+          {
+            "branch": "Uptown",
+            "product": "Spanish Latte",
+            "observed": 1.9,
+            "fitted": 1.8997617963912192,
+            "log_residual": 0.00012537817992641642,
+            "multiplicative_residual": 0.00012538604009892929
+          },
+          {
+            "branch": "Garden",
+            "product": "Sparkling Water",
+            "observed": 1.9300000000000002,
+            "fitted": 1.931171495454095,
+            "log_residual": -0.0006068083178492056,
+            "multiplicative_residual": -0.0006066242469157102
+          },
+          {
+            "branch": "Harbour",
+            "product": "Sparkling Water",
+            "observed": 1.35,
+            "fitted": 1.3504268801715757,
+            "log_residual": -0.00031615755143449276,
+            "multiplicative_residual": -0.0003161075789023249
+          },
+          {
+            "branch": "Uptown",
+            "product": "Sparkling Water",
+            "observed": 1.3,
+            "fitted": 1.2959614101136878,
+            "log_residual": 0.0031114431275721666,
+            "multiplicative_residual": 0.0031162886910018894
+          },
+          {
+            "branch": "Garden",
+            "product": "Still Water",
+            "observed": 0.93,
+            "fitted": 0.9293356929548161,
+            "log_residual": 0.0007145638907137125,
+            "multiplicative_residual": 0.0007148192523112051
+          },
+          {
+            "branch": "Harbour",
+            "product": "Still Water",
+            "observed": 0.65,
+            "fitted": 0.6498645529013266,
+            "log_residual": 0.00020840186596571275,
+            "multiplicative_residual": 0.00020842358314321352
+          },
+          {
+            "branch": "Uptown",
+            "product": "Still Water",
+            "observed": 0.62,
+            "fitted": 0.6236541901875506,
+            "log_residual": -0.005876554322726157,
+            "multiplicative_residual": -0.005859321151120089
+          },
+          {
+            "branch": "Garden",
+            "product": "Strawberry Matcha",
+            "observed": 4.55,
+            "fitted": 4.547495721215971,
+            "log_residual": 0.0005505424622387345,
+            "multiplicative_residual": 0.0005506940385551218
+          },
+          {
+            "branch": "Harbour",
+            "product": "Strawberry Matcha",
+            "observed": 3.18,
+            "fitted": 3.1799663954501707,
+            "log_residual": 1.0567524336035916e-05,
+            "multiplicative_residual": 1.0567580172482494e-05
+          },
+          {
+            "branch": "Uptown",
+            "product": "Strawberry Matcha",
+            "observed": 3.05,
+            "fitted": 3.051711865686607,
+            "log_residual": -0.0005611099865754365,
+            "multiplicative_residual": -0.0005609525938065074
+          },
+          {
+            "branch": "Garden",
+            "product": "Tiramisu Cup",
+            "observed": 4.08,
+            "fitted": 4.079616407972379,
+            "log_residual": 9.402207376529859e-05,
+            "multiplicative_residual": 9.402649397904916e-05
+          },
+          {
+            "branch": "Harbour",
+            "product": "Tiramisu Cup",
+            "observed": 2.85,
+            "fitted": 2.8527884090477804,
+            "log_residual": -0.000977910828874995,
+            "multiplicative_residual": -0.0009774328299064772
+          },
+          {
+            "branch": "Uptown",
+            "product": "Tiramisu Cup",
+            "observed": 2.74,
+            "fitted": 2.7377296347032263,
+            "log_residual": 0.0008289439523982978,
+            "multiplicative_residual": 0.000829287621390673
+          },
+          {
+            "branch": "Garden",
+            "product": "Tuna Sandwich",
+            "observed": 5.33,
+            "fitted": 5.332929833324274,
+            "log_residual": -0.0005495362801410941,
+            "multiplicative_residual": -0.0005493853127347403
+          },
+          {
+            "branch": "Harbour",
+            "product": "Tuna Sandwich",
+            "observed": 3.73,
+            "fitted": 3.7292036538146016,
+            "log_residual": 0.00021352043070077542,
+            "multiplicative_residual": 0.00021354322781053092
+          },
+          {
+            "branch": "Uptown",
+            "product": "Tuna Sandwich",
+            "observed": 3.58,
+            "fitted": 3.578797265339278,
+            "log_residual": 0.0003360158494394305,
+            "multiplicative_residual": 0.00033607230908860863
+          },
+          {
+            "branch": "Garden",
+            "product": "Turkey & Cheese Sandwich",
+            "observed": 6.75,
+            "fitted": 6.750058006264272,
+            "log_residual": -8.59348370862989e-06,
+            "multiplicative_residual": -8.593446784721515e-06
+          },
+          {
+            "branch": "Harbour",
+            "product": "Turkey & Cheese Sandwich",
+            "observed": 4.72,
+            "fitted": 4.720171044277567,
+            "log_residual": -3.6237537812455756e-05,
+            "multiplicative_residual": -3.623688124076985e-05
+          },
+          {
+            "branch": "Uptown",
+            "product": "Turkey & Cheese Sandwich",
+            "observed": 4.53,
+            "fitted": 4.5297969200246895,
+            "log_residual": 4.483102152019747e-05,
+            "multiplicative_residual": 4.483202644545159e-05
+          },
+          {
+            "branch": "Garden",
+            "product": "Vanilla Latte",
+            "observed": 2.46,
+            "fitted": 2.4594727390940276,
+            "log_residual": 0.00021435667436520145,
+            "multiplicative_residual": 0.00021437965039883267
+          },
+          {
+            "branch": "Harbour",
+            "product": "Vanilla Latte",
+            "observed": 1.72,
+            "fitted": 1.719856628859784,
+            "log_residual": 8.335878832632648e-05,
+            "multiplicative_residual": 8.336226276672853e-05
+          },
+          {
+            "branch": "Uptown",
+            "product": "Vanilla Latte",
+            "observed": 1.65,
+            "fitted": 1.6504913036441597,
+            "log_residual": -0.00029771546269263816,
+            "multiplicative_residual": -0.000297671149841916
+          }
+        ]
+      },
+      "ols": {
+        "target": "unit_cost",
+        "method": "ols",
+        "reference_branch": "Garden",
+        "reference_product": "Almond Croissant",
+        "branch_effects": {
+          "Garden": 0.0,
+          "Harbour": -0.3577259002322042,
+          "Uptown": -0.3989585764573316
+        },
+        "branch_multipliers": {
+          "Garden": 1.0,
+          "Harbour": 0.6992647170373755,
+          "Uptown": 0.6710184967410813
+        },
+        "product_effects": {
+          "Almond Croissant": 0.0,
+          "Americano": -0.9752432547433526,
+          "Avocado Toast": 0.7839340792363162,
+          "Banana Bread": -0.19386844390178576,
+          "Blueberry Muffin": -0.3762145096885985,
+          "Brownie": 0.2173915004656707,
+          "Butter Croissant": -0.5166449482142021,
+          "Cappuccino": -0.5318091541399551,
+          "Caramel Latte": -0.019972416642654714,
+          "Chai Latte": -0.2538685900118743,
+          "Cheesecake Slice": 0.47866752937897755,
+          "Chicken Pesto Sandwich": 0.9962284487028513,
+          "Chicken Salad Bowl": 1.0851408050113904,
+          "Chocolate Cookie": -0.7423097668153313,
+          "Chocolate Croissant": -0.18807360764249326,
+          "Cinnamon Roll": 0.15979123323448838,
+          "Classic Matcha": 0.17401296217573922,
+          "Coffee Frappe": 0.2822879226069432,
+          "Cold Brew": -0.49870773176592254,
+          "Egg Sandwich": 0.4890264638877166,
+          "English Breakfast Tea": -1.204709225247245,
+          "Espresso": -1.0790367426596768,
+          "Flat White": -0.4318921949275382,
+          "Fresh Orange Juice": 0.10573589931752882,
+          "Frozen Yoghurt Cup": 0.343227640912744,
+          "Granola Yoghurt": 0.5541364998876547,
+          "Halloumi Wrap": 0.7740258377744997,
+          "Iced Americano": -0.7952863722168284,
+          "Iced Latte": -0.14075974812036804,
+          "Iced Matcha": 0.2741136283459022,
+          "Iced Mocha": 0.15570250439793556,
+          "Lemonade": -0.49085491918780155,
+          "Mint Tea": -1.1113141390430366,
+          "Peach Iced Tea": -0.5086508180310486,
+          "Pistachio Cookie": -0.4810867393239767,
+          "Quinoa Bowl": 0.9470015607209655,
+          "Soup of the Day": 0.3799762677163592,
+          "Spanish Latte": 0.03650220814174977,
+          "Sparkling Water": -0.3452439860913714,
+          "Still Water": -1.079036742659675,
+          "Strawberry Matcha": 0.5104764007551759,
+          "Tiramisu Cup": 0.4018843616626249,
+          "Tuna Sandwich": 0.6698004847124498,
+          "Turkey & Cheese Sandwich": 0.9054508086227031,
+          "Vanilla Latte": -0.10415329647553737
+        },
+        "intercept": 1.0041350982660908,
+        "rmse": 0.0013802169408916377,
+        "mae": 0.0009907614261591958,
+        "r_squared": 0.9999952380897783,
+        "iterations": 1,
+        "observations": 135,
+        "residuals": [
+          {
+            "branch": "Garden",
+            "product": "Almond Croissant",
+            "observed": 2.73,
+            "fitted": 2.729545463002717,
+            "log_residual": 0.00016651093077757473,
+            "multiplicative_residual": 0.00016652479449219548
+          },
+          {
+            "branch": "Harbour",
+            "product": "Almond Croissant",
+            "observed": 1.91,
+            "fitted": 1.9086748358272467,
+            "log_residual": 0.0006940440246517854,
+            "multiplicative_residual": 0.000694284928935307
+          },
+          {
+            "branch": "Uptown",
+            "product": "Almond Croissant",
+            "observed": 1.83,
+            "fitted": 1.8315754933705217,
+            "log_residual": -0.0008605549554296932,
+            "multiplicative_residual": -0.0008601847842059085
+          },
+          {
+            "branch": "Garden",
+            "product": "Americano",
+            "observed": 1.03,
+            "fitted": 1.0293132615581824,
+            "log_residual": 0.0006669587188062147,
+            "multiplicative_residual": 0.0006671811852283493
+          },
+          {
+            "branch": "Harbour",
+            "product": "Americano",
+            "observed": 0.72,
+            "fitted": 0.7197624465863005,
+            "log_residual": 0.0003299897374297589,
+            "multiplicative_residual": 0.0003300441900326856
+          },
+          {
+            "branch": "Uptown",
+            "product": "Americano",
+            "observed": 0.69,
+            "fitted": 0.6906882374464309,
+            "log_residual": -0.000996948456238711,
+            "multiplicative_residual": -0.0009964516682309243
+          },
+          {
+            "branch": "Garden",
+            "product": "Avocado Toast",
+            "observed": 5.980000000000001,
+            "fitted": 5.977899054196177,
+            "log_residual": 0.00035139046013354935,
+            "multiplicative_residual": 0.00035145220499321894
+          },
+          {
+            "branch": "Harbour",
+            "product": "Avocado Toast",
+            "observed": 4.18,
+            "fitted": 4.180133890610485,
+            "log_residual": -3.2030733537968814e-05,
+            "multiplicative_residual": -3.203022055953131e-05
+          },
+          {
+            "branch": "Uptown",
+            "product": "Avocado Toast",
+            "observed": 4.01,
+            "fitted": 4.011280837016651,
+            "log_residual": -0.000319359726597801,
+            "multiplicative_residual": -0.00031930873670849014
+          },
+          {
+            "branch": "Garden",
+            "product": "Banana Bread",
+            "observed": 2.25,
+            "fitted": 2.248507481077022,
+            "log_residual": 0.000663561852023653,
+            "multiplicative_residual": 0.0006637820578934139
+          },
+          {
+            "branch": "Harbour",
+            "product": "Banana Bread",
+            "observed": 1.57,
+            "fitted": 1.5723019475117457,
+            "log_residual": -0.0014651347718842023,
+            "multiplicative_residual": -0.001464061985923637
+          },
+          {
+            "branch": "Uptown",
+            "product": "Banana Bread",
+            "observed": 1.51,
+            "fitted": 1.5087901098633785,
+            "log_residual": 0.0008015729198594945,
+            "multiplicative_residual": 0.0008018942652872063
+          },
+          {
+            "branch": "Garden",
+            "product": "Blueberry Muffin",
+            "observed": 1.87,
+            "fitted": 1.8737103109154583,
+            "log_residual": -0.001982157710996968,
+            "multiplicative_residual": -0.0019801945337245552
+          },
+          {
+            "branch": "Harbour",
+            "product": "Blueberry Muffin",
+            "observed": 1.31,
+            "fitted": 1.3102195103723109,
+            "log_residual": -0.00016755113222793883,
+            "multiplicative_residual": -0.0001675370963208911
+          },
+          {
+            "branch": "Uptown",
+            "product": "Blueberry Muffin",
+            "observed": 1.26,
+            "fitted": 1.2572942761587549,
+            "log_residual": 0.002149708843225878,
+            "multiplicative_residual": 0.002152021123894343
+          },
+          {
+            "branch": "Garden",
+            "product": "Brownie",
+            "observed": 3.39,
+            "fitted": 3.3923625590556963,
+            "log_residual": -0.000696677339402596,
+            "multiplicative_residual": -0.0006964347160915985
+          },
+          {
+            "branch": "Harbour",
+            "product": "Brownie",
+            "observed": 2.37,
+            "fitted": 2.372159444946268,
+            "log_residual": -0.0009107433525175068,
+            "multiplicative_residual": -0.0009103287516649683
+          },
+          {
+            "branch": "Uptown",
+            "product": "Brownie",
+            "observed": 2.28,
+            "fitted": 2.2763380247782807,
+            "log_residual": 0.0016074206919194367,
+            "multiplicative_residual": 0.001608713285047303
+          },
+          {
+            "branch": "Garden",
+            "product": "Butter Croissant",
+            "observed": 1.6299999999999997,
+            "fitted": 1.6282244881398014,
+            "log_residual": 0.0010898647667820782,
+            "multiplicative_residual": 0.001090458885203649
+          },
+          {
+            "branch": "Harbour",
+            "product": "Butter Croissant",
+            "observed": 1.14,
+            "fitted": 1.1385599359724037,
+            "log_residual": 0.001264012586719515,
+            "multiplicative_residual": 0.0012648117873268472
+          },
+          {
+            "branch": "Uptown",
+            "product": "Butter Croissant",
+            "observed": 1.09,
+            "fitted": 1.092568748388586,
+            "log_residual": -0.0023538773535046326,
+            "multiplicative_residual": -0.0023511091566316145
+          },
+          {
+            "branch": "Garden",
+            "product": "Cappuccino",
+            "observed": 1.5999999999999999,
+            "fitted": 1.6037200216675922,
+            "log_residual": -0.0023223148804002447,
+            "multiplicative_residual": -0.0023196203934177095
+          },
+          {
+            "branch": "Harbour",
+            "product": "Cappuccino",
+            "observed": 1.12,
+            "fitted": 1.1214248271585627,
+            "log_residual": -0.0012713585869282562,
+            "multiplicative_residual": -0.0012705507529851001
+          },
+          {
+            "branch": "Uptown",
+            "product": "Cappuccino",
+            "observed": 1.08,
+            "fitted": 1.0761257981329622,
+            "log_residual": 0.0035936734673242543,
+            "multiplicative_residual": 0.003600138453849544
+          },
+          {
+            "branch": "Garden",
+            "product": "Caramel Latte",
+            "observed": 2.67,
+            "fitted": 2.675570641769017,
+            "log_residual": -0.002084209211277943,
+            "multiplicative_residual": -0.002082038755416349
+          },
+          {
+            "branch": "Harbour",
+            "product": "Caramel Latte",
+            "observed": 1.8699999999999999,
+            "fitted": 1.870932147730121,
+            "log_residual": -0.0004983505247367903,
+            "multiplicative_residual": -0.0004982263687393074
+          },
+          {
+            "branch": "Uptown",
+            "product": "Caramel Latte",
+            "observed": 1.8,
+            "fitted": 1.795357389964416,
+            "log_residual": 0.0025825597360145114,
+            "multiplicative_residual": 0.0025858974160437587
+          },
+          {
+            "branch": "Garden",
+            "product": "Chai Latte",
+            "observed": 2.12,
+            "fitted": 2.117564289779667,
+            "log_residual": 0.0011495804297045886,
+            "multiplicative_residual": 0.0011502414505613068
+          },
+          {
+            "branch": "Harbour",
+            "product": "Chai Latte",
+            "observed": 1.4800000000000002,
+            "fitted": 1.48073799390123,
+            "log_residual": -0.0004985202459885651,
+            "multiplicative_residual": -0.0004983960054171233
+          },
+          {
+            "branch": "Uptown",
+            "product": "Chai Latte",
+            "observed": 1.42,
+            "fitted": 1.4209248064805475,
+            "log_residual": -0.0006510601837156349,
+            "multiplicative_residual": -0.0006508482900219326
+          },
+          {
+            "branch": "Garden",
+            "product": "Cheesecake Slice",
+            "observed": 4.4,
+            "fitted": 4.405274740739218,
+            "log_residual": -0.0011980867208527535,
+            "multiplicative_residual": -0.001197369301496165
+          },
+          {
+            "branch": "Harbour",
+            "product": "Cheesecake Slice",
+            "observed": 3.08,
+            "fitted": 3.0804531950549072,
+            "log_residual": -0.00014713042738101478,
+            "multiplicative_residual": -0.00014711960423052783
+          },
+          {
+            "branch": "Uptown",
+            "product": "Cheesecake Slice",
+            "observed": 2.96,
+            "fitted": 2.956020834262287,
+            "log_residual": 0.001345217148232214,
+            "multiplicative_residual": 0.0013461223586761495
+          },
+          {
+            "branch": "Garden",
+            "product": "Chicken Pesto Sandwich",
+            "observed": 7.39,
+            "fitted": 7.3917428562304055,
+            "log_residual": -0.00023581200883171505,
+            "multiplicative_residual": -0.00023578420736536376
+          },
+          {
+            "branch": "Harbour",
+            "product": "Chicken Pesto Sandwich",
+            "observed": 5.17,
+            "fitted": 5.1687849767749965,
+            "log_residual": 0.00023504178359967653,
+            "multiplicative_residual": 0.00023506940808393217
+          },
+          {
+            "branch": "Uptown",
+            "product": "Chicken Pesto Sandwich",
+            "observed": 4.959999999999999,
+            "fitted": 4.959996179684353,
+            "log_residual": 7.7022522515513e-07,
+            "multiplicative_residual": 7.702255218067222e-07
+          },
+          {
+            "branch": "Garden",
+            "product": "Chicken Salad Bowl",
+            "observed": 8.08,
+            "fitted": 8.079063022746702,
+            "log_residual": 0.00011596925552304072,
+            "multiplicative_residual": 0.00011597598021717559
+          },
+          {
+            "branch": "Harbour",
+            "product": "Chicken Salad Bowl",
+            "observed": 5.65,
+            "fitted": 5.649403718528096,
+            "log_residual": 0.0001055421130728984,
+            "multiplicative_residual": 0.00010554768283776994
+          },
+          {
+            "branch": "Uptown",
+            "product": "Chicken Salad Bowl",
+            "observed": 5.42,
+            "fitted": 5.421200724599949,
+            "log_residual": -0.0002215113685948289,
+            "multiplicative_residual": -0.0002214868367630407
+          },
+          {
+            "branch": "Garden",
+            "product": "Chocolate Cookie",
+            "observed": 1.3,
+            "fitted": 1.299299575836056,
+            "log_residual": 0.0005389330167315798,
+            "multiplicative_residual": 0.000539078267222104
+          },
+          {
+            "branch": "Harbour",
+            "product": "Chocolate Cookie",
+            "observed": 0.9100000000000001,
+            "fitted": 0.9085543502437816,
+            "log_residual": 0.0015898893102035405,
+            "multiplicative_residual": 0.001591153854285876
+          },
+          {
+            "branch": "Uptown",
+            "product": "Chocolate Cookie",
+            "observed": 0.87,
+            "fitted": 0.8718540481938347,
+            "log_residual": -0.0021288223269355644,
+            "multiplicative_residual": -0.00212655799175987
+          },
+          {
+            "branch": "Garden",
+            "product": "Chocolate Croissant",
+            "observed": 2.26,
+            "fitted": 2.261575039370465,
+            "log_residual": -0.0006966773394031511,
+            "multiplicative_residual": -0.0006964347160921536
+          },
+          {
+            "branch": "Harbour",
+            "product": "Chocolate Croissant",
+            "observed": 1.58,
+            "fitted": 1.5814396299641795,
+            "log_residual": -0.0009107433525178954,
+            "multiplicative_residual": -0.0009103287516654124
+          },
+          {
+            "branch": "Uptown",
+            "product": "Chocolate Croissant",
+            "observed": 1.5200000000000002,
+            "fitted": 1.517558683185521,
+            "log_residual": 0.0016074206919192147,
+            "multiplicative_residual": 0.0016087132850470809
+          },
+          {
+            "branch": "Garden",
+            "product": "Cinnamon Roll",
+            "observed": 3.2,
+            "fitted": 3.202482631966722,
+            "log_residual": -0.0007755216948983623,
+            "multiplicative_residual": -0.0007752210556711825
+          },
+          {
+            "branch": "Harbour",
+            "product": "Cinnamon Roll",
+            "observed": 2.24,
+            "fitted": 2.2393831114593192,
+            "log_residual": 0.0002754345985734874,
+            "multiplicative_residual": 0.0002754725341653774
+          },
+          {
+            "branch": "Uptown",
+            "product": "Cinnamon Roll",
+            "observed": 2.15,
+            "fitted": 2.148925081541731,
+            "log_residual": 0.0005000870963237647,
+            "multiplicative_residual": 0.0005002121607224908
+          },
+          {
+            "branch": "Garden",
+            "product": "Classic Matcha",
+            "observed": 3.25,
+            "fitted": 3.2483528758540516,
+            "log_residual": 0.0005069358998162077,
+            "multiplicative_residual": 0.0005070644135345415
+          },
+          {
+            "branch": "Harbour",
+            "product": "Classic Matcha",
+            "observed": 2.27,
+            "fitted": 2.2714585545716286,
+            "log_residual": -0.000642328716314422,
+            "multiplicative_residual": -0.0006421224673867076
+          },
+          {
+            "branch": "Uptown",
+            "product": "Classic Matcha",
+            "observed": 2.18,
+            "fitted": 2.179704863640154,
+            "log_residual": 0.00013539281649932455,
+            "multiplicative_residual": 0.00013540198252037783
+          },
+          {
+            "branch": "Garden",
+            "product": "Coffee Frappe",
+            "observed": 3.6199999999999997,
+            "fitted": 3.6198153667366295,
+            "log_residual": 5.1004964645606776e-05,
+            "multiplicative_residual": 5.1006265420872055e-05
+          },
+          {
+            "branch": "Harbour",
+            "product": "Coffee Frappe",
+            "observed": 2.53,
+            "fitted": 2.531209168148633,
+            "log_residual": -0.0004778179014011119,
+            "multiplicative_residual": -0.00047770376460720687
+          },
+          {
+            "branch": "Uptown",
+            "product": "Coffee Frappe",
+            "observed": 2.43,
+            "fitted": 2.4289630658678787,
+            "log_residual": 0.00042681293675461696,
+            "multiplicative_residual": 0.0004269040343563013
+          },
+          {
+            "branch": "Garden",
+            "product": "Cold Brew",
+            "observed": 1.66,
+            "fitted": 1.6576938119027966,
+            "log_residual": 0.0013902358682835736,
+            "multiplicative_residual": 0.001391202694155158
+          },
+          {
+            "branch": "Harbour",
+            "product": "Cold Brew",
+            "observed": 1.16,
+            "fitted": 1.1591667943148174,
+            "log_residual": 0.0007185388503091195,
+            "multiplicative_residual": 0.0007187970611899352
+          },
+          {
+            "branch": "Uptown",
+            "product": "Cold Brew",
+            "observed": 1.11,
+            "fitted": 1.1123432097200072,
+            "log_residual": -0.0021087747185938033,
+            "multiplicative_residual": -0.002106552815292484
+          },
+          {
+            "branch": "Garden",
+            "product": "Egg Sandwich",
+            "observed": 4.45,
+            "fitted": 4.451145871096761,
+            "log_residual": -0.00025746597565867724,
+            "multiplicative_residual": -0.00025743283413870444
+          },
+          {
+            "branch": "Harbour",
+            "product": "Egg Sandwich",
+            "observed": 3.11,
+            "fitted": 3.112529258044559,
+            "log_residual": -0.0008129357304604845,
+            "multiplicative_residual": -0.0008126053877314243
+          },
+          {
+            "branch": "Uptown",
+            "product": "Egg Sandwich",
+            "observed": 2.99,
+            "fitted": 2.9868012111986193,
+            "log_residual": 0.0010704017061191617,
+            "multiplicative_residual": 0.001070974790484014
+          },
+          {
+            "branch": "Garden",
+            "product": "English Breakfast Tea",
+            "observed": 0.82,
+            "fitted": 0.8182608325722677,
+            "log_residual": 0.002123188257315972,
+            "multiplicative_residual": 0.0021254438175477564
+          },
+          {
+            "branch": "Harbour",
+            "product": "English Breakfast Tea",
+            "observed": 0.57,
+            "fitted": 0.5721809295514141,
+            "log_residual": -0.0038188909401828397,
+            "multiplicative_residual": -0.0038116082497260395
+          },
+          {
+            "branch": "Uptown",
+            "product": "English Breakfast Tea",
+            "observed": 0.55,
+            "fitted": 0.5490681538147486,
+            "log_residual": 0.001695702682865452,
+            "multiplicative_residual": 0.0016971411996438146
+          },
+          {
+            "branch": "Garden",
+            "product": "Espresso",
+            "observed": 0.9300000000000002,
+            "fitted": 0.9278347395893087,
+            "log_residual": 0.0023309515587506685,
+            "multiplicative_residual": 0.0023336703383727286
+          },
+          {
+            "branch": "Harbour",
+            "product": "Espresso",
+            "observed": 0.65,
+            "fitted": 0.648802096636365,
+            "log_residual": 0.0018446285333358903,
+            "multiplicative_residual": 0.0018463309071370393
+          },
+          {
+            "branch": "Uptown",
+            "product": "Espresso",
+            "observed": 0.62,
+            "fitted": 0.6225942721833706,
+            "log_residual": -0.004175580092082298,
+            "multiplicative_residual": -0.004166874478739979
+          },
+          {
+            "branch": "Garden",
+            "product": "Flat White",
+            "observed": 1.77,
+            "fitted": 1.772237554569712,
+            "log_residual": -0.0012633567528147482,
+            "multiplicative_residual": -0.001262559053633927
+          },
+          {
+            "branch": "Harbour",
+            "product": "Flat White",
+            "observed": 1.24,
+            "fitted": 1.2392631921191999,
+            "log_residual": 0.0005943765105971277,
+            "multiplicative_residual": 0.0005945531873177146
+          },
+          {
+            "branch": "Uptown",
+            "product": "Flat White",
+            "observed": 1.19,
+            "fitted": 1.189204179735458,
+            "log_residual": 0.0006689802422170654,
+            "multiplicative_residual": 0.000669204059406292
+          },
+          {
+            "branch": "Garden",
+            "product": "Fresh Orange Juice",
+            "observed": 3.03,
+            "fitted": 3.0339669801178686,
+            "log_residual": -0.0013083780623419639,
+            "multiplicative_residual": -0.001307522508934733
+          },
+          {
+            "branch": "Harbour",
+            "product": "Fresh Orange Juice",
+            "observed": 2.12,
+            "fitted": 2.121546061852862,
+            "log_residual": -0.0007290086674942575,
+            "multiplicative_residual": -0.0007287430052362875
+          },
+          {
+            "branch": "Uptown",
+            "product": "Fresh Orange Juice",
+            "observed": 2.04,
+            "fitted": 2.03584796216077,
+            "log_residual": 0.0020373867298369985,
+            "multiplicative_residual": 0.002039463612411918
+          },
+          {
+            "branch": "Garden",
+            "product": "Frozen Yoghurt Cup",
+            "observed": 3.85,
+            "fitted": 3.8472658961658346,
+            "log_residual": 0.0007104091208580687,
+            "multiplicative_residual": 0.0007106615211831535
+          },
+          {
+            "branch": "Harbour",
+            "product": "Frozen Yoghurt Cup",
+            "observed": 2.69,
+            "fitted": 2.690257298249947,
+            "log_residual": -9.564533288286547e-05,
+            "multiplicative_residual": -9.56407590138042e-05
+          },
+          {
+            "branch": "Uptown",
+            "product": "Frozen Yoghurt Cup",
+            "observed": 2.58,
+            "fitted": 2.581586578208427,
+            "log_residual": -0.0006147637879770906,
+            "multiplicative_residual": -0.0006145748594370559
+          },
+          {
+            "branch": "Garden",
+            "product": "Granola Yoghurt",
+            "observed": 4.75,
+            "fitted": 4.750603193805176,
+            "log_residual": -0.00012698010719569552,
+            "multiplicative_residual": -0.0001269720455631118
+          },
+          {
+            "branch": "Harbour",
+            "product": "Granola Yoghurt",
+            "observed": 3.32,
+            "fitted": 3.321929198073029,
+            "log_residual": -0.000580914993144388,
+            "multiplicative_residual": -0.0005807462946978426
+          },
+          {
+            "branch": "Uptown",
+            "product": "Granola Yoghurt",
+            "observed": 3.19,
+            "fitted": 3.187742613720529,
+            "log_residual": 0.0007078951003391953,
+            "multiplicative_residual": 0.0007081457172091188
+          },
+          {
+            "branch": "Garden",
+            "product": "Halloumi Wrap",
+            "observed": 5.92,
+            "fitted": 5.918961055073246,
+            "log_residual": 0.00017551285532380057,
+            "multiplicative_residual": 0.0001755282586062279
+          },
+          {
+            "branch": "Harbour",
+            "product": "Halloumi Wrap",
+            "observed": 4.14,
+            "fitted": 4.138920627331038,
+            "log_residual": 0.000260752028836464,
+            "multiplicative_residual": 0.00026078602760182257
+          },
+          {
+            "branch": "Uptown",
+            "product": "Halloumi Wrap",
+            "observed": 3.97,
+            "fitted": 3.971732349444254,
+            "log_residual": -0.00043626488415982045,
+            "multiplicative_residual": -0.0004361697344725801
+          },
+          {
+            "branch": "Garden",
+            "product": "Iced Americano",
+            "observed": 1.23,
+            "fitted": 1.2322585758070668,
+            "log_residual": -0.0018345566649362877,
+            "multiplicative_residual": -0.0018328748944494988
+          },
+          {
+            "branch": "Harbour",
+            "product": "Iced Americano",
+            "observed": 0.86,
+            "fitted": 0.8616749443286079,
+            "log_residual": -0.0019457155516418856,
+            "multiplicative_residual": -0.0019438238742255365
+          },
+          {
+            "branch": "Uptown",
+            "product": "Iced Americano",
+            "observed": 0.8300000000000001,
+            "fitted": 0.8268682971343637,
+            "log_residual": 0.0037802722165757863,
+            "multiplicative_residual": 0.003787426457743992
+          },
+          {
+            "branch": "Garden",
+            "product": "Iced Latte",
+            "observed": 2.37,
+            "fitted": 2.3711506653878986,
+            "log_residual": -0.000485394998682942,
+            "multiplicative_residual": -0.0004852772135888195
+          },
+          {
+            "branch": "Harbour",
+            "product": "Iced Latte",
+            "observed": 1.6600000000000001,
+            "fitted": 1.6580619990854535,
+            "log_residual": 0.0011681524549334021,
+            "multiplicative_residual": 0.0011688350107630363
+          },
+          {
+            "branch": "Uptown",
+            "product": "Iced Latte",
+            "observed": 1.59,
+            "fitted": 1.5910859550352023,
+            "log_residual": -0.0006827574562509597,
+            "multiplicative_residual": -0.0006825244304152767
+          },
+          {
+            "branch": "Garden",
+            "product": "Iced Matcha",
+            "observed": 3.59,
+            "fitted": 3.590346538285763,
+            "log_residual": -9.652411180560705e-05,
+            "multiplicative_residual": -9.651945350341862e-05
+          },
+          {
+            "branch": "Harbour",
+            "product": "Iced Matcha",
+            "observed": 2.51,
+            "fitted": 2.510602656160515,
+            "log_residual": -0.0002400732360964275,
+            "multiplicative_residual": -0.0002400444208230379
+          },
+          {
+            "branch": "Uptown",
+            "product": "Iced Matcha",
+            "observed": 2.41,
+            "fitted": 2.409188936900058,
+            "log_residual": 0.00033659734790214557,
+            "multiplicative_residual": 0.00033665400314597527
+          },
+          {
+            "branch": "Garden",
+            "product": "Iced Mocha",
+            "observed": 3.19,
+            "fitted": 3.1894152815118204,
+            "log_residual": 0.000183314132726764,
+            "multiplicative_residual": 0.00018333093578903892
+          },
+          {
+            "branch": "Harbour",
+            "product": "Iced Mocha",
+            "observed": 2.23,
+            "fitted": 2.2302455743410445,
+            "log_residual": -0.00011011695979490366,
+            "multiplicative_residual": -0.00011011089714507705
+          },
+          {
+            "branch": "Uptown",
+            "product": "Iced Mocha",
+            "observed": 2.14,
+            "fitted": 2.1401566476830944,
+            "log_residual": -7.319717293474692e-05,
+            "multiplicative_residual": -7.31944940870477e-05
+          },
+          {
+            "branch": "Garden",
+            "product": "Lemonade",
+            "observed": 1.67,
+            "fitted": 1.6707626169990337,
+            "log_residual": -0.000456552649625519,
+            "multiplicative_residual": -0.000456448445323443
+          },
+          {
+            "branch": "Harbour",
+            "product": "Lemonade",
+            "observed": 1.17,
+            "fitted": 1.1683053486124544,
+            "log_residual": 0.0014494699635796138,
+            "multiplicative_residual": 0.0014505209528983265
+          },
+          {
+            "branch": "Uptown",
+            "product": "Lemonade",
+            "observed": 1.12,
+            "fitted": 1.1211126196698866,
+            "log_residual": -0.0009929173139544278,
+            "multiplicative_residual": -0.0009924245346680793
+          },
+          {
+            "branch": "Garden",
+            "product": "Mint Tea",
+            "observed": 0.9,
+            "fitted": 0.898364814656238,
+            "log_residual": 0.0018185251191194518,
+            "multiplicative_residual": 0.0018201796387002922
+          },
+          {
+            "branch": "Harbour",
+            "product": "Mint Tea",
+            "observed": 0.63,
+            "fitted": 0.6281948179169284,
+            "log_residual": 0.002869481412591246,
+            "multiplicative_residual": 0.002873602315054846
+          },
+          {
+            "branch": "Uptown",
+            "product": "Mint Tea",
+            "observed": 0.6,
+            "fitted": 0.6028194074557088,
+            "log_residual": -0.004688006531713418,
+            "multiplicative_residual": -0.004677034980689498
+          },
+          {
+            "branch": "Garden",
+            "product": "Peach Iced Tea",
+            "observed": 1.64,
+            "fitted": 1.6412928923317476,
+            "log_residual": -0.0007880383989352091,
+            "multiplicative_residual": -0.0007877279782225743
+          },
+          {
+            "branch": "Harbour",
+            "product": "Peach Iced Tea",
+            "observed": 1.15,
+            "fitted": 1.147698209931815,
+            "log_residual": 0.0020035623723206053,
+            "multiplicative_residual": 0.002005570844552995
+          },
+          {
+            "branch": "Uptown",
+            "product": "Peach Iced Tea",
+            "observed": 1.1,
+            "fitted": 1.1013378893242707,
+            "log_residual": -0.0012155239733857015,
+            "multiplicative_residual": -0.001214785523352302
+          },
+          {
+            "branch": "Garden",
+            "product": "Pistachio Cookie",
+            "observed": 1.69,
+            "fitted": 1.6871628967873171,
+            "log_residual": 0.0016801699928680192,
+            "multiplicative_residual": 0.0016815822693145854
+          },
+          {
+            "branch": "Harbour",
+            "product": "Pistachio Cookie",
+            "observed": 1.18,
+            "fitted": 1.179773485617942,
+            "log_residual": 0.00019197976766341385,
+            "multiplicative_residual": 0.00019199819695825404
+          },
+          {
+            "branch": "Uptown",
+            "product": "Pistachio Cookie",
+            "observed": 1.13,
+            "fitted": 1.1321175107595536,
+            "log_residual": -0.001872149760533362,
+            "multiplicative_residual": -0.0018703983812889957
+          },
+          {
+            "branch": "Garden",
+            "product": "Quinoa Bowl",
+            "observed": 7.04,
+            "fitted": 7.03668134372568,
+            "log_residual": 0.0004715111828945684,
+            "multiplicative_residual": 0.00047162236176578887
+          },
+          {
+            "branch": "Harbour",
+            "product": "Quinoa Bowl",
+            "observed": 4.92,
+            "fitted": 4.920502988702516,
+            "log_residual": -0.00010222825063554986,
+            "multiplicative_residual": -0.0001022230255059986
+          },
+          {
+            "branch": "Uptown",
+            "product": "Quinoa Bowl",
+            "observed": 4.72,
+            "fitted": 4.721743337312817,
+            "log_residual": -0.00036928293226101694,
+            "multiplicative_residual": -0.00036921475571138895
+          },
+          {
+            "branch": "Garden",
+            "product": "Soup of the Day",
+            "observed": 3.9899999999999998,
+            "fitted": 3.9912775434542325,
+            "log_residual": -0.00032013508067785246,
+            "multiplicative_residual": -0.00032008384291071224
+          },
+          {
+            "branch": "Harbour",
+            "product": "Soup of the Day",
+            "observed": 2.79,
+            "fitted": 2.790959562041155,
+            "log_residual": -0.0003438699169715509,
+            "multiplicative_residual": -0.00034381080048795365
+          },
+          {
+            "branch": "Uptown",
+            "product": "Soup of the Day",
+            "observed": 2.68,
+            "fitted": 2.6782210572850946,
+            "log_residual": 0.0006640049976469609,
+            "multiplicative_residual": 0.0006642254977671236
+          },
+          {
+            "branch": "Garden",
+            "product": "Spanish Latte",
+            "observed": 2.83,
+            "fitted": 2.831020667162677,
+            "log_residual": -0.00036059475269434316,
+            "multiplicative_residual": -0.0003605297462203616
+          },
+          {
+            "branch": "Harbour",
+            "product": "Spanish Latte",
+            "observed": 1.98,
+            "fitted": 1.9796328657504711,
+            "log_residual": 0.00018543853080743578,
+            "multiplicative_residual": 0.00018545572559469647
+          },
+          {
+            "branch": "Uptown",
+            "product": "Spanish Latte",
+            "observed": 1.9,
+            "fitted": 1.8996672323224324,
+            "log_residual": 0.00017515622188568614,
+            "multiplicative_residual": 0.0001751715626323591
+          },
+          {
+            "branch": "Garden",
+            "product": "Sparkling Water",
+            "observed": 1.9300000000000002,
+            "fitted": 1.9326480558398855,
+            "log_residual": -0.0013711092579251627,
+            "multiplicative_residual": -0.0013701697170800387
+          },
+          {
+            "branch": "Harbour",
+            "product": "Sparkling Water",
+            "observed": 1.35,
+            "fitted": 1.3514325958997113,
+            "log_residual": -0.0010606194921770618,
+            "multiplicative_residual": -0.0010600572341216141
+          },
+          {
+            "branch": "Uptown",
+            "product": "Sparkling Water",
+            "observed": 1.3,
+            "fitted": 1.296842593159253,
+            "log_residual": 0.002431728750103279,
+            "multiplicative_residual": 0.002434687800510149
+          },
+          {
+            "branch": "Garden",
+            "product": "Still Water",
+            "observed": 0.93,
+            "fitted": 0.9278347395893104,
+            "log_residual": 0.002330951558748781,
+            "multiplicative_residual": 0.0023336703383709523
+          },
+          {
+            "branch": "Harbour",
+            "product": "Still Water",
+            "observed": 0.65,
+            "fitted": 0.6488020966363661,
+            "log_residual": 0.001844628533334114,
+            "multiplicative_residual": 0.001846330907135263
+          },
+          {
+            "branch": "Uptown",
+            "product": "Still Water",
+            "observed": 0.62,
+            "fitted": 0.6225942721833717,
+            "log_residual": -0.004175580092084075,
+            "multiplicative_residual": -0.0041668744787417555
+          },
+          {
+            "branch": "Garden",
+            "product": "Strawberry Matcha",
+            "observed": 4.55,
+            "fitted": 4.547654015569653,
+            "log_residual": 0.0005157339415924334,
+            "multiplicative_residual": 0.0005158669552072226
+          },
+          {
+            "branch": "Harbour",
+            "product": "Strawberry Matcha",
+            "observed": 3.18,
+            "fitted": 3.1800139983811975,
+            "log_residual": -4.401996976932665e-06,
+            "multiplicative_residual": -4.401987288127351e-06
+          },
+          {
+            "branch": "Uptown",
+            "product": "Strawberry Matcha",
+            "observed": 3.05,
+            "fitted": 3.05155996122609,
+            "log_residual": -0.0005113319446148346,
+            "multiplicative_residual": -0.0005112012367153307
+          },
+          {
+            "branch": "Garden",
+            "product": "Tiramisu Cup",
+            "observed": 4.08,
+            "fitted": 4.079683696033036,
+            "log_residual": 7.752848735465001e-05,
+            "multiplicative_residual": 7.753149276545912e-05
+          },
+          {
+            "branch": "Harbour",
+            "product": "Tiramisu Cup",
+            "observed": 2.85,
+            "fitted": 2.852778865308535,
+            "log_residual": -0.0009745654159523109,
+            "multiplicative_residual": -0.0009740906813098249
+          },
+          {
+            "branch": "Uptown",
+            "product": "Tiramisu Cup",
+            "observed": 2.74,
+            "fitted": 2.737543220891186,
+            "log_residual": 0.0008970369285947744,
+            "multiplicative_residual": 0.0008974393865512909
+          },
+          {
+            "branch": "Garden",
+            "product": "Tuna Sandwich",
+            "observed": 5.33,
+            "fitted": 5.333115467953298,
+            "log_residual": -0.0005843448007876173,
+            "multiplicative_residual": -0.0005841741046146431
+          },
+          {
+            "branch": "Harbour",
+            "product": "Tuna Sandwich",
+            "observed": 3.73,
+            "fitted": 3.729259478626013,
+            "log_residual": 0.0001985509093875848,
+            "multiplicative_residual": 0.00019857062192407682
+          },
+          {
+            "branch": "Uptown",
+            "product": "Tuna Sandwich",
+            "observed": 3.58,
+            "fitted": 3.5786191242526297,
+            "log_residual": 0.00038579389139981046,
+            "multiplicative_residual": 0.00038586831943421274
+          },
+          {
+            "branch": "Garden",
+            "product": "Turkey & Cheese Sandwich",
+            "observed": 6.75,
+            "fitted": 6.750292969887093,
+            "log_residual": -4.340200435537511e-05,
+            "multiplicative_residual": -4.340106250200204e-05
+          },
+          {
+            "branch": "Harbour",
+            "product": "Turkey & Cheese Sandwich",
+            "observed": 4.72,
+            "fitted": 4.720241703507484,
+            "log_residual": -5.1207059125868426e-05,
+            "multiplicative_residual": -5.1205748066829315e-05
+          },
+          {
+            "branch": "Uptown",
+            "product": "Turkey & Cheese Sandwich",
+            "observed": 4.53,
+            "fitted": 4.529571441215526,
+            "log_residual": 9.460906348035536e-05,
+            "multiplicative_residual": 9.461353905892977e-05
+          },
+          {
+            "branch": "Garden",
+            "product": "Vanilla Latte",
+            "observed": 2.46,
+            "fitted": 2.4595583511916543,
+            "log_residual": 0.00017954815371801214,
+            "multiplicative_residual": 0.00017956427345255932
+          },
+          {
+            "branch": "Harbour",
+            "product": "Vanilla Latte",
+            "observed": 1.72,
+            "fitted": 1.719882374482946,
+            "log_residual": 6.838926701246972e-05,
+            "multiplicative_residual": 6.83916056116729e-05
+          },
+          {
+            "branch": "Uptown",
+            "product": "Vanilla Latte",
+            "observed": 1.65,
+            "fitted": 1.6504091474635962,
+            "log_residual": -0.0002479374207327023,
+            "multiplicative_residual": -0.0002479066867905333
+          }
+        ]
+      },
+      "benchmark_stability_log_effect_range": {
+        "Garden__vs__Harbour": 5.440092820663267e-15,
+        "Garden__vs__Uptown": 3.2751579226442118e-15,
+        "Harbour__vs__Uptown": 2.1510571102112408e-15
+      }
+    },
+    "price": {
+      "huber": {
+        "target": "listed_unit_price",
+        "method": "huber",
+        "reference_branch": "Garden",
+        "reference_product": "Almond Croissant",
+        "branch_effects": {
+          "Garden": 0.0,
+          "Harbour": 0.048739427351000064,
+          "Uptown": -0.041111409267697276
+        },
+        "branch_multipliers": {
+          "Garden": 1.0,
+          "Harbour": 1.0499467276920915,
+          "Uptown": 0.9597222020438072
+        },
+        "product_effects": {
+          "Almond Croissant": 0.0,
+          "Americano": -0.4315765528174047,
+          "Avocado Toast": 0.6669916303184252,
+          "Banana Bread": -0.08629601362490676,
+          "Blueberry Muffin": -0.20516205027461012,
+          "Brownie": 0.060017709713765834,
+          "Butter Croissant": -0.2847586772706948,
+          "Cappuccino": -0.1802621242432722,
+          "Caramel Latte": 0.17047223035692707,
+          "Chai Latte": 0.07921124862580883,
+          "Cheesecake Slice": 0.3307944399394838,
+          "Chicken Pesto Sandwich": 0.7961139522714847,
+          "Chicken Salad Bowl": 0.9427354643167205,
+          "Chocolate Cookie": -0.4315765528174053,
+          "Chocolate Croissant": -0.1321334328632788,
+          "Cinnamon Roll": 0.06001770971376739,
+          "Classic Matcha": 0.2849837561513882,
+          "Coffee Frappe": 0.3008265787768521,
+          "Cold Brew": 0.06001770971376687,
+          "Egg Sandwich": 0.5190792119964789,
+          "English Breakfast Tea": -0.34092286323476123,
+          "Espresso": -0.6052650587856099,
+          "Flat White": -0.10820522896132391,
+          "Fresh Orange Juice": 0.1704722303569269,
+          "Frozen Yoghurt Cup": 0.2374895715168017,
+          "Granola Yoghurt": 0.4816286701524035,
+          "Halloumi Wrap": 0.7187168826999183,
+          "Iced Americano": -0.23090585725622384,
+          "Iced Latte": 0.09861322977276023,
+          "Iced Matcha": 0.3453416442809795,
+          "Iced Mocha": 0.25358883331938575,
+          "Lemonade": -0.042467943492638,
+          "Mint Tea": -0.28475867727069665,
+          "Peach Iced Tea": -0.08629601362490585,
+          "Pistachio Cookie": -0.34092286323476173,
+          "Quinoa Bowl": 0.8762531871545133,
+          "Soup of the Day": 0.38816340941518246,
+          "Spanish Latte": 0.20454222366652058,
+          "Sparkling Water": -0.5670129348594393,
+          "Still Water": -0.9111496331352072,
+          "Strawberry Matcha": 0.4555546608164439,
+          "Tiramisu Cup": 0.30082657877685226,
+          "Tuna Sandwich": 0.6015497382347755,
+          "Turkey & Cheese Sandwich": 0.6878660820984563,
+          "Vanilla Latte": 0.11647688538982794
+        },
+        "intercept": 1.5789790059636335,
+        "rmse": 0.00039833496552196536,
+        "mae": 0.0002851295648053959,
+        "r_squared": 0.9999990697391641,
+        "iterations": 31,
+        "observations": 135,
+        "residuals": [
+          {
+            "branch": "Garden",
+            "product": "Almond Croissant",
+            "observed": 4.85,
+            "fitted": 4.850001459919292,
+            "log_residual": -3.010142417547712e-07,
+            "multiplicative_residual": -3.010141964576718e-07
+          },
+          {
+            "branch": "Harbour",
+            "product": "Almond Croissant",
+            "observed": 5.09,
+            "fitted": 5.092243162144127,
+            "log_residual": -0.00044060275220214606,
+            "multiplicative_residual": -0.00044050570106368703
+          },
+          {
+            "branch": "Uptown",
+            "product": "Almond Croissant",
+            "observed": 4.66,
+            "fitted": 4.654654081029423,
+            "log_residual": 0.0011478514416183305,
+            "multiplicative_residual": 0.001148510475217801
+          },
+          {
+            "branch": "Garden",
+            "product": "Americano",
+            "observed": 3.15,
+            "fitted": 3.1500000009723643,
+            "log_residual": -3.086870759005933e-10,
+            "multiplicative_residual": -3.086870759005933e-10
+          },
+          {
+            "branch": "Harbour",
+            "product": "Americano",
+            "observed": 3.3099999999999996,
+            "fitted": 3.3073321932510193,
+            "log_residual": 0.000806308891742713,
+            "multiplicative_residual": 0.0008066340461430066
+          },
+          {
+            "branch": "Uptown",
+            "product": "Americano",
+            "observed": 3.02,
+            "fitted": 3.023124937371193,
+            "log_residual": -0.0010342124917532836,
+            "multiplicative_residual": -0.0010336778783314182
+          },
+          {
+            "branch": "Garden",
+            "product": "Avocado Toast",
+            "observed": 9.45,
+            "fitted": 9.44958321482832,
+            "log_residual": 4.410522359243885e-05,
+            "multiplicative_residual": 4.4106196242177376e-05
+          },
+          {
+            "branch": "Harbour",
+            "product": "Avocado Toast",
+            "observed": 9.92,
+            "fitted": 9.92155897446311,
+            "log_residual": -0.00015714233627761587,
+            "multiplicative_residual": -0.00015712999006745054
+          },
+          {
+            "branch": "Uptown",
+            "product": "Avocado Toast",
+            "observed": 9.07,
+            "fitted": 9.068974811331232,
+            "log_residual": 0.00011303711268384475,
+            "multiplicative_residual": 0.00011304350161900345
+          },
+          {
+            "branch": "Garden",
+            "product": "Banana Bread",
+            "observed": 4.45,
+            "fitted": 4.449016196679925,
+            "log_residual": 0.00022110383942197664,
+            "multiplicative_residual": 0.00022112828467757417
+          },
+          {
+            "branch": "Harbour",
+            "product": "Banana Bread",
+            "observed": 4.67,
+            "fitted": 4.671229997153203,
+            "log_residual": -0.00026334800892091614,
+            "multiplicative_residual": -0.0002633133358778128
+          },
+          {
+            "branch": "Uptown",
+            "product": "Banana Bread",
+            "observed": 4.27,
+            "fitted": 4.2698196212062225,
+            "log_residual": 4.224416950338039e-05,
+            "multiplicative_residual": 4.224506180094956e-05
+          },
+          {
+            "branch": "Garden",
+            "product": "Blueberry Muffin",
+            "observed": 3.95,
+            "fitted": 3.950400458563428,
+            "log_residual": -0.00010137677599275641,
+            "multiplicative_residual": -0.00010137163754109224
+          },
+          {
+            "branch": "Harbour",
+            "product": "Blueberry Muffin",
+            "observed": 4.15,
+            "fitted": 4.147710034542009,
+            "log_residual": 0.000551951202583556,
+            "multiplicative_residual": 0.0005521035556776965
+          },
+          {
+            "branch": "Uptown",
+            "product": "Blueberry Muffin",
+            "observed": 3.79,
+            "fitted": 3.7912870270473595,
+            "log_residual": -0.0003395273269912735,
+            "multiplicative_residual": -0.0003394696941112496
+          },
+          {
+            "branch": "Garden",
+            "product": "Brownie",
+            "observed": 5.15,
+            "fitted": 5.150000005159035,
+            "log_residual": -1.0017544571638837e-09,
+            "multiplicative_residual": -1.0017544571638837e-09
+          },
+          {
+            "branch": "Harbour",
+            "product": "Brownie",
+            "observed": 5.41,
+            "fitted": 5.407225653030985,
+            "log_residual": 0.0005129498299907276,
+            "multiplicative_residual": 0.0005130814112519477
+          },
+          {
+            "branch": "Uptown",
+            "product": "Brownie",
+            "observed": 4.94,
+            "fitted": 4.942569345476849,
+            "log_residual": -0.0005199752098707933,
+            "multiplicative_residual": -0.0005198400461896568
+          },
+          {
+            "branch": "Garden",
+            "product": "Butter Croissant",
+            "observed": 3.65,
+            "fitted": 3.648150506746823,
+            "log_residual": 0.000506838901461304,
+            "multiplicative_residual": 0.0005069673660000884
+          },
+          {
+            "branch": "Harbour",
+            "product": "Butter Croissant",
+            "observed": 3.83,
+            "fitted": 3.8303636866870723,
+            "log_residual": -9.495285138405585e-05,
+            "multiplicative_residual": -9.494834350476378e-05
+          },
+          {
+            "branch": "Uptown",
+            "product": "Butter Croissant",
+            "observed": 3.5,
+            "fitted": 3.5012110377222925,
+            "log_residual": -0.0003459509298735508,
+            "multiplicative_residual": -0.00034589109575067223
+          },
+          {
+            "branch": "Garden",
+            "product": "Cappuccino",
+            "observed": 4.05,
+            "fitted": 4.050000002437749,
+            "log_residual": -6.019134080048616e-10,
+            "multiplicative_residual": -6.019134080048616e-10
+          },
+          {
+            "branch": "Harbour",
+            "product": "Cappuccino",
+            "observed": 4.25,
+            "fitted": 4.252284249712478,
+            "log_residual": -0.000537326135035876,
+            "multiplicative_residual": -0.0005371818012007701
+          },
+          {
+            "branch": "Uptown",
+            "product": "Cappuccino",
+            "observed": 3.89,
+            "fitted": 3.886874920616982,
+            "log_residual": 0.000803685177690916,
+            "multiplicative_residual": 0.0008040082191587139
+          },
+          {
+            "branch": "Garden",
+            "product": "Caramel Latte",
+            "observed": 5.75,
+            "fitted": 5.751445625384117,
+            "log_residual": -0.0002513815113014406,
+            "multiplicative_residual": -0.00025134991761677217
+          },
+          {
+            "branch": "Harbour",
+            "product": "Caramel Latte",
+            "observed": 6.04,
+            "fitted": 6.038711513871049,
+            "log_residual": 0.00021334827516295007,
+            "multiplicative_residual": 0.00021337103552476755
+          },
+          {
+            "branch": "Uptown",
+            "product": "Caramel Latte",
+            "observed": 5.52,
+            "fitted": 5.519790060528868,
+            "log_residual": 3.8033236140488924e-05,
+            "multiplicative_residual": 3.803395941326393e-05
+          },
+          {
+            "branch": "Garden",
+            "product": "Chai Latte",
+            "observed": 5.25,
+            "fitted": 5.249801438181055,
+            "log_residual": 3.7822014090194145e-05,
+            "multiplicative_residual": 3.7822729351599804e-05
+          },
+          {
+            "branch": "Harbour",
+            "product": "Chai Latte",
+            "observed": 5.51,
+            "fitted": 5.512011841051435,
+            "log_residual": -0.00036505877561943123,
+            "multiplicative_residual": -0.0003649921497722586
+          },
+          {
+            "branch": "Uptown",
+            "product": "Chai Latte",
+            "observed": 5.04,
+            "fitted": 5.038350996543868,
+            "log_residual": 0.00032723676153212367,
+            "multiplicative_residual": 0.0003272903093218815
+          },
+          {
+            "branch": "Garden",
+            "product": "Cheesecake Slice",
+            "observed": 6.75,
+            "fitted": 6.751559031891359,
+            "log_residual": -0.00023094101867870975,
+            "multiplicative_residual": -0.0002309143538543612
+          },
+          {
+            "branch": "Harbour",
+            "product": "Cheesecake Slice",
+            "observed": 7.09,
+            "fitted": 7.088777312354319,
+            "log_residual": 0.00017246728991882065,
+            "multiplicative_residual": 0.00017248216325693733
+          },
+          {
+            "branch": "Uptown",
+            "product": "Cheesecake Slice",
+            "observed": 6.48,
+            "fitted": 6.479621101315532,
+            "log_residual": 5.847372876321977e-05,
+            "multiplicative_residual": 5.847543838499725e-05
+          },
+          {
+            "branch": "Garden",
+            "product": "Chicken Pesto Sandwich",
+            "observed": 10.75,
+            "fitted": 10.752012627740314,
+            "log_residual": -0.00018720366144675538,
+            "multiplicative_residual": -0.00018718613993473632
+          },
+          {
+            "branch": "Harbour",
+            "product": "Chicken Pesto Sandwich",
+            "observed": 11.29,
+            "fitted": 11.289040474599991,
+            "log_residual": 8.499257545180328e-05,
+            "multiplicative_residual": 8.499618742296988e-05
+          },
+          {
+            "branch": "Uptown",
+            "product": "Chicken Pesto Sandwich",
+            "observed": 10.32,
+            "fitted": 10.318945235497754,
+            "log_residual": 0.00010221108599584028,
+            "multiplicative_residual": 0.00010221630972684359
+          },
+          {
+            "branch": "Garden",
+            "product": "Chicken Salad Bowl",
+            "observed": 12.45,
+            "fitted": 12.44992339998763,
+            "log_residual": 6.1526303625214496e-06,
+            "multiplicative_residual": 6.152649290047663e-06
+          },
+          {
+            "branch": "Harbour",
+            "product": "Chicken Salad Bowl",
+            "observed": 13.07,
+            "fitted": 13.071756333834214,
+            "log_residual": -0.00013436999522342674,
+            "multiplicative_residual": -0.00013436096797991848
+          },
+          {
+            "branch": "Uptown",
+            "product": "Chicken Salad Bowl",
+            "observed": 11.95,
+            "fitted": 11.948467900712853,
+            "log_residual": 0.00012821736486312574,
+            "multiplicative_residual": 0.00012822558506075943
+          },
+          {
+            "branch": "Garden",
+            "product": "Chocolate Cookie",
+            "observed": 3.1499999999999995,
+            "fitted": 3.150000000972362,
+            "log_residual": -3.0868663181138345e-10,
+            "multiplicative_residual": -3.0868663181138345e-10
+          },
+          {
+            "branch": "Harbour",
+            "product": "Chocolate Cookie",
+            "observed": 3.31,
+            "fitted": 3.3073321932510176,
+            "log_residual": 0.0008063088917431571,
+            "multiplicative_residual": 0.0008066340461434507
+          },
+          {
+            "branch": "Uptown",
+            "product": "Chocolate Cookie",
+            "observed": 3.02,
+            "fitted": 3.0231249373711906,
+            "log_residual": -0.0010342124917526174,
+            "multiplicative_residual": -0.001033677878330752
+          },
+          {
+            "branch": "Garden",
+            "product": "Chocolate Croissant",
+            "observed": 4.25,
+            "fitted": 4.249688019648477,
+            "log_residual": 7.340983597070583e-05,
+            "multiplicative_residual": 7.341253053860797e-05
+          },
+          {
+            "branch": "Harbour",
+            "product": "Chocolate Croissant",
+            "observed": 4.46,
+            "fitted": 4.461946029942204,
+            "log_residual": -0.0004362344193820089,
+            "multiplicative_residual": -0.0004361392829821398
+          },
+          {
+            "branch": "Uptown",
+            "product": "Chocolate Croissant",
+            "observed": 4.08,
+            "fitted": 4.078519944216223,
+            "log_residual": 0.0003628245834128574,
+            "multiplicative_residual": 0.0003628904122132681
+          },
+          {
+            "branch": "Garden",
+            "product": "Cinnamon Roll",
+            "observed": 5.15,
+            "fitted": 5.150000005159043,
+            "log_residual": -1.0017560114761181e-09,
+            "multiplicative_residual": -1.0017560114761181e-09
+          },
+          {
+            "branch": "Harbour",
+            "product": "Cinnamon Roll",
+            "observed": 5.41,
+            "fitted": 5.407225653030993,
+            "log_residual": 0.0005129498299891733,
+            "multiplicative_residual": 0.0005130814112503934
+          },
+          {
+            "branch": "Uptown",
+            "product": "Cinnamon Roll",
+            "observed": 4.94,
+            "fitted": 4.942569345476857,
+            "log_residual": -0.0005199752098723476,
+            "multiplicative_residual": -0.0005198400461912112
+          },
+          {
+            "branch": "Garden",
+            "product": "Classic Matcha",
+            "observed": 6.45,
+            "fitted": 6.449243016356306,
+            "log_residual": 0.00011736869265943639,
+            "multiplicative_residual": 0.00011737558063384945
+          },
+          {
+            "branch": "Harbour",
+            "product": "Classic Matcha",
+            "observed": 6.77,
+            "fitted": 6.771361601114378,
+            "log_residual": -0.00020110254183802745,
+            "multiplicative_residual": -0.00020108232207727283
+          },
+          {
+            "branch": "Uptown",
+            "product": "Classic Matcha",
+            "observed": 6.19,
+            "fitted": 6.18948170917312,
+            "log_residual": 8.373384918036741e-05,
+            "multiplicative_residual": 8.373735495692536e-05
+          },
+          {
+            "branch": "Garden",
+            "product": "Coffee Frappe",
+            "observed": 6.55,
+            "fitted": 6.552230884686983,
+            "log_residual": -0.00034053509332498955,
+            "multiplicative_residual": -0.00034047711783113943
+          },
+          {
+            "branch": "Harbour",
+            "product": "Coffee Frappe",
+            "observed": 6.88,
+            "fitted": 6.879493376460157,
+            "log_residual": 7.363985376640514e-05,
+            "multiplicative_residual": 7.364256524700075e-05
+          },
+          {
+            "branch": "Uptown",
+            "product": "Coffee Frappe",
+            "observed": 6.29,
+            "fitted": 6.288321452951235,
+            "log_residual": 0.00026689523956080485,
+            "multiplicative_residual": 0.00026693085926399185
+          },
+          {
+            "branch": "Garden",
+            "product": "Cold Brew",
+            "observed": 5.15,
+            "fitted": 5.1500000051590415,
+            "log_residual": -1.0017555673869083e-09,
+            "multiplicative_residual": -1.0017555673869083e-09
+          },
+          {
+            "branch": "Harbour",
+            "product": "Cold Brew",
+            "observed": 5.41,
+            "fitted": 5.40722565303099,
+            "log_residual": 0.0005129498299898394,
+            "multiplicative_residual": 0.0005130814112510595
+          },
+          {
+            "branch": "Uptown",
+            "product": "Cold Brew",
+            "observed": 4.94,
+            "fitted": 4.942569345476854,
+            "log_residual": -0.0005199752098719035,
+            "multiplicative_residual": -0.0005198400461907671
+          },
+          {
+            "branch": "Garden",
+            "product": "Egg Sandwich",
+            "observed": 8.15,
+            "fitted": 8.150328375880031,
+            "log_residual": -4.0290707340684406e-05,
+            "multiplicative_residual": -4.028989568105601e-05
+          },
+          {
+            "branch": "Harbour",
+            "product": "Egg Sandwich",
+            "observed": 8.56,
+            "fitted": 8.55741060787124,
+            "log_residual": 0.00030254484253822156,
+            "multiplicative_residual": 0.00030259061384496633
+          },
+          {
+            "branch": "Uptown",
+            "product": "Egg Sandwich",
+            "observed": 7.82,
+            "fitted": 7.822051096279713,
+            "log_residual": -0.0002622541351953167,
+            "multiplicative_residual": -0.0002622197495856238
+          },
+          {
+            "branch": "Garden",
+            "product": "English Breakfast Tea",
+            "observed": 3.4500000000000006,
+            "fitted": 3.448902769832632,
+            "log_residual": 0.00031808831439628094,
+            "multiplicative_residual": 0.0003181389098485532
+          },
+          {
+            "branch": "Harbour",
+            "product": "English Breakfast Tea",
+            "observed": 3.6200000000000006,
+            "fitted": 3.621164177313963,
+            "log_residual": -0.0003215442421924397,
+            "multiplicative_residual": -0.000321492552382896
+          },
+          {
+            "branch": "Uptown",
+            "product": "English Breakfast Tea",
+            "observed": 3.31,
+            "fitted": 3.3099885608987596,
+            "log_residual": 3.4559277966028645e-06,
+            "multiplicative_residual": 3.4559337682704694e-06
+          },
+          {
+            "branch": "Garden",
+            "product": "Espresso",
+            "observed": 2.65,
+            "fitted": 2.647759861394795,
+            "log_residual": 0.0008456928201071578,
+            "multiplicative_residual": 0.0008460505191074663
+          },
+          {
+            "branch": "Harbour",
+            "product": "Espresso",
+            "observed": 2.78,
+            "fitted": 2.7800068021859303,
+            "log_residual": -2.4468264780974636e-06,
+            "multiplicative_residual": -2.4468234846031223e-06
+          },
+          {
+            "branch": "Uptown",
+            "product": "Espresso",
+            "observed": 2.54,
+            "fitted": 2.5411139246610186,
+            "log_residual": -0.0004384568798811994,
+            "multiplicative_residual": -0.0004383607717103333
+          },
+          {
+            "branch": "Garden",
+            "product": "Flat White",
+            "observed": 4.35,
+            "fitted": 4.352601781539043,
+            "log_residual": -0.0005979319017168638,
+            "multiplicative_residual": -0.0005977531760610333
+          },
+          {
+            "branch": "Harbour",
+            "product": "Flat White",
+            "observed": 4.57,
+            "fitted": 4.569999997473687,
+            "log_residual": 5.528038027335924e-10,
+            "multiplicative_residual": 5.528038027335924e-10
+          },
+          {
+            "branch": "Uptown",
+            "product": "Flat White",
+            "observed": 4.18,
+            "fitted": 4.17728856639845,
+            "log_residual": 0.0006488788020526659,
+            "multiplicative_residual": 0.0006490893694444111
+          },
+          {
+            "branch": "Garden",
+            "product": "Fresh Orange Juice",
+            "observed": 5.75,
+            "fitted": 5.751445625384116,
+            "log_residual": -0.00025138151130121855,
+            "multiplicative_residual": -0.0002513499176165501
+          },
+          {
+            "branch": "Harbour",
+            "product": "Fresh Orange Juice",
+            "observed": 6.04,
+            "fitted": 6.038711513871049,
+            "log_residual": 0.00021334827516295007,
+            "multiplicative_residual": 0.00021337103552476755
+          },
+          {
+            "branch": "Uptown",
+            "product": "Fresh Orange Juice",
+            "observed": 5.52,
+            "fitted": 5.519790060528867,
+            "log_residual": 3.803323614071097e-05,
+            "multiplicative_residual": 3.8033959413485974e-05
+          },
+          {
+            "branch": "Garden",
+            "product": "Frozen Yoghurt Cup",
+            "observed": 6.15,
+            "fitted": 6.150101449158087,
+            "log_residual": -1.6495662008564338e-05,
+            "multiplicative_residual": -1.6495525955839696e-05
+          },
+          {
+            "branch": "Harbour",
+            "product": "Frozen Yoghurt Cup",
+            "observed": 6.46,
+            "fitted": 6.457278891517923,
+            "log_residual": 0.0004213129630752377,
+            "multiplicative_residual": 0.00042140172784721486
+          },
+          {
+            "branch": "Uptown",
+            "product": "Frozen Yoghurt Cup",
+            "observed": 5.9,
+            "fitted": 5.9023889055788095,
+            "log_residual": -0.00040481730106423086,
+            "multiplicative_residual": -0.00040473537359619893
+          },
+          {
+            "branch": "Garden",
+            "product": "Granola Yoghurt",
+            "observed": 7.85,
+            "fitted": 7.85073906771447,
+            "log_residual": -9.414432172016873e-05,
+            "multiplicative_residual": -9.413989028261849e-05
+          },
+          {
+            "branch": "Harbour",
+            "product": "Granola Yoghurt",
+            "observed": 8.24,
+            "fitted": 8.242857794111272,
+            "log_residual": -0.00034675954565699385,
+            "multiplicative_residual": -0.00034669943151433014
+          },
+          {
+            "branch": "Uptown",
+            "product": "Granola Yoghurt",
+            "observed": 7.539999999999999,
+            "fitted": 7.53452858573828,
+            "log_residual": 0.0007259151715244272,
+            "multiplicative_residual": 0.0007261787117078811
+          },
+          {
+            "branch": "Garden",
+            "product": "Halloumi Wrap",
+            "observed": 9.95,
+            "fitted": 9.951227283739344,
+            "log_residual": -0.00012333749305026842,
+            "multiplicative_residual": -0.00012332988729435446
+          },
+          {
+            "branch": "Harbour",
+            "product": "Halloumi Wrap",
+            "observed": 10.45,
+            "fitted": 10.448258523082387,
+            "log_residual": 0.00016666239626816903,
+            "multiplicative_residual": 0.00016667628521682687
+          },
+          {
+            "branch": "Uptown",
+            "product": "Halloumi Wrap",
+            "observed": 9.55,
+            "fitted": 9.550413761788738,
+            "log_residual": -4.332490321523608e-05,
+            "multiplicative_residual": -4.332396470518862e-05
+          },
+          {
+            "branch": "Garden",
+            "product": "Iced Americano",
+            "observed": 3.8500000000000005,
+            "fitted": 3.8500000015697093,
+            "log_residual": -4.077165272065031e-10,
+            "multiplicative_residual": -4.077165272065031e-10
+          },
+          {
+            "branch": "Harbour",
+            "product": "Iced Americano",
+            "observed": 4.04,
+            "fitted": 4.042294903262665,
+            "log_residual": -0.0005678840853511335,
+            "multiplicative_residual": -0.000567722869702636
+          },
+          {
+            "branch": "Uptown",
+            "product": "Iced Americano",
+            "observed": 3.7,
+            "fitted": 3.6949304793751434,
+            "log_residual": 0.001371080210466502,
+            "multiplicative_residual": 0.0013720205706588828
+          },
+          {
+            "branch": "Garden",
+            "product": "Iced Latte",
+            "observed": 5.35,
+            "fitted": 5.352652517671172,
+            "log_residual": -0.000495674828478565,
+            "multiplicative_residual": -0.0004955520020055726
+          },
+          {
+            "branch": "Harbour",
+            "product": "Iced Latte",
+            "observed": 5.62,
+            "fitted": 5.619999995401682,
+            "log_residual": 8.1820594743931e-10,
+            "multiplicative_residual": 8.1820594743931e-10
+          },
+          {
+            "branch": "Uptown",
+            "product": "Iced Latte",
+            "observed": 5.14,
+            "fitted": 5.137059461034707,
+            "log_residual": 0.000572252998377154,
+            "multiplicative_residual": 0.0005724167663616608
+          },
+          {
+            "branch": "Garden",
+            "product": "Iced Matcha",
+            "observed": 6.85,
+            "fitted": 6.850493203852407,
+            "log_residual": -7.199797047929835e-05,
+            "multiplicative_residual": -7.199537868762818e-05
+          },
+          {
+            "branch": "Harbour",
+            "product": "Iced Matcha",
+            "observed": 7.19,
+            "fitted": 7.192652922461748,
+            "log_residual": -0.000368905862657698,
+            "multiplicative_residual": -0.00036883782525665154
+          },
+          {
+            "branch": "Uptown",
+            "product": "Iced Matcha",
+            "observed": 6.58,
+            "fitted": 6.574570422687369,
+            "log_residual": 0.0008255043603100365,
+            "multiplicative_residual": 0.0008258451828115909
+          },
+          {
+            "branch": "Garden",
+            "product": "Iced Mocha",
+            "observed": 6.25,
+            "fitted": 6.24991484767201,
+            "log_residual": 1.3624465291073307e-05,
+            "multiplicative_residual": 1.3624558104607942e-05
+          },
+          {
+            "branch": "Harbour",
+            "product": "Iced Mocha",
+            "observed": 6.56,
+            "fitted": 6.562077642667444,
+            "log_residual": -0.00031666367802163364,
+            "multiplicative_residual": -0.00031661354537104724
+          },
+          {
+            "branch": "Uptown",
+            "product": "Iced Mocha",
+            "observed": 6.0,
+            "fitted": 5.998182040194068,
+            "log_residual": 0.00030303921273300283,
+            "multiplicative_residual": 0.00030308513375376656
+          },
+          {
+            "branch": "Garden",
+            "product": "Lemonade",
+            "observed": 4.65,
+            "fitted": 4.648344164239905,
+            "log_residual": 0.0003561571282695297,
+            "multiplicative_residual": 0.00035622055974982025
+          },
+          {
+            "branch": "Harbour",
+            "product": "Lemonade",
+            "observed": 4.88,
+            "fitted": 4.880513744430318,
+            "log_residual": -0.00010526995693971308,
+            "multiplicative_residual": -0.0001052644162522487
+          },
+          {
+            "branch": "Uptown",
+            "product": "Lemonade",
+            "observed": 4.46,
+            "fitted": 4.461119097161802,
+            "log_residual": -0.0002508871713255978,
+            "multiplicative_residual": -0.00025085570177107996
+          },
+          {
+            "branch": "Garden",
+            "product": "Mint Tea",
+            "observed": 3.65,
+            "fitted": 3.6481505067468154,
+            "log_residual": 0.0005068389014633023,
+            "multiplicative_residual": 0.0005069673660020868
+          },
+          {
+            "branch": "Harbour",
+            "product": "Mint Tea",
+            "observed": 3.83,
+            "fitted": 3.8303636866870643,
+            "log_residual": -9.495285138205745e-05,
+            "multiplicative_residual": -9.494834350276538e-05
+          },
+          {
+            "branch": "Uptown",
+            "product": "Mint Tea",
+            "observed": 3.5,
+            "fitted": 3.5012110377222854,
+            "log_residual": -0.0003459509298715524,
+            "multiplicative_residual": -0.0003458910957486738
+          },
+          {
+            "branch": "Garden",
+            "product": "Peach Iced Tea",
+            "observed": 4.45,
+            "fitted": 4.4490161966799295,
+            "log_residual": 0.00022110383942108847,
+            "multiplicative_residual": 0.000221128284676686
+          },
+          {
+            "branch": "Harbour",
+            "product": "Peach Iced Tea",
+            "observed": 4.67,
+            "fitted": 4.6712299971532065,
+            "log_residual": -0.0002633480089218043,
+            "multiplicative_residual": -0.000263313335878701
+          },
+          {
+            "branch": "Uptown",
+            "product": "Peach Iced Tea",
+            "observed": 4.27,
+            "fitted": 4.269819621206227,
+            "log_residual": 4.224416950249221e-05,
+            "multiplicative_residual": 4.224506180006138e-05
+          },
+          {
+            "branch": "Garden",
+            "product": "Pistachio Cookie",
+            "observed": 3.45,
+            "fitted": 3.44890276983263,
+            "log_residual": 0.000318088314396725,
+            "multiplicative_residual": 0.0003181389098489973
+          },
+          {
+            "branch": "Harbour",
+            "product": "Pistachio Cookie",
+            "observed": 3.62,
+            "fitted": 3.6211641773139607,
+            "log_residual": -0.0003215442421919956,
+            "multiplicative_residual": -0.0003214925523824519
+          },
+          {
+            "branch": "Uptown",
+            "product": "Pistachio Cookie",
+            "observed": 3.31,
+            "fitted": 3.3099885608987583,
+            "log_residual": 3.4559277970469537e-06,
+            "multiplicative_residual": 3.4559337687145586e-06
+          },
+          {
+            "branch": "Garden",
+            "product": "Quinoa Bowl",
+            "observed": 11.65,
+            "fitted": 11.649138084575611,
+            "log_residual": 7.39868935628607e-05,
+            "multiplicative_residual": 7.398963066052033e-05
+          },
+          {
+            "branch": "Harbour",
+            "product": "Quinoa Bowl",
+            "observed": 12.23,
+            "fitted": 12.230974412333484,
+            "log_residual": -7.967077006609813e-05,
+            "multiplicative_residual": -7.96675964346294e-05
+          },
+          {
+            "branch": "Uptown",
+            "product": "Quinoa Bowl",
+            "observed": 11.18,
+            "fitted": 11.179936454441282,
+            "log_residual": 5.6838765036815175e-06,
+            "multiplicative_residual": 5.683892656982437e-06
+          },
+          {
+            "branch": "Garden",
+            "product": "Soup of the Day",
+            "observed": 7.15,
+            "fitted": 7.1502149227413625,
+            "log_residual": -3.0058672899624383e-05,
+            "multiplicative_residual": -3.0058221142215125e-05
+          },
+          {
+            "branch": "Harbour",
+            "product": "Soup of the Day",
+            "observed": 7.51,
+            "fitted": 7.507344760427455,
+            "log_residual": 0.0003536230462275469,
+            "multiplicative_residual": 0.0003536855782275694
+          },
+          {
+            "branch": "Uptown",
+            "product": "Soup of the Day",
+            "observed": 6.86,
+            "fitted": 6.862220010739832,
+            "log_residual": -0.0003235643733248139,
+            "multiplicative_residual": -0.0003235120320184137
+          },
+          {
+            "branch": "Garden",
+            "product": "Spanish Latte",
+            "observed": 5.95,
+            "fitted": 5.950773610219534,
+            "log_residual": -0.00013001007261581599,
+            "multiplicative_residual": -0.00013000162167253748
+          },
+          {
+            "branch": "Harbour",
+            "product": "Spanish Latte",
+            "observed": 6.25,
+            "fitted": 6.247995279286454,
+            "log_residual": 0.0003208067671560677,
+            "multiplicative_residual": 0.00032085823115024503
+          },
+          {
+            "branch": "Uptown",
+            "product": "Spanish Latte",
+            "observed": 5.71,
+            "fitted": 5.711089553064069,
+            "log_residual": -0.00019079669453803128,
+            "multiplicative_residual": -0.00019077849400628288
+          },
+          {
+            "branch": "Garden",
+            "product": "Sparkling Water",
+            "observed": 2.75,
+            "fitted": 2.7510043717874666,
+            "log_residual": -0.00036515942571435644,
+            "multiplicative_residual": -0.00036509276312568506
+          },
+          {
+            "branch": "Harbour",
+            "product": "Sparkling Water",
+            "observed": 2.89,
+            "fitted": 2.8884080380248887,
+            "log_residual": 0.0005510036691465103,
+            "multiplicative_residual": 0.000551155499553202
+          },
+          {
+            "branch": "Uptown",
+            "product": "Sparkling Water",
+            "observed": 2.64,
+            "fitted": 2.640199973524008,
+            "log_residual": -7.574467827209386e-05,
+            "multiplicative_residual": -7.574180971636757e-05
+          },
+          {
+            "branch": "Garden",
+            "product": "Still Water",
+            "observed": 1.9500000000000002,
+            "fitted": 1.950000000492903,
+            "log_residual": -2.527706932653473e-10,
+            "multiplicative_residual": -2.527706932653473e-10
+          },
+          {
+            "branch": "Harbour",
+            "product": "Still Water",
+            "observed": 2.05,
+            "fitted": 2.0473961195171007,
+            "log_residual": 0.0012709929708903944,
+            "multiplicative_residual": 0.0012718010247636524
+          },
+          {
+            "branch": "Uptown",
+            "product": "Still Water",
+            "observed": 1.87,
+            "fitted": 1.8714582944584743,
+            "log_residual": -0.0007795326942336978,
+            "multiplicative_residual": -0.0007792289375575523
+          },
+          {
+            "branch": "Garden",
+            "product": "Strawberry Matcha",
+            "observed": 7.650000000000001,
+            "fitted": 7.6486844580308855,
+            "log_residual": 0.00017198105836691013,
+            "multiplicative_residual": 0.00017199584795690726
+          },
+          {
+            "branch": "Harbour",
+            "product": "Strawberry Matcha",
+            "observed": 8.03,
+            "fitted": 8.030711217858888,
+            "log_residual": -8.856617240748932e-05,
+            "multiplicative_residual": -8.856225053976985e-05
+          },
+          {
+            "branch": "Uptown",
+            "product": "Strawberry Matcha",
+            "observed": 7.34,
+            "fitted": 7.340612290799645,
+            "log_residual": -8.34148859558681e-05,
+            "multiplicative_residual": -8.341140703105321e-05
+          },
+          {
+            "branch": "Garden",
+            "product": "Tiramisu Cup",
+            "observed": 6.55,
+            "fitted": 6.552230884686984,
+            "log_residual": -0.0003405350933252116,
+            "multiplicative_residual": -0.0003404771178313615
+          },
+          {
+            "branch": "Harbour",
+            "product": "Tiramisu Cup",
+            "observed": 6.88,
+            "fitted": 6.879493376460157,
+            "log_residual": 7.363985376640514e-05,
+            "multiplicative_residual": 7.364256524700075e-05
+          },
+          {
+            "branch": "Uptown",
+            "product": "Tiramisu Cup",
+            "observed": 6.290000000000001,
+            "fitted": 6.288321452951236,
+            "log_residual": 0.00026689523956080485,
+            "multiplicative_residual": 0.00026693085926399185
+          },
+          {
+            "branch": "Garden",
+            "product": "Tuna Sandwich",
+            "observed": 8.85,
+            "fitted": 8.850984928633315,
+            "log_residual": -0.00011128517857095233,
+            "multiplicative_residual": -0.00011127898660512336
+          },
+          {
+            "branch": "Harbour",
+            "product": "Tuna Sandwich",
+            "observed": 9.29,
+            "fitted": 9.29306266267057,
+            "log_residual": -0.00032961872366188416,
+            "multiplicative_residual": -0.0003295644053786795
+          },
+          {
+            "branch": "Uptown",
+            "product": "Tuna Sandwich",
+            "observed": 8.5,
+            "fitted": 8.494486745964517,
+            "log_residual": 0.0006488285655588122,
+            "multiplicative_residual": 0.0006490391003437512
+          },
+          {
+            "branch": "Garden",
+            "product": "Turkey & Cheese Sandwich",
+            "observed": 9.65,
+            "fitted": 9.648911278082963,
+            "log_residual": 0.0001128272888046844,
+            "multiplicative_residual": 0.00011283365404257673
+          },
+          {
+            "branch": "Harbour",
+            "product": "Turkey & Cheese Sandwich",
+            "observed": 10.13,
+            "fitted": 10.130842822214522,
+            "log_residual": -8.319715249793802e-05,
+            "multiplicative_residual": -8.319369171083668e-05
+          },
+          {
+            "branch": "Uptown",
+            "product": "Turkey & Cheese Sandwich",
+            "observed": 9.26,
+            "fitted": 9.260274379127106,
+            "log_residual": -2.9630136304525934e-05,
+            "multiplicative_residual": -2.9629697336330807e-05
+          },
+          {
+            "branch": "Garden",
+            "product": "Vanilla Latte",
+            "observed": 5.45,
+            "fitted": 5.449129610106804,
+            "log_residual": 0.0001597173216913994,
+            "multiplicative_residual": 0.00015973007718184107
+          },
+          {
+            "branch": "Harbour",
+            "product": "Vanilla Latte",
+            "observed": 5.72,
+            "fitted": 5.721295802901722,
+            "log_residual": -0.00022651331275502784,
+            "multiplicative_residual": -0.00022648766055144431
+          },
+          {
+            "branch": "Uptown",
+            "product": "Vanilla Latte",
+            "observed": 5.23,
+            "fitted": 5.229650668633815,
+            "log_residual": 6.679599106740319e-05,
+            "multiplicative_residual": 6.679822196931084e-05
+          }
+        ]
+      },
+      "ols": {
+        "target": "listed_unit_price",
+        "method": "ols",
+        "reference_branch": "Garden",
+        "reference_product": "Almond Croissant",
+        "branch_effects": {
+          "Garden": 0.0,
+          "Harbour": 0.048771647766432336,
+          "Uptown": -0.0410863105320725
+        },
+        "branch_multipliers": {
+          "Garden": 1.0,
+          "Harbour": 1.0499805579568493,
+          "Uptown": 0.959746290159919
+        },
+        "product_effects": {
+          "Almond Croissant": 0.0,
+          "Americano": -0.43188817001202784,
+          "Avocado Toast": 0.6667559810933683,
+          "Banana Bread": -0.08653166284996167,
+          "Blueberry Muffin": -0.20536068379980066,
+          "Brownie": 0.059779718361497446,
+          "Butter Croissant": -0.2849723481223495,
+          "Cappuccino": -0.18040898732141525,
+          "Caramel Latte": 0.17023658113187087,
+          "Chai Latte": 0.07897559940075258,
+          "Cheesecake Slice": 0.3305587907144281,
+          "Chicken Pesto Sandwich": 0.7958783030464293,
+          "Chicken Salad Bowl": 0.9424998150916638,
+          "Chocolate Cookie": -0.4318881700120273,
+          "Chocolate Croissant": -0.13236908208833492,
+          "Cinnamon Roll": 0.05977971836149733,
+          "Classic Matcha": 0.2847481069263313,
+          "Coffee Frappe": 0.3005909295517962,
+          "Cold Brew": 0.05977971836149771,
+          "Egg Sandwich": 0.5188435627714221,
+          "English Breakfast Tea": -0.3411585124598177,
+          "Espresso": -0.6053657783060848,
+          "Flat White": -0.1084238957020008,
+          "Fresh Orange Juice": 0.17023658113187046,
+          "Frozen Yoghurt Cup": 0.2372539222917462,
+          "Granola Yoghurt": 0.4814880246953961,
+          "Halloumi Wrap": 0.7184812334748624,
+          "Iced Americano": -0.23087377457548114,
+          "Iced Latte": 0.09840310687707142,
+          "Iced Matcha": 0.34523419523164717,
+          "Iced Mocha": 0.2533531840943298,
+          "Lemonade": -0.04270359271769343,
+          "Mint Tea": -0.28497234812235045,
+          "Peach Iced Tea": -0.08653166284996186,
+          "Pistachio Cookie": -0.34115851245981776,
+          "Quinoa Bowl": 0.8760175379294568,
+          "Soup of the Day": 0.38792776019012687,
+          "Spanish Latte": 0.2043065744414647,
+          "Sparkling Water": -0.5672118842294427,
+          "Still Water": -0.9112214623523014,
+          "Strawberry Matcha": 0.4553190115913882,
+          "Tiramisu Cup": 0.3005909295517962,
+          "Tuna Sandwich": 0.6013833972308275,
+          "Turkey & Cheese Sandwich": 0.6876304328734003,
+          "Vanilla Latte": 0.1162412361647722
+        },
+        "intercept": 1.5791955488050045,
+        "rmse": 0.00039172002455800496,
+        "mae": 0.0002968888598962773,
+        "r_squared": 0.999999100379334,
+        "iterations": 1,
+        "observations": 135,
+        "residuals": [
+          {
+            "branch": "Garden",
+            "product": "Almond Croissant",
+            "observed": 4.85,
+            "fitted": 4.851051806734514,
+            "log_residual": -0.0002168438556127139,
+            "multiplicative_residual": -0.0002168203466831331
+          },
+          {
+            "branch": "Harbour",
+            "product": "Almond Croissant",
+            "observed": 5.09,
+            "fitted": 5.093510082712687,
+            "log_residual": -0.0006893660090054876,
+            "multiplicative_residual": -0.0006891284508495632
+          },
+          {
+            "branch": "Uptown",
+            "product": "Almond Croissant",
+            "observed": 4.66,
+            "fitted": 4.6557789748870215,
+            "log_residual": 0.0009062098646226424,
+            "multiplicative_residual": 0.0009066205968424335
+          },
+          {
+            "branch": "Garden",
+            "product": "Americano",
+            "observed": 3.15,
+            "fitted": 3.1497005309957102,
+            "log_residual": 9.507404456510216e-05,
+            "multiplicative_residual": 9.507856424528782e-05
+          },
+          {
+            "branch": "Harbour",
+            "product": "Americano",
+            "observed": 3.3099999999999996,
+            "fitted": 3.3071243209318606,
+            "log_residual": 0.0008691628295625087,
+            "multiplicative_residual": 0.0008695406610323975
+          },
+          {
+            "branch": "Uptown",
+            "product": "Americano",
+            "observed": 3.02,
+            "fitted": 3.02291339973786,
+            "log_residual": -0.0009642368741258345,
+            "multiplicative_residual": -0.0009637721471320582
+          },
+          {
+            "branch": "Garden",
+            "product": "Avocado Toast",
+            "observed": 9.45,
+            "fitted": 9.449402669190539,
+            "log_residual": 6.321160727829067e-05,
+            "multiplicative_residual": 6.321360517413943e-05
+          },
+          {
+            "branch": "Harbour",
+            "product": "Avocado Toast",
+            "observed": 9.92,
+            "fitted": 9.921689086955622,
+            "log_residual": -0.0001702563680239244,
+            "multiplicative_residual": -0.00017024187523095868
+          },
+          {
+            "branch": "Uptown",
+            "product": "Avocado Toast",
+            "observed": 9.07,
+            "fitted": 9.069029155982856,
+            "log_residual": 0.00010704476074474556,
+            "multiplicative_residual": 0.0001070504902396241
+          },
+          {
+            "branch": "Garden",
+            "product": "Banana Bread",
+            "observed": 4.45,
+            "fitted": 4.448931192881515,
+            "log_residual": 0.0002402102231060521,
+            "multiplicative_residual": 0.00024023907589199034
+          },
+          {
+            "branch": "Harbour",
+            "product": "Banana Bread",
+            "observed": 4.67,
+            "fitted": 4.671291256213364,
+            "log_residual": -0.0002764620406692231,
+            "multiplicative_residual": -0.00027642382856074565
+          },
+          {
+            "branch": "Uptown",
+            "product": "Banana Bread",
+            "observed": 4.27,
+            "fitted": 4.269845207544777,
+            "log_residual": 3.6251817562726885e-05,
+            "multiplicative_residual": 3.6252474667763934e-05
+          },
+          {
+            "branch": "Garden",
+            "product": "Blueberry Muffin",
+            "observed": 3.95,
+            "fitted": 3.9504712081678166,
+            "log_residual": -0.00011928609217326525,
+            "multiplicative_residual": -0.00011927897787022967
+          },
+          {
+            "branch": "Harbour",
+            "product": "Blueberry Muffin",
+            "observed": 4.15,
+            "fitted": 4.147917963344513,
+            "log_residual": 0.0005018214709706648,
+            "multiplicative_residual": 0.000501947404429437
+          },
+          {
+            "branch": "Uptown",
+            "product": "Blueberry Muffin",
+            "observed": 3.79,
+            "fitted": 3.791450086422634,
+            "log_residual": -0.0003825353787962893,
+            "multiplicative_residual": -0.0003824622214669837
+          },
+          {
+            "branch": "Garden",
+            "product": "Brownie",
+            "observed": 5.15,
+            "fitted": 5.149889546512394,
+            "log_residual": 2.1447509142902277e-05,
+            "multiplicative_residual": 2.1447739142477218e-05
+          },
+          {
+            "branch": "Harbour",
+            "product": "Brownie",
+            "observed": 5.41,
+            "fitted": 5.40728389946323,
+            "log_residual": 0.0005021779254559267,
+            "multiplicative_residual": 0.0005023040378997479
+          },
+          {
+            "branch": "Uptown",
+            "product": "Brownie",
+            "observed": 4.94,
+            "fitted": 4.942587386998618,
+            "log_residual": -0.0005236254345981628,
+            "multiplicative_residual": -0.0005234883667254442
+          },
+          {
+            "branch": "Garden",
+            "product": "Butter Croissant",
+            "observed": 3.65,
+            "fitted": 3.6481609842126073,
+            "log_residual": 0.0005039669117450352,
+            "multiplicative_residual": 0.0005040939244049802
+          },
+          {
+            "branch": "Harbour",
+            "product": "Butter Croissant",
+            "observed": 3.83,
+            "fitted": 3.8304981057199616,
+            "log_residual": -0.00013004525653270704,
+            "multiplicative_residual": -0.0001300368010148656
+          },
+          {
+            "branch": "Uptown",
+            "product": "Butter Croissant",
+            "observed": 3.5,
+            "fitted": 3.5013089705042084,
+            "log_residual": -0.00037392165521454857,
+            "multiplicative_residual": -0.0003738517552250853
+          },
+          {
+            "branch": "Garden",
+            "product": "Cappuccino",
+            "observed": 4.05,
+            "fitted": 4.0502822153111415,
+            "log_residual": -6.96803651414335e-05,
+            "multiplicative_residual": -6.967793752121754e-05
+          },
+          {
+            "branch": "Harbour",
+            "product": "Cappuccino",
+            "observed": 4.25,
+            "fitted": 4.252717580315096,
+            "log_residual": -0.0006392263136962839,
+            "multiplicative_residual": -0.0006390220520816614
+          },
+          {
+            "branch": "Uptown",
+            "product": "Cappuccino",
+            "observed": 3.89,
+            "fitted": 3.8872433302455667,
+            "log_residual": 0.0007089066788381615,
+            "multiplicative_residual": 0.0007091580125651031
+          },
+          {
+            "branch": "Garden",
+            "product": "Caramel Latte",
+            "observed": 5.75,
+            "fitted": 5.751335737107041,
+            "log_residual": -0.0002322751276162549,
+            "multiplicative_residual": -0.0002322481538372667
+          },
+          {
+            "branch": "Harbour",
+            "product": "Caramel Latte",
+            "observed": 6.04,
+            "fitted": 6.038790706244819,
+            "log_residual": 0.00020023424341575335,
+            "multiplicative_residual": 0.00020025429162995323
+          },
+          {
+            "branch": "Uptown",
+            "product": "Caramel Latte",
+            "observed": 5.52,
+            "fitted": 5.519823137152646,
+            "log_residual": 3.204088420094564e-05,
+            "multiplicative_residual": 3.2041397515447656e-05
+          },
+          {
+            "branch": "Garden",
+            "product": "Chai Latte",
+            "observed": 5.25,
+            "fitted": 5.249701134418729,
+            "log_residual": 5.6928397775379835e-05,
+            "multiplicative_residual": 5.6930018227374646e-05
+          },
+          {
+            "branch": "Harbour",
+            "product": "Chai Latte",
+            "observed": 5.51,
+            "fitted": 5.512084126223683,
+            "log_residual": -0.0003781728073664059,
+            "multiplicative_residual": -0.00037810130904347705
+          },
+          {
+            "branch": "Uptown",
+            "product": "Chai Latte",
+            "observed": 5.04,
+            "fitted": 5.038381188206694,
+            "log_residual": 0.0003212444095925804,
+            "multiplicative_residual": 0.00032129601410368913
+          },
+          {
+            "branch": "Garden",
+            "product": "Cheesecake Slice",
+            "observed": 6.75,
+            "fitted": 6.75143003524636,
+            "log_residual": -0.00021183463499396815,
+            "multiplicative_residual": -0.0002118121996218525
+          },
+          {
+            "branch": "Harbour",
+            "product": "Cheesecake Slice",
+            "observed": 7.09,
+            "fitted": 7.088870275414603,
+            "log_residual": 0.00015935325817117985,
+            "multiplicative_residual": 0.00015936595557608513
+          },
+          {
+            "branch": "Uptown",
+            "product": "Cheesecake Slice",
+            "observed": 6.48,
+            "fitted": 6.479659929601945,
+            "log_residual": 5.2481376823232395e-05,
+            "multiplicative_residual": 5.2482753994720355e-05
+          },
+          {
+            "branch": "Garden",
+            "product": "Chicken Pesto Sandwich",
+            "observed": 10.75,
+            "fitted": 10.751807197624187,
+            "log_residual": -0.00016809727776223582,
+            "multiplicative_residual": -0.00016808315020644393
+          },
+          {
+            "branch": "Harbour",
+            "product": "Chicken Pesto Sandwich",
+            "observed": 11.29,
+            "fitted": 11.289188520405911,
+            "log_residual": 7.187854370416247e-05,
+            "multiplicative_residual": 7.188112702860572e-05
+          },
+          {
+            "branch": "Uptown",
+            "product": "Chicken Pesto Sandwich",
+            "observed": 10.32,
+            "fitted": 10.319007070434528,
+            "log_residual": 9.621873405540882e-05,
+            "multiplicative_residual": 9.622336322623326e-05
+          },
+          {
+            "branch": "Garden",
+            "product": "Chicken Salad Bowl",
+            "observed": 12.45,
+            "fitted": 12.449685529246723,
+            "log_residual": 2.5259014048373274e-05,
+            "multiplicative_residual": 2.525933305985717e-05
+          },
+          {
+            "branch": "Harbour",
+            "product": "Chicken Salad Bowl",
+            "observed": 13.07,
+            "fitted": 13.071927758385788,
+            "log_residual": -0.00014748402696973528,
+            "multiplicative_residual": -0.00014747315173524456
+          },
+          {
+            "branch": "Uptown",
+            "product": "Chicken Salad Bowl",
+            "observed": 11.95,
+            "fitted": 11.94853950035217,
+            "log_residual": 0.00012222501292402654,
+            "multiplicative_residual": 0.00012223248270526454
+          },
+          {
+            "branch": "Garden",
+            "product": "Chocolate Cookie",
+            "observed": 3.1499999999999995,
+            "fitted": 3.1497005309957116,
+            "log_residual": 9.507404456443602e-05,
+            "multiplicative_residual": 9.507856424462169e-05
+          },
+          {
+            "branch": "Harbour",
+            "product": "Chocolate Cookie",
+            "observed": 3.31,
+            "fitted": 3.307124320931862,
+            "log_residual": 0.0008691628295620646,
+            "multiplicative_residual": 0.0008695406610319534
+          },
+          {
+            "branch": "Uptown",
+            "product": "Chocolate Cookie",
+            "observed": 3.02,
+            "fitted": 3.0229133997378614,
+            "log_residual": -0.0009642368741262786,
+            "multiplicative_residual": -0.0009637721471325023
+          },
+          {
+            "branch": "Garden",
+            "product": "Chocolate Croissant",
+            "observed": 4.25,
+            "fitted": 4.249606824254309,
+            "log_residual": 9.251621965589152e-05,
+            "multiplicative_residual": 9.252049941332885e-05
+          },
+          {
+            "branch": "Harbour",
+            "product": "Chocolate Croissant",
+            "observed": 4.46,
+            "fitted": 4.462004544427774,
+            "log_residual": -0.00044934845112920563,
+            "multiplicative_residual": -0.00044924750923391876
+          },
+          {
+            "branch": "Uptown",
+            "product": "Chocolate Croissant",
+            "observed": 4.08,
+            "fitted": 4.0785443842163485,
+            "log_residual": 0.0003568322314733141,
+            "multiplicative_residual": 0.00035689590366727586
+          },
+          {
+            "branch": "Garden",
+            "product": "Cinnamon Roll",
+            "observed": 5.15,
+            "fitted": 5.149889546512394,
+            "log_residual": 2.1447509142902277e-05,
+            "multiplicative_residual": 2.1447739142477218e-05
+          },
+          {
+            "branch": "Harbour",
+            "product": "Cinnamon Roll",
+            "observed": 5.41,
+            "fitted": 5.407283899463228,
+            "log_residual": 0.0005021779254561487,
+            "multiplicative_residual": 0.0005023040378999699
+          },
+          {
+            "branch": "Uptown",
+            "product": "Cinnamon Roll",
+            "observed": 4.94,
+            "fitted": 4.942587386998618,
+            "log_residual": -0.0005236254345981628,
+            "multiplicative_residual": -0.0005234883667254442
+          },
+          {
+            "branch": "Garden",
+            "product": "Classic Matcha",
+            "observed": 6.45,
+            "fitted": 6.449119795821905,
+            "log_residual": 0.00013647507634528822,
+            "multiplicative_residual": 0.00013648438949220854
+          },
+          {
+            "branch": "Harbour",
+            "product": "Classic Matcha",
+            "observed": 6.77,
+            "fitted": 6.771450401547646,
+            "log_residual": -0.00021421657358455803,
+            "multiplicative_residual": -0.00021419363085262155
+          },
+          {
+            "branch": "Uptown",
+            "product": "Classic Matcha",
+            "observed": 6.19,
+            "fitted": 6.189518798836968,
+            "log_residual": 7.774149724149026e-05,
+            "multiplicative_residual": 7.77445191899595e-05
+          },
+          {
+            "branch": "Garden",
+            "product": "Coffee Frappe",
+            "observed": 6.55,
+            "fitted": 6.5521056964456585,
+            "log_residual": -0.0003214287096400259,
+            "multiplicative_residual": -0.0003213770569666652
+          },
+          {
+            "branch": "Harbour",
+            "product": "Coffee Frappe",
+            "observed": 6.88,
+            "fitted": 6.879583594946263,
+            "log_residual": 6.052582201920842e-05,
+            "multiplicative_residual": 6.0527653743758236e-05
+          },
+          {
+            "branch": "Uptown",
+            "product": "Coffee Frappe",
+            "observed": 6.29,
+            "fitted": 6.288359134899393,
+            "log_residual": 0.0002609028876210395,
+            "multiplicative_residual": 0.0002609369257395855
+          },
+          {
+            "branch": "Garden",
+            "product": "Cold Brew",
+            "observed": 5.15,
+            "fitted": 5.149889546512395,
+            "log_residual": 2.1447509142680232e-05,
+            "multiplicative_residual": 2.1447739142255173e-05
+          },
+          {
+            "branch": "Harbour",
+            "product": "Cold Brew",
+            "observed": 5.41,
+            "fitted": 5.407283899463231,
+            "log_residual": 0.0005021779254557046,
+            "multiplicative_residual": 0.0005023040378995258
+          },
+          {
+            "branch": "Uptown",
+            "product": "Cold Brew",
+            "observed": 4.94,
+            "fitted": 4.942587386998619,
+            "log_residual": -0.0005236254345983848,
+            "multiplicative_residual": -0.0005234883667256662
+          },
+          {
+            "branch": "Garden",
+            "product": "Egg Sandwich",
+            "observed": 8.15,
+            "fitted": 8.150172654066562,
+            "log_residual": -2.1184323654832582e-05,
+            "multiplicative_residual": -2.1184099268656276e-05
+          },
+          {
+            "branch": "Harbour",
+            "product": "Egg Sandwich",
+            "observed": 8.56,
+            "fitted": 8.557522830761467,
+            "log_residual": 0.00028943081079146893,
+            "multiplicative_residual": 0.00028947269992984914
+          },
+          {
+            "branch": "Uptown",
+            "product": "Egg Sandwich",
+            "observed": 7.82,
+            "fitted": 7.822097968903207,
+            "log_residual": -0.0002682464871344159,
+            "multiplicative_residual": -0.0002682105122622236
+          },
+          {
+            "branch": "Garden",
+            "product": "English Breakfast Tea",
+            "observed": 3.4500000000000006,
+            "fitted": 3.4488368744025313,
+            "log_residual": 0.0003371946980819107,
+            "multiplicative_residual": 0.00033725155460451184
+          },
+          {
+            "branch": "Harbour",
+            "product": "English Breakfast Tea",
+            "observed": 3.6200000000000006,
+            "fitted": 3.621211665687326,
+            "log_residual": -0.00033465827393919234,
+            "multiplicative_residual": -0.00033460228210524523
+          },
+          {
+            "branch": "Uptown",
+            "product": "English Breakfast Tea",
+            "observed": 3.31,
+            "fitted": 3.3100083955745596,
+            "log_residual": -2.5364241427183742e-06,
+            "multiplicative_residual": -2.5364209259581827e-06
+          },
+          {
+            "branch": "Garden",
+            "product": "Espresso",
+            "observed": 2.65,
+            "fitted": 2.6480665514954667,
+            "log_residual": 0.0007298694992111665,
+            "multiplicative_residual": 0.0007301359187672496
+          },
+          {
+            "branch": "Harbour",
+            "product": "Espresso",
+            "observed": 2.78,
+            "fitted": 2.78041839524608,
+            "log_residual": -0.00015049056280647122,
+            "multiplicative_residual": -0.00015047923966970966
+          },
+          {
+            "branch": "Uptown",
+            "product": "Espresso",
+            "observed": 2.54,
+            "fitted": 2.5414720488943443,
+            "log_residual": -0.0005793789364019197,
+            "multiplicative_residual": -0.0005792111288355217
+          },
+          {
+            "branch": "Garden",
+            "product": "Flat White",
+            "observed": 4.35,
+            "fitted": 4.352592537060959,
+            "log_residual": -0.0005958080024111023,
+            "multiplicative_residual": -0.0005956305440686371
+          },
+          {
+            "branch": "Harbour",
+            "product": "Flat White",
+            "observed": 4.57,
+            "fitted": 4.570137540622084,
+            "log_residual": -3.0095963322818164e-05,
+            "multiplicative_residual": -3.0095510443861606e-05
+          },
+          {
+            "branch": "Uptown",
+            "product": "Flat White",
+            "observed": 4.18,
+            "fitted": 4.177384540022005,
+            "log_residual": 0.0006259039657336984,
+            "multiplicative_residual": 0.0006260998844942467
+          },
+          {
+            "branch": "Garden",
+            "product": "Fresh Orange Juice",
+            "observed": 5.75,
+            "fitted": 5.7513357371070395,
+            "log_residual": -0.00023227512761581082,
+            "multiplicative_residual": -0.00023224815383682262
+          },
+          {
+            "branch": "Harbour",
+            "product": "Fresh Orange Juice",
+            "observed": 6.04,
+            "fitted": 6.038790706244816,
+            "log_residual": 0.00020023424341619744,
+            "multiplicative_residual": 0.00020025429163039732
+          },
+          {
+            "branch": "Uptown",
+            "product": "Fresh Orange Juice",
+            "observed": 5.52,
+            "fitted": 5.519823137152644,
+            "log_residual": 3.204088420138973e-05,
+            "multiplicative_residual": 3.2041397515891745e-05
+          },
+          {
+            "branch": "Garden",
+            "product": "Frozen Yoghurt Cup",
+            "observed": 6.15,
+            "fitted": 6.149983944082653,
+            "log_residual": 2.6107216759552188e-06,
+            "multiplicative_residual": 2.610725083895815e-06
+          },
+          {
+            "branch": "Harbour",
+            "product": "Frozen Yoghurt Cup",
+            "observed": 6.46,
+            "fitted": 6.457363573033568,
+            "log_residual": 0.00040819893132737484,
+            "multiplicative_residual": 0.0004082822558484356
+          },
+          {
+            "branch": "Uptown",
+            "product": "Frozen Yoghurt Cup",
+            "observed": 5.9,
+            "fitted": 5.902424274876391,
+            "log_residual": -0.00041080965300421823,
+            "multiplicative_residual": -0.00041072528227259486
+          },
+          {
+            "branch": "Garden",
+            "product": "Granola Yoghurt",
+            "observed": 7.85,
+            "fitted": 7.851334940887352,
+            "log_residual": -0.00017004170608370117,
+            "multiplicative_residual": -0.00017002724981218797
+          },
+          {
+            "branch": "Harbour",
+            "product": "Granola Yoghurt",
+            "observed": 8.24,
+            "fitted": 8.243749041939008,
+            "log_residual": -0.00045487734545268665,
+            "multiplicative_residual": -0.00045477390443793286
+          },
+          {
+            "branch": "Uptown",
+            "product": "Granola Yoghurt",
+            "observed": 7.539999999999999,
+            "fitted": 7.5352895823195825,
+            "log_residual": 0.0006249190515363878,
+            "multiplicative_residual": 0.0006251143541275983
+          },
+          {
+            "branch": "Garden",
+            "product": "Halloumi Wrap",
+            "observed": 9.95,
+            "fitted": 9.95103715358908,
+            "log_residual": -0.00010423110936530477,
+            "multiplicative_residual": -0.00010422567749190925
+          },
+          {
+            "branch": "Harbour",
+            "product": "Halloumi Wrap",
+            "observed": 10.45,
+            "fitted": 10.4483955427748,
+            "log_residual": 0.00015354836452097231,
+            "multiplicative_residual": 0.00015356015367440357
+          },
+          {
+            "branch": "Uptown",
+            "product": "Halloumi Wrap",
+            "observed": 9.55,
+            "fitted": 9.55047099140064,
+            "log_residual": -4.931725515522345e-05,
+            "multiplicative_residual": -4.931603907942783e-05
+          },
+          {
+            "branch": "Garden",
+            "product": "Iced Americano",
+            "observed": 3.8500000000000005,
+            "fitted": 3.850957328833301,
+            "log_residual": -0.00024862592983021514,
+            "multiplicative_residual": -0.00024859502496499264
+          },
+          {
+            "branch": "Harbour",
+            "product": "Iced Americano",
+            "observed": 4.04,
+            "fitted": 4.043430324796407,
+            "log_residual": -0.0008487300228969819,
+            "multiplicative_residual": -0.0008483699534455047
+          },
+          {
+            "branch": "Uptown",
+            "product": "Iced Americano",
+            "observed": 3.7,
+            "fitted": 3.6959420099119122,
+            "log_residual": 0.0010973559527280852,
+            "multiplicative_residual": 0.0010979582680694655
+          },
+          {
+            "branch": "Garden",
+            "product": "Iced Latte",
+            "observed": 5.35,
+            "fitted": 5.352686881519898,
+            "log_residual": -0.000502094774160744,
+            "multiplicative_residual": -0.0005019687456732091
+          },
+          {
+            "branch": "Harbour",
+            "product": "Iced Latte",
+            "observed": 5.62,
+            "fitted": 5.620217158426571,
+            "log_residual": -3.863954290861393e-05,
+            "multiplicative_residual": -3.8638796411083476e-05
+          },
+          {
+            "branch": "Uptown",
+            "product": "Iced Latte",
+            "observed": 5.14,
+            "fitted": 5.137221376926388,
+            "log_residual": 0.0005407343170702461,
+            "multiplicative_residual": 0.0005408805402258299
+          },
+          {
+            "branch": "Garden",
+            "product": "Iced Matcha",
+            "observed": 6.85,
+            "fitted": 6.851240590900252,
+            "log_residual": -0.00018109176251779324,
+            "multiplicative_residual": -0.0001810753663943343
+          },
+          {
+            "branch": "Harbour",
+            "product": "Iced Matcha",
+            "observed": 7.19,
+            "fitted": 7.19366941833006,
+            "log_residual": -0.0005102200701285753,
+            "multiplicative_residual": -0.0005100899300028994
+          },
+          {
+            "branch": "Uptown",
+            "product": "Iced Matcha",
+            "observed": 6.58,
+            "fitted": 6.575452740109568,
+            "log_residual": 0.0006913118326468126,
+            "multiplicative_residual": 0.0006915508437457252
+          },
+          {
+            "branch": "Garden",
+            "product": "Iced Mocha",
+            "observed": 6.25,
+            "fitted": 6.249795435541703,
+            "log_residual": 3.273084897603695e-05,
+            "multiplicative_residual": 3.273138463621983e-05
+          },
+          {
+            "branch": "Harbour",
+            "product": "Iced Mocha",
+            "observed": 6.56,
+            "fitted": 6.5621636985262475,
+            "log_residual": -0.0003297777097690524,
+            "multiplicative_residual": -0.0003297233390769927
+          },
+          {
+            "branch": "Uptown",
+            "product": "Iced Mocha",
+            "observed": 6.0,
+            "fitted": 5.998217983519544,
+            "log_residual": 0.0002970468607932375,
+            "multiplicative_residual": 0.0002970909835806612
+          },
+          {
+            "branch": "Garden",
+            "product": "Lemonade",
+            "observed": 4.65,
+            "fitted": 4.6482553520412475,
+            "log_residual": 0.0003752635119540493,
+            "multiplicative_residual": 0.00037533393211419686
+          },
+          {
+            "branch": "Harbour",
+            "product": "Lemonade",
+            "observed": 4.88,
+            "fitted": 4.88057774806218,
+            "log_residual": -0.00011838398868757594,
+            "multiplicative_residual": -0.00011837698157968202
+          },
+          {
+            "branch": "Uptown",
+            "product": "Lemonade",
+            "observed": 4.46,
+            "fitted": 4.461145829837576,
+            "log_residual": -0.0002568795232658072,
+            "multiplicative_residual": -0.00025684653254598455
+          },
+          {
+            "branch": "Garden",
+            "product": "Mint Tea",
+            "observed": 3.65,
+            "fitted": 3.6481609842126033,
+            "log_residual": 0.0005039669117461454,
+            "multiplicative_residual": 0.0005040939244060905
+          },
+          {
+            "branch": "Harbour",
+            "product": "Mint Tea",
+            "observed": 3.83,
+            "fitted": 3.8304981057199576,
+            "log_residual": -0.00013004525653159682,
+            "multiplicative_residual": -0.00013003680101375537
+          },
+          {
+            "branch": "Uptown",
+            "product": "Mint Tea",
+            "observed": 3.5,
+            "fitted": 3.5013089705042044,
+            "log_residual": -0.00037392165521343834,
+            "multiplicative_residual": -0.00037385175522397507
+          },
+          {
+            "branch": "Garden",
+            "product": "Peach Iced Tea",
+            "observed": 4.45,
+            "fitted": 4.448931192881514,
+            "log_residual": 0.00024021022310627416,
+            "multiplicative_residual": 0.00024023907589221238
+          },
+          {
+            "branch": "Harbour",
+            "product": "Peach Iced Tea",
+            "observed": 4.67,
+            "fitted": 4.6712912562133635,
+            "log_residual": -0.00027646204066900104,
+            "multiplicative_residual": -0.0002764238285605236
+          },
+          {
+            "branch": "Uptown",
+            "product": "Peach Iced Tea",
+            "observed": 4.27,
+            "fitted": 4.269845207544776,
+            "log_residual": 3.625181756294893e-05,
+            "multiplicative_residual": 3.625247466798598e-05
+          },
+          {
+            "branch": "Garden",
+            "product": "Pistachio Cookie",
+            "observed": 3.45,
+            "fitted": 3.4488368744025313,
+            "log_residual": 0.00033719469808168867,
+            "multiplicative_residual": 0.0003372515546042898
+          },
+          {
+            "branch": "Harbour",
+            "product": "Pistachio Cookie",
+            "observed": 3.62,
+            "fitted": 3.621211665687326,
+            "log_residual": -0.0003346582739394144,
+            "multiplicative_residual": -0.0003346022821054673
+          },
+          {
+            "branch": "Uptown",
+            "product": "Pistachio Cookie",
+            "observed": 3.31,
+            "fitted": 3.3100083955745596,
+            "log_residual": -2.5364241427183742e-06,
+            "multiplicative_residual": -2.5364209259581827e-06
+          },
+          {
+            "branch": "Garden",
+            "product": "Quinoa Bowl",
+            "observed": 11.65,
+            "fitted": 11.648915513800025,
+            "log_residual": 9.309327724871252e-05,
+            "multiplicative_residual": 9.309761056242039e-05
+          },
+          {
+            "branch": "Harbour",
+            "product": "Quinoa Bowl",
+            "observed": 12.23,
+            "fitted": 12.231134810771954,
+            "log_residual": -9.278480181285076e-05,
+            "multiplicative_residual": -9.278049743621786e-05
+          },
+          {
+            "branch": "Uptown",
+            "product": "Quinoa Bowl",
+            "observed": 11.18,
+            "fitted": 11.180003448755906,
+            "log_residual": -3.0847543586176585e-07,
+            "multiplicative_residual": -3.084753882331981e-07
+          },
+          {
+            "branch": "Garden",
+            "product": "Soup of the Day",
+            "observed": 7.15,
+            "fitted": 7.150078309296719,
+            "log_residual": -1.0952289214882782e-05,
+            "multiplicative_residual": -1.0952229238747613e-05
+          },
+          {
+            "branch": "Harbour",
+            "product": "Soup of the Day",
+            "observed": 7.51,
+            "fitted": 7.507443212630535,
+            "log_residual": 0.0003405090144799061,
+            "multiplicative_residual": 0.0003405669942551093
+          },
+          {
+            "branch": "Uptown",
+            "product": "Soup of the Day",
+            "observed": 6.86,
+            "fitted": 6.862261131700432,
+            "log_residual": -0.0003295567252648013,
+            "multiplicative_residual": -0.00032950242741214275
+          },
+          {
+            "branch": "Garden",
+            "product": "Spanish Latte",
+            "observed": 5.95,
+            "fitted": 5.950659913541885,
+            "log_residual": -0.00011090368893085234,
+            "multiplicative_residual": -0.00011089753934412361
+          },
+          {
+            "branch": "Harbour",
+            "product": "Spanish Latte",
+            "observed": 6.25,
+            "fitted": 6.248077216232163,
+            "log_residual": 0.000307692735408871,
+            "multiplicative_residual": 0.0003077400776740902
+          },
+          {
+            "branch": "Uptown",
+            "product": "Spanish Latte",
+            "observed": 5.71,
+            "fitted": 5.711123776025168,
+            "log_residual": -0.0001967890464777966,
+            "multiplicative_residual": -0.0001967696847834377
+          },
+          {
+            "branch": "Garden",
+            "product": "Sparkling Water",
+            "observed": 2.75,
+            "fitted": 2.7510527719298756,
+            "log_residual": -0.00038275289708189497,
+            "multiplicative_residual": -0.0003826796565363777
+          },
+          {
+            "branch": "Harbour",
+            "product": "Sparkling Water",
+            "observed": 2.89,
+            "fitted": 2.8885519244396676,
+            "log_residual": 0.0005011897823465894,
+            "multiplicative_residual": 0.0005013153989306129
+          },
+          {
+            "branch": "Uptown",
+            "product": "Sparkling Water",
+            "observed": 2.64,
+            "fitted": 2.6403126918938598,
+            "log_residual": -0.00011843688526447238,
+            "multiplicative_residual": -0.00011842987189347731
+          },
+          {
+            "branch": "Garden",
+            "product": "Still Water",
+            "observed": 1.9500000000000002,
+            "fitted": 1.9502822124797814,
+            "log_residual": -0.0001447138770475087,
+            "multiplicative_residual": -0.0001447034064995245
+          },
+          {
+            "branch": "Harbour",
+            "product": "Still Water",
+            "observed": 2.05,
+            "fitted": 2.0477584056328393,
+            "log_residual": 0.0010940589311813076,
+            "multiplicative_residual": 0.0010946576319719181
+          },
+          {
+            "branch": "Uptown",
+            "product": "Still Water",
+            "observed": 1.87,
+            "fitted": 1.8717761181923491,
+            "log_residual": -0.0009493450541352422,
+            "multiplicative_residual": -0.0009488945686859651
+          },
+          {
+            "branch": "Garden",
+            "product": "Strawberry Matcha",
+            "observed": 7.650000000000001,
+            "fitted": 7.648538320727027,
+            "log_residual": 0.00019108744205187378,
+            "multiplicative_residual": 0.0001911057004200245
+          },
+          {
+            "branch": "Harbour",
+            "product": "Strawberry Matcha",
+            "observed": 8.03,
+            "fitted": 8.030816533551308,
+            "log_residual": -0.00010168020415468604,
+            "multiplicative_residual": -0.00010167503489788565
+          },
+          {
+            "branch": "Uptown",
+            "product": "Strawberry Matcha",
+            "observed": 7.34,
+            "fitted": 7.340656278463741,
+            "log_residual": -8.940723789585547e-05,
+            "multiplicative_residual": -8.940324118789089e-05
+          },
+          {
+            "branch": "Garden",
+            "product": "Tiramisu Cup",
+            "observed": 6.55,
+            "fitted": 6.5521056964456585,
+            "log_residual": -0.0003214287096400259,
+            "multiplicative_residual": -0.0003213770569666652
+          },
+          {
+            "branch": "Harbour",
+            "product": "Tiramisu Cup",
+            "observed": 6.88,
+            "fitted": 6.879583594946263,
+            "log_residual": 6.052582201920842e-05,
+            "multiplicative_residual": 6.0527653743758236e-05
+          },
+          {
+            "branch": "Uptown",
+            "product": "Tiramisu Cup",
+            "observed": 6.290000000000001,
+            "fitted": 6.288359134899393,
+            "log_residual": 0.00026090288762126157,
+            "multiplicative_residual": 0.00026093692573980753
+          },
+          {
+            "branch": "Garden",
+            "product": "Tuna Sandwich",
+            "observed": 8.85,
+            "fitted": 8.851429275493157,
+            "log_residual": -0.00016148701599405513,
+            "multiplicative_residual": -0.00016147397766774763
+          },
+          {
+            "branch": "Harbour",
+            "product": "Tuna Sandwich",
+            "observed": 9.29,
+            "fitted": 9.293828649397895,
+            "log_residual": -0.00041204097651714733,
+            "multiplicative_residual": -0.00041195609929201016
+          },
+          {
+            "branch": "Uptown",
+            "product": "Tuna Sandwich",
+            "observed": 8.5,
+            "fitted": 8.495126409767456,
+            "log_residual": 0.0005735279925112025,
+            "multiplicative_residual": 0.0005736924911370345
+          },
+          {
+            "branch": "Garden",
+            "product": "Turkey & Cheese Sandwich",
+            "observed": 9.65,
+            "fitted": 9.648726924043112,
+            "log_residual": 0.00013193367249009214,
+            "multiplicative_residual": 0.000131942376119909
+          },
+          {
+            "branch": "Harbour",
+            "product": "Turkey & Cheese Sandwich",
+            "observed": 10.13,
+            "fitted": 10.130975679280061,
+            "log_residual": -9.631118424513474e-05,
+            "multiplicative_residual": -9.630654647196923e-05
+          },
+          {
+            "branch": "Uptown",
+            "product": "Turkey & Cheese Sandwich",
+            "observed": 9.26,
+            "fitted": 9.260329870116504,
+            "log_residual": -3.562248824406922e-05,
+            "multiplicative_residual": -3.56218537708175e-05
+          },
+          {
+            "branch": "Garden",
+            "product": "Vanilla Latte",
+            "observed": 5.45,
+            "fitted": 5.449025497940332,
+            "log_residual": 0.000178823705376141,
+            "multiplicative_residual": 0.00017883969528798005
+          },
+          {
+            "branch": "Harbour",
+            "product": "Vanilla Latte",
+            "observed": 5.72,
+            "fitted": 5.721370832648488,
+            "log_residual": -0.00023962734450266865,
+            "multiplicative_residual": -0.00023959863616374033
+          },
+          {
+            "branch": "Uptown",
+            "product": "Vanilla Latte",
+            "observed": 5.23,
+            "fitted": 5.229682006635039,
+            "log_residual": 6.080363912741582e-05,
+            "multiplicative_residual": 6.080548770603933e-05
+          }
+        ]
+      },
+      "benchmark_stability_log_effect_range": {
+        "Garden__vs__Harbour": 1.8735013540549517e-15,
+        "Garden__vs__Uptown": 3.011479954295737e-15,
+        "Harbour__vs__Uptown": 1.5543122344752192e-15
+      }
+    }
+  }
+}

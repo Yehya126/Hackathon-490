@@ -1,0 +1,272 @@
+[
+  {
+    "id": "price_change",
+    "label": "Adjust listed selling price",
+    "enabled": true,
+    "scopes": [
+      "product",
+      "category",
+      "branch",
+      "company"
+    ],
+    "parameters": [
+      {
+        "name": "change_pct",
+        "dtype": "int",
+        "unit": "percent",
+        "validation": "resulting_price_must_be_positive_and_within_simulator_support"
+      },
+      {
+        "name": "duration_weeks",
+        "dtype": "int",
+        "unit": "weeks",
+        "validation": "positive"
+      }
+    ],
+    "simulator_capability": "action_conditioned_price_and_demand",
+    "interaction_group": "pricing",
+    "executor": "price_change"
+  },
+  {
+    "id": "discount_change",
+    "label": "Adjust discount policy",
+    "enabled": true,
+    "scopes": [
+      "product",
+      "category",
+      "branch"
+    ],
+    "parameters": [
+      {
+        "name": "change_percentage_points",
+        "dtype": "int",
+        "unit": "percentage_points",
+        "validation": "final_discount_between_0_and_100"
+      },
+      {
+        "name": "duration_weeks",
+        "dtype": "int",
+        "unit": "weeks",
+        "validation": "positive"
+      }
+    ],
+    "simulator_capability": "action_conditioned_discount_and_demand",
+    "interaction_group": "discount",
+    "executor": "discount_change"
+  },
+  {
+    "id": "bundle_create",
+    "label": "Introduce a product bundle",
+    "enabled": true,
+    "scopes": [
+      "branch",
+      "category"
+    ],
+    "parameters": [
+      {
+        "name": "bundle_discount_pct",
+        "dtype": "int",
+        "unit": "percent",
+        "validation": "between_0_and_100"
+      },
+      {
+        "name": "duration_weeks",
+        "dtype": "int",
+        "unit": "weeks",
+        "validation": "positive"
+      }
+    ],
+    "simulator_capability": "bundle_uptake_substitution_and_price_response",
+    "interaction_group": "bundle",
+    "executor": "bundle_create"
+  },
+  {
+    "id": "bundle_modify",
+    "label": "Modify an existing bundle",
+    "enabled": true,
+    "scopes": [
+      "branch"
+    ],
+    "parameters": [
+      {
+        "name": "bundle_discount_pct",
+        "dtype": "int",
+        "unit": "percent",
+        "validation": "between_0_and_100"
+      },
+      {
+        "name": "duration_weeks",
+        "dtype": "int",
+        "unit": "weeks",
+        "validation": "positive"
+      }
+    ],
+    "simulator_capability": "bundle_uptake_substitution_and_price_response",
+    "interaction_group": "bundle",
+    "executor": "bundle_modify"
+  },
+  {
+    "id": "cross_sell",
+    "label": "Cross-sell an additional product",
+    "enabled": true,
+    "scopes": [
+      "product",
+      "branch"
+    ],
+    "parameters": [
+      {
+        "name": "intensity_pct",
+        "dtype": "int",
+        "unit": "percent",
+        "validation": "between_0_and_100"
+      },
+      {
+        "name": "duration_weeks",
+        "dtype": "int",
+        "unit": "weeks",
+        "validation": "positive"
+      }
+    ],
+    "simulator_capability": "cross_sell_response_and_cannibalization",
+    "interaction_group": "merchandising",
+    "executor": "cross_sell"
+  },
+  {
+    "id": "promotion",
+    "label": "Promote a product or category",
+    "enabled": true,
+    "scopes": [
+      "product",
+      "category",
+      "branch"
+    ],
+    "parameters": [
+      {
+        "name": "intensity_pct",
+        "dtype": "int",
+        "unit": "percent",
+        "validation": "between_0_and_100"
+      },
+      {
+        "name": "duration_weeks",
+        "dtype": "int",
+        "unit": "weeks",
+        "validation": "positive"
+      }
+    ],
+    "simulator_capability": "promotion_response_and_cost",
+    "interaction_group": "merchandising",
+    "executor": "promotion"
+  },
+  {
+    "id": "assortment_change",
+    "label": "Change products offered in branch",
+    "enabled": true,
+    "scopes": [
+      "branch",
+      "product"
+    ],
+    "parameters": [
+      {
+        "name": "duration_weeks",
+        "dtype": "int",
+        "unit": "weeks",
+        "validation": "positive"
+      }
+    ],
+    "simulator_capability": "assortment_substitution_and_supply",
+    "interaction_group": "assortment",
+    "executor": "assortment_change"
+  },
+  {
+    "id": "preparation_change",
+    "label": "Change prepared quantity",
+    "enabled": true,
+    "scopes": [
+      "branch",
+      "product"
+    ],
+    "parameters": [
+      {
+        "name": "units_delta",
+        "dtype": "int",
+        "unit": "units",
+        "validation": "final_preparation_nonnegative"
+      },
+      {
+        "name": "duration_weeks",
+        "dtype": "int",
+        "unit": "weeks",
+        "validation": "positive"
+      }
+    ],
+    "simulator_capability": "inventory_waste_and_stockout",
+    "interaction_group": "inventory",
+    "executor": "preparation_change"
+  },
+  {
+    "id": "staffing_change",
+    "label": "Change staffing level",
+    "enabled": true,
+    "scopes": [
+      "branch"
+    ],
+    "parameters": [
+      {
+        "name": "staff_delta",
+        "dtype": "int",
+        "unit": "people",
+        "validation": "resulting_staff_nonnegative"
+      },
+      {
+        "name": "duration_weeks",
+        "dtype": "int",
+        "unit": "weeks",
+        "validation": "positive"
+      }
+    ],
+    "simulator_capability": "service_capacity_and_labor_cost",
+    "interaction_group": "staffing",
+    "executor": "staffing_change"
+  },
+  {
+    "id": "procurement_scenario",
+    "label": "Investigate feasible procurement reduction",
+    "enabled": true,
+    "scopes": [
+      "product",
+      "category",
+      "branch",
+      "company"
+    ],
+    "parameters": [
+      {
+        "name": "target_cost_reduction_pct",
+        "dtype": "int",
+        "unit": "percent",
+        "validation": "between_0_and_100_and_feasible"
+      },
+      {
+        "name": "duration_weeks",
+        "dtype": "int",
+        "unit": "weeks",
+        "validation": "positive"
+      }
+    ],
+    "simulator_capability": "validated_operational_cost_intervention",
+    "interaction_group": "procurement",
+    "executor": "procurement_scenario"
+  },
+  {
+    "id": "stop",
+    "label": "Stop adding decisions for this week",
+    "enabled": true,
+    "scopes": [
+      "company"
+    ],
+    "parameters": [],
+    "simulator_capability": "none_required",
+    "interaction_group": "none",
+    "executor": "stop"
+  }
+]

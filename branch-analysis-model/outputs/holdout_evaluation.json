@@ -1,0 +1,251 @@
+{
+  "evaluation_design": {
+    "type": "chronological retrospective holdout",
+    "model_fit_split": "train only",
+    "validation_split_use": "Held-out method comparison and stability diagnostics; no test-driven tuning.",
+    "final_evaluation_split": "test",
+    "primary_method": "huber",
+    "protocol_sha256": "1e8f3105398ba523c8702d399b083bb96dbc6203ca05f1f6152c6486510ecde7",
+    "important_disclosure": "The test files were used by an earlier combined descriptive run before split isolation was implemented; this is retrospective rather than a pristine blind test."
+  },
+  "split_validation": {
+    "train": {
+      "rows": 35788,
+      "transactions": 23720,
+      "branches": 3,
+      "products": 45,
+      "date_min": "2026-01-01",
+      "date_max": "2026-05-16",
+      "exact_duplicate_lines": 200,
+      "duplicate_source_row_ids": 0,
+      "revenue_mismatches": 0,
+      "gross_profit_mismatches": 0,
+      "missing_optional_customer_ids": 13075,
+      "warnings": [
+        "Found 200 rows participating in exact duplicate transaction lines; retained for review."
+      ]
+    },
+    "validation": {
+      "rows": 7691,
+      "transactions": 5083,
+      "branches": 3,
+      "products": 45,
+      "date_min": "2026-05-16",
+      "date_max": "2026-06-09",
+      "exact_duplicate_lines": 32,
+      "duplicate_source_row_ids": 0,
+      "revenue_mismatches": 0,
+      "gross_profit_mismatches": 0,
+      "missing_optional_customer_ids": 2810,
+      "warnings": [
+        "Found 32 rows participating in exact duplicate transaction lines; retained for review."
+      ]
+    },
+    "test": {
+      "rows": 7698,
+      "transactions": 5084,
+      "branches": 3,
+      "products": 45,
+      "date_min": "2026-06-09",
+      "date_max": "2026-06-30",
+      "exact_duplicate_lines": 32,
+      "duplicate_source_row_ids": 0,
+      "revenue_mismatches": 0,
+      "gross_profit_mismatches": 0,
+      "missing_optional_customer_ids": 2806,
+      "warnings": [
+        "Found 32 rows participating in exact duplicate transaction lines; retained for review."
+      ]
+    },
+    "leakage_checks": {
+      "train_validation_transaction_overlap": 0,
+      "train_test_transaction_overlap": 0,
+      "validation_test_transaction_overlap": 0,
+      "train_validation_source_row_overlap": 0,
+      "train_test_source_row_overlap": 0,
+      "validation_test_source_row_overlap": 0
+    }
+  },
+  "train_fit": {
+    "cost": {
+      "huber": {
+        "observations": 135,
+        "rmse": 0.0015158079264153508,
+        "mae": 0.0008740596318425192,
+        "r_squared": 0.9999942565235674
+      },
+      "ols": {
+        "observations": 135,
+        "rmse": 0.0013802169408916377,
+        "mae": 0.0009907614261591958,
+        "r_squared": 0.9999952380897783
+      }
+    },
+    "price": {
+      "huber": {
+        "observations": 135,
+        "rmse": 0.00039833496552196536,
+        "mae": 0.0002851295648053959,
+        "r_squared": 0.9999990697391641
+      },
+      "ols": {
+        "observations": 135,
+        "rmse": 0.00039172002455800496,
+        "mae": 0.0002968888598962773,
+        "r_squared": 0.999999100379334
+      }
+    }
+  },
+  "validation_metrics": {
+    "cost": {
+      "huber": {
+        "observations": 135,
+        "scored_observations": 135,
+        "coverage": 1.0,
+        "log_rmse": 0.0015158079264153447,
+        "log_mae": 0.0008740596318425146,
+        "rmse_original_units": 0.0019427971756439172,
+        "mae_original_units": 0.0014401498824152454,
+        "mape_pct": 0.087435047862813,
+        "r_squared_log": 0.9999942565235674,
+        "unseen_branches": [],
+        "unseen_products": []
+      },
+      "ols": {
+        "observations": 135,
+        "scored_observations": 135,
+        "coverage": 1.0,
+        "log_rmse": 0.0013802169408916342,
+        "log_mae": 0.0009907614261591914,
+        "rmse_original_units": 0.00196614245793928,
+        "mae_original_units": 0.001615607002756282,
+        "mape_pct": 0.09908242606916975,
+        "r_squared_log": 0.9999952380897783,
+        "unseen_branches": [],
+        "unseen_products": []
+      }
+    },
+    "price": {
+      "huber": {
+        "observations": 135,
+        "scored_observations": 135,
+        "coverage": 1.0,
+        "log_rmse": 0.00039833496552198184,
+        "log_mae": 0.0002851295648053967,
+        "rmse_original_units": 0.0018739834951210087,
+        "mae_original_units": 0.0014372597005720968,
+        "mape_pct": 0.02851090368368318,
+        "r_squared_log": 0.9999990697391641,
+        "unseen_branches": [],
+        "unseen_products": []
+      },
+      "ols": {
+        "observations": 135,
+        "scored_observations": 135,
+        "coverage": 1.0,
+        "log_rmse": 0.0003917200245580172,
+        "log_mae": 0.00029688885989629293,
+        "rmse_original_units": 0.0018553377133112968,
+        "mae_original_units": 0.0014911846644999889,
+        "mape_pct": 0.029688291973975756,
+        "r_squared_log": 0.999999100379334,
+        "unseen_branches": [],
+        "unseen_products": []
+      }
+    }
+  },
+  "test_metrics": {
+    "cost": {
+      "huber": {
+        "observations": 135,
+        "scored_observations": 135,
+        "coverage": 1.0,
+        "log_rmse": 0.001515807926415336,
+        "log_mae": 0.0008740596318425072,
+        "rmse_original_units": 0.001942797175643912,
+        "mae_original_units": 0.0014401498824152422,
+        "mape_pct": 0.08743504786281266,
+        "r_squared_log": 0.9999942565235674,
+        "unseen_branches": [],
+        "unseen_products": []
+      },
+      "ols": {
+        "observations": 135,
+        "scored_observations": 135,
+        "coverage": 1.0,
+        "log_rmse": 0.001380216940891625,
+        "log_mae": 0.000990761426159184,
+        "rmse_original_units": 0.0019661424579392683,
+        "mae_original_units": 0.0016156070027562787,
+        "mape_pct": 0.09908242606916941,
+        "r_squared_log": 0.9999952380897783,
+        "unseen_branches": [],
+        "unseen_products": []
+      }
+    },
+    "price": {
+      "huber": {
+        "observations": 135,
+        "scored_observations": 135,
+        "coverage": 1.0,
+        "log_rmse": 0.00039833496552197023,
+        "log_mae": 0.00028512956480539176,
+        "rmse_original_units": 0.0018739834951209788,
+        "mae_original_units": 0.001437259700572105,
+        "mape_pct": 0.028510903683683152,
+        "r_squared_log": 0.9999990697391641,
+        "unseen_branches": [],
+        "unseen_products": []
+      },
+      "ols": {
+        "observations": 135,
+        "scored_observations": 135,
+        "coverage": 1.0,
+        "log_rmse": 0.00039172002455800604,
+        "log_mae": 0.00029688885989628144,
+        "rmse_original_units": 0.0018553377133112717,
+        "mae_original_units": 0.0014911846644999642,
+        "mape_pct": 0.029688291973975284,
+        "r_squared_log": 0.999999100379334,
+        "unseen_branches": [],
+        "unseen_products": []
+      }
+    }
+  },
+  "validation_branch_effect_stability": {
+    "cost": {
+      "Garden": {
+        "train_log_effect": 0.0,
+        "validation_log_effect": 0.0,
+        "absolute_difference": 0.0
+      },
+      "Harbour": {
+        "train_log_effect": -0.3577060612328708,
+        "validation_log_effect": -0.3577060612328704,
+        "absolute_difference": 3.885780586188048e-16
+      },
+      "Uptown": {
+        "train_log_effect": -0.39887398989472456,
+        "validation_log_effect": -0.39887398989472445,
+        "absolute_difference": 1.1102230246251565e-16
+      }
+    },
+    "price": {
+      "Garden": {
+        "train_log_effect": 0.0,
+        "validation_log_effect": 0.0,
+        "absolute_difference": 0.0
+      },
+      "Harbour": {
+        "train_log_effect": 0.048739427351000064,
+        "validation_log_effect": 0.04873942735100245,
+        "absolute_difference": 2.3869795029440866e-15
+      },
+      "Uptown": {
+        "train_log_effect": -0.041111409267697276,
+        "validation_log_effect": -0.04111140926769483,
+        "absolute_difference": 2.4424906541753444e-15
+      }
+    }
+  }
+}
