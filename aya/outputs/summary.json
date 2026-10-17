@@ -1,0 +1,118 @@
+{
+  "test_period": [
+    "2026-06-09",
+    "2026-06-30"
+  ],
+  "forecast_for": "2026-07-01",
+  "boosting_rounds": 316,
+  "nb_alpha": {
+    "Garden": 0.0224,
+    "Harbour": 0.0838,
+    "Uptown": 0.0828
+  },
+  "accuracy": {
+    "Same weekday last week": {
+      "Garden": {
+        "MAE": 1.799,
+        "WAPE": 0.66,
+        "bias": -0.026
+      },
+      "Harbour": {
+        "MAE": 2.3,
+        "WAPE": 0.572,
+        "bias": 0.011
+      },
+      "Uptown": {
+        "MAE": 1.376,
+        "WAPE": 0.913,
+        "bias": -0.015
+      },
+      "ALL": {
+        "MAE": 1.825,
+        "WAPE": 0.663,
+        "bias": -0.006
+      }
+    },
+    "Weekday average": {
+      "Garden": {
+        "MAE": 1.524,
+        "WAPE": 0.56,
+        "bias": -0.023
+      },
+      "Harbour": {
+        "MAE": 1.957,
+        "WAPE": 0.486,
+        "bias": -0.009
+      },
+      "Uptown": {
+        "MAE": 1.187,
+        "WAPE": 0.788,
+        "bias": -0.014
+      },
+      "ALL": {
+        "MAE": 1.556,
+        "WAPE": 0.566,
+        "bias": -0.015
+      }
+    },
+    "LightGBM + NB": {
+      "Garden": {
+        "MAE": 1.338,
+        "WAPE": 0.491,
+        "bias": -0.046
+      },
+      "Harbour": {
+        "MAE": 1.684,
+        "WAPE": 0.419,
+        "bias": -0.027
+      },
+      "Uptown": {
+        "MAE": 1.037,
+        "WAPE": 0.689,
+        "bias": -0.025
+      },
+      "ALL": {
+        "MAE": 1.353,
+        "WAPE": 0.492,
+        "bias": -0.033
+      }
+    }
+  },
+  "p10_p90_coverage": {
+    "Garden": 0.874,
+    "Harbour": 0.886,
+    "Uptown": 0.931
+  },
+  "inventory_totals": {
+    "Same weekday last week": {
+      "profit": 14002.9,
+      "waste_cost": 4236.5,
+      "missed_profit": 9204.6,
+      "sold": 5437.0,
+      "missed": 2735.0
+    },
+    "Forecast mean": {
+      "profit": 17373.9,
+      "waste_cost": 2905.5,
+      "missed_profit": 7164.6,
+      "sold": 6049.0,
+      "missed": 2123.0
+    },
+    "Recommended (NB quantile)": {
+      "profit": 20152.8,
+      "waste_cost": 3299.1,
+      "missed_profit": 3992.1,
+      "sold": 7011.0,
+      "missed": 1161.0
+    }
+  },
+  "alerts": {
+    "count": 49,
+    "by_flag": {
+      "demand_spike": 33,
+      "sustained_rise": 7,
+      "sustained_drop": 7,
+      "demand_drop": 2
+    }
+  }
+}

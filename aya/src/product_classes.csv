@@ -1,0 +1,46 @@
+Product,shelf_class
+Almond Croissant,fresh
+Banana Bread,fresh
+Blueberry Muffin,fresh
+Butter Croissant,fresh
+Chocolate Cookie,fresh
+Chocolate Croissant,fresh
+Cinnamon Roll,fresh
+Pistachio Cookie,fresh
+Avocado Toast,fresh
+Egg Sandwich,fresh
+Granola Yoghurt,fresh
+Brownie,fresh
+Cheesecake Slice,fresh
+Frozen Yoghurt Cup,fresh
+Tiramisu Cup,fresh
+Chicken Salad Bowl,fresh
+Quinoa Bowl,fresh
+Soup of the Day,fresh
+Chicken Pesto Sandwich,fresh
+Halloumi Wrap,fresh
+Tuna Sandwich,fresh
+Turkey & Cheese Sandwich,fresh
+Fresh Orange Juice,fresh
+Coffee Frappe,made_to_order
+Cold Brew,made_to_order
+Iced Americano,made_to_order
+Iced Latte,made_to_order
+Iced Mocha,made_to_order
+Americano,made_to_order
+Cappuccino,made_to_order
+Caramel Latte,made_to_order
+Espresso,made_to_order
+Flat White,made_to_order
+Spanish Latte,made_to_order
+Vanilla Latte,made_to_order
+Chai Latte,made_to_order
+Classic Matcha,made_to_order
+English Breakfast Tea,made_to_order
+Iced Matcha,made_to_order
+Mint Tea,made_to_order
+Strawberry Matcha,made_to_order
+Lemonade,made_to_order
+Peach Iced Tea,made_to_order
+Sparkling Water,packaged
+Still Water,packaged
