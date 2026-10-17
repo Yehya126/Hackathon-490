@@ -6,10 +6,10 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
 import pandas as pd
-from mohammad.model import combination_table, evaluate_table, fit_model
-from mohammad.run import read_split, save
-from mohammad.dine_in import dine_in_table, readable_dine_in
-from mohammad.screening import combination_decision, dine_in_decision
+from Marketing_Expert.model import combination_table, evaluate_table, fit_model
+from Marketing_Expert.run import read_split, save
+from Marketing_Expert.dine_in import dine_in_table, readable_dine_in
+from Marketing_Expert.screening import combination_decision, dine_in_decision
 
 
 def verdict(row):

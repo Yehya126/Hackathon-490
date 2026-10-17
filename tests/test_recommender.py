@@ -2,12 +2,12 @@
 import unittest
 from unittest.mock import patch
 import pandas as pd
-from mohammad.model import combination_table, evaluate_table, price_summary
+from Marketing_Expert.model import combination_table, evaluate_table, price_summary
 
 
 class CombinationTests(unittest.TestCase):
     def test_category_presence_and_plain_english_output(self):
-        from mohammad.validation_report import category_lines, association_words
+        from Marketing_Expert.validation_report import category_lines, association_words
         from data_utils import make_baskets
         data = pd.DataFrame({'Transaction ID': ['A', 'A', 'A'],
                              'Product': ['Latte', 'Espresso', 'Cookie'],
@@ -61,8 +61,8 @@ class CombinationTests(unittest.TestCase):
         self.assertEqual(row['training_gross_profit_usd'], 5.)
 
     def test_help_never_trains(self):
-        from mohammad.run import main
-        with patch('sys.argv', ['run.py', '--help']), patch('mohammad.run.fit_model') as fit:
+        from Marketing_Expert.run import main
+        with patch('sys.argv', ['run.py', '--help']), patch('Marketing_Expert.run.fit_model') as fit:
             with self.assertRaises(SystemExit):
                 main()
             fit.assert_not_called()

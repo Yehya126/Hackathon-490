@@ -5,7 +5,7 @@ import pandas as pd
 
 ROOT = Path(__file__).resolve().parents[1]
 OUTPUT = Path(__file__).resolve().parent
-source = ROOT / 'mohammad/artifacts/full_data'
+source = ROOT / 'Marketing_Expert/artifacts/full_data'
 raw = pd.read_csv(ROOT / 'stories_transactions.csv')
 dates = pd.to_datetime(raw['Date'])
 months = len(pd.period_range(dates.min().to_period('M'), dates.max().to_period('M'), freq='M'))

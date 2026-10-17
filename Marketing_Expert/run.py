@@ -8,7 +8,7 @@ import sys
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 import pandas as pd
-from mohammad.model import DEFAULTS, combination_table, evaluate_table, fit_model
+from Marketing_Expert.model import DEFAULTS, combination_table, evaluate_table, fit_model
 
 WORKSPACE = Path(__file__).resolve().parent
 
