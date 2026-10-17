@@ -8,16 +8,16 @@ for the original design.
 ## Run
 
 ```powershell
-py -m pip install -r aya/requirements.txt
-py aya/run_pipeline.py          # full run -> aya/outputs/
-py aya/eda.py                   # exploration printout + figures in aya/outputs/eda/
-py aya/evaluate_forecast.py     # validation experiments (first model, NB check, injection tests)
-py aya/compare_models.py        # validation: raw vs linear-tree vs baseline-offset LightGBM
-py aya/compare_horizons.py      # validation: 1-14 day forecasts, multi-day model vs baseline
-py -m unittest discover -s aya/tests -v
+py -m pip install -r Merchandise/requirements.txt
+py Merchandise/run_pipeline.py          # full run -> Merchandise/outputs/
+py Merchandise/eda.py                   # exploration printout + figures in Merchandise/outputs/eda/
+py Merchandise/evaluate_forecast.py     # validation experiments (first model, NB check, injection tests)
+py Merchandise/compare_models.py        # validation: raw vs linear-tree vs baseline-offset LightGBM
+py Merchandise/compare_horizons.py      # validation: 1-14 day forecasts, multi-day model vs baseline
+py -m unittest discover -s Merchandise/tests -v
 ```
 
-Outputs in `aya/outputs/`:
+Outputs in `Merchandise/outputs/`:
 
 | File | Contents |
 |---|---|

@@ -1,7 +1,7 @@
 """End-to-end run: tune on validation, evaluate on test, forecast expected units sold for the next 14 days,
 write outputs + report.
 
-    py aya/run_pipeline.py
+    py Merchandise/run_pipeline.py
 """
 
 import json

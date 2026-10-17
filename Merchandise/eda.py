@@ -1,4 +1,4 @@
-"""Forecast-oriented EDA: prints findings and saves figures to aya/outputs/eda/."""
+"""Forecast-oriented EDA: prints findings and saves figures to Merchandise/outputs/eda/."""
 
 import sys
 from pathlib import Path
