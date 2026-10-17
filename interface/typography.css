@@ -1,0 +1,12 @@
+/* A softer humanist typeface throughout, with readable local fallbacks. */
+body { font-family: 'Nunito Sans', 'Segoe UI', sans-serif; }
+.brand, h1, h2, .metric {
+  font-family: 'Nunito Sans', 'Segoe UI', sans-serif;
+}
+.brand { font-weight: 800; letter-spacing: -1.5px; }
+.brand span { font-family: inherit; letter-spacing: 1.2px; }
+h1 { font-size: 36px; font-weight: 600; letter-spacing: -.8px; }
+h2 { font-size: 23px; font-weight: 600; letter-spacing: -.35px; }
+.metric { font-size: 34px; font-weight: 600; letter-spacing: -.8px; }
+.eyebrow { letter-spacing: 1px; }
+@media (max-width: 700px) { h1 { font-size: 30px; } }

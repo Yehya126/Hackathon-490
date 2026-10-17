@@ -1,5 +1,11 @@
 # Product combination tables
 
+**For Yehya:** see [INTEGRATION.md](INTEGRATION.md) for current output locations,
+CSV field meanings, loading examples and how to consume these signals in the
+decision model. Outputs are now under `Marketing_Expert/artifacts/full_data/`.
+The commands below retain older `mohammad` paths; update rename references before
+using them to rerun training.
+
 ## Current workflow: full-data descriptive suggestions
 
 Run `python mohammad/train_all.py` from the repository root. This fits on the
