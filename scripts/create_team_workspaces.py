@@ -4,14 +4,13 @@ from __future__ import annotations
 
 import hashlib
 import json
-import sys
 from pathlib import Path
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
-sys.path.insert(0, str(PROJECT_ROOT / "src"))
+import sys
+sys.path.insert(0, str(PROJECT_ROOT))
 
-from coffee_recommender.data.load_data import load_transactions
-from coffee_recommender.data.split_data import chronological_transaction_split
+from data_utils import load_data, split_data
 
 
 MEMBERS = ("mohammad", "yehya", "aya")
@@ -28,8 +27,8 @@ def sha256(path: Path) -> str:
 
 
 def main() -> None:
-    data = load_transactions(PROJECT_ROOT / "stories_transactions.csv")
-    splits = chronological_transaction_split(data)
+    data = load_data(PROJECT_ROOT / "stories_transactions.csv")
+    splits = split_data(data)
     manifest: dict[str, object] = {
         "source": "stories_transactions.csv",
         "strategy": "chronological transaction-level 70/15/15 split",
