@@ -1,0 +1,1891 @@
+Branch,Product,Category,Date,days_ahead,expected_units
+Garden,Almond Croissant,Bakery,2026-07-01,1,2.32
+Garden,Almond Croissant,Bakery,2026-07-02,2,2.12
+Garden,Almond Croissant,Bakery,2026-07-03,3,2.41
+Garden,Almond Croissant,Bakery,2026-07-04,4,1.53
+Garden,Almond Croissant,Bakery,2026-07-05,5,1.92
+Garden,Almond Croissant,Bakery,2026-07-06,6,2.08
+Garden,Almond Croissant,Bakery,2026-07-07,7,3.49
+Garden,Almond Croissant,Bakery,2026-07-08,8,2.34
+Garden,Almond Croissant,Bakery,2026-07-09,9,2.15
+Garden,Almond Croissant,Bakery,2026-07-10,10,2.43
+Garden,Almond Croissant,Bakery,2026-07-11,11,1.56
+Garden,Almond Croissant,Bakery,2026-07-12,12,1.96
+Garden,Almond Croissant,Bakery,2026-07-13,13,2.12
+Garden,Almond Croissant,Bakery,2026-07-14,14,3.46
+Garden,Americano,Hot Coffee,2026-07-01,1,2.21
+Garden,Americano,Hot Coffee,2026-07-02,2,2.04
+Garden,Americano,Hot Coffee,2026-07-03,3,2.3
+Garden,Americano,Hot Coffee,2026-07-04,4,1.47
+Garden,Americano,Hot Coffee,2026-07-05,5,1.84
+Garden,Americano,Hot Coffee,2026-07-06,6,2.02
+Garden,Americano,Hot Coffee,2026-07-07,7,3.37
+Garden,Americano,Hot Coffee,2026-07-08,8,2.23
+Garden,Americano,Hot Coffee,2026-07-09,9,2.06
+Garden,Americano,Hot Coffee,2026-07-10,10,2.33
+Garden,Americano,Hot Coffee,2026-07-11,11,1.5
+Garden,Americano,Hot Coffee,2026-07-12,12,1.87
+Garden,Americano,Hot Coffee,2026-07-13,13,2.06
+Garden,Americano,Hot Coffee,2026-07-14,14,3.39
+Garden,Avocado Toast,Breakfast,2026-07-01,1,2.21
+Garden,Avocado Toast,Breakfast,2026-07-02,2,2.05
+Garden,Avocado Toast,Breakfast,2026-07-03,3,2.3
+Garden,Avocado Toast,Breakfast,2026-07-04,4,1.51
+Garden,Avocado Toast,Breakfast,2026-07-05,5,1.86
+Garden,Avocado Toast,Breakfast,2026-07-06,6,2.04
+Garden,Avocado Toast,Breakfast,2026-07-07,7,3.32
+Garden,Avocado Toast,Breakfast,2026-07-08,8,2.23
+Garden,Avocado Toast,Breakfast,2026-07-09,9,2.06
+Garden,Avocado Toast,Breakfast,2026-07-10,10,2.28
+Garden,Avocado Toast,Breakfast,2026-07-11,11,1.49
+Garden,Avocado Toast,Breakfast,2026-07-12,12,1.84
+Garden,Avocado Toast,Breakfast,2026-07-13,13,2.03
+Garden,Avocado Toast,Breakfast,2026-07-14,14,3.26
+Garden,Banana Bread,Bakery,2026-07-01,1,2.9
+Garden,Banana Bread,Bakery,2026-07-02,2,2.66
+Garden,Banana Bread,Bakery,2026-07-03,3,3.01
+Garden,Banana Bread,Bakery,2026-07-04,4,1.9
+Garden,Banana Bread,Bakery,2026-07-05,5,2.4
+Garden,Banana Bread,Bakery,2026-07-06,6,2.64
+Garden,Banana Bread,Bakery,2026-07-07,7,4.43
+Garden,Banana Bread,Bakery,2026-07-08,8,2.92
+Garden,Banana Bread,Bakery,2026-07-09,9,2.69
+Garden,Banana Bread,Bakery,2026-07-10,10,3.0
+Garden,Banana Bread,Bakery,2026-07-11,11,1.92
+Garden,Banana Bread,Bakery,2026-07-12,12,2.42
+Garden,Banana Bread,Bakery,2026-07-13,13,2.67
+Garden,Banana Bread,Bakery,2026-07-14,14,4.37
+Garden,Blueberry Muffin,Bakery,2026-07-01,1,2.03
+Garden,Blueberry Muffin,Bakery,2026-07-02,2,1.87
+Garden,Blueberry Muffin,Bakery,2026-07-03,3,2.11
+Garden,Blueberry Muffin,Bakery,2026-07-04,4,1.35
+Garden,Blueberry Muffin,Bakery,2026-07-05,5,1.7
+Garden,Blueberry Muffin,Bakery,2026-07-06,6,1.86
+Garden,Blueberry Muffin,Bakery,2026-07-07,7,3.04
+Garden,Blueberry Muffin,Bakery,2026-07-08,8,2.05
+Garden,Blueberry Muffin,Bakery,2026-07-09,9,1.89
+Garden,Blueberry Muffin,Bakery,2026-07-10,10,2.12
+Garden,Blueberry Muffin,Bakery,2026-07-11,11,1.37
+Garden,Blueberry Muffin,Bakery,2026-07-12,12,1.72
+Garden,Blueberry Muffin,Bakery,2026-07-13,13,1.89
+Garden,Blueberry Muffin,Bakery,2026-07-14,14,3.04
+Garden,Brownie,Desserts,2026-07-01,1,3.86
+Garden,Brownie,Desserts,2026-07-02,2,3.56
+Garden,Brownie,Desserts,2026-07-03,3,4.02
+Garden,Brownie,Desserts,2026-07-04,4,2.54
+Garden,Brownie,Desserts,2026-07-05,5,3.22
+Garden,Brownie,Desserts,2026-07-06,6,3.55
+Garden,Brownie,Desserts,2026-07-07,7,5.91
+Garden,Brownie,Desserts,2026-07-08,8,3.9
+Garden,Brownie,Desserts,2026-07-09,9,3.61
+Garden,Brownie,Desserts,2026-07-10,10,4.05
+Garden,Brownie,Desserts,2026-07-11,11,2.58
+Garden,Brownie,Desserts,2026-07-12,12,3.26
+Garden,Brownie,Desserts,2026-07-13,13,3.6
+Garden,Brownie,Desserts,2026-07-14,14,5.96
+Garden,Butter Croissant,Bakery,2026-07-01,1,4.97
+Garden,Butter Croissant,Bakery,2026-07-02,2,4.59
+Garden,Butter Croissant,Bakery,2026-07-03,3,5.19
+Garden,Butter Croissant,Bakery,2026-07-04,4,3.27
+Garden,Butter Croissant,Bakery,2026-07-05,5,4.15
+Garden,Butter Croissant,Bakery,2026-07-06,6,4.57
+Garden,Butter Croissant,Bakery,2026-07-07,7,7.64
+Garden,Butter Croissant,Bakery,2026-07-08,8,5.02
+Garden,Butter Croissant,Bakery,2026-07-09,9,4.65
+Garden,Butter Croissant,Bakery,2026-07-10,10,5.18
+Garden,Butter Croissant,Bakery,2026-07-11,11,3.3
+Garden,Butter Croissant,Bakery,2026-07-12,12,4.18
+Garden,Butter Croissant,Bakery,2026-07-13,13,4.63
+Garden,Butter Croissant,Bakery,2026-07-14,14,7.59
+Garden,Cappuccino,Hot Coffee,2026-07-01,1,3.73
+Garden,Cappuccino,Hot Coffee,2026-07-02,2,3.47
+Garden,Cappuccino,Hot Coffee,2026-07-03,3,3.88
+Garden,Cappuccino,Hot Coffee,2026-07-04,4,2.47
+Garden,Cappuccino,Hot Coffee,2026-07-05,5,3.14
+Garden,Cappuccino,Hot Coffee,2026-07-06,6,3.46
+Garden,Cappuccino,Hot Coffee,2026-07-07,7,5.69
+Garden,Cappuccino,Hot Coffee,2026-07-08,8,3.77
+Garden,Cappuccino,Hot Coffee,2026-07-09,9,3.52
+Garden,Cappuccino,Hot Coffee,2026-07-10,10,3.94
+Garden,Cappuccino,Hot Coffee,2026-07-11,11,2.51
+Garden,Cappuccino,Hot Coffee,2026-07-12,12,3.18
+Garden,Cappuccino,Hot Coffee,2026-07-13,13,3.5
+Garden,Cappuccino,Hot Coffee,2026-07-14,14,5.78
+Garden,Caramel Latte,Hot Coffee,2026-07-01,1,2.56
+Garden,Caramel Latte,Hot Coffee,2026-07-02,2,2.36
+Garden,Caramel Latte,Hot Coffee,2026-07-03,3,2.62
+Garden,Caramel Latte,Hot Coffee,2026-07-04,4,1.69
+Garden,Caramel Latte,Hot Coffee,2026-07-05,5,2.14
+Garden,Caramel Latte,Hot Coffee,2026-07-06,6,2.34
+Garden,Caramel Latte,Hot Coffee,2026-07-07,7,3.87
+Garden,Caramel Latte,Hot Coffee,2026-07-08,8,2.59
+Garden,Caramel Latte,Hot Coffee,2026-07-09,9,2.38
+Garden,Caramel Latte,Hot Coffee,2026-07-10,10,2.66
+Garden,Caramel Latte,Hot Coffee,2026-07-11,11,1.7
+Garden,Caramel Latte,Hot Coffee,2026-07-12,12,2.16
+Garden,Caramel Latte,Hot Coffee,2026-07-13,13,2.36
+Garden,Caramel Latte,Hot Coffee,2026-07-14,14,3.89
+Garden,Chai Latte,Matcha & Tea,2026-07-01,1,2.22
+Garden,Chai Latte,Matcha & Tea,2026-07-02,2,2.07
+Garden,Chai Latte,Matcha & Tea,2026-07-03,3,2.3
+Garden,Chai Latte,Matcha & Tea,2026-07-04,4,1.52
+Garden,Chai Latte,Matcha & Tea,2026-07-05,5,1.87
+Garden,Chai Latte,Matcha & Tea,2026-07-06,6,2.05
+Garden,Chai Latte,Matcha & Tea,2026-07-07,7,3.39
+Garden,Chai Latte,Matcha & Tea,2026-07-08,8,2.24
+Garden,Chai Latte,Matcha & Tea,2026-07-09,9,2.09
+Garden,Chai Latte,Matcha & Tea,2026-07-10,10,2.33
+Garden,Chai Latte,Matcha & Tea,2026-07-11,11,1.54
+Garden,Chai Latte,Matcha & Tea,2026-07-12,12,1.9
+Garden,Chai Latte,Matcha & Tea,2026-07-13,13,2.09
+Garden,Chai Latte,Matcha & Tea,2026-07-14,14,3.43
+Garden,Cheesecake Slice,Desserts,2026-07-01,1,2.89
+Garden,Cheesecake Slice,Desserts,2026-07-02,2,2.67
+Garden,Cheesecake Slice,Desserts,2026-07-03,3,3.0
+Garden,Cheesecake Slice,Desserts,2026-07-04,4,1.9
+Garden,Cheesecake Slice,Desserts,2026-07-05,5,2.41
+Garden,Cheesecake Slice,Desserts,2026-07-06,6,2.66
+Garden,Cheesecake Slice,Desserts,2026-07-07,7,4.42
+Garden,Cheesecake Slice,Desserts,2026-07-08,8,2.92
+Garden,Cheesecake Slice,Desserts,2026-07-09,9,2.71
+Garden,Cheesecake Slice,Desserts,2026-07-10,10,3.02
+Garden,Cheesecake Slice,Desserts,2026-07-11,11,1.93
+Garden,Cheesecake Slice,Desserts,2026-07-12,12,2.44
+Garden,Cheesecake Slice,Desserts,2026-07-13,13,2.69
+Garden,Cheesecake Slice,Desserts,2026-07-14,14,4.42
+Garden,Chicken Pesto Sandwich,Sandwiches,2026-07-01,1,2.77
+Garden,Chicken Pesto Sandwich,Sandwiches,2026-07-02,2,2.55
+Garden,Chicken Pesto Sandwich,Sandwiches,2026-07-03,3,2.85
+Garden,Chicken Pesto Sandwich,Sandwiches,2026-07-04,4,1.82
+Garden,Chicken Pesto Sandwich,Sandwiches,2026-07-05,5,2.3
+Garden,Chicken Pesto Sandwich,Sandwiches,2026-07-06,6,2.54
+Garden,Chicken Pesto Sandwich,Sandwiches,2026-07-07,7,4.18
+Garden,Chicken Pesto Sandwich,Sandwiches,2026-07-08,8,2.8
+Garden,Chicken Pesto Sandwich,Sandwiches,2026-07-09,9,2.59
+Garden,Chicken Pesto Sandwich,Sandwiches,2026-07-10,10,2.89
+Garden,Chicken Pesto Sandwich,Sandwiches,2026-07-11,11,1.85
+Garden,Chicken Pesto Sandwich,Sandwiches,2026-07-12,12,2.34
+Garden,Chicken Pesto Sandwich,Sandwiches,2026-07-13,13,2.58
+Garden,Chicken Pesto Sandwich,Sandwiches,2026-07-14,14,4.25
+Garden,Chicken Salad Bowl,Meals,2026-07-01,1,1.38
+Garden,Chicken Salad Bowl,Meals,2026-07-02,2,1.27
+Garden,Chicken Salad Bowl,Meals,2026-07-03,3,1.42
+Garden,Chicken Salad Bowl,Meals,2026-07-04,4,0.97
+Garden,Chicken Salad Bowl,Meals,2026-07-05,5,1.15
+Garden,Chicken Salad Bowl,Meals,2026-07-06,6,1.28
+Garden,Chicken Salad Bowl,Meals,2026-07-07,7,2.11
+Garden,Chicken Salad Bowl,Meals,2026-07-08,8,1.39
+Garden,Chicken Salad Bowl,Meals,2026-07-09,9,1.28
+Garden,Chicken Salad Bowl,Meals,2026-07-10,10,1.44
+Garden,Chicken Salad Bowl,Meals,2026-07-11,11,0.98
+Garden,Chicken Salad Bowl,Meals,2026-07-12,12,1.16
+Garden,Chicken Salad Bowl,Meals,2026-07-13,13,1.29
+Garden,Chicken Salad Bowl,Meals,2026-07-14,14,2.13
+Garden,Chocolate Cookie,Bakery,2026-07-01,1,3.21
+Garden,Chocolate Cookie,Bakery,2026-07-02,2,2.94
+Garden,Chocolate Cookie,Bakery,2026-07-03,3,3.33
+Garden,Chocolate Cookie,Bakery,2026-07-04,4,2.11
+Garden,Chocolate Cookie,Bakery,2026-07-05,5,2.66
+Garden,Chocolate Cookie,Bakery,2026-07-06,6,2.93
+Garden,Chocolate Cookie,Bakery,2026-07-07,7,4.91
+Garden,Chocolate Cookie,Bakery,2026-07-08,8,3.24
+Garden,Chocolate Cookie,Bakery,2026-07-09,9,2.97
+Garden,Chocolate Cookie,Bakery,2026-07-10,10,3.3
+Garden,Chocolate Cookie,Bakery,2026-07-11,11,2.12
+Garden,Chocolate Cookie,Bakery,2026-07-12,12,2.66
+Garden,Chocolate Cookie,Bakery,2026-07-13,13,2.95
+Garden,Chocolate Cookie,Bakery,2026-07-14,14,4.81
+Garden,Chocolate Croissant,Bakery,2026-07-01,1,3.68
+Garden,Chocolate Croissant,Bakery,2026-07-02,2,3.4
+Garden,Chocolate Croissant,Bakery,2026-07-03,3,3.81
+Garden,Chocolate Croissant,Bakery,2026-07-04,4,2.43
+Garden,Chocolate Croissant,Bakery,2026-07-05,5,3.08
+Garden,Chocolate Croissant,Bakery,2026-07-06,6,3.38
+Garden,Chocolate Croissant,Bakery,2026-07-07,7,5.62
+Garden,Chocolate Croissant,Bakery,2026-07-08,8,3.72
+Garden,Chocolate Croissant,Bakery,2026-07-09,9,3.44
+Garden,Chocolate Croissant,Bakery,2026-07-10,10,3.87
+Garden,Chocolate Croissant,Bakery,2026-07-11,11,2.47
+Garden,Chocolate Croissant,Bakery,2026-07-12,12,3.12
+Garden,Chocolate Croissant,Bakery,2026-07-13,13,3.44
+Garden,Chocolate Croissant,Bakery,2026-07-14,14,5.66
+Garden,Cinnamon Roll,Bakery,2026-07-01,1,3.37
+Garden,Cinnamon Roll,Bakery,2026-07-02,2,3.1
+Garden,Cinnamon Roll,Bakery,2026-07-03,3,3.54
+Garden,Cinnamon Roll,Bakery,2026-07-04,4,2.22
+Garden,Cinnamon Roll,Bakery,2026-07-05,5,2.82
+Garden,Cinnamon Roll,Bakery,2026-07-06,6,3.08
+Garden,Cinnamon Roll,Bakery,2026-07-07,7,5.17
+Garden,Cinnamon Roll,Bakery,2026-07-08,8,3.4
+Garden,Cinnamon Roll,Bakery,2026-07-09,9,3.14
+Garden,Cinnamon Roll,Bakery,2026-07-10,10,3.55
+Garden,Cinnamon Roll,Bakery,2026-07-11,11,2.25
+Garden,Cinnamon Roll,Bakery,2026-07-12,12,2.86
+Garden,Cinnamon Roll,Bakery,2026-07-13,13,3.14
+Garden,Cinnamon Roll,Bakery,2026-07-14,14,5.13
+Garden,Classic Matcha,Matcha & Tea,2026-07-01,1,4.71
+Garden,Classic Matcha,Matcha & Tea,2026-07-02,2,4.31
+Garden,Classic Matcha,Matcha & Tea,2026-07-03,3,4.89
+Garden,Classic Matcha,Matcha & Tea,2026-07-04,4,3.08
+Garden,Classic Matcha,Matcha & Tea,2026-07-05,5,3.9
+Garden,Classic Matcha,Matcha & Tea,2026-07-06,6,4.29
+Garden,Classic Matcha,Matcha & Tea,2026-07-07,7,7.15
+Garden,Classic Matcha,Matcha & Tea,2026-07-08,8,4.75
+Garden,Classic Matcha,Matcha & Tea,2026-07-09,9,4.35
+Garden,Classic Matcha,Matcha & Tea,2026-07-10,10,4.83
+Garden,Classic Matcha,Matcha & Tea,2026-07-11,11,3.08
+Garden,Classic Matcha,Matcha & Tea,2026-07-12,12,3.89
+Garden,Classic Matcha,Matcha & Tea,2026-07-13,13,4.3
+Garden,Classic Matcha,Matcha & Tea,2026-07-14,14,7.06
+Garden,Coffee Frappe,Cold Coffee,2026-07-01,1,2.64
+Garden,Coffee Frappe,Cold Coffee,2026-07-02,2,2.45
+Garden,Coffee Frappe,Cold Coffee,2026-07-03,3,2.74
+Garden,Coffee Frappe,Cold Coffee,2026-07-04,4,1.76
+Garden,Coffee Frappe,Cold Coffee,2026-07-05,5,2.21
+Garden,Coffee Frappe,Cold Coffee,2026-07-06,6,2.44
+Garden,Coffee Frappe,Cold Coffee,2026-07-07,7,4.04
+Garden,Coffee Frappe,Cold Coffee,2026-07-08,8,2.67
+Garden,Coffee Frappe,Cold Coffee,2026-07-09,9,2.47
+Garden,Coffee Frappe,Cold Coffee,2026-07-10,10,2.76
+Garden,Coffee Frappe,Cold Coffee,2026-07-11,11,1.77
+Garden,Coffee Frappe,Cold Coffee,2026-07-12,12,2.23
+Garden,Coffee Frappe,Cold Coffee,2026-07-13,13,2.46
+Garden,Coffee Frappe,Cold Coffee,2026-07-14,14,4.06
+Garden,Cold Brew,Cold Coffee,2026-07-01,1,3.43
+Garden,Cold Brew,Cold Coffee,2026-07-02,2,3.16
+Garden,Cold Brew,Cold Coffee,2026-07-03,3,3.57
+Garden,Cold Brew,Cold Coffee,2026-07-04,4,2.26
+Garden,Cold Brew,Cold Coffee,2026-07-05,5,2.86
+Garden,Cold Brew,Cold Coffee,2026-07-06,6,3.14
+Garden,Cold Brew,Cold Coffee,2026-07-07,7,5.26
+Garden,Cold Brew,Cold Coffee,2026-07-08,8,3.46
+Garden,Cold Brew,Cold Coffee,2026-07-09,9,3.2
+Garden,Cold Brew,Cold Coffee,2026-07-10,10,3.58
+Garden,Cold Brew,Cold Coffee,2026-07-11,11,2.29
+Garden,Cold Brew,Cold Coffee,2026-07-12,12,2.89
+Garden,Cold Brew,Cold Coffee,2026-07-13,13,3.18
+Garden,Cold Brew,Cold Coffee,2026-07-14,14,5.26
+Garden,Egg Sandwich,Breakfast,2026-07-01,1,2.83
+Garden,Egg Sandwich,Breakfast,2026-07-02,2,2.6
+Garden,Egg Sandwich,Breakfast,2026-07-03,3,2.95
+Garden,Egg Sandwich,Breakfast,2026-07-04,4,1.87
+Garden,Egg Sandwich,Breakfast,2026-07-05,5,2.36
+Garden,Egg Sandwich,Breakfast,2026-07-06,6,2.59
+Garden,Egg Sandwich,Breakfast,2026-07-07,7,4.33
+Garden,Egg Sandwich,Breakfast,2026-07-08,8,2.86
+Garden,Egg Sandwich,Breakfast,2026-07-09,9,2.64
+Garden,Egg Sandwich,Breakfast,2026-07-10,10,2.97
+Garden,Egg Sandwich,Breakfast,2026-07-11,11,1.9
+Garden,Egg Sandwich,Breakfast,2026-07-12,12,2.4
+Garden,Egg Sandwich,Breakfast,2026-07-13,13,2.63
+Garden,Egg Sandwich,Breakfast,2026-07-14,14,4.33
+Garden,English Breakfast Tea,Matcha & Tea,2026-07-01,1,0.92
+Garden,English Breakfast Tea,Matcha & Tea,2026-07-02,2,0.84
+Garden,English Breakfast Tea,Matcha & Tea,2026-07-03,3,0.95
+Garden,English Breakfast Tea,Matcha & Tea,2026-07-04,4,0.6
+Garden,English Breakfast Tea,Matcha & Tea,2026-07-05,5,0.77
+Garden,English Breakfast Tea,Matcha & Tea,2026-07-06,6,0.84
+Garden,English Breakfast Tea,Matcha & Tea,2026-07-07,7,1.35
+Garden,English Breakfast Tea,Matcha & Tea,2026-07-08,8,0.93
+Garden,English Breakfast Tea,Matcha & Tea,2026-07-09,9,0.85
+Garden,English Breakfast Tea,Matcha & Tea,2026-07-10,10,0.96
+Garden,English Breakfast Tea,Matcha & Tea,2026-07-11,11,0.61
+Garden,English Breakfast Tea,Matcha & Tea,2026-07-12,12,0.78
+Garden,English Breakfast Tea,Matcha & Tea,2026-07-13,13,0.85
+Garden,English Breakfast Tea,Matcha & Tea,2026-07-14,14,1.35
+Garden,Espresso,Hot Coffee,2026-07-01,1,1.48
+Garden,Espresso,Hot Coffee,2026-07-02,2,1.35
+Garden,Espresso,Hot Coffee,2026-07-03,3,1.51
+Garden,Espresso,Hot Coffee,2026-07-04,4,1.05
+Garden,Espresso,Hot Coffee,2026-07-05,5,1.23
+Garden,Espresso,Hot Coffee,2026-07-06,6,1.35
+Garden,Espresso,Hot Coffee,2026-07-07,7,2.24
+Garden,Espresso,Hot Coffee,2026-07-08,8,1.49
+Garden,Espresso,Hot Coffee,2026-07-09,9,1.37
+Garden,Espresso,Hot Coffee,2026-07-10,10,1.54
+Garden,Espresso,Hot Coffee,2026-07-11,11,1.06
+Garden,Espresso,Hot Coffee,2026-07-12,12,1.25
+Garden,Espresso,Hot Coffee,2026-07-13,13,1.36
+Garden,Espresso,Hot Coffee,2026-07-14,14,2.25
+Garden,Flat White,Hot Coffee,2026-07-01,1,3.31
+Garden,Flat White,Hot Coffee,2026-07-02,2,3.07
+Garden,Flat White,Hot Coffee,2026-07-03,3,3.42
+Garden,Flat White,Hot Coffee,2026-07-04,4,2.21
+Garden,Flat White,Hot Coffee,2026-07-05,5,2.78
+Garden,Flat White,Hot Coffee,2026-07-06,6,3.06
+Garden,Flat White,Hot Coffee,2026-07-07,7,5.04
+Garden,Flat White,Hot Coffee,2026-07-08,8,3.34
+Garden,Flat White,Hot Coffee,2026-07-09,9,3.1
+Garden,Flat White,Hot Coffee,2026-07-10,10,3.46
+Garden,Flat White,Hot Coffee,2026-07-11,11,2.22
+Garden,Flat White,Hot Coffee,2026-07-12,12,2.79
+Garden,Flat White,Hot Coffee,2026-07-13,13,3.08
+Garden,Flat White,Hot Coffee,2026-07-14,14,5.07
+Garden,Fresh Orange Juice,Cold Drinks,2026-07-01,1,2.38
+Garden,Fresh Orange Juice,Cold Drinks,2026-07-02,2,2.21
+Garden,Fresh Orange Juice,Cold Drinks,2026-07-03,3,2.47
+Garden,Fresh Orange Juice,Cold Drinks,2026-07-04,4,1.62
+Garden,Fresh Orange Juice,Cold Drinks,2026-07-05,5,2.01
+Garden,Fresh Orange Juice,Cold Drinks,2026-07-06,6,2.22
+Garden,Fresh Orange Juice,Cold Drinks,2026-07-07,7,3.63
+Garden,Fresh Orange Juice,Cold Drinks,2026-07-08,8,2.4
+Garden,Fresh Orange Juice,Cold Drinks,2026-07-09,9,2.23
+Garden,Fresh Orange Juice,Cold Drinks,2026-07-10,10,2.49
+Garden,Fresh Orange Juice,Cold Drinks,2026-07-11,11,1.61
+Garden,Fresh Orange Juice,Cold Drinks,2026-07-12,12,2.0
+Garden,Fresh Orange Juice,Cold Drinks,2026-07-13,13,2.23
+Garden,Fresh Orange Juice,Cold Drinks,2026-07-14,14,3.62
+Garden,Frozen Yoghurt Cup,Desserts,2026-07-01,1,3.7
+Garden,Frozen Yoghurt Cup,Desserts,2026-07-02,2,3.42
+Garden,Frozen Yoghurt Cup,Desserts,2026-07-03,3,3.85
+Garden,Frozen Yoghurt Cup,Desserts,2026-07-04,4,2.45
+Garden,Frozen Yoghurt Cup,Desserts,2026-07-05,5,3.09
+Garden,Frozen Yoghurt Cup,Desserts,2026-07-06,6,3.4
+Garden,Frozen Yoghurt Cup,Desserts,2026-07-07,7,5.67
+Garden,Frozen Yoghurt Cup,Desserts,2026-07-08,8,3.73
+Garden,Frozen Yoghurt Cup,Desserts,2026-07-09,9,3.46
+Garden,Frozen Yoghurt Cup,Desserts,2026-07-10,10,3.87
+Garden,Frozen Yoghurt Cup,Desserts,2026-07-11,11,2.48
+Garden,Frozen Yoghurt Cup,Desserts,2026-07-12,12,3.13
+Garden,Frozen Yoghurt Cup,Desserts,2026-07-13,13,3.44
+Garden,Frozen Yoghurt Cup,Desserts,2026-07-14,14,5.68
+Garden,Granola Yoghurt,Breakfast,2026-07-01,1,1.1
+Garden,Granola Yoghurt,Breakfast,2026-07-02,2,1.04
+Garden,Granola Yoghurt,Breakfast,2026-07-03,3,1.14
+Garden,Granola Yoghurt,Breakfast,2026-07-04,4,0.74
+Garden,Granola Yoghurt,Breakfast,2026-07-05,5,0.93
+Garden,Granola Yoghurt,Breakfast,2026-07-06,6,1.03
+Garden,Granola Yoghurt,Breakfast,2026-07-07,7,1.65
+Garden,Granola Yoghurt,Breakfast,2026-07-08,8,1.11
+Garden,Granola Yoghurt,Breakfast,2026-07-09,9,1.05
+Garden,Granola Yoghurt,Breakfast,2026-07-10,10,1.15
+Garden,Granola Yoghurt,Breakfast,2026-07-11,11,0.75
+Garden,Granola Yoghurt,Breakfast,2026-07-12,12,0.95
+Garden,Granola Yoghurt,Breakfast,2026-07-13,13,1.04
+Garden,Granola Yoghurt,Breakfast,2026-07-14,14,1.65
+Garden,Halloumi Wrap,Sandwiches,2026-07-01,1,2.0
+Garden,Halloumi Wrap,Sandwiches,2026-07-02,2,1.84
+Garden,Halloumi Wrap,Sandwiches,2026-07-03,3,2.05
+Garden,Halloumi Wrap,Sandwiches,2026-07-04,4,1.33
+Garden,Halloumi Wrap,Sandwiches,2026-07-05,5,1.66
+Garden,Halloumi Wrap,Sandwiches,2026-07-06,6,1.83
+Garden,Halloumi Wrap,Sandwiches,2026-07-07,7,3.01
+Garden,Halloumi Wrap,Sandwiches,2026-07-08,8,2.02
+Garden,Halloumi Wrap,Sandwiches,2026-07-09,9,1.86
+Garden,Halloumi Wrap,Sandwiches,2026-07-10,10,2.1
+Garden,Halloumi Wrap,Sandwiches,2026-07-11,11,1.36
+Garden,Halloumi Wrap,Sandwiches,2026-07-12,12,1.69
+Garden,Halloumi Wrap,Sandwiches,2026-07-13,13,1.86
+Garden,Halloumi Wrap,Sandwiches,2026-07-14,14,3.07
+Garden,Iced Americano,Cold Coffee,2026-07-01,1,4.22
+Garden,Iced Americano,Cold Coffee,2026-07-02,2,3.89
+Garden,Iced Americano,Cold Coffee,2026-07-03,3,4.39
+Garden,Iced Americano,Cold Coffee,2026-07-04,4,2.78
+Garden,Iced Americano,Cold Coffee,2026-07-05,5,3.52
+Garden,Iced Americano,Cold Coffee,2026-07-06,6,3.88
+Garden,Iced Americano,Cold Coffee,2026-07-07,7,6.47
+Garden,Iced Americano,Cold Coffee,2026-07-08,8,4.27
+Garden,Iced Americano,Cold Coffee,2026-07-09,9,3.95
+Garden,Iced Americano,Cold Coffee,2026-07-10,10,4.42
+Garden,Iced Americano,Cold Coffee,2026-07-11,11,2.81
+Garden,Iced Americano,Cold Coffee,2026-07-12,12,3.57
+Garden,Iced Americano,Cold Coffee,2026-07-13,13,3.93
+Garden,Iced Americano,Cold Coffee,2026-07-14,14,6.49
+Garden,Iced Latte,Cold Coffee,2026-07-01,1,5.53
+Garden,Iced Latte,Cold Coffee,2026-07-02,2,5.07
+Garden,Iced Latte,Cold Coffee,2026-07-03,3,5.74
+Garden,Iced Latte,Cold Coffee,2026-07-04,4,3.62
+Garden,Iced Latte,Cold Coffee,2026-07-05,5,4.59
+Garden,Iced Latte,Cold Coffee,2026-07-06,6,5.04
+Garden,Iced Latte,Cold Coffee,2026-07-07,7,8.41
+Garden,Iced Latte,Cold Coffee,2026-07-08,8,5.58
+Garden,Iced Latte,Cold Coffee,2026-07-09,9,5.13
+Garden,Iced Latte,Cold Coffee,2026-07-10,10,5.7
+Garden,Iced Latte,Cold Coffee,2026-07-11,11,3.63
+Garden,Iced Latte,Cold Coffee,2026-07-12,12,4.6
+Garden,Iced Latte,Cold Coffee,2026-07-13,13,5.06
+Garden,Iced Latte,Cold Coffee,2026-07-14,14,8.35
+Garden,Iced Matcha,Matcha & Tea,2026-07-01,1,4.62
+Garden,Iced Matcha,Matcha & Tea,2026-07-02,2,4.26
+Garden,Iced Matcha,Matcha & Tea,2026-07-03,3,4.83
+Garden,Iced Matcha,Matcha & Tea,2026-07-04,4,3.04
+Garden,Iced Matcha,Matcha & Tea,2026-07-05,5,3.85
+Garden,Iced Matcha,Matcha & Tea,2026-07-06,6,4.25
+Garden,Iced Matcha,Matcha & Tea,2026-07-07,7,7.09
+Garden,Iced Matcha,Matcha & Tea,2026-07-08,8,4.67
+Garden,Iced Matcha,Matcha & Tea,2026-07-09,9,4.33
+Garden,Iced Matcha,Matcha & Tea,2026-07-10,10,4.83
+Garden,Iced Matcha,Matcha & Tea,2026-07-11,11,3.08
+Garden,Iced Matcha,Matcha & Tea,2026-07-12,12,3.9
+Garden,Iced Matcha,Matcha & Tea,2026-07-13,13,4.3
+Garden,Iced Matcha,Matcha & Tea,2026-07-14,14,7.1
+Garden,Iced Mocha,Cold Coffee,2026-07-01,1,3.11
+Garden,Iced Mocha,Cold Coffee,2026-07-02,2,2.85
+Garden,Iced Mocha,Cold Coffee,2026-07-03,3,3.23
+Garden,Iced Mocha,Cold Coffee,2026-07-04,4,2.04
+Garden,Iced Mocha,Cold Coffee,2026-07-05,5,2.58
+Garden,Iced Mocha,Cold Coffee,2026-07-06,6,2.84
+Garden,Iced Mocha,Cold Coffee,2026-07-07,7,4.78
+Garden,Iced Mocha,Cold Coffee,2026-07-08,8,3.15
+Garden,Iced Mocha,Cold Coffee,2026-07-09,9,2.88
+Garden,Iced Mocha,Cold Coffee,2026-07-10,10,3.22
+Garden,Iced Mocha,Cold Coffee,2026-07-11,11,2.04
+Garden,Iced Mocha,Cold Coffee,2026-07-12,12,2.59
+Garden,Iced Mocha,Cold Coffee,2026-07-13,13,2.85
+Garden,Iced Mocha,Cold Coffee,2026-07-14,14,4.69
+Garden,Lemonade,Cold Drinks,2026-07-01,1,2.35
+Garden,Lemonade,Cold Drinks,2026-07-02,2,2.17
+Garden,Lemonade,Cold Drinks,2026-07-03,3,2.41
+Garden,Lemonade,Cold Drinks,2026-07-04,4,1.61
+Garden,Lemonade,Cold Drinks,2026-07-05,5,1.97
+Garden,Lemonade,Cold Drinks,2026-07-06,6,2.16
+Garden,Lemonade,Cold Drinks,2026-07-07,7,3.49
+Garden,Lemonade,Cold Drinks,2026-07-08,8,2.38
+Garden,Lemonade,Cold Drinks,2026-07-09,9,2.19
+Garden,Lemonade,Cold Drinks,2026-07-10,10,2.44
+Garden,Lemonade,Cold Drinks,2026-07-11,11,1.61
+Garden,Lemonade,Cold Drinks,2026-07-12,12,1.98
+Garden,Lemonade,Cold Drinks,2026-07-13,13,2.19
+Garden,Lemonade,Cold Drinks,2026-07-14,14,3.52
+Garden,Mint Tea,Matcha & Tea,2026-07-01,1,1.46
+Garden,Mint Tea,Matcha & Tea,2026-07-02,2,1.35
+Garden,Mint Tea,Matcha & Tea,2026-07-03,3,1.52
+Garden,Mint Tea,Matcha & Tea,2026-07-04,4,1.04
+Garden,Mint Tea,Matcha & Tea,2026-07-05,5,1.22
+Garden,Mint Tea,Matcha & Tea,2026-07-06,6,1.34
+Garden,Mint Tea,Matcha & Tea,2026-07-07,7,2.23
+Garden,Mint Tea,Matcha & Tea,2026-07-08,8,1.48
+Garden,Mint Tea,Matcha & Tea,2026-07-09,9,1.37
+Garden,Mint Tea,Matcha & Tea,2026-07-10,10,1.53
+Garden,Mint Tea,Matcha & Tea,2026-07-11,11,1.06
+Garden,Mint Tea,Matcha & Tea,2026-07-12,12,1.24
+Garden,Mint Tea,Matcha & Tea,2026-07-13,13,1.36
+Garden,Mint Tea,Matcha & Tea,2026-07-14,14,2.22
+Garden,Peach Iced Tea,Cold Drinks,2026-07-01,1,2.77
+Garden,Peach Iced Tea,Cold Drinks,2026-07-02,2,2.55
+Garden,Peach Iced Tea,Cold Drinks,2026-07-03,3,2.88
+Garden,Peach Iced Tea,Cold Drinks,2026-07-04,4,1.83
+Garden,Peach Iced Tea,Cold Drinks,2026-07-05,5,2.31
+Garden,Peach Iced Tea,Cold Drinks,2026-07-06,6,2.54
+Garden,Peach Iced Tea,Cold Drinks,2026-07-07,7,4.25
+Garden,Peach Iced Tea,Cold Drinks,2026-07-08,8,2.8
+Garden,Peach Iced Tea,Cold Drinks,2026-07-09,9,2.58
+Garden,Peach Iced Tea,Cold Drinks,2026-07-10,10,2.88
+Garden,Peach Iced Tea,Cold Drinks,2026-07-11,11,1.83
+Garden,Peach Iced Tea,Cold Drinks,2026-07-12,12,2.32
+Garden,Peach Iced Tea,Cold Drinks,2026-07-13,13,2.56
+Garden,Peach Iced Tea,Cold Drinks,2026-07-14,14,4.21
+Garden,Pistachio Cookie,Bakery,2026-07-01,1,2.84
+Garden,Pistachio Cookie,Bakery,2026-07-02,2,2.61
+Garden,Pistachio Cookie,Bakery,2026-07-03,3,2.98
+Garden,Pistachio Cookie,Bakery,2026-07-04,4,1.87
+Garden,Pistachio Cookie,Bakery,2026-07-05,5,2.36
+Garden,Pistachio Cookie,Bakery,2026-07-06,6,2.6
+Garden,Pistachio Cookie,Bakery,2026-07-07,7,4.36
+Garden,Pistachio Cookie,Bakery,2026-07-08,8,2.87
+Garden,Pistachio Cookie,Bakery,2026-07-09,9,2.65
+Garden,Pistachio Cookie,Bakery,2026-07-10,10,2.99
+Garden,Pistachio Cookie,Bakery,2026-07-11,11,1.91
+Garden,Pistachio Cookie,Bakery,2026-07-12,12,2.4
+Garden,Pistachio Cookie,Bakery,2026-07-13,13,2.66
+Garden,Pistachio Cookie,Bakery,2026-07-14,14,4.35
+Garden,Quinoa Bowl,Meals,2026-07-01,1,1.22
+Garden,Quinoa Bowl,Meals,2026-07-02,2,1.14
+Garden,Quinoa Bowl,Meals,2026-07-03,3,1.27
+Garden,Quinoa Bowl,Meals,2026-07-04,4,0.86
+Garden,Quinoa Bowl,Meals,2026-07-05,5,1.09
+Garden,Quinoa Bowl,Meals,2026-07-06,6,1.13
+Garden,Quinoa Bowl,Meals,2026-07-07,7,1.86
+Garden,Quinoa Bowl,Meals,2026-07-08,8,1.23
+Garden,Quinoa Bowl,Meals,2026-07-09,9,1.14
+Garden,Quinoa Bowl,Meals,2026-07-10,10,1.28
+Garden,Quinoa Bowl,Meals,2026-07-11,11,0.87
+Garden,Quinoa Bowl,Meals,2026-07-12,12,1.1
+Garden,Quinoa Bowl,Meals,2026-07-13,13,1.14
+Garden,Quinoa Bowl,Meals,2026-07-14,14,1.87
+Garden,Soup of the Day,Meals,2026-07-01,1,1.16
+Garden,Soup of the Day,Meals,2026-07-02,2,1.09
+Garden,Soup of the Day,Meals,2026-07-03,3,1.22
+Garden,Soup of the Day,Meals,2026-07-04,4,0.83
+Garden,Soup of the Day,Meals,2026-07-05,5,1.07
+Garden,Soup of the Day,Meals,2026-07-06,6,1.09
+Garden,Soup of the Day,Meals,2026-07-07,7,1.74
+Garden,Soup of the Day,Meals,2026-07-08,8,1.17
+Garden,Soup of the Day,Meals,2026-07-09,9,1.1
+Garden,Soup of the Day,Meals,2026-07-10,10,1.22
+Garden,Soup of the Day,Meals,2026-07-11,11,0.84
+Garden,Soup of the Day,Meals,2026-07-12,12,1.08
+Garden,Soup of the Day,Meals,2026-07-13,13,1.11
+Garden,Soup of the Day,Meals,2026-07-14,14,1.76
+Garden,Spanish Latte,Hot Coffee,2026-07-01,1,2.58
+Garden,Spanish Latte,Hot Coffee,2026-07-02,2,2.38
+Garden,Spanish Latte,Hot Coffee,2026-07-03,3,2.68
+Garden,Spanish Latte,Hot Coffee,2026-07-04,4,1.69
+Garden,Spanish Latte,Hot Coffee,2026-07-05,5,2.15
+Garden,Spanish Latte,Hot Coffee,2026-07-06,6,2.37
+Garden,Spanish Latte,Hot Coffee,2026-07-07,7,3.94
+Garden,Spanish Latte,Hot Coffee,2026-07-08,8,2.6
+Garden,Spanish Latte,Hot Coffee,2026-07-09,9,2.41
+Garden,Spanish Latte,Hot Coffee,2026-07-10,10,2.7
+Garden,Spanish Latte,Hot Coffee,2026-07-11,11,1.72
+Garden,Spanish Latte,Hot Coffee,2026-07-12,12,2.18
+Garden,Spanish Latte,Hot Coffee,2026-07-13,13,2.4
+Garden,Spanish Latte,Hot Coffee,2026-07-14,14,3.93
+Garden,Sparkling Water,Cold Drinks,2026-07-01,1,2.32
+Garden,Sparkling Water,Cold Drinks,2026-07-02,2,2.15
+Garden,Sparkling Water,Cold Drinks,2026-07-03,3,2.43
+Garden,Sparkling Water,Cold Drinks,2026-07-04,4,1.56
+Garden,Sparkling Water,Cold Drinks,2026-07-05,5,1.95
+Garden,Sparkling Water,Cold Drinks,2026-07-06,6,2.14
+Garden,Sparkling Water,Cold Drinks,2026-07-07,7,3.53
+Garden,Sparkling Water,Cold Drinks,2026-07-08,8,2.34
+Garden,Sparkling Water,Cold Drinks,2026-07-09,9,2.19
+Garden,Sparkling Water,Cold Drinks,2026-07-10,10,2.45
+Garden,Sparkling Water,Cold Drinks,2026-07-11,11,1.59
+Garden,Sparkling Water,Cold Drinks,2026-07-12,12,1.99
+Garden,Sparkling Water,Cold Drinks,2026-07-13,13,2.19
+Garden,Sparkling Water,Cold Drinks,2026-07-14,14,3.58
+Garden,Still Water,Cold Drinks,2026-07-01,1,2.5
+Garden,Still Water,Cold Drinks,2026-07-02,2,2.31
+Garden,Still Water,Cold Drinks,2026-07-03,3,2.57
+Garden,Still Water,Cold Drinks,2026-07-04,4,1.7
+Garden,Still Water,Cold Drinks,2026-07-05,5,2.11
+Garden,Still Water,Cold Drinks,2026-07-06,6,2.3
+Garden,Still Water,Cold Drinks,2026-07-07,7,3.77
+Garden,Still Water,Cold Drinks,2026-07-08,8,2.53
+Garden,Still Water,Cold Drinks,2026-07-09,9,2.32
+Garden,Still Water,Cold Drinks,2026-07-10,10,2.58
+Garden,Still Water,Cold Drinks,2026-07-11,11,1.67
+Garden,Still Water,Cold Drinks,2026-07-12,12,2.1
+Garden,Still Water,Cold Drinks,2026-07-13,13,2.31
+Garden,Still Water,Cold Drinks,2026-07-14,14,3.77
+Garden,Strawberry Matcha,Matcha & Tea,2026-07-01,1,3.16
+Garden,Strawberry Matcha,Matcha & Tea,2026-07-02,2,2.91
+Garden,Strawberry Matcha,Matcha & Tea,2026-07-03,3,3.28
+Garden,Strawberry Matcha,Matcha & Tea,2026-07-04,4,2.08
+Garden,Strawberry Matcha,Matcha & Tea,2026-07-05,5,2.63
+Garden,Strawberry Matcha,Matcha & Tea,2026-07-06,6,2.9
+Garden,Strawberry Matcha,Matcha & Tea,2026-07-07,7,4.84
+Garden,Strawberry Matcha,Matcha & Tea,2026-07-08,8,3.19
+Garden,Strawberry Matcha,Matcha & Tea,2026-07-09,9,2.94
+Garden,Strawberry Matcha,Matcha & Tea,2026-07-10,10,3.27
+Garden,Strawberry Matcha,Matcha & Tea,2026-07-11,11,2.1
+Garden,Strawberry Matcha,Matcha & Tea,2026-07-12,12,2.65
+Garden,Strawberry Matcha,Matcha & Tea,2026-07-13,13,2.92
+Garden,Strawberry Matcha,Matcha & Tea,2026-07-14,14,4.8
+Garden,Tiramisu Cup,Desserts,2026-07-01,1,3.42
+Garden,Tiramisu Cup,Desserts,2026-07-02,2,3.14
+Garden,Tiramisu Cup,Desserts,2026-07-03,3,3.55
+Garden,Tiramisu Cup,Desserts,2026-07-04,4,2.24
+Garden,Tiramisu Cup,Desserts,2026-07-05,5,2.83
+Garden,Tiramisu Cup,Desserts,2026-07-06,6,3.11
+Garden,Tiramisu Cup,Desserts,2026-07-07,7,5.24
+Garden,Tiramisu Cup,Desserts,2026-07-08,8,3.45
+Garden,Tiramisu Cup,Desserts,2026-07-09,9,3.17
+Garden,Tiramisu Cup,Desserts,2026-07-10,10,3.52
+Garden,Tiramisu Cup,Desserts,2026-07-11,11,2.25
+Garden,Tiramisu Cup,Desserts,2026-07-12,12,2.83
+Garden,Tiramisu Cup,Desserts,2026-07-13,13,3.12
+Garden,Tiramisu Cup,Desserts,2026-07-14,14,5.12
+Garden,Tuna Sandwich,Sandwiches,2026-07-01,1,1.66
+Garden,Tuna Sandwich,Sandwiches,2026-07-02,2,1.53
+Garden,Tuna Sandwich,Sandwiches,2026-07-03,3,1.71
+Garden,Tuna Sandwich,Sandwiches,2026-07-04,4,1.12
+Garden,Tuna Sandwich,Sandwiches,2026-07-05,5,1.38
+Garden,Tuna Sandwich,Sandwiches,2026-07-06,6,1.52
+Garden,Tuna Sandwich,Sandwiches,2026-07-07,7,2.52
+Garden,Tuna Sandwich,Sandwiches,2026-07-08,8,1.68
+Garden,Tuna Sandwich,Sandwiches,2026-07-09,9,1.55
+Garden,Tuna Sandwich,Sandwiches,2026-07-10,10,1.74
+Garden,Tuna Sandwich,Sandwiches,2026-07-11,11,1.14
+Garden,Tuna Sandwich,Sandwiches,2026-07-12,12,1.41
+Garden,Tuna Sandwich,Sandwiches,2026-07-13,13,1.55
+Garden,Tuna Sandwich,Sandwiches,2026-07-14,14,2.54
+Garden,Turkey & Cheese Sandwich,Sandwiches,2026-07-01,1,2.35
+Garden,Turkey & Cheese Sandwich,Sandwiches,2026-07-02,2,2.17
+Garden,Turkey & Cheese Sandwich,Sandwiches,2026-07-03,3,2.45
+Garden,Turkey & Cheese Sandwich,Sandwiches,2026-07-04,4,1.56
+Garden,Turkey & Cheese Sandwich,Sandwiches,2026-07-05,5,1.96
+Garden,Turkey & Cheese Sandwich,Sandwiches,2026-07-06,6,2.17
+Garden,Turkey & Cheese Sandwich,Sandwiches,2026-07-07,7,3.55
+Garden,Turkey & Cheese Sandwich,Sandwiches,2026-07-08,8,2.38
+Garden,Turkey & Cheese Sandwich,Sandwiches,2026-07-09,9,2.2
+Garden,Turkey & Cheese Sandwich,Sandwiches,2026-07-10,10,2.45
+Garden,Turkey & Cheese Sandwich,Sandwiches,2026-07-11,11,1.57
+Garden,Turkey & Cheese Sandwich,Sandwiches,2026-07-12,12,1.98
+Garden,Turkey & Cheese Sandwich,Sandwiches,2026-07-13,13,2.18
+Garden,Turkey & Cheese Sandwich,Sandwiches,2026-07-14,14,3.51
+Garden,Vanilla Latte,Hot Coffee,2026-07-01,1,3.73
+Garden,Vanilla Latte,Hot Coffee,2026-07-02,2,3.42
+Garden,Vanilla Latte,Hot Coffee,2026-07-03,3,3.83
+Garden,Vanilla Latte,Hot Coffee,2026-07-04,4,2.44
+Garden,Vanilla Latte,Hot Coffee,2026-07-05,5,3.09
+Garden,Vanilla Latte,Hot Coffee,2026-07-06,6,3.4
+Garden,Vanilla Latte,Hot Coffee,2026-07-07,7,5.62
+Garden,Vanilla Latte,Hot Coffee,2026-07-08,8,3.77
+Garden,Vanilla Latte,Hot Coffee,2026-07-09,9,3.46
+Garden,Vanilla Latte,Hot Coffee,2026-07-10,10,3.89
+Garden,Vanilla Latte,Hot Coffee,2026-07-11,11,2.48
+Garden,Vanilla Latte,Hot Coffee,2026-07-12,12,3.14
+Garden,Vanilla Latte,Hot Coffee,2026-07-13,13,3.45
+Garden,Vanilla Latte,Hot Coffee,2026-07-14,14,5.71
+Harbour,Almond Croissant,Bakery,2026-07-01,1,5.57
+Harbour,Almond Croissant,Bakery,2026-07-02,2,5.08
+Harbour,Almond Croissant,Bakery,2026-07-03,3,6.02
+Harbour,Almond Croissant,Bakery,2026-07-04,4,3.7
+Harbour,Almond Croissant,Bakery,2026-07-05,5,4.52
+Harbour,Almond Croissant,Bakery,2026-07-06,6,5.16
+Harbour,Almond Croissant,Bakery,2026-07-07,7,8.35
+Harbour,Almond Croissant,Bakery,2026-07-08,8,5.57
+Harbour,Almond Croissant,Bakery,2026-07-09,9,5.22
+Harbour,Almond Croissant,Bakery,2026-07-10,10,5.91
+Harbour,Almond Croissant,Bakery,2026-07-11,11,3.81
+Harbour,Almond Croissant,Bakery,2026-07-12,12,4.66
+Harbour,Almond Croissant,Bakery,2026-07-13,13,5.31
+Harbour,Almond Croissant,Bakery,2026-07-14,14,8.39
+Harbour,Americano,Hot Coffee,2026-07-01,1,3.88
+Harbour,Americano,Hot Coffee,2026-07-02,2,3.54
+Harbour,Americano,Hot Coffee,2026-07-03,3,4.19
+Harbour,Americano,Hot Coffee,2026-07-04,4,2.57
+Harbour,Americano,Hot Coffee,2026-07-05,5,3.15
+Harbour,Americano,Hot Coffee,2026-07-06,6,3.59
+Harbour,Americano,Hot Coffee,2026-07-07,7,5.64
+Harbour,Americano,Hot Coffee,2026-07-08,8,3.78
+Harbour,Americano,Hot Coffee,2026-07-09,9,3.56
+Harbour,Americano,Hot Coffee,2026-07-10,10,4.01
+Harbour,Americano,Hot Coffee,2026-07-11,11,2.6
+Harbour,Americano,Hot Coffee,2026-07-12,12,3.17
+Harbour,Americano,Hot Coffee,2026-07-13,13,3.61
+Harbour,Americano,Hot Coffee,2026-07-14,14,5.69
+Harbour,Avocado Toast,Breakfast,2026-07-01,1,3.14
+Harbour,Avocado Toast,Breakfast,2026-07-02,2,2.91
+Harbour,Avocado Toast,Breakfast,2026-07-03,3,3.41
+Harbour,Avocado Toast,Breakfast,2026-07-04,4,2.12
+Harbour,Avocado Toast,Breakfast,2026-07-05,5,2.6
+Harbour,Avocado Toast,Breakfast,2026-07-06,6,2.96
+Harbour,Avocado Toast,Breakfast,2026-07-07,7,4.68
+Harbour,Avocado Toast,Breakfast,2026-07-08,8,3.13
+Harbour,Avocado Toast,Breakfast,2026-07-09,9,2.96
+Harbour,Avocado Toast,Breakfast,2026-07-10,10,3.33
+Harbour,Avocado Toast,Breakfast,2026-07-11,11,2.15
+Harbour,Avocado Toast,Breakfast,2026-07-12,12,2.63
+Harbour,Avocado Toast,Breakfast,2026-07-13,13,3.0
+Harbour,Avocado Toast,Breakfast,2026-07-14,14,4.74
+Harbour,Banana Bread,Bakery,2026-07-01,1,4.59
+Harbour,Banana Bread,Bakery,2026-07-02,2,4.21
+Harbour,Banana Bread,Bakery,2026-07-03,3,4.96
+Harbour,Banana Bread,Bakery,2026-07-04,4,3.05
+Harbour,Banana Bread,Bakery,2026-07-05,5,3.74
+Harbour,Banana Bread,Bakery,2026-07-06,6,4.27
+Harbour,Banana Bread,Bakery,2026-07-07,7,6.75
+Harbour,Banana Bread,Bakery,2026-07-08,8,4.52
+Harbour,Banana Bread,Bakery,2026-07-09,9,4.26
+Harbour,Banana Bread,Bakery,2026-07-10,10,4.78
+Harbour,Banana Bread,Bakery,2026-07-11,11,3.09
+Harbour,Banana Bread,Bakery,2026-07-12,12,3.78
+Harbour,Banana Bread,Bakery,2026-07-13,13,4.31
+Harbour,Banana Bread,Bakery,2026-07-14,14,6.79
+Harbour,Blueberry Muffin,Bakery,2026-07-01,1,3.75
+Harbour,Blueberry Muffin,Bakery,2026-07-02,2,3.42
+Harbour,Blueberry Muffin,Bakery,2026-07-03,3,4.05
+Harbour,Blueberry Muffin,Bakery,2026-07-04,4,2.49
+Harbour,Blueberry Muffin,Bakery,2026-07-05,5,3.05
+Harbour,Blueberry Muffin,Bakery,2026-07-06,6,3.48
+Harbour,Blueberry Muffin,Bakery,2026-07-07,7,5.55
+Harbour,Blueberry Muffin,Bakery,2026-07-08,8,3.71
+Harbour,Blueberry Muffin,Bakery,2026-07-09,9,3.49
+Harbour,Blueberry Muffin,Bakery,2026-07-10,10,3.93
+Harbour,Blueberry Muffin,Bakery,2026-07-11,11,2.54
+Harbour,Blueberry Muffin,Bakery,2026-07-12,12,3.1
+Harbour,Blueberry Muffin,Bakery,2026-07-13,13,3.54
+Harbour,Blueberry Muffin,Bakery,2026-07-14,14,5.58
+Harbour,Brownie,Desserts,2026-07-01,1,4.52
+Harbour,Brownie,Desserts,2026-07-02,2,4.17
+Harbour,Brownie,Desserts,2026-07-03,3,4.87
+Harbour,Brownie,Desserts,2026-07-04,4,3.04
+Harbour,Brownie,Desserts,2026-07-05,5,3.72
+Harbour,Brownie,Desserts,2026-07-06,6,4.24
+Harbour,Brownie,Desserts,2026-07-07,7,6.76
+Harbour,Brownie,Desserts,2026-07-08,8,4.53
+Harbour,Brownie,Desserts,2026-07-09,9,4.29
+Harbour,Brownie,Desserts,2026-07-10,10,4.84
+Harbour,Brownie,Desserts,2026-07-11,11,3.12
+Harbour,Brownie,Desserts,2026-07-12,12,3.82
+Harbour,Brownie,Desserts,2026-07-13,13,4.36
+Harbour,Brownie,Desserts,2026-07-14,14,6.88
+Harbour,Butter Croissant,Bakery,2026-07-01,1,8.6
+Harbour,Butter Croissant,Bakery,2026-07-02,2,7.94
+Harbour,Butter Croissant,Bakery,2026-07-03,3,9.37
+Harbour,Butter Croissant,Bakery,2026-07-04,4,5.74
+Harbour,Butter Croissant,Bakery,2026-07-05,5,7.08
+Harbour,Butter Croissant,Bakery,2026-07-06,6,8.08
+Harbour,Butter Croissant,Bakery,2026-07-07,7,12.2
+Harbour,Butter Croissant,Bakery,2026-07-08,8,8.39
+Harbour,Butter Croissant,Bakery,2026-07-09,9,8.02
+Harbour,Butter Croissant,Bakery,2026-07-10,10,8.97
+Harbour,Butter Croissant,Bakery,2026-07-11,11,5.83
+Harbour,Butter Croissant,Bakery,2026-07-12,12,7.13
+Harbour,Butter Croissant,Bakery,2026-07-13,13,8.12
+Harbour,Butter Croissant,Bakery,2026-07-14,14,12.7
+Harbour,Cappuccino,Hot Coffee,2026-07-01,1,5.39
+Harbour,Cappuccino,Hot Coffee,2026-07-02,2,4.95
+Harbour,Cappuccino,Hot Coffee,2026-07-03,3,5.85
+Harbour,Cappuccino,Hot Coffee,2026-07-04,4,3.62
+Harbour,Cappuccino,Hot Coffee,2026-07-05,5,4.41
+Harbour,Cappuccino,Hot Coffee,2026-07-06,6,5.04
+Harbour,Cappuccino,Hot Coffee,2026-07-07,7,8.0
+Harbour,Cappuccino,Hot Coffee,2026-07-08,8,5.35
+Harbour,Cappuccino,Hot Coffee,2026-07-09,9,5.06
+Harbour,Cappuccino,Hot Coffee,2026-07-10,10,5.7
+Harbour,Cappuccino,Hot Coffee,2026-07-11,11,3.71
+Harbour,Cappuccino,Hot Coffee,2026-07-12,12,4.5
+Harbour,Cappuccino,Hot Coffee,2026-07-13,13,5.13
+Harbour,Cappuccino,Hot Coffee,2026-07-14,14,8.06
+Harbour,Caramel Latte,Hot Coffee,2026-07-01,1,4.58
+Harbour,Caramel Latte,Hot Coffee,2026-07-02,2,4.22
+Harbour,Caramel Latte,Hot Coffee,2026-07-03,3,4.93
+Harbour,Caramel Latte,Hot Coffee,2026-07-04,4,3.07
+Harbour,Caramel Latte,Hot Coffee,2026-07-05,5,3.76
+Harbour,Caramel Latte,Hot Coffee,2026-07-06,6,4.29
+Harbour,Caramel Latte,Hot Coffee,2026-07-07,7,6.85
+Harbour,Caramel Latte,Hot Coffee,2026-07-08,8,4.58
+Harbour,Caramel Latte,Hot Coffee,2026-07-09,9,4.34
+Harbour,Caramel Latte,Hot Coffee,2026-07-10,10,4.87
+Harbour,Caramel Latte,Hot Coffee,2026-07-11,11,3.14
+Harbour,Caramel Latte,Hot Coffee,2026-07-12,12,3.84
+Harbour,Caramel Latte,Hot Coffee,2026-07-13,13,4.38
+Harbour,Caramel Latte,Hot Coffee,2026-07-14,14,6.92
+Harbour,Chai Latte,Matcha & Tea,2026-07-01,1,3.53
+Harbour,Chai Latte,Matcha & Tea,2026-07-02,2,3.26
+Harbour,Chai Latte,Matcha & Tea,2026-07-03,3,3.81
+Harbour,Chai Latte,Matcha & Tea,2026-07-04,4,2.37
+Harbour,Chai Latte,Matcha & Tea,2026-07-05,5,2.91
+Harbour,Chai Latte,Matcha & Tea,2026-07-06,6,3.31
+Harbour,Chai Latte,Matcha & Tea,2026-07-07,7,5.2
+Harbour,Chai Latte,Matcha & Tea,2026-07-08,8,3.49
+Harbour,Chai Latte,Matcha & Tea,2026-07-09,9,3.31
+Harbour,Chai Latte,Matcha & Tea,2026-07-10,10,3.73
+Harbour,Chai Latte,Matcha & Tea,2026-07-11,11,2.41
+Harbour,Chai Latte,Matcha & Tea,2026-07-12,12,2.95
+Harbour,Chai Latte,Matcha & Tea,2026-07-13,13,3.36
+Harbour,Chai Latte,Matcha & Tea,2026-07-14,14,5.29
+Harbour,Cheesecake Slice,Desserts,2026-07-01,1,3.74
+Harbour,Cheesecake Slice,Desserts,2026-07-02,2,3.43
+Harbour,Cheesecake Slice,Desserts,2026-07-03,3,4.05
+Harbour,Cheesecake Slice,Desserts,2026-07-04,4,2.5
+Harbour,Cheesecake Slice,Desserts,2026-07-05,5,3.06
+Harbour,Cheesecake Slice,Desserts,2026-07-06,6,3.49
+Harbour,Cheesecake Slice,Desserts,2026-07-07,7,5.55
+Harbour,Cheesecake Slice,Desserts,2026-07-08,8,3.71
+Harbour,Cheesecake Slice,Desserts,2026-07-09,9,3.49
+Harbour,Cheesecake Slice,Desserts,2026-07-10,10,3.91
+Harbour,Cheesecake Slice,Desserts,2026-07-11,11,2.54
+Harbour,Cheesecake Slice,Desserts,2026-07-12,12,3.09
+Harbour,Cheesecake Slice,Desserts,2026-07-13,13,3.52
+Harbour,Cheesecake Slice,Desserts,2026-07-14,14,5.54
+Harbour,Chicken Pesto Sandwich,Sandwiches,2026-07-01,1,3.63
+Harbour,Chicken Pesto Sandwich,Sandwiches,2026-07-02,2,3.34
+Harbour,Chicken Pesto Sandwich,Sandwiches,2026-07-03,3,3.91
+Harbour,Chicken Pesto Sandwich,Sandwiches,2026-07-04,4,2.43
+Harbour,Chicken Pesto Sandwich,Sandwiches,2026-07-05,5,2.97
+Harbour,Chicken Pesto Sandwich,Sandwiches,2026-07-06,6,3.4
+Harbour,Chicken Pesto Sandwich,Sandwiches,2026-07-07,7,5.39
+Harbour,Chicken Pesto Sandwich,Sandwiches,2026-07-08,8,3.62
+Harbour,Chicken Pesto Sandwich,Sandwiches,2026-07-09,9,3.43
+Harbour,Chicken Pesto Sandwich,Sandwiches,2026-07-10,10,3.86
+Harbour,Chicken Pesto Sandwich,Sandwiches,2026-07-11,11,2.5
+Harbour,Chicken Pesto Sandwich,Sandwiches,2026-07-12,12,3.05
+Harbour,Chicken Pesto Sandwich,Sandwiches,2026-07-13,13,3.48
+Harbour,Chicken Pesto Sandwich,Sandwiches,2026-07-14,14,5.48
+Harbour,Chicken Salad Bowl,Meals,2026-07-01,1,2.19
+Harbour,Chicken Salad Bowl,Meals,2026-07-02,2,2.01
+Harbour,Chicken Salad Bowl,Meals,2026-07-03,3,2.34
+Harbour,Chicken Salad Bowl,Meals,2026-07-04,4,1.47
+Harbour,Chicken Salad Bowl,Meals,2026-07-05,5,1.79
+Harbour,Chicken Salad Bowl,Meals,2026-07-06,6,2.04
+Harbour,Chicken Salad Bowl,Meals,2026-07-07,7,3.25
+Harbour,Chicken Salad Bowl,Meals,2026-07-08,8,2.2
+Harbour,Chicken Salad Bowl,Meals,2026-07-09,9,2.04
+Harbour,Chicken Salad Bowl,Meals,2026-07-10,10,2.32
+Harbour,Chicken Salad Bowl,Meals,2026-07-11,11,1.5
+Harbour,Chicken Salad Bowl,Meals,2026-07-12,12,1.82
+Harbour,Chicken Salad Bowl,Meals,2026-07-13,13,2.08
+Harbour,Chicken Salad Bowl,Meals,2026-07-14,14,3.29
+Harbour,Chocolate Cookie,Bakery,2026-07-01,1,5.35
+Harbour,Chocolate Cookie,Bakery,2026-07-02,2,4.89
+Harbour,Chocolate Cookie,Bakery,2026-07-03,3,5.79
+Harbour,Chocolate Cookie,Bakery,2026-07-04,4,3.56
+Harbour,Chocolate Cookie,Bakery,2026-07-05,5,4.36
+Harbour,Chocolate Cookie,Bakery,2026-07-06,6,4.97
+Harbour,Chocolate Cookie,Bakery,2026-07-07,7,7.77
+Harbour,Chocolate Cookie,Bakery,2026-07-08,8,5.21
+Harbour,Chocolate Cookie,Bakery,2026-07-09,9,4.92
+Harbour,Chocolate Cookie,Bakery,2026-07-10,10,5.51
+Harbour,Chocolate Cookie,Bakery,2026-07-11,11,3.6
+Harbour,Chocolate Cookie,Bakery,2026-07-12,12,4.36
+Harbour,Chocolate Cookie,Bakery,2026-07-13,13,4.96
+Harbour,Chocolate Cookie,Bakery,2026-07-14,14,7.81
+Harbour,Chocolate Croissant,Bakery,2026-07-01,1,5.89
+Harbour,Chocolate Croissant,Bakery,2026-07-02,2,5.41
+Harbour,Chocolate Croissant,Bakery,2026-07-03,3,6.38
+Harbour,Chocolate Croissant,Bakery,2026-07-04,4,3.94
+Harbour,Chocolate Croissant,Bakery,2026-07-05,5,4.82
+Harbour,Chocolate Croissant,Bakery,2026-07-06,6,5.5
+Harbour,Chocolate Croissant,Bakery,2026-07-07,7,8.76
+Harbour,Chocolate Croissant,Bakery,2026-07-08,8,5.85
+Harbour,Chocolate Croissant,Bakery,2026-07-09,9,5.52
+Harbour,Chocolate Croissant,Bakery,2026-07-10,10,6.23
+Harbour,Chocolate Croissant,Bakery,2026-07-11,11,4.02
+Harbour,Chocolate Croissant,Bakery,2026-07-12,12,4.91
+Harbour,Chocolate Croissant,Bakery,2026-07-13,13,5.6
+Harbour,Chocolate Croissant,Bakery,2026-07-14,14,8.78
+Harbour,Cinnamon Roll,Bakery,2026-07-01,1,6.29
+Harbour,Cinnamon Roll,Bakery,2026-07-02,2,5.78
+Harbour,Cinnamon Roll,Bakery,2026-07-03,3,6.82
+Harbour,Cinnamon Roll,Bakery,2026-07-04,4,4.21
+Harbour,Cinnamon Roll,Bakery,2026-07-05,5,5.15
+Harbour,Cinnamon Roll,Bakery,2026-07-06,6,5.87
+Harbour,Cinnamon Roll,Bakery,2026-07-07,7,9.33
+Harbour,Cinnamon Roll,Bakery,2026-07-08,8,6.3
+Harbour,Cinnamon Roll,Bakery,2026-07-09,9,5.96
+Harbour,Cinnamon Roll,Bakery,2026-07-10,10,6.71
+Harbour,Cinnamon Roll,Bakery,2026-07-11,11,4.33
+Harbour,Cinnamon Roll,Bakery,2026-07-12,12,5.29
+Harbour,Cinnamon Roll,Bakery,2026-07-13,13,6.03
+Harbour,Cinnamon Roll,Bakery,2026-07-14,14,9.46
+Harbour,Classic Matcha,Matcha & Tea,2026-07-01,1,5.21
+Harbour,Classic Matcha,Matcha & Tea,2026-07-02,2,4.78
+Harbour,Classic Matcha,Matcha & Tea,2026-07-03,3,5.64
+Harbour,Classic Matcha,Matcha & Tea,2026-07-04,4,3.47
+Harbour,Classic Matcha,Matcha & Tea,2026-07-05,5,4.26
+Harbour,Classic Matcha,Matcha & Tea,2026-07-06,6,4.86
+Harbour,Classic Matcha,Matcha & Tea,2026-07-07,7,7.64
+Harbour,Classic Matcha,Matcha & Tea,2026-07-08,8,5.11
+Harbour,Classic Matcha,Matcha & Tea,2026-07-09,9,4.81
+Harbour,Classic Matcha,Matcha & Tea,2026-07-10,10,5.39
+Harbour,Classic Matcha,Matcha & Tea,2026-07-11,11,3.48
+Harbour,Classic Matcha,Matcha & Tea,2026-07-12,12,4.25
+Harbour,Classic Matcha,Matcha & Tea,2026-07-13,13,4.85
+Harbour,Classic Matcha,Matcha & Tea,2026-07-14,14,7.64
+Harbour,Coffee Frappe,Cold Coffee,2026-07-01,1,3.55
+Harbour,Coffee Frappe,Cold Coffee,2026-07-02,2,3.28
+Harbour,Coffee Frappe,Cold Coffee,2026-07-03,3,3.82
+Harbour,Coffee Frappe,Cold Coffee,2026-07-04,4,2.39
+Harbour,Coffee Frappe,Cold Coffee,2026-07-05,5,2.92
+Harbour,Coffee Frappe,Cold Coffee,2026-07-06,6,3.33
+Harbour,Coffee Frappe,Cold Coffee,2026-07-07,7,5.22
+Harbour,Coffee Frappe,Cold Coffee,2026-07-08,8,3.5
+Harbour,Coffee Frappe,Cold Coffee,2026-07-09,9,3.33
+Harbour,Coffee Frappe,Cold Coffee,2026-07-10,10,3.76
+Harbour,Coffee Frappe,Cold Coffee,2026-07-11,11,2.42
+Harbour,Coffee Frappe,Cold Coffee,2026-07-12,12,2.96
+Harbour,Coffee Frappe,Cold Coffee,2026-07-13,13,3.37
+Harbour,Coffee Frappe,Cold Coffee,2026-07-14,14,5.33
+Harbour,Cold Brew,Cold Coffee,2026-07-01,1,5.7
+Harbour,Cold Brew,Cold Coffee,2026-07-02,2,5.19
+Harbour,Cold Brew,Cold Coffee,2026-07-03,3,6.15
+Harbour,Cold Brew,Cold Coffee,2026-07-04,4,3.76
+Harbour,Cold Brew,Cold Coffee,2026-07-05,5,4.62
+Harbour,Cold Brew,Cold Coffee,2026-07-06,6,5.27
+Harbour,Cold Brew,Cold Coffee,2026-07-07,7,8.43
+Harbour,Cold Brew,Cold Coffee,2026-07-08,8,5.64
+Harbour,Cold Brew,Cold Coffee,2026-07-09,9,5.33
+Harbour,Cold Brew,Cold Coffee,2026-07-10,10,6.02
+Harbour,Cold Brew,Cold Coffee,2026-07-11,11,3.88
+Harbour,Cold Brew,Cold Coffee,2026-07-12,12,4.75
+Harbour,Cold Brew,Cold Coffee,2026-07-13,13,5.42
+Harbour,Cold Brew,Cold Coffee,2026-07-14,14,8.54
+Harbour,Egg Sandwich,Breakfast,2026-07-01,1,3.03
+Harbour,Egg Sandwich,Breakfast,2026-07-02,2,2.78
+Harbour,Egg Sandwich,Breakfast,2026-07-03,3,3.29
+Harbour,Egg Sandwich,Breakfast,2026-07-04,4,2.03
+Harbour,Egg Sandwich,Breakfast,2026-07-05,5,2.48
+Harbour,Egg Sandwich,Breakfast,2026-07-06,6,2.82
+Harbour,Egg Sandwich,Breakfast,2026-07-07,7,4.54
+Harbour,Egg Sandwich,Breakfast,2026-07-08,8,3.03
+Harbour,Egg Sandwich,Breakfast,2026-07-09,9,2.85
+Harbour,Egg Sandwich,Breakfast,2026-07-10,10,3.23
+Harbour,Egg Sandwich,Breakfast,2026-07-11,11,2.08
+Harbour,Egg Sandwich,Breakfast,2026-07-12,12,2.54
+Harbour,Egg Sandwich,Breakfast,2026-07-13,13,2.91
+Harbour,Egg Sandwich,Breakfast,2026-07-14,14,4.59
+Harbour,English Breakfast Tea,Matcha & Tea,2026-07-01,1,1.84
+Harbour,English Breakfast Tea,Matcha & Tea,2026-07-02,2,1.64
+Harbour,English Breakfast Tea,Matcha & Tea,2026-07-03,3,1.99
+Harbour,English Breakfast Tea,Matcha & Tea,2026-07-04,4,1.21
+Harbour,English Breakfast Tea,Matcha & Tea,2026-07-05,5,1.48
+Harbour,English Breakfast Tea,Matcha & Tea,2026-07-06,6,1.67
+Harbour,English Breakfast Tea,Matcha & Tea,2026-07-07,7,2.59
+Harbour,English Breakfast Tea,Matcha & Tea,2026-07-08,8,1.75
+Harbour,English Breakfast Tea,Matcha & Tea,2026-07-09,9,1.64
+Harbour,English Breakfast Tea,Matcha & Tea,2026-07-10,10,1.85
+Harbour,English Breakfast Tea,Matcha & Tea,2026-07-11,11,1.21
+Harbour,English Breakfast Tea,Matcha & Tea,2026-07-12,12,1.47
+Harbour,English Breakfast Tea,Matcha & Tea,2026-07-13,13,1.67
+Harbour,English Breakfast Tea,Matcha & Tea,2026-07-14,14,2.63
+Harbour,Espresso,Hot Coffee,2026-07-01,1,2.73
+Harbour,Espresso,Hot Coffee,2026-07-02,2,2.42
+Harbour,Espresso,Hot Coffee,2026-07-03,3,2.96
+Harbour,Espresso,Hot Coffee,2026-07-04,4,1.76
+Harbour,Espresso,Hot Coffee,2026-07-05,5,2.15
+Harbour,Espresso,Hot Coffee,2026-07-06,6,2.45
+Harbour,Espresso,Hot Coffee,2026-07-07,7,3.85
+Harbour,Espresso,Hot Coffee,2026-07-08,8,2.57
+Harbour,Espresso,Hot Coffee,2026-07-09,9,2.44
+Harbour,Espresso,Hot Coffee,2026-07-10,10,2.76
+Harbour,Espresso,Hot Coffee,2026-07-11,11,1.8
+Harbour,Espresso,Hot Coffee,2026-07-12,12,2.18
+Harbour,Espresso,Hot Coffee,2026-07-13,13,2.48
+Harbour,Espresso,Hot Coffee,2026-07-14,14,3.91
+Harbour,Flat White,Hot Coffee,2026-07-01,1,4.62
+Harbour,Flat White,Hot Coffee,2026-07-02,2,4.25
+Harbour,Flat White,Hot Coffee,2026-07-03,3,5.0
+Harbour,Flat White,Hot Coffee,2026-07-04,4,3.08
+Harbour,Flat White,Hot Coffee,2026-07-05,5,3.79
+Harbour,Flat White,Hot Coffee,2026-07-06,6,4.31
+Harbour,Flat White,Hot Coffee,2026-07-07,7,6.82
+Harbour,Flat White,Hot Coffee,2026-07-08,8,4.56
+Harbour,Flat White,Hot Coffee,2026-07-09,9,4.29
+Harbour,Flat White,Hot Coffee,2026-07-10,10,4.85
+Harbour,Flat White,Hot Coffee,2026-07-11,11,3.11
+Harbour,Flat White,Hot Coffee,2026-07-12,12,3.81
+Harbour,Flat White,Hot Coffee,2026-07-13,13,4.34
+Harbour,Flat White,Hot Coffee,2026-07-14,14,6.87
+Harbour,Fresh Orange Juice,Cold Drinks,2026-07-01,1,4.24
+Harbour,Fresh Orange Juice,Cold Drinks,2026-07-02,2,3.91
+Harbour,Fresh Orange Juice,Cold Drinks,2026-07-03,3,4.57
+Harbour,Fresh Orange Juice,Cold Drinks,2026-07-04,4,2.84
+Harbour,Fresh Orange Juice,Cold Drinks,2026-07-05,5,3.48
+Harbour,Fresh Orange Juice,Cold Drinks,2026-07-06,6,3.98
+Harbour,Fresh Orange Juice,Cold Drinks,2026-07-07,7,6.3
+Harbour,Fresh Orange Juice,Cold Drinks,2026-07-08,8,4.21
+Harbour,Fresh Orange Juice,Cold Drinks,2026-07-09,9,3.98
+Harbour,Fresh Orange Juice,Cold Drinks,2026-07-10,10,4.47
+Harbour,Fresh Orange Juice,Cold Drinks,2026-07-11,11,2.89
+Harbour,Fresh Orange Juice,Cold Drinks,2026-07-12,12,3.52
+Harbour,Fresh Orange Juice,Cold Drinks,2026-07-13,13,4.01
+Harbour,Fresh Orange Juice,Cold Drinks,2026-07-14,14,6.33
+Harbour,Frozen Yoghurt Cup,Desserts,2026-07-01,1,3.5
+Harbour,Frozen Yoghurt Cup,Desserts,2026-07-02,2,3.23
+Harbour,Frozen Yoghurt Cup,Desserts,2026-07-03,3,3.79
+Harbour,Frozen Yoghurt Cup,Desserts,2026-07-04,4,2.35
+Harbour,Frozen Yoghurt Cup,Desserts,2026-07-05,5,2.88
+Harbour,Frozen Yoghurt Cup,Desserts,2026-07-06,6,3.28
+Harbour,Frozen Yoghurt Cup,Desserts,2026-07-07,7,5.16
+Harbour,Frozen Yoghurt Cup,Desserts,2026-07-08,8,3.45
+Harbour,Frozen Yoghurt Cup,Desserts,2026-07-09,9,3.27
+Harbour,Frozen Yoghurt Cup,Desserts,2026-07-10,10,3.68
+Harbour,Frozen Yoghurt Cup,Desserts,2026-07-11,11,2.41
+Harbour,Frozen Yoghurt Cup,Desserts,2026-07-12,12,2.91
+Harbour,Frozen Yoghurt Cup,Desserts,2026-07-13,13,3.32
+Harbour,Frozen Yoghurt Cup,Desserts,2026-07-14,14,5.22
+Harbour,Granola Yoghurt,Breakfast,2026-07-01,1,1.8
+Harbour,Granola Yoghurt,Breakfast,2026-07-02,2,1.66
+Harbour,Granola Yoghurt,Breakfast,2026-07-03,3,1.92
+Harbour,Granola Yoghurt,Breakfast,2026-07-04,4,1.22
+Harbour,Granola Yoghurt,Breakfast,2026-07-05,5,1.49
+Harbour,Granola Yoghurt,Breakfast,2026-07-06,6,1.68
+Harbour,Granola Yoghurt,Breakfast,2026-07-07,7,2.66
+Harbour,Granola Yoghurt,Breakfast,2026-07-08,8,1.8
+Harbour,Granola Yoghurt,Breakfast,2026-07-09,9,1.68
+Harbour,Granola Yoghurt,Breakfast,2026-07-10,10,1.91
+Harbour,Granola Yoghurt,Breakfast,2026-07-11,11,1.24
+Harbour,Granola Yoghurt,Breakfast,2026-07-12,12,1.5
+Harbour,Granola Yoghurt,Breakfast,2026-07-13,13,1.71
+Harbour,Granola Yoghurt,Breakfast,2026-07-14,14,2.7
+Harbour,Halloumi Wrap,Sandwiches,2026-07-01,1,2.46
+Harbour,Halloumi Wrap,Sandwiches,2026-07-02,2,2.26
+Harbour,Halloumi Wrap,Sandwiches,2026-07-03,3,2.68
+Harbour,Halloumi Wrap,Sandwiches,2026-07-04,4,1.65
+Harbour,Halloumi Wrap,Sandwiches,2026-07-05,5,2.01
+Harbour,Halloumi Wrap,Sandwiches,2026-07-06,6,2.29
+Harbour,Halloumi Wrap,Sandwiches,2026-07-07,7,3.65
+Harbour,Halloumi Wrap,Sandwiches,2026-07-08,8,2.44
+Harbour,Halloumi Wrap,Sandwiches,2026-07-09,9,2.31
+Harbour,Halloumi Wrap,Sandwiches,2026-07-10,10,2.61
+Harbour,Halloumi Wrap,Sandwiches,2026-07-11,11,1.69
+Harbour,Halloumi Wrap,Sandwiches,2026-07-12,12,2.06
+Harbour,Halloumi Wrap,Sandwiches,2026-07-13,13,2.35
+Harbour,Halloumi Wrap,Sandwiches,2026-07-14,14,3.7
+Harbour,Iced Americano,Cold Coffee,2026-07-01,1,6.51
+Harbour,Iced Americano,Cold Coffee,2026-07-02,2,5.99
+Harbour,Iced Americano,Cold Coffee,2026-07-03,3,7.02
+Harbour,Iced Americano,Cold Coffee,2026-07-04,4,4.34
+Harbour,Iced Americano,Cold Coffee,2026-07-05,5,5.33
+Harbour,Iced Americano,Cold Coffee,2026-07-06,6,6.09
+Harbour,Iced Americano,Cold Coffee,2026-07-07,7,9.55
+Harbour,Iced Americano,Cold Coffee,2026-07-08,8,6.42
+Harbour,Iced Americano,Cold Coffee,2026-07-09,9,6.15
+Harbour,Iced Americano,Cold Coffee,2026-07-10,10,6.94
+Harbour,Iced Americano,Cold Coffee,2026-07-11,11,4.48
+Harbour,Iced Americano,Cold Coffee,2026-07-12,12,5.47
+Harbour,Iced Americano,Cold Coffee,2026-07-13,13,6.24
+Harbour,Iced Americano,Cold Coffee,2026-07-14,14,9.8
+Harbour,Iced Latte,Cold Coffee,2026-07-01,1,9.58
+Harbour,Iced Latte,Cold Coffee,2026-07-02,2,8.8
+Harbour,Iced Latte,Cold Coffee,2026-07-03,3,10.37
+Harbour,Iced Latte,Cold Coffee,2026-07-04,4,6.36
+Harbour,Iced Latte,Cold Coffee,2026-07-05,5,7.85
+Harbour,Iced Latte,Cold Coffee,2026-07-06,6,8.94
+Harbour,Iced Latte,Cold Coffee,2026-07-07,7,13.75
+Harbour,Iced Latte,Cold Coffee,2026-07-08,8,9.2
+Harbour,Iced Latte,Cold Coffee,2026-07-09,9,8.82
+Harbour,Iced Latte,Cold Coffee,2026-07-10,10,9.84
+Harbour,Iced Latte,Cold Coffee,2026-07-11,11,6.39
+Harbour,Iced Latte,Cold Coffee,2026-07-12,12,7.82
+Harbour,Iced Latte,Cold Coffee,2026-07-13,13,8.85
+Harbour,Iced Latte,Cold Coffee,2026-07-14,14,13.95
+Harbour,Iced Matcha,Matcha & Tea,2026-07-01,1,7.12
+Harbour,Iced Matcha,Matcha & Tea,2026-07-02,2,6.56
+Harbour,Iced Matcha,Matcha & Tea,2026-07-03,3,7.71
+Harbour,Iced Matcha,Matcha & Tea,2026-07-04,4,4.79
+Harbour,Iced Matcha,Matcha & Tea,2026-07-05,5,5.84
+Harbour,Iced Matcha,Matcha & Tea,2026-07-06,6,6.7
+Harbour,Iced Matcha,Matcha & Tea,2026-07-07,7,10.46
+Harbour,Iced Matcha,Matcha & Tea,2026-07-08,8,7.09
+Harbour,Iced Matcha,Matcha & Tea,2026-07-09,9,6.72
+Harbour,Iced Matcha,Matcha & Tea,2026-07-10,10,7.55
+Harbour,Iced Matcha,Matcha & Tea,2026-07-11,11,4.93
+Harbour,Iced Matcha,Matcha & Tea,2026-07-12,12,5.98
+Harbour,Iced Matcha,Matcha & Tea,2026-07-13,13,6.8
+Harbour,Iced Matcha,Matcha & Tea,2026-07-14,14,10.65
+Harbour,Iced Mocha,Cold Coffee,2026-07-01,1,4.24
+Harbour,Iced Mocha,Cold Coffee,2026-07-02,2,3.89
+Harbour,Iced Mocha,Cold Coffee,2026-07-03,3,4.57
+Harbour,Iced Mocha,Cold Coffee,2026-07-04,4,2.84
+Harbour,Iced Mocha,Cold Coffee,2026-07-05,5,3.46
+Harbour,Iced Mocha,Cold Coffee,2026-07-06,6,3.95
+Harbour,Iced Mocha,Cold Coffee,2026-07-07,7,6.22
+Harbour,Iced Mocha,Cold Coffee,2026-07-08,8,4.16
+Harbour,Iced Mocha,Cold Coffee,2026-07-09,9,3.94
+Harbour,Iced Mocha,Cold Coffee,2026-07-10,10,4.41
+Harbour,Iced Mocha,Cold Coffee,2026-07-11,11,2.85
+Harbour,Iced Mocha,Cold Coffee,2026-07-12,12,3.48
+Harbour,Iced Mocha,Cold Coffee,2026-07-13,13,3.97
+Harbour,Iced Mocha,Cold Coffee,2026-07-14,14,6.27
+Harbour,Lemonade,Cold Drinks,2026-07-01,1,3.28
+Harbour,Lemonade,Cold Drinks,2026-07-02,2,3.03
+Harbour,Lemonade,Cold Drinks,2026-07-03,3,3.51
+Harbour,Lemonade,Cold Drinks,2026-07-04,4,2.21
+Harbour,Lemonade,Cold Drinks,2026-07-05,5,2.7
+Harbour,Lemonade,Cold Drinks,2026-07-06,6,3.08
+Harbour,Lemonade,Cold Drinks,2026-07-07,7,4.87
+Harbour,Lemonade,Cold Drinks,2026-07-08,8,3.26
+Harbour,Lemonade,Cold Drinks,2026-07-09,9,3.09
+Harbour,Lemonade,Cold Drinks,2026-07-10,10,3.48
+Harbour,Lemonade,Cold Drinks,2026-07-11,11,2.25
+Harbour,Lemonade,Cold Drinks,2026-07-12,12,2.75
+Harbour,Lemonade,Cold Drinks,2026-07-13,13,3.13
+Harbour,Lemonade,Cold Drinks,2026-07-14,14,4.93
+Harbour,Mint Tea,Matcha & Tea,2026-07-01,1,2.12
+Harbour,Mint Tea,Matcha & Tea,2026-07-02,2,1.96
+Harbour,Mint Tea,Matcha & Tea,2026-07-03,3,2.27
+Harbour,Mint Tea,Matcha & Tea,2026-07-04,4,1.46
+Harbour,Mint Tea,Matcha & Tea,2026-07-05,5,1.74
+Harbour,Mint Tea,Matcha & Tea,2026-07-06,6,1.99
+Harbour,Mint Tea,Matcha & Tea,2026-07-07,7,3.15
+Harbour,Mint Tea,Matcha & Tea,2026-07-08,8,2.12
+Harbour,Mint Tea,Matcha & Tea,2026-07-09,9,2.0
+Harbour,Mint Tea,Matcha & Tea,2026-07-10,10,2.26
+Harbour,Mint Tea,Matcha & Tea,2026-07-11,11,1.49
+Harbour,Mint Tea,Matcha & Tea,2026-07-12,12,1.78
+Harbour,Mint Tea,Matcha & Tea,2026-07-13,13,2.03
+Harbour,Mint Tea,Matcha & Tea,2026-07-14,14,3.2
+Harbour,Peach Iced Tea,Cold Drinks,2026-07-01,1,3.58
+Harbour,Peach Iced Tea,Cold Drinks,2026-07-02,2,3.29
+Harbour,Peach Iced Tea,Cold Drinks,2026-07-03,3,3.87
+Harbour,Peach Iced Tea,Cold Drinks,2026-07-04,4,2.4
+Harbour,Peach Iced Tea,Cold Drinks,2026-07-05,5,2.93
+Harbour,Peach Iced Tea,Cold Drinks,2026-07-06,6,3.34
+Harbour,Peach Iced Tea,Cold Drinks,2026-07-07,7,5.35
+Harbour,Peach Iced Tea,Cold Drinks,2026-07-08,8,3.58
+Harbour,Peach Iced Tea,Cold Drinks,2026-07-09,9,3.35
+Harbour,Peach Iced Tea,Cold Drinks,2026-07-10,10,3.77
+Harbour,Peach Iced Tea,Cold Drinks,2026-07-11,11,2.44
+Harbour,Peach Iced Tea,Cold Drinks,2026-07-12,12,2.97
+Harbour,Peach Iced Tea,Cold Drinks,2026-07-13,13,3.38
+Harbour,Peach Iced Tea,Cold Drinks,2026-07-14,14,5.36
+Harbour,Pistachio Cookie,Bakery,2026-07-01,1,4.35
+Harbour,Pistachio Cookie,Bakery,2026-07-02,2,3.86
+Harbour,Pistachio Cookie,Bakery,2026-07-03,3,4.72
+Harbour,Pistachio Cookie,Bakery,2026-07-04,4,2.8
+Harbour,Pistachio Cookie,Bakery,2026-07-05,5,3.44
+Harbour,Pistachio Cookie,Bakery,2026-07-06,6,3.92
+Harbour,Pistachio Cookie,Bakery,2026-07-07,7,6.14
+Harbour,Pistachio Cookie,Bakery,2026-07-08,8,4.1
+Harbour,Pistachio Cookie,Bakery,2026-07-09,9,3.91
+Harbour,Pistachio Cookie,Bakery,2026-07-10,10,4.41
+Harbour,Pistachio Cookie,Bakery,2026-07-11,11,2.85
+Harbour,Pistachio Cookie,Bakery,2026-07-12,12,3.48
+Harbour,Pistachio Cookie,Bakery,2026-07-13,13,3.97
+Harbour,Pistachio Cookie,Bakery,2026-07-14,14,6.25
+Harbour,Quinoa Bowl,Meals,2026-07-01,1,1.82
+Harbour,Quinoa Bowl,Meals,2026-07-02,2,1.66
+Harbour,Quinoa Bowl,Meals,2026-07-03,3,1.95
+Harbour,Quinoa Bowl,Meals,2026-07-04,4,1.23
+Harbour,Quinoa Bowl,Meals,2026-07-05,5,1.5
+Harbour,Quinoa Bowl,Meals,2026-07-06,6,1.69
+Harbour,Quinoa Bowl,Meals,2026-07-07,7,2.71
+Harbour,Quinoa Bowl,Meals,2026-07-08,8,1.83
+Harbour,Quinoa Bowl,Meals,2026-07-09,9,1.71
+Harbour,Quinoa Bowl,Meals,2026-07-10,10,1.94
+Harbour,Quinoa Bowl,Meals,2026-07-11,11,1.27
+Harbour,Quinoa Bowl,Meals,2026-07-12,12,1.53
+Harbour,Quinoa Bowl,Meals,2026-07-13,13,1.74
+Harbour,Quinoa Bowl,Meals,2026-07-14,14,2.78
+Harbour,Soup of the Day,Meals,2026-07-01,1,1.58
+Harbour,Soup of the Day,Meals,2026-07-02,2,1.46
+Harbour,Soup of the Day,Meals,2026-07-03,3,1.7
+Harbour,Soup of the Day,Meals,2026-07-04,4,1.07
+Harbour,Soup of the Day,Meals,2026-07-05,5,1.3
+Harbour,Soup of the Day,Meals,2026-07-06,6,1.48
+Harbour,Soup of the Day,Meals,2026-07-07,7,2.31
+Harbour,Soup of the Day,Meals,2026-07-08,8,1.56
+Harbour,Soup of the Day,Meals,2026-07-09,9,1.46
+Harbour,Soup of the Day,Meals,2026-07-10,10,1.63
+Harbour,Soup of the Day,Meals,2026-07-11,11,1.07
+Harbour,Soup of the Day,Meals,2026-07-12,12,1.3
+Harbour,Soup of the Day,Meals,2026-07-13,13,1.48
+Harbour,Soup of the Day,Meals,2026-07-14,14,2.32
+Harbour,Spanish Latte,Hot Coffee,2026-07-01,1,4.17
+Harbour,Spanish Latte,Hot Coffee,2026-07-02,2,3.8
+Harbour,Spanish Latte,Hot Coffee,2026-07-03,3,4.52
+Harbour,Spanish Latte,Hot Coffee,2026-07-04,4,2.77
+Harbour,Spanish Latte,Hot Coffee,2026-07-05,5,3.39
+Harbour,Spanish Latte,Hot Coffee,2026-07-06,6,3.86
+Harbour,Spanish Latte,Hot Coffee,2026-07-07,7,6.13
+Harbour,Spanish Latte,Hot Coffee,2026-07-08,8,4.1
+Harbour,Spanish Latte,Hot Coffee,2026-07-09,9,3.86
+Harbour,Spanish Latte,Hot Coffee,2026-07-10,10,4.35
+Harbour,Spanish Latte,Hot Coffee,2026-07-11,11,2.81
+Harbour,Spanish Latte,Hot Coffee,2026-07-12,12,3.44
+Harbour,Spanish Latte,Hot Coffee,2026-07-13,13,3.92
+Harbour,Spanish Latte,Hot Coffee,2026-07-14,14,6.18
+Harbour,Sparkling Water,Cold Drinks,2026-07-01,1,3.27
+Harbour,Sparkling Water,Cold Drinks,2026-07-02,2,3.02
+Harbour,Sparkling Water,Cold Drinks,2026-07-03,3,3.52
+Harbour,Sparkling Water,Cold Drinks,2026-07-04,4,2.2
+Harbour,Sparkling Water,Cold Drinks,2026-07-05,5,2.69
+Harbour,Sparkling Water,Cold Drinks,2026-07-06,6,3.07
+Harbour,Sparkling Water,Cold Drinks,2026-07-07,7,4.83
+Harbour,Sparkling Water,Cold Drinks,2026-07-08,8,3.24
+Harbour,Sparkling Water,Cold Drinks,2026-07-09,9,3.09
+Harbour,Sparkling Water,Cold Drinks,2026-07-10,10,3.48
+Harbour,Sparkling Water,Cold Drinks,2026-07-11,11,2.27
+Harbour,Sparkling Water,Cold Drinks,2026-07-12,12,2.75
+Harbour,Sparkling Water,Cold Drinks,2026-07-13,13,3.13
+Harbour,Sparkling Water,Cold Drinks,2026-07-14,14,4.93
+Harbour,Still Water,Cold Drinks,2026-07-01,1,4.18
+Harbour,Still Water,Cold Drinks,2026-07-02,2,3.85
+Harbour,Still Water,Cold Drinks,2026-07-03,3,4.52
+Harbour,Still Water,Cold Drinks,2026-07-04,4,2.82
+Harbour,Still Water,Cold Drinks,2026-07-05,5,3.43
+Harbour,Still Water,Cold Drinks,2026-07-06,6,3.92
+Harbour,Still Water,Cold Drinks,2026-07-07,7,6.09
+Harbour,Still Water,Cold Drinks,2026-07-08,8,4.07
+Harbour,Still Water,Cold Drinks,2026-07-09,9,3.87
+Harbour,Still Water,Cold Drinks,2026-07-10,10,4.34
+Harbour,Still Water,Cold Drinks,2026-07-11,11,2.81
+Harbour,Still Water,Cold Drinks,2026-07-12,12,3.42
+Harbour,Still Water,Cold Drinks,2026-07-13,13,3.9
+Harbour,Still Water,Cold Drinks,2026-07-14,14,6.15
+Harbour,Strawberry Matcha,Matcha & Tea,2026-07-01,1,6.09
+Harbour,Strawberry Matcha,Matcha & Tea,2026-07-02,2,5.58
+Harbour,Strawberry Matcha,Matcha & Tea,2026-07-03,3,6.56
+Harbour,Strawberry Matcha,Matcha & Tea,2026-07-04,4,4.07
+Harbour,Strawberry Matcha,Matcha & Tea,2026-07-05,5,4.97
+Harbour,Strawberry Matcha,Matcha & Tea,2026-07-06,6,5.67
+Harbour,Strawberry Matcha,Matcha & Tea,2026-07-07,7,9.0
+Harbour,Strawberry Matcha,Matcha & Tea,2026-07-08,8,6.03
+Harbour,Strawberry Matcha,Matcha & Tea,2026-07-09,9,5.68
+Harbour,Strawberry Matcha,Matcha & Tea,2026-07-10,10,6.38
+Harbour,Strawberry Matcha,Matcha & Tea,2026-07-11,11,4.12
+Harbour,Strawberry Matcha,Matcha & Tea,2026-07-12,12,5.03
+Harbour,Strawberry Matcha,Matcha & Tea,2026-07-13,13,5.74
+Harbour,Strawberry Matcha,Matcha & Tea,2026-07-14,14,8.99
+Harbour,Tiramisu Cup,Desserts,2026-07-01,1,3.52
+Harbour,Tiramisu Cup,Desserts,2026-07-02,2,3.23
+Harbour,Tiramisu Cup,Desserts,2026-07-03,3,3.79
+Harbour,Tiramisu Cup,Desserts,2026-07-04,4,2.36
+Harbour,Tiramisu Cup,Desserts,2026-07-05,5,2.87
+Harbour,Tiramisu Cup,Desserts,2026-07-06,6,3.28
+Harbour,Tiramisu Cup,Desserts,2026-07-07,7,5.23
+Harbour,Tiramisu Cup,Desserts,2026-07-08,8,3.5
+Harbour,Tiramisu Cup,Desserts,2026-07-09,9,3.29
+Harbour,Tiramisu Cup,Desserts,2026-07-10,10,3.69
+Harbour,Tiramisu Cup,Desserts,2026-07-11,11,2.38
+Harbour,Tiramisu Cup,Desserts,2026-07-12,12,2.91
+Harbour,Tiramisu Cup,Desserts,2026-07-13,13,3.32
+Harbour,Tiramisu Cup,Desserts,2026-07-14,14,5.24
+Harbour,Tuna Sandwich,Sandwiches,2026-07-01,1,2.78
+Harbour,Tuna Sandwich,Sandwiches,2026-07-02,2,2.53
+Harbour,Tuna Sandwich,Sandwiches,2026-07-03,3,3.01
+Harbour,Tuna Sandwich,Sandwiches,2026-07-04,4,1.84
+Harbour,Tuna Sandwich,Sandwiches,2026-07-05,5,2.25
+Harbour,Tuna Sandwich,Sandwiches,2026-07-06,6,2.57
+Harbour,Tuna Sandwich,Sandwiches,2026-07-07,7,4.07
+Harbour,Tuna Sandwich,Sandwiches,2026-07-08,8,2.72
+Harbour,Tuna Sandwich,Sandwiches,2026-07-09,9,2.56
+Harbour,Tuna Sandwich,Sandwiches,2026-07-10,10,2.89
+Harbour,Tuna Sandwich,Sandwiches,2026-07-11,11,1.88
+Harbour,Tuna Sandwich,Sandwiches,2026-07-12,12,2.28
+Harbour,Tuna Sandwich,Sandwiches,2026-07-13,13,2.61
+Harbour,Tuna Sandwich,Sandwiches,2026-07-14,14,4.1
+Harbour,Turkey & Cheese Sandwich,Sandwiches,2026-07-01,1,3.65
+Harbour,Turkey & Cheese Sandwich,Sandwiches,2026-07-02,2,3.35
+Harbour,Turkey & Cheese Sandwich,Sandwiches,2026-07-03,3,3.93
+Harbour,Turkey & Cheese Sandwich,Sandwiches,2026-07-04,4,2.43
+Harbour,Turkey & Cheese Sandwich,Sandwiches,2026-07-05,5,2.98
+Harbour,Turkey & Cheese Sandwich,Sandwiches,2026-07-06,6,3.4
+Harbour,Turkey & Cheese Sandwich,Sandwiches,2026-07-07,7,5.43
+Harbour,Turkey & Cheese Sandwich,Sandwiches,2026-07-08,8,3.63
+Harbour,Turkey & Cheese Sandwich,Sandwiches,2026-07-09,9,3.42
+Harbour,Turkey & Cheese Sandwich,Sandwiches,2026-07-10,10,3.83
+Harbour,Turkey & Cheese Sandwich,Sandwiches,2026-07-11,11,2.47
+Harbour,Turkey & Cheese Sandwich,Sandwiches,2026-07-12,12,3.03
+Harbour,Turkey & Cheese Sandwich,Sandwiches,2026-07-13,13,3.45
+Harbour,Turkey & Cheese Sandwich,Sandwiches,2026-07-14,14,5.44
+Harbour,Vanilla Latte,Hot Coffee,2026-07-01,1,5.02
+Harbour,Vanilla Latte,Hot Coffee,2026-07-02,2,4.61
+Harbour,Vanilla Latte,Hot Coffee,2026-07-03,3,5.41
+Harbour,Vanilla Latte,Hot Coffee,2026-07-04,4,3.36
+Harbour,Vanilla Latte,Hot Coffee,2026-07-05,5,4.11
+Harbour,Vanilla Latte,Hot Coffee,2026-07-06,6,4.69
+Harbour,Vanilla Latte,Hot Coffee,2026-07-07,7,7.5
+Harbour,Vanilla Latte,Hot Coffee,2026-07-08,8,5.03
+Harbour,Vanilla Latte,Hot Coffee,2026-07-09,9,4.75
+Harbour,Vanilla Latte,Hot Coffee,2026-07-10,10,5.37
+Harbour,Vanilla Latte,Hot Coffee,2026-07-11,11,3.48
+Harbour,Vanilla Latte,Hot Coffee,2026-07-12,12,4.24
+Harbour,Vanilla Latte,Hot Coffee,2026-07-13,13,4.83
+Harbour,Vanilla Latte,Hot Coffee,2026-07-14,14,7.63
+Uptown,Almond Croissant,Bakery,2026-07-01,1,1.49
+Uptown,Almond Croissant,Bakery,2026-07-02,2,1.47
+Uptown,Almond Croissant,Bakery,2026-07-03,3,1.45
+Uptown,Almond Croissant,Bakery,2026-07-04,4,1.11
+Uptown,Almond Croissant,Bakery,2026-07-05,5,1.22
+Uptown,Almond Croissant,Bakery,2026-07-06,6,1.42
+Uptown,Almond Croissant,Bakery,2026-07-07,7,2.22
+Uptown,Almond Croissant,Bakery,2026-07-08,8,1.51
+Uptown,Almond Croissant,Bakery,2026-07-09,9,1.48
+Uptown,Almond Croissant,Bakery,2026-07-10,10,1.47
+Uptown,Almond Croissant,Bakery,2026-07-11,11,1.14
+Uptown,Almond Croissant,Bakery,2026-07-12,12,1.24
+Uptown,Almond Croissant,Bakery,2026-07-13,13,1.44
+Uptown,Almond Croissant,Bakery,2026-07-14,14,2.23
+Uptown,Americano,Hot Coffee,2026-07-01,1,1.42
+Uptown,Americano,Hot Coffee,2026-07-02,2,1.39
+Uptown,Americano,Hot Coffee,2026-07-03,3,1.39
+Uptown,Americano,Hot Coffee,2026-07-04,4,1.07
+Uptown,Americano,Hot Coffee,2026-07-05,5,1.17
+Uptown,Americano,Hot Coffee,2026-07-06,6,1.35
+Uptown,Americano,Hot Coffee,2026-07-07,7,2.02
+Uptown,Americano,Hot Coffee,2026-07-08,8,1.4
+Uptown,Americano,Hot Coffee,2026-07-09,9,1.36
+Uptown,Americano,Hot Coffee,2026-07-10,10,1.36
+Uptown,Americano,Hot Coffee,2026-07-11,11,1.06
+Uptown,Americano,Hot Coffee,2026-07-12,12,1.15
+Uptown,Americano,Hot Coffee,2026-07-13,13,1.32
+Uptown,Americano,Hot Coffee,2026-07-14,14,2.02
+Uptown,Avocado Toast,Breakfast,2026-07-01,1,1.08
+Uptown,Avocado Toast,Breakfast,2026-07-02,2,1.06
+Uptown,Avocado Toast,Breakfast,2026-07-03,3,1.06
+Uptown,Avocado Toast,Breakfast,2026-07-04,4,0.85
+Uptown,Avocado Toast,Breakfast,2026-07-05,5,0.9
+Uptown,Avocado Toast,Breakfast,2026-07-06,6,1.04
+Uptown,Avocado Toast,Breakfast,2026-07-07,7,1.44
+Uptown,Avocado Toast,Breakfast,2026-07-08,8,1.06
+Uptown,Avocado Toast,Breakfast,2026-07-09,9,1.06
+Uptown,Avocado Toast,Breakfast,2026-07-10,10,1.05
+Uptown,Avocado Toast,Breakfast,2026-07-11,11,0.84
+Uptown,Avocado Toast,Breakfast,2026-07-12,12,0.89
+Uptown,Avocado Toast,Breakfast,2026-07-13,13,1.02
+Uptown,Avocado Toast,Breakfast,2026-07-14,14,1.43
+Uptown,Banana Bread,Bakery,2026-07-01,1,1.46
+Uptown,Banana Bread,Bakery,2026-07-02,2,1.43
+Uptown,Banana Bread,Bakery,2026-07-03,3,1.42
+Uptown,Banana Bread,Bakery,2026-07-04,4,1.1
+Uptown,Banana Bread,Bakery,2026-07-05,5,1.2
+Uptown,Banana Bread,Bakery,2026-07-06,6,1.39
+Uptown,Banana Bread,Bakery,2026-07-07,7,2.13
+Uptown,Banana Bread,Bakery,2026-07-08,8,1.47
+Uptown,Banana Bread,Bakery,2026-07-09,9,1.43
+Uptown,Banana Bread,Bakery,2026-07-10,10,1.4
+Uptown,Banana Bread,Bakery,2026-07-11,11,1.1
+Uptown,Banana Bread,Bakery,2026-07-12,12,1.2
+Uptown,Banana Bread,Bakery,2026-07-13,13,1.38
+Uptown,Banana Bread,Bakery,2026-07-14,14,2.12
+Uptown,Blueberry Muffin,Bakery,2026-07-01,1,0.95
+Uptown,Blueberry Muffin,Bakery,2026-07-02,2,0.94
+Uptown,Blueberry Muffin,Bakery,2026-07-03,3,0.93
+Uptown,Blueberry Muffin,Bakery,2026-07-04,4,0.71
+Uptown,Blueberry Muffin,Bakery,2026-07-05,5,0.78
+Uptown,Blueberry Muffin,Bakery,2026-07-06,6,0.9
+Uptown,Blueberry Muffin,Bakery,2026-07-07,7,1.37
+Uptown,Blueberry Muffin,Bakery,2026-07-08,8,0.96
+Uptown,Blueberry Muffin,Bakery,2026-07-09,9,0.94
+Uptown,Blueberry Muffin,Bakery,2026-07-10,10,0.93
+Uptown,Blueberry Muffin,Bakery,2026-07-11,11,0.72
+Uptown,Blueberry Muffin,Bakery,2026-07-12,12,0.79
+Uptown,Blueberry Muffin,Bakery,2026-07-13,13,0.91
+Uptown,Blueberry Muffin,Bakery,2026-07-14,14,1.38
+Uptown,Brownie,Desserts,2026-07-01,1,1.33
+Uptown,Brownie,Desserts,2026-07-02,2,1.32
+Uptown,Brownie,Desserts,2026-07-03,3,1.3
+Uptown,Brownie,Desserts,2026-07-04,4,1.05
+Uptown,Brownie,Desserts,2026-07-05,5,1.11
+Uptown,Brownie,Desserts,2026-07-06,6,1.3
+Uptown,Brownie,Desserts,2026-07-07,7,1.97
+Uptown,Brownie,Desserts,2026-07-08,8,1.34
+Uptown,Brownie,Desserts,2026-07-09,9,1.32
+Uptown,Brownie,Desserts,2026-07-10,10,1.31
+Uptown,Brownie,Desserts,2026-07-11,11,1.05
+Uptown,Brownie,Desserts,2026-07-12,12,1.12
+Uptown,Brownie,Desserts,2026-07-13,13,1.29
+Uptown,Brownie,Desserts,2026-07-14,14,2.01
+Uptown,Butter Croissant,Bakery,2026-07-01,1,2.5
+Uptown,Butter Croissant,Bakery,2026-07-02,2,2.47
+Uptown,Butter Croissant,Bakery,2026-07-03,3,2.45
+Uptown,Butter Croissant,Bakery,2026-07-04,4,1.88
+Uptown,Butter Croissant,Bakery,2026-07-05,5,2.06
+Uptown,Butter Croissant,Bakery,2026-07-06,6,2.38
+Uptown,Butter Croissant,Bakery,2026-07-07,7,3.7
+Uptown,Butter Croissant,Bakery,2026-07-08,8,2.51
+Uptown,Butter Croissant,Bakery,2026-07-09,9,2.47
+Uptown,Butter Croissant,Bakery,2026-07-10,10,2.44
+Uptown,Butter Croissant,Bakery,2026-07-11,11,1.89
+Uptown,Butter Croissant,Bakery,2026-07-12,12,2.06
+Uptown,Butter Croissant,Bakery,2026-07-13,13,2.4
+Uptown,Butter Croissant,Bakery,2026-07-14,14,3.72
+Uptown,Cappuccino,Hot Coffee,2026-07-01,1,2.3
+Uptown,Cappuccino,Hot Coffee,2026-07-02,2,2.23
+Uptown,Cappuccino,Hot Coffee,2026-07-03,3,2.21
+Uptown,Cappuccino,Hot Coffee,2026-07-04,4,1.73
+Uptown,Cappuccino,Hot Coffee,2026-07-05,5,1.89
+Uptown,Cappuccino,Hot Coffee,2026-07-06,6,2.18
+Uptown,Cappuccino,Hot Coffee,2026-07-07,7,3.34
+Uptown,Cappuccino,Hot Coffee,2026-07-08,8,2.31
+Uptown,Cappuccino,Hot Coffee,2026-07-09,9,2.25
+Uptown,Cappuccino,Hot Coffee,2026-07-10,10,2.25
+Uptown,Cappuccino,Hot Coffee,2026-07-11,11,1.76
+Uptown,Cappuccino,Hot Coffee,2026-07-12,12,1.92
+Uptown,Cappuccino,Hot Coffee,2026-07-13,13,2.22
+Uptown,Cappuccino,Hot Coffee,2026-07-14,14,3.44
+Uptown,Caramel Latte,Hot Coffee,2026-07-01,1,1.73
+Uptown,Caramel Latte,Hot Coffee,2026-07-02,2,1.72
+Uptown,Caramel Latte,Hot Coffee,2026-07-03,3,1.71
+Uptown,Caramel Latte,Hot Coffee,2026-07-04,4,1.34
+Uptown,Caramel Latte,Hot Coffee,2026-07-05,5,1.47
+Uptown,Caramel Latte,Hot Coffee,2026-07-06,6,1.67
+Uptown,Caramel Latte,Hot Coffee,2026-07-07,7,2.58
+Uptown,Caramel Latte,Hot Coffee,2026-07-08,8,1.75
+Uptown,Caramel Latte,Hot Coffee,2026-07-09,9,1.74
+Uptown,Caramel Latte,Hot Coffee,2026-07-10,10,1.7
+Uptown,Caramel Latte,Hot Coffee,2026-07-11,11,1.32
+Uptown,Caramel Latte,Hot Coffee,2026-07-12,12,1.45
+Uptown,Caramel Latte,Hot Coffee,2026-07-13,13,1.67
+Uptown,Caramel Latte,Hot Coffee,2026-07-14,14,2.59
+Uptown,Chai Latte,Matcha & Tea,2026-07-01,1,1.38
+Uptown,Chai Latte,Matcha & Tea,2026-07-02,2,1.36
+Uptown,Chai Latte,Matcha & Tea,2026-07-03,3,1.34
+Uptown,Chai Latte,Matcha & Tea,2026-07-04,4,1.11
+Uptown,Chai Latte,Matcha & Tea,2026-07-05,5,1.16
+Uptown,Chai Latte,Matcha & Tea,2026-07-06,6,1.32
+Uptown,Chai Latte,Matcha & Tea,2026-07-07,7,1.99
+Uptown,Chai Latte,Matcha & Tea,2026-07-08,8,1.39
+Uptown,Chai Latte,Matcha & Tea,2026-07-09,9,1.36
+Uptown,Chai Latte,Matcha & Tea,2026-07-10,10,1.35
+Uptown,Chai Latte,Matcha & Tea,2026-07-11,11,1.1
+Uptown,Chai Latte,Matcha & Tea,2026-07-12,12,1.15
+Uptown,Chai Latte,Matcha & Tea,2026-07-13,13,1.32
+Uptown,Chai Latte,Matcha & Tea,2026-07-14,14,2.03
+Uptown,Cheesecake Slice,Desserts,2026-07-01,1,1.19
+Uptown,Cheesecake Slice,Desserts,2026-07-02,2,1.17
+Uptown,Cheesecake Slice,Desserts,2026-07-03,3,1.15
+Uptown,Cheesecake Slice,Desserts,2026-07-04,4,1.02
+Uptown,Cheesecake Slice,Desserts,2026-07-05,5,1.1
+Uptown,Cheesecake Slice,Desserts,2026-07-06,6,1.15
+Uptown,Cheesecake Slice,Desserts,2026-07-07,7,1.66
+Uptown,Cheesecake Slice,Desserts,2026-07-08,8,1.17
+Uptown,Cheesecake Slice,Desserts,2026-07-09,9,1.15
+Uptown,Cheesecake Slice,Desserts,2026-07-10,10,1.12
+Uptown,Cheesecake Slice,Desserts,2026-07-11,11,0.99
+Uptown,Cheesecake Slice,Desserts,2026-07-12,12,1.06
+Uptown,Cheesecake Slice,Desserts,2026-07-13,13,1.09
+Uptown,Cheesecake Slice,Desserts,2026-07-14,14,1.65
+Uptown,Chicken Pesto Sandwich,Sandwiches,2026-07-01,1,1.9
+Uptown,Chicken Pesto Sandwich,Sandwiches,2026-07-02,2,1.85
+Uptown,Chicken Pesto Sandwich,Sandwiches,2026-07-03,3,1.84
+Uptown,Chicken Pesto Sandwich,Sandwiches,2026-07-04,4,1.46
+Uptown,Chicken Pesto Sandwich,Sandwiches,2026-07-05,5,1.57
+Uptown,Chicken Pesto Sandwich,Sandwiches,2026-07-06,6,1.81
+Uptown,Chicken Pesto Sandwich,Sandwiches,2026-07-07,7,2.77
+Uptown,Chicken Pesto Sandwich,Sandwiches,2026-07-08,8,1.91
+Uptown,Chicken Pesto Sandwich,Sandwiches,2026-07-09,9,1.87
+Uptown,Chicken Pesto Sandwich,Sandwiches,2026-07-10,10,1.87
+Uptown,Chicken Pesto Sandwich,Sandwiches,2026-07-11,11,1.47
+Uptown,Chicken Pesto Sandwich,Sandwiches,2026-07-12,12,1.6
+Uptown,Chicken Pesto Sandwich,Sandwiches,2026-07-13,13,1.84
+Uptown,Chicken Pesto Sandwich,Sandwiches,2026-07-14,14,2.84
+Uptown,Chicken Salad Bowl,Meals,2026-07-01,1,0.74
+Uptown,Chicken Salad Bowl,Meals,2026-07-02,2,0.73
+Uptown,Chicken Salad Bowl,Meals,2026-07-03,3,0.73
+Uptown,Chicken Salad Bowl,Meals,2026-07-04,4,0.56
+Uptown,Chicken Salad Bowl,Meals,2026-07-05,5,0.61
+Uptown,Chicken Salad Bowl,Meals,2026-07-06,6,0.71
+Uptown,Chicken Salad Bowl,Meals,2026-07-07,7,1.09
+Uptown,Chicken Salad Bowl,Meals,2026-07-08,8,0.75
+Uptown,Chicken Salad Bowl,Meals,2026-07-09,9,0.74
+Uptown,Chicken Salad Bowl,Meals,2026-07-10,10,0.73
+Uptown,Chicken Salad Bowl,Meals,2026-07-11,11,0.57
+Uptown,Chicken Salad Bowl,Meals,2026-07-12,12,0.62
+Uptown,Chicken Salad Bowl,Meals,2026-07-13,13,0.72
+Uptown,Chicken Salad Bowl,Meals,2026-07-14,14,1.1
+Uptown,Chocolate Cookie,Bakery,2026-07-01,1,2.09
+Uptown,Chocolate Cookie,Bakery,2026-07-02,2,2.06
+Uptown,Chocolate Cookie,Bakery,2026-07-03,3,2.03
+Uptown,Chocolate Cookie,Bakery,2026-07-04,4,1.59
+Uptown,Chocolate Cookie,Bakery,2026-07-05,5,1.73
+Uptown,Chocolate Cookie,Bakery,2026-07-06,6,1.99
+Uptown,Chocolate Cookie,Bakery,2026-07-07,7,3.05
+Uptown,Chocolate Cookie,Bakery,2026-07-08,8,2.08
+Uptown,Chocolate Cookie,Bakery,2026-07-09,9,2.04
+Uptown,Chocolate Cookie,Bakery,2026-07-10,10,1.99
+Uptown,Chocolate Cookie,Bakery,2026-07-11,11,1.56
+Uptown,Chocolate Cookie,Bakery,2026-07-12,12,1.7
+Uptown,Chocolate Cookie,Bakery,2026-07-13,13,1.96
+Uptown,Chocolate Cookie,Bakery,2026-07-14,14,3.02
+Uptown,Chocolate Croissant,Bakery,2026-07-01,1,2.36
+Uptown,Chocolate Croissant,Bakery,2026-07-02,2,2.3
+Uptown,Chocolate Croissant,Bakery,2026-07-03,3,2.28
+Uptown,Chocolate Croissant,Bakery,2026-07-04,4,1.76
+Uptown,Chocolate Croissant,Bakery,2026-07-05,5,1.93
+Uptown,Chocolate Croissant,Bakery,2026-07-06,6,2.23
+Uptown,Chocolate Croissant,Bakery,2026-07-07,7,3.46
+Uptown,Chocolate Croissant,Bakery,2026-07-08,8,2.36
+Uptown,Chocolate Croissant,Bakery,2026-07-09,9,2.32
+Uptown,Chocolate Croissant,Bakery,2026-07-10,10,2.3
+Uptown,Chocolate Croissant,Bakery,2026-07-11,11,1.79
+Uptown,Chocolate Croissant,Bakery,2026-07-12,12,1.95
+Uptown,Chocolate Croissant,Bakery,2026-07-13,13,2.26
+Uptown,Chocolate Croissant,Bakery,2026-07-14,14,3.5
+Uptown,Cinnamon Roll,Bakery,2026-07-01,1,1.82
+Uptown,Cinnamon Roll,Bakery,2026-07-02,2,1.79
+Uptown,Cinnamon Roll,Bakery,2026-07-03,3,1.78
+Uptown,Cinnamon Roll,Bakery,2026-07-04,4,1.4
+Uptown,Cinnamon Roll,Bakery,2026-07-05,5,1.54
+Uptown,Cinnamon Roll,Bakery,2026-07-06,6,1.73
+Uptown,Cinnamon Roll,Bakery,2026-07-07,7,2.69
+Uptown,Cinnamon Roll,Bakery,2026-07-08,8,1.85
+Uptown,Cinnamon Roll,Bakery,2026-07-09,9,1.82
+Uptown,Cinnamon Roll,Bakery,2026-07-10,10,1.8
+Uptown,Cinnamon Roll,Bakery,2026-07-11,11,1.43
+Uptown,Cinnamon Roll,Bakery,2026-07-12,12,1.58
+Uptown,Cinnamon Roll,Bakery,2026-07-13,13,1.77
+Uptown,Cinnamon Roll,Bakery,2026-07-14,14,2.72
+Uptown,Classic Matcha,Matcha & Tea,2026-07-01,1,2.49
+Uptown,Classic Matcha,Matcha & Tea,2026-07-02,2,2.45
+Uptown,Classic Matcha,Matcha & Tea,2026-07-03,3,2.41
+Uptown,Classic Matcha,Matcha & Tea,2026-07-04,4,1.85
+Uptown,Classic Matcha,Matcha & Tea,2026-07-05,5,2.01
+Uptown,Classic Matcha,Matcha & Tea,2026-07-06,6,2.35
+Uptown,Classic Matcha,Matcha & Tea,2026-07-07,7,3.63
+Uptown,Classic Matcha,Matcha & Tea,2026-07-08,8,2.46
+Uptown,Classic Matcha,Matcha & Tea,2026-07-09,9,2.41
+Uptown,Classic Matcha,Matcha & Tea,2026-07-10,10,2.35
+Uptown,Classic Matcha,Matcha & Tea,2026-07-11,11,1.82
+Uptown,Classic Matcha,Matcha & Tea,2026-07-12,12,1.99
+Uptown,Classic Matcha,Matcha & Tea,2026-07-13,13,2.31
+Uptown,Classic Matcha,Matcha & Tea,2026-07-14,14,3.59
+Uptown,Coffee Frappe,Cold Coffee,2026-07-01,1,1.31
+Uptown,Coffee Frappe,Cold Coffee,2026-07-02,2,1.3
+Uptown,Coffee Frappe,Cold Coffee,2026-07-03,3,1.29
+Uptown,Coffee Frappe,Cold Coffee,2026-07-04,4,1.08
+Uptown,Coffee Frappe,Cold Coffee,2026-07-05,5,1.11
+Uptown,Coffee Frappe,Cold Coffee,2026-07-06,6,1.27
+Uptown,Coffee Frappe,Cold Coffee,2026-07-07,7,1.87
+Uptown,Coffee Frappe,Cold Coffee,2026-07-08,8,1.32
+Uptown,Coffee Frappe,Cold Coffee,2026-07-09,9,1.3
+Uptown,Coffee Frappe,Cold Coffee,2026-07-10,10,1.27
+Uptown,Coffee Frappe,Cold Coffee,2026-07-11,11,1.06
+Uptown,Coffee Frappe,Cold Coffee,2026-07-12,12,1.09
+Uptown,Coffee Frappe,Cold Coffee,2026-07-13,13,1.25
+Uptown,Coffee Frappe,Cold Coffee,2026-07-14,14,1.9
+Uptown,Cold Brew,Cold Coffee,2026-07-01,1,1.9
+Uptown,Cold Brew,Cold Coffee,2026-07-02,2,1.85
+Uptown,Cold Brew,Cold Coffee,2026-07-03,3,1.84
+Uptown,Cold Brew,Cold Coffee,2026-07-04,4,1.44
+Uptown,Cold Brew,Cold Coffee,2026-07-05,5,1.55
+Uptown,Cold Brew,Cold Coffee,2026-07-06,6,1.79
+Uptown,Cold Brew,Cold Coffee,2026-07-07,7,2.8
+Uptown,Cold Brew,Cold Coffee,2026-07-08,8,1.92
+Uptown,Cold Brew,Cold Coffee,2026-07-09,9,1.88
+Uptown,Cold Brew,Cold Coffee,2026-07-10,10,1.87
+Uptown,Cold Brew,Cold Coffee,2026-07-11,11,1.47
+Uptown,Cold Brew,Cold Coffee,2026-07-12,12,1.59
+Uptown,Cold Brew,Cold Coffee,2026-07-13,13,1.83
+Uptown,Cold Brew,Cold Coffee,2026-07-14,14,2.84
+Uptown,Egg Sandwich,Breakfast,2026-07-01,1,1.12
+Uptown,Egg Sandwich,Breakfast,2026-07-02,2,1.1
+Uptown,Egg Sandwich,Breakfast,2026-07-03,3,1.1
+Uptown,Egg Sandwich,Breakfast,2026-07-04,4,0.85
+Uptown,Egg Sandwich,Breakfast,2026-07-05,5,0.93
+Uptown,Egg Sandwich,Breakfast,2026-07-06,6,1.07
+Uptown,Egg Sandwich,Breakfast,2026-07-07,7,1.63
+Uptown,Egg Sandwich,Breakfast,2026-07-08,8,1.13
+Uptown,Egg Sandwich,Breakfast,2026-07-09,9,1.11
+Uptown,Egg Sandwich,Breakfast,2026-07-10,10,1.1
+Uptown,Egg Sandwich,Breakfast,2026-07-11,11,0.86
+Uptown,Egg Sandwich,Breakfast,2026-07-12,12,0.93
+Uptown,Egg Sandwich,Breakfast,2026-07-13,13,1.08
+Uptown,Egg Sandwich,Breakfast,2026-07-14,14,1.65
+Uptown,English Breakfast Tea,Matcha & Tea,2026-07-01,1,0.62
+Uptown,English Breakfast Tea,Matcha & Tea,2026-07-02,2,0.61
+Uptown,English Breakfast Tea,Matcha & Tea,2026-07-03,3,0.61
+Uptown,English Breakfast Tea,Matcha & Tea,2026-07-04,4,0.46
+Uptown,English Breakfast Tea,Matcha & Tea,2026-07-05,5,0.51
+Uptown,English Breakfast Tea,Matcha & Tea,2026-07-06,6,0.59
+Uptown,English Breakfast Tea,Matcha & Tea,2026-07-07,7,0.91
+Uptown,English Breakfast Tea,Matcha & Tea,2026-07-08,8,0.62
+Uptown,English Breakfast Tea,Matcha & Tea,2026-07-09,9,0.61
+Uptown,English Breakfast Tea,Matcha & Tea,2026-07-10,10,0.61
+Uptown,English Breakfast Tea,Matcha & Tea,2026-07-11,11,0.47
+Uptown,English Breakfast Tea,Matcha & Tea,2026-07-12,12,0.51
+Uptown,English Breakfast Tea,Matcha & Tea,2026-07-13,13,0.6
+Uptown,English Breakfast Tea,Matcha & Tea,2026-07-14,14,0.92
+Uptown,Espresso,Hot Coffee,2026-07-01,1,1.05
+Uptown,Espresso,Hot Coffee,2026-07-02,2,1.02
+Uptown,Espresso,Hot Coffee,2026-07-03,3,1.02
+Uptown,Espresso,Hot Coffee,2026-07-04,4,0.79
+Uptown,Espresso,Hot Coffee,2026-07-05,5,0.87
+Uptown,Espresso,Hot Coffee,2026-07-06,6,0.99
+Uptown,Espresso,Hot Coffee,2026-07-07,7,1.35
+Uptown,Espresso,Hot Coffee,2026-07-08,8,1.04
+Uptown,Espresso,Hot Coffee,2026-07-09,9,1.02
+Uptown,Espresso,Hot Coffee,2026-07-10,10,1.01
+Uptown,Espresso,Hot Coffee,2026-07-11,11,0.8
+Uptown,Espresso,Hot Coffee,2026-07-12,12,0.88
+Uptown,Espresso,Hot Coffee,2026-07-13,13,0.98
+Uptown,Espresso,Hot Coffee,2026-07-14,14,1.36
+Uptown,Flat White,Hot Coffee,2026-07-01,1,2.05
+Uptown,Flat White,Hot Coffee,2026-07-02,2,1.99
+Uptown,Flat White,Hot Coffee,2026-07-03,3,2.0
+Uptown,Flat White,Hot Coffee,2026-07-04,4,1.55
+Uptown,Flat White,Hot Coffee,2026-07-05,5,1.67
+Uptown,Flat White,Hot Coffee,2026-07-06,6,1.94
+Uptown,Flat White,Hot Coffee,2026-07-07,7,2.98
+Uptown,Flat White,Hot Coffee,2026-07-08,8,2.06
+Uptown,Flat White,Hot Coffee,2026-07-09,9,2.0
+Uptown,Flat White,Hot Coffee,2026-07-10,10,1.99
+Uptown,Flat White,Hot Coffee,2026-07-11,11,1.55
+Uptown,Flat White,Hot Coffee,2026-07-12,12,1.68
+Uptown,Flat White,Hot Coffee,2026-07-13,13,1.96
+Uptown,Flat White,Hot Coffee,2026-07-14,14,3.03
+Uptown,Fresh Orange Juice,Cold Drinks,2026-07-01,1,1.19
+Uptown,Fresh Orange Juice,Cold Drinks,2026-07-02,2,1.18
+Uptown,Fresh Orange Juice,Cold Drinks,2026-07-03,3,1.18
+Uptown,Fresh Orange Juice,Cold Drinks,2026-07-04,4,0.9
+Uptown,Fresh Orange Juice,Cold Drinks,2026-07-05,5,0.99
+Uptown,Fresh Orange Juice,Cold Drinks,2026-07-06,6,1.17
+Uptown,Fresh Orange Juice,Cold Drinks,2026-07-07,7,1.7
+Uptown,Fresh Orange Juice,Cold Drinks,2026-07-08,8,1.19
+Uptown,Fresh Orange Juice,Cold Drinks,2026-07-09,9,1.17
+Uptown,Fresh Orange Juice,Cold Drinks,2026-07-10,10,1.15
+Uptown,Fresh Orange Juice,Cold Drinks,2026-07-11,11,0.88
+Uptown,Fresh Orange Juice,Cold Drinks,2026-07-12,12,0.96
+Uptown,Fresh Orange Juice,Cold Drinks,2026-07-13,13,1.12
+Uptown,Fresh Orange Juice,Cold Drinks,2026-07-14,14,1.7
+Uptown,Frozen Yoghurt Cup,Desserts,2026-07-01,1,1.07
+Uptown,Frozen Yoghurt Cup,Desserts,2026-07-02,2,1.04
+Uptown,Frozen Yoghurt Cup,Desserts,2026-07-03,3,1.05
+Uptown,Frozen Yoghurt Cup,Desserts,2026-07-04,4,0.82
+Uptown,Frozen Yoghurt Cup,Desserts,2026-07-05,5,0.89
+Uptown,Frozen Yoghurt Cup,Desserts,2026-07-06,6,1.04
+Uptown,Frozen Yoghurt Cup,Desserts,2026-07-07,7,1.52
+Uptown,Frozen Yoghurt Cup,Desserts,2026-07-08,8,1.06
+Uptown,Frozen Yoghurt Cup,Desserts,2026-07-09,9,1.03
+Uptown,Frozen Yoghurt Cup,Desserts,2026-07-10,10,1.04
+Uptown,Frozen Yoghurt Cup,Desserts,2026-07-11,11,0.82
+Uptown,Frozen Yoghurt Cup,Desserts,2026-07-12,12,0.89
+Uptown,Frozen Yoghurt Cup,Desserts,2026-07-13,13,1.02
+Uptown,Frozen Yoghurt Cup,Desserts,2026-07-14,14,1.52
+Uptown,Granola Yoghurt,Breakfast,2026-07-01,1,0.78
+Uptown,Granola Yoghurt,Breakfast,2026-07-02,2,0.77
+Uptown,Granola Yoghurt,Breakfast,2026-07-03,3,0.76
+Uptown,Granola Yoghurt,Breakfast,2026-07-04,4,0.58
+Uptown,Granola Yoghurt,Breakfast,2026-07-05,5,0.64
+Uptown,Granola Yoghurt,Breakfast,2026-07-06,6,0.74
+Uptown,Granola Yoghurt,Breakfast,2026-07-07,7,1.13
+Uptown,Granola Yoghurt,Breakfast,2026-07-08,8,0.79
+Uptown,Granola Yoghurt,Breakfast,2026-07-09,9,0.78
+Uptown,Granola Yoghurt,Breakfast,2026-07-10,10,0.77
+Uptown,Granola Yoghurt,Breakfast,2026-07-11,11,0.59
+Uptown,Granola Yoghurt,Breakfast,2026-07-12,12,0.65
+Uptown,Granola Yoghurt,Breakfast,2026-07-13,13,0.76
+Uptown,Granola Yoghurt,Breakfast,2026-07-14,14,1.14
+Uptown,Halloumi Wrap,Sandwiches,2026-07-01,1,1.62
+Uptown,Halloumi Wrap,Sandwiches,2026-07-02,2,1.59
+Uptown,Halloumi Wrap,Sandwiches,2026-07-03,3,1.56
+Uptown,Halloumi Wrap,Sandwiches,2026-07-04,4,1.23
+Uptown,Halloumi Wrap,Sandwiches,2026-07-05,5,1.35
+Uptown,Halloumi Wrap,Sandwiches,2026-07-06,6,1.54
+Uptown,Halloumi Wrap,Sandwiches,2026-07-07,7,2.35
+Uptown,Halloumi Wrap,Sandwiches,2026-07-08,8,1.62
+Uptown,Halloumi Wrap,Sandwiches,2026-07-09,9,1.6
+Uptown,Halloumi Wrap,Sandwiches,2026-07-10,10,1.58
+Uptown,Halloumi Wrap,Sandwiches,2026-07-11,11,1.24
+Uptown,Halloumi Wrap,Sandwiches,2026-07-12,12,1.36
+Uptown,Halloumi Wrap,Sandwiches,2026-07-13,13,1.55
+Uptown,Halloumi Wrap,Sandwiches,2026-07-14,14,2.41
+Uptown,Iced Americano,Cold Coffee,2026-07-01,1,1.97
+Uptown,Iced Americano,Cold Coffee,2026-07-02,2,1.92
+Uptown,Iced Americano,Cold Coffee,2026-07-03,3,1.91
+Uptown,Iced Americano,Cold Coffee,2026-07-04,4,1.48
+Uptown,Iced Americano,Cold Coffee,2026-07-05,5,1.61
+Uptown,Iced Americano,Cold Coffee,2026-07-06,6,1.88
+Uptown,Iced Americano,Cold Coffee,2026-07-07,7,2.93
+Uptown,Iced Americano,Cold Coffee,2026-07-08,8,2.0
+Uptown,Iced Americano,Cold Coffee,2026-07-09,9,1.97
+Uptown,Iced Americano,Cold Coffee,2026-07-10,10,1.96
+Uptown,Iced Americano,Cold Coffee,2026-07-11,11,1.51
+Uptown,Iced Americano,Cold Coffee,2026-07-12,12,1.66
+Uptown,Iced Americano,Cold Coffee,2026-07-13,13,1.93
+Uptown,Iced Americano,Cold Coffee,2026-07-14,14,2.99
+Uptown,Iced Latte,Cold Coffee,2026-07-01,1,3.36
+Uptown,Iced Latte,Cold Coffee,2026-07-02,2,3.29
+Uptown,Iced Latte,Cold Coffee,2026-07-03,3,3.25
+Uptown,Iced Latte,Cold Coffee,2026-07-04,4,2.48
+Uptown,Iced Latte,Cold Coffee,2026-07-05,5,2.71
+Uptown,Iced Latte,Cold Coffee,2026-07-06,6,3.16
+Uptown,Iced Latte,Cold Coffee,2026-07-07,7,4.91
+Uptown,Iced Latte,Cold Coffee,2026-07-08,8,3.34
+Uptown,Iced Latte,Cold Coffee,2026-07-09,9,3.26
+Uptown,Iced Latte,Cold Coffee,2026-07-10,10,3.18
+Uptown,Iced Latte,Cold Coffee,2026-07-11,11,2.47
+Uptown,Iced Latte,Cold Coffee,2026-07-12,12,2.7
+Uptown,Iced Latte,Cold Coffee,2026-07-13,13,3.13
+Uptown,Iced Latte,Cold Coffee,2026-07-14,14,4.87
+Uptown,Iced Matcha,Matcha & Tea,2026-07-01,1,2.92
+Uptown,Iced Matcha,Matcha & Tea,2026-07-02,2,2.87
+Uptown,Iced Matcha,Matcha & Tea,2026-07-03,3,2.85
+Uptown,Iced Matcha,Matcha & Tea,2026-07-04,4,2.19
+Uptown,Iced Matcha,Matcha & Tea,2026-07-05,5,2.39
+Uptown,Iced Matcha,Matcha & Tea,2026-07-06,6,2.78
+Uptown,Iced Matcha,Matcha & Tea,2026-07-07,7,4.33
+Uptown,Iced Matcha,Matcha & Tea,2026-07-08,8,2.95
+Uptown,Iced Matcha,Matcha & Tea,2026-07-09,9,2.9
+Uptown,Iced Matcha,Matcha & Tea,2026-07-10,10,2.87
+Uptown,Iced Matcha,Matcha & Tea,2026-07-11,11,2.23
+Uptown,Iced Matcha,Matcha & Tea,2026-07-12,12,2.43
+Uptown,Iced Matcha,Matcha & Tea,2026-07-13,13,2.82
+Uptown,Iced Matcha,Matcha & Tea,2026-07-14,14,4.39
+Uptown,Iced Mocha,Cold Coffee,2026-07-01,1,1.89
+Uptown,Iced Mocha,Cold Coffee,2026-07-02,2,1.87
+Uptown,Iced Mocha,Cold Coffee,2026-07-03,3,1.85
+Uptown,Iced Mocha,Cold Coffee,2026-07-04,4,1.43
+Uptown,Iced Mocha,Cold Coffee,2026-07-05,5,1.57
+Uptown,Iced Mocha,Cold Coffee,2026-07-06,6,1.81
+Uptown,Iced Mocha,Cold Coffee,2026-07-07,7,2.78
+Uptown,Iced Mocha,Cold Coffee,2026-07-08,8,1.9
+Uptown,Iced Mocha,Cold Coffee,2026-07-09,9,1.86
+Uptown,Iced Mocha,Cold Coffee,2026-07-10,10,1.81
+Uptown,Iced Mocha,Cold Coffee,2026-07-11,11,1.41
+Uptown,Iced Mocha,Cold Coffee,2026-07-12,12,1.54
+Uptown,Iced Mocha,Cold Coffee,2026-07-13,13,1.78
+Uptown,Iced Mocha,Cold Coffee,2026-07-14,14,2.76
+Uptown,Lemonade,Cold Drinks,2026-07-01,1,1.43
+Uptown,Lemonade,Cold Drinks,2026-07-02,2,1.4
+Uptown,Lemonade,Cold Drinks,2026-07-03,3,1.37
+Uptown,Lemonade,Cold Drinks,2026-07-04,4,1.08
+Uptown,Lemonade,Cold Drinks,2026-07-05,5,1.18
+Uptown,Lemonade,Cold Drinks,2026-07-06,6,1.39
+Uptown,Lemonade,Cold Drinks,2026-07-07,7,2.02
+Uptown,Lemonade,Cold Drinks,2026-07-08,8,1.41
+Uptown,Lemonade,Cold Drinks,2026-07-09,9,1.39
+Uptown,Lemonade,Cold Drinks,2026-07-10,10,1.36
+Uptown,Lemonade,Cold Drinks,2026-07-11,11,1.05
+Uptown,Lemonade,Cold Drinks,2026-07-12,12,1.15
+Uptown,Lemonade,Cold Drinks,2026-07-13,13,1.34
+Uptown,Lemonade,Cold Drinks,2026-07-14,14,2.03
+Uptown,Mint Tea,Matcha & Tea,2026-07-01,1,0.89
+Uptown,Mint Tea,Matcha & Tea,2026-07-02,2,0.88
+Uptown,Mint Tea,Matcha & Tea,2026-07-03,3,0.87
+Uptown,Mint Tea,Matcha & Tea,2026-07-04,4,0.67
+Uptown,Mint Tea,Matcha & Tea,2026-07-05,5,0.73
+Uptown,Mint Tea,Matcha & Tea,2026-07-06,6,0.85
+Uptown,Mint Tea,Matcha & Tea,2026-07-07,7,1.19
+Uptown,Mint Tea,Matcha & Tea,2026-07-08,8,0.9
+Uptown,Mint Tea,Matcha & Tea,2026-07-09,9,0.88
+Uptown,Mint Tea,Matcha & Tea,2026-07-10,10,0.87
+Uptown,Mint Tea,Matcha & Tea,2026-07-11,11,0.68
+Uptown,Mint Tea,Matcha & Tea,2026-07-12,12,0.74
+Uptown,Mint Tea,Matcha & Tea,2026-07-13,13,0.86
+Uptown,Mint Tea,Matcha & Tea,2026-07-14,14,1.19
+Uptown,Peach Iced Tea,Cold Drinks,2026-07-01,1,1.6
+Uptown,Peach Iced Tea,Cold Drinks,2026-07-02,2,1.6
+Uptown,Peach Iced Tea,Cold Drinks,2026-07-03,3,1.58
+Uptown,Peach Iced Tea,Cold Drinks,2026-07-04,4,1.19
+Uptown,Peach Iced Tea,Cold Drinks,2026-07-05,5,1.31
+Uptown,Peach Iced Tea,Cold Drinks,2026-07-06,6,1.56
+Uptown,Peach Iced Tea,Cold Drinks,2026-07-07,7,2.29
+Uptown,Peach Iced Tea,Cold Drinks,2026-07-08,8,1.59
+Uptown,Peach Iced Tea,Cold Drinks,2026-07-09,9,1.59
+Uptown,Peach Iced Tea,Cold Drinks,2026-07-10,10,1.54
+Uptown,Peach Iced Tea,Cold Drinks,2026-07-11,11,1.16
+Uptown,Peach Iced Tea,Cold Drinks,2026-07-12,12,1.28
+Uptown,Peach Iced Tea,Cold Drinks,2026-07-13,13,1.51
+Uptown,Peach Iced Tea,Cold Drinks,2026-07-14,14,2.27
+Uptown,Pistachio Cookie,Bakery,2026-07-01,1,2.49
+Uptown,Pistachio Cookie,Bakery,2026-07-02,2,2.43
+Uptown,Pistachio Cookie,Bakery,2026-07-03,3,2.4
+Uptown,Pistachio Cookie,Bakery,2026-07-04,4,1.84
+Uptown,Pistachio Cookie,Bakery,2026-07-05,5,2.01
+Uptown,Pistachio Cookie,Bakery,2026-07-06,6,2.34
+Uptown,Pistachio Cookie,Bakery,2026-07-07,7,3.63
+Uptown,Pistachio Cookie,Bakery,2026-07-08,8,2.47
+Uptown,Pistachio Cookie,Bakery,2026-07-09,9,2.42
+Uptown,Pistachio Cookie,Bakery,2026-07-10,10,2.4
+Uptown,Pistachio Cookie,Bakery,2026-07-11,11,1.86
+Uptown,Pistachio Cookie,Bakery,2026-07-12,12,2.03
+Uptown,Pistachio Cookie,Bakery,2026-07-13,13,2.36
+Uptown,Pistachio Cookie,Bakery,2026-07-14,14,3.67
+Uptown,Quinoa Bowl,Meals,2026-07-01,1,0.85
+Uptown,Quinoa Bowl,Meals,2026-07-02,2,0.83
+Uptown,Quinoa Bowl,Meals,2026-07-03,3,0.83
+Uptown,Quinoa Bowl,Meals,2026-07-04,4,0.63
+Uptown,Quinoa Bowl,Meals,2026-07-05,5,0.7
+Uptown,Quinoa Bowl,Meals,2026-07-06,6,0.81
+Uptown,Quinoa Bowl,Meals,2026-07-07,7,1.16
+Uptown,Quinoa Bowl,Meals,2026-07-08,8,0.85
+Uptown,Quinoa Bowl,Meals,2026-07-09,9,0.84
+Uptown,Quinoa Bowl,Meals,2026-07-10,10,0.83
+Uptown,Quinoa Bowl,Meals,2026-07-11,11,0.64
+Uptown,Quinoa Bowl,Meals,2026-07-12,12,0.7
+Uptown,Quinoa Bowl,Meals,2026-07-13,13,0.82
+Uptown,Quinoa Bowl,Meals,2026-07-14,14,1.16
+Uptown,Soup of the Day,Meals,2026-07-01,1,0.47
+Uptown,Soup of the Day,Meals,2026-07-02,2,0.46
+Uptown,Soup of the Day,Meals,2026-07-03,3,0.46
+Uptown,Soup of the Day,Meals,2026-07-04,4,0.35
+Uptown,Soup of the Day,Meals,2026-07-05,5,0.38
+Uptown,Soup of the Day,Meals,2026-07-06,6,0.45
+Uptown,Soup of the Day,Meals,2026-07-07,7,0.7
+Uptown,Soup of the Day,Meals,2026-07-08,8,0.48
+Uptown,Soup of the Day,Meals,2026-07-09,9,0.47
+Uptown,Soup of the Day,Meals,2026-07-10,10,0.46
+Uptown,Soup of the Day,Meals,2026-07-11,11,0.35
+Uptown,Soup of the Day,Meals,2026-07-12,12,0.39
+Uptown,Soup of the Day,Meals,2026-07-13,13,0.45
+Uptown,Soup of the Day,Meals,2026-07-14,14,0.7
+Uptown,Spanish Latte,Hot Coffee,2026-07-01,1,1.42
+Uptown,Spanish Latte,Hot Coffee,2026-07-02,2,1.37
+Uptown,Spanish Latte,Hot Coffee,2026-07-03,3,1.38
+Uptown,Spanish Latte,Hot Coffee,2026-07-04,4,1.07
+Uptown,Spanish Latte,Hot Coffee,2026-07-05,5,1.16
+Uptown,Spanish Latte,Hot Coffee,2026-07-06,6,1.34
+Uptown,Spanish Latte,Hot Coffee,2026-07-07,7,2.02
+Uptown,Spanish Latte,Hot Coffee,2026-07-08,8,1.4
+Uptown,Spanish Latte,Hot Coffee,2026-07-09,9,1.35
+Uptown,Spanish Latte,Hot Coffee,2026-07-10,10,1.35
+Uptown,Spanish Latte,Hot Coffee,2026-07-11,11,1.06
+Uptown,Spanish Latte,Hot Coffee,2026-07-12,12,1.14
+Uptown,Spanish Latte,Hot Coffee,2026-07-13,13,1.33
+Uptown,Spanish Latte,Hot Coffee,2026-07-14,14,2.02
+Uptown,Sparkling Water,Cold Drinks,2026-07-01,1,1.56
+Uptown,Sparkling Water,Cold Drinks,2026-07-02,2,1.53
+Uptown,Sparkling Water,Cold Drinks,2026-07-03,3,1.51
+Uptown,Sparkling Water,Cold Drinks,2026-07-04,4,1.19
+Uptown,Sparkling Water,Cold Drinks,2026-07-05,5,1.31
+Uptown,Sparkling Water,Cold Drinks,2026-07-06,6,1.56
+Uptown,Sparkling Water,Cold Drinks,2026-07-07,7,2.26
+Uptown,Sparkling Water,Cold Drinks,2026-07-08,8,1.55
+Uptown,Sparkling Water,Cold Drinks,2026-07-09,9,1.52
+Uptown,Sparkling Water,Cold Drinks,2026-07-10,10,1.52
+Uptown,Sparkling Water,Cold Drinks,2026-07-11,11,1.19
+Uptown,Sparkling Water,Cold Drinks,2026-07-12,12,1.31
+Uptown,Sparkling Water,Cold Drinks,2026-07-13,13,1.49
+Uptown,Sparkling Water,Cold Drinks,2026-07-14,14,2.29
+Uptown,Still Water,Cold Drinks,2026-07-01,1,1.56
+Uptown,Still Water,Cold Drinks,2026-07-02,2,1.55
+Uptown,Still Water,Cold Drinks,2026-07-03,3,1.55
+Uptown,Still Water,Cold Drinks,2026-07-04,4,1.21
+Uptown,Still Water,Cold Drinks,2026-07-05,5,1.3
+Uptown,Still Water,Cold Drinks,2026-07-06,6,1.53
+Uptown,Still Water,Cold Drinks,2026-07-07,7,2.21
+Uptown,Still Water,Cold Drinks,2026-07-08,8,1.53
+Uptown,Still Water,Cold Drinks,2026-07-09,9,1.53
+Uptown,Still Water,Cold Drinks,2026-07-10,10,1.5
+Uptown,Still Water,Cold Drinks,2026-07-11,11,1.15
+Uptown,Still Water,Cold Drinks,2026-07-12,12,1.26
+Uptown,Still Water,Cold Drinks,2026-07-13,13,1.46
+Uptown,Still Water,Cold Drinks,2026-07-14,14,2.2
+Uptown,Strawberry Matcha,Matcha & Tea,2026-07-01,1,2.74
+Uptown,Strawberry Matcha,Matcha & Tea,2026-07-02,2,2.69
+Uptown,Strawberry Matcha,Matcha & Tea,2026-07-03,3,2.66
+Uptown,Strawberry Matcha,Matcha & Tea,2026-07-04,4,2.03
+Uptown,Strawberry Matcha,Matcha & Tea,2026-07-05,5,2.22
+Uptown,Strawberry Matcha,Matcha & Tea,2026-07-06,6,2.6
+Uptown,Strawberry Matcha,Matcha & Tea,2026-07-07,7,4.06
+Uptown,Strawberry Matcha,Matcha & Tea,2026-07-08,8,2.74
+Uptown,Strawberry Matcha,Matcha & Tea,2026-07-09,9,2.68
+Uptown,Strawberry Matcha,Matcha & Tea,2026-07-10,10,2.63
+Uptown,Strawberry Matcha,Matcha & Tea,2026-07-11,11,2.04
+Uptown,Strawberry Matcha,Matcha & Tea,2026-07-12,12,2.22
+Uptown,Strawberry Matcha,Matcha & Tea,2026-07-13,13,2.59
+Uptown,Strawberry Matcha,Matcha & Tea,2026-07-14,14,4.01
+Uptown,Tiramisu Cup,Desserts,2026-07-01,1,1.46
+Uptown,Tiramisu Cup,Desserts,2026-07-02,2,1.43
+Uptown,Tiramisu Cup,Desserts,2026-07-03,3,1.41
+Uptown,Tiramisu Cup,Desserts,2026-07-04,4,1.14
+Uptown,Tiramisu Cup,Desserts,2026-07-05,5,1.22
+Uptown,Tiramisu Cup,Desserts,2026-07-06,6,1.4
+Uptown,Tiramisu Cup,Desserts,2026-07-07,7,2.08
+Uptown,Tiramisu Cup,Desserts,2026-07-08,8,1.45
+Uptown,Tiramisu Cup,Desserts,2026-07-09,9,1.42
+Uptown,Tiramisu Cup,Desserts,2026-07-10,10,1.37
+Uptown,Tiramisu Cup,Desserts,2026-07-11,11,1.1
+Uptown,Tiramisu Cup,Desserts,2026-07-12,12,1.16
+Uptown,Tiramisu Cup,Desserts,2026-07-13,13,1.35
+Uptown,Tiramisu Cup,Desserts,2026-07-14,14,2.05
+Uptown,Tuna Sandwich,Sandwiches,2026-07-01,1,1.13
+Uptown,Tuna Sandwich,Sandwiches,2026-07-02,2,1.11
+Uptown,Tuna Sandwich,Sandwiches,2026-07-03,3,1.1
+Uptown,Tuna Sandwich,Sandwiches,2026-07-04,4,0.93
+Uptown,Tuna Sandwich,Sandwiches,2026-07-05,5,1.01
+Uptown,Tuna Sandwich,Sandwiches,2026-07-06,6,1.07
+Uptown,Tuna Sandwich,Sandwiches,2026-07-07,7,1.59
+Uptown,Tuna Sandwich,Sandwiches,2026-07-08,8,1.11
+Uptown,Tuna Sandwich,Sandwiches,2026-07-09,9,1.09
+Uptown,Tuna Sandwich,Sandwiches,2026-07-10,10,1.08
+Uptown,Tuna Sandwich,Sandwiches,2026-07-11,11,0.93
+Uptown,Tuna Sandwich,Sandwiches,2026-07-12,12,1.01
+Uptown,Tuna Sandwich,Sandwiches,2026-07-13,13,1.06
+Uptown,Tuna Sandwich,Sandwiches,2026-07-14,14,1.6
+Uptown,Turkey & Cheese Sandwich,Sandwiches,2026-07-01,1,1.92
+Uptown,Turkey & Cheese Sandwich,Sandwiches,2026-07-02,2,1.89
+Uptown,Turkey & Cheese Sandwich,Sandwiches,2026-07-03,3,1.86
+Uptown,Turkey & Cheese Sandwich,Sandwiches,2026-07-04,4,1.44
+Uptown,Turkey & Cheese Sandwich,Sandwiches,2026-07-05,5,1.56
+Uptown,Turkey & Cheese Sandwich,Sandwiches,2026-07-06,6,1.82
+Uptown,Turkey & Cheese Sandwich,Sandwiches,2026-07-07,7,2.83
+Uptown,Turkey & Cheese Sandwich,Sandwiches,2026-07-08,8,1.95
+Uptown,Turkey & Cheese Sandwich,Sandwiches,2026-07-09,9,1.9
+Uptown,Turkey & Cheese Sandwich,Sandwiches,2026-07-10,10,1.86
+Uptown,Turkey & Cheese Sandwich,Sandwiches,2026-07-11,11,1.44
+Uptown,Turkey & Cheese Sandwich,Sandwiches,2026-07-12,12,1.57
+Uptown,Turkey & Cheese Sandwich,Sandwiches,2026-07-13,13,1.83
+Uptown,Turkey & Cheese Sandwich,Sandwiches,2026-07-14,14,2.83
+Uptown,Vanilla Latte,Hot Coffee,2026-07-01,1,1.67
+Uptown,Vanilla Latte,Hot Coffee,2026-07-02,2,1.64
+Uptown,Vanilla Latte,Hot Coffee,2026-07-03,3,1.61
+Uptown,Vanilla Latte,Hot Coffee,2026-07-04,4,1.27
+Uptown,Vanilla Latte,Hot Coffee,2026-07-05,5,1.39
+Uptown,Vanilla Latte,Hot Coffee,2026-07-06,6,1.58
+Uptown,Vanilla Latte,Hot Coffee,2026-07-07,7,2.45
+Uptown,Vanilla Latte,Hot Coffee,2026-07-08,8,1.68
+Uptown,Vanilla Latte,Hot Coffee,2026-07-09,9,1.66
+Uptown,Vanilla Latte,Hot Coffee,2026-07-10,10,1.65
+Uptown,Vanilla Latte,Hot Coffee,2026-07-11,11,1.28
+Uptown,Vanilla Latte,Hot Coffee,2026-07-12,12,1.4
+Uptown,Vanilla Latte,Hot Coffee,2026-07-13,13,1.62
+Uptown,Vanilla Latte,Hot Coffee,2026-07-14,14,2.51

@@ -30,7 +30,9 @@ class NoLeakTest(unittest.TestCase):
         # so this checks what matters for forecasting — no feature for day t sees sales from day t onward.
         cutoff = pd.Timestamp("2026-05-25")
         changed = panel.copy()
-        changed.loc[changed["Date"] >= cutoff, "units"] *= 10
+        after = changed["Date"] >= cutoff
+        changed.loc[after, "units"] *= 10
+        changed.loc[after, ["price", "unit_margin"]] *= 2
         a, b = add_features(panel), add_features(changed)
         cols = [c for c in OFFSET_FEATURES if c not in ("Branch", "Product", "Category", "shelf_class")]
         mask = a["Date"] <= cutoff  # features on the cutoff day itself must not see that day's sales

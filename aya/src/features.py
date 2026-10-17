@@ -12,7 +12,7 @@ NUMERIC = [
     "lag_1", "lag_7", "lag_14", "lag_28", "same_weekday_mean_4",
     "roll_mean_7", "roll_mean_14", "roll_mean_28", "roll_std_7",
     "branch_roll_mean_7", "branch_roll_mean_28",
-    "weekday", "day_of_month", "trend", "price_ratio", "unit_margin",
+    "weekday", "day_of_month", "trend", "price_ratio", "unit_margin_prev",
 ]
 FEATURES = CATEGORICAL + NUMERIC
 # Extra inputs for the baseline-offset model: everything relative to the baseline.
@@ -45,7 +45,10 @@ def add_features(panel: pd.DataFrame) -> pd.DataFrame:
     df["day_of_month"] = df["Date"].dt.day
     df["trend"] = (df["Date"] - df["Date"].min()).dt.days
     reference = df[df["Date"] <= TRAIN_END].groupby("Product")["price"].median()
-    df["price_ratio"] = df["price"] / df["Product"].map(reference)
+    # Previous day's price and margin: the day's own price is computed from that day's transactions.
+    previous_price = df.groupby(KEYS, sort=False, observed=True)["price"].shift(1)
+    df["price_ratio"] = previous_price / df["Product"].map(reference)
+    df["unit_margin_prev"] = df.groupby(KEYS, sort=False, observed=True)["unit_margin"].shift(1)
     df = _add_baseline(df)
     for col in CATEGORICAL:
         df[col] = df[col].astype("category")

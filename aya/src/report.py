@@ -71,18 +71,16 @@ def _kpi(value: str, label: str) -> str:
     return f'<div class="kpi"><div class="v">{value}</div><div class="l">{label}</div></div>'
 
 
-def _branch_section(branch, test, future, alerts, metrics, tomorrow, category_plan) -> str:
-    m_model = metrics["LightGBM + NB"].loc[branch]
+def _branch_section(branch, test, future, alerts, metrics, tomorrow, category_plan, fortnight, by_horizon) -> str:
+    # Accuracy of the model that produces the forward forecasts (multi-day model, 1 day ahead, test period).
+    day1 = by_horizon.loc[(branch, 1)]
     m_naive = metrics["Same weekday last week"].loc[branch]
-    t = test[test["Branch"] == branch]
-    daily = t.groupby("Date")[["units", "forecast"]].sum()
-    branch_day_error = (daily["forecast"] - daily["units"]).abs().sum() / daily["units"].sum()
     n_alerts = len(alerts[alerts["Branch"] == branch])
     days = test["Date"].nunique()
     kpis = "".join([
-        _kpi(f"{m_model['WAPE']:.0%}", f"Product-level forecast error (WAPE) vs {m_naive['WAPE']:.0%} for same-weekday-last-week"),
-        _kpi(f"{branch_day_error:.0%}", "Error on the branch's daily total"),
-        _kpi(f"{m_model['bias']:+.1%}", "Bias (forecast vs actual units sold)"),
+        _kpi(f"{day1['product_wape']:.0%}", f"Product-level forecast error (WAPE) vs {m_naive['WAPE']:.0%} for same-weekday-last-week"),
+        _kpi(f"{day1['branch_day_wape']:.0%}", "Error on the branch's daily total"),
+        _kpi(f"{day1['bias']:+.1%}", "Bias (forecast vs actual units sold)"),
         _kpi(f"{n_alerts}", f"Alerts over {days} test days"),
     ])
 
@@ -129,11 +127,50 @@ def _branch_section(branch, test, future, alerts, metrics, tomorrow, category_pl
     <div><h2>Expected higher than usual</h2>{_table(up, move_cols) if len(up) else no_move}</div>
     <div><h2>Expected lower than usual</h2>{_table(down, move_cols) if len(down) else no_move}</div>
   </div>
+  {_fortnight_section(fortnight, by_horizon, branch)}
   <h2>Alerts worth checking ({n_alerts} over {days} test days)</h2>
   {_table(alert_table, {"Actual", "Expected", "Profit impact"}) if len(a) else '<p class="note">No alerts.</p>'}
   <h2>Daily units: actual vs forecast (test period)</h2>
   <div class="card" style="padding:12px"><img alt="Daily units actual vs forecast for {branch}" src="data:image/png;base64,{_chart(test, branch)}"></div>
 </section>"""
+
+
+def _fortnight_section(fortnight: pd.DataFrame, by_horizon: pd.DataFrame, branch: str) -> str:
+    f = fortnight[fortnight["Branch"].astype(str) == branch]
+    start = f["Date"].min()
+    week_two = start + pd.Timedelta(days=7)
+
+    days = f.groupby("Date")["forecast"].sum().reset_index()
+    days["horizon"] = (days["Date"] - start).dt.days + 1
+    errors = by_horizon.loc[branch, "branch_day_wape"]
+    days["branch_day_wape"] = days["horizon"].map(errors)
+    daily_table = pd.DataFrame({
+        "Date": days["Date"].dt.strftime("%a %d %b"),
+        "Days ahead": days["horizon"].astype(str),
+        "Expected units (whole branch)": days["forecast"].map("<b>{:.0f}</b>".format),
+        "Typical error on test": days["branch_day_wape"].map("±{:.0%}".format),
+    })
+
+    weeks = f.assign(week=(f["Date"] >= week_two).map({False: "week1", True: "week2"}))
+    by_product = weeks.pivot_table(index=["Category", "Product"], columns="week", values="forecast",
+                                   aggfunc="sum", observed=True).reset_index()
+    by_product["total"] = by_product["week1"] + by_product["week2"]
+    by_product = by_product.sort_values(["Category", "total"], ascending=[True, False])
+    week1 = f"{start:%d %b}–{start + pd.Timedelta(days=6):%d %b}"
+    week2 = f"{week_two:%d %b}–{week_two + pd.Timedelta(days=6):%d %b}"
+    product_table = pd.DataFrame({
+        "Product": by_product["Product"].astype(str),
+        "Category": by_product["Category"].astype(str),
+        week1: by_product["week1"].map("{:.0f}".format),
+        week2: by_product["week2"].map("{:.0f}".format),
+        "14 days": by_product["total"].map("<b>{:.0f}</b>".format),
+    })
+    return f"""<h2>Next 14 days: expected units per day</h2>
+  {_table(daily_table, {"Days ahead", "Expected units (whole branch)", "Typical error on test"})}
+  <p class="note">Typical error = how far this branch's daily total was off on average in the test weeks,
+  for forecasts made that many days in advance.</p>
+  <h2>Next 14 days: expected units per product</h2>
+  {_table(product_table, {week1, week2, "14 days"})}"""
 
 
 def _category_table(plan: pd.DataFrame, branch: str) -> pd.DataFrame:
@@ -145,18 +182,19 @@ def _category_table(plan: pd.DataFrame, branch: str) -> pd.DataFrame:
     })
 
 
-def write_report(path, *, test, future, alerts, metrics, tomorrow, category_plan) -> None:
+def write_report(path, *, test, future, alerts, metrics, tomorrow, category_plan, fortnight, by_horizon) -> None:
     branches = sorted(test["Branch"].astype(str).unique())
     tabs = "".join(f'<button role="tab" data-b="{b}" aria-selected="{str(i == 0).lower()}">{b}</button>'
                    for i, b in enumerate(branches))
-    sections = "".join(_branch_section(b, test, future, alerts, metrics, tomorrow, category_plan) for b in branches)
+    sections = "".join(_branch_section(b, test, future, alerts, metrics, tomorrow, category_plan,
+                                       fortnight, by_horizon) for b in branches)
     start, end = test["Date"].min(), test["Date"].max()
     page = f"""<!doctype html><html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1"><title>Branch Sales Forecast</title>
 <style>{CSS}</style></head><body><main>
 <h1>Branch Sales Forecast</h1>
-<p class="sub">Expected units sold per product tomorrow, plus unusual-sales alerts — each branch judged against its
-own history. Evaluated on {start:%d %b}–{end:%d %b %Y}; forecast for {tomorrow:%d %b %Y}.</p>
+<p class="sub">Expected units sold per product for tomorrow and the next 14 days, plus unusual-sales alerts — each branch judged against its
+own history. Evaluated on {start:%d %b}–{end:%d %b %Y}; forecast from {tomorrow:%d %b %Y}.</p>
 <div class="tabs" role="tablist">{tabs}</div>
 {sections}
 </main><script>

@@ -5,7 +5,7 @@ Owner: Aya · Workspace: `aya/` · Status: **core system built and evaluated**
 ## Scope
 
 1. **Expected units sold.** For every product at every branch, the model gives the
-   expected number of units sold tomorrow. It does not recommend prep quantities.
+   expected number of units sold for each of the next 14 days. It does not recommend prep quantities.
    Deciding how much to make is left to the branch.
 2. **Within-branch anomaly alerts.** These compare actual sales with that expectation
    and flag unusual drops, spikes, possible stockouts and sustained shifts, with an
@@ -47,13 +47,15 @@ aya/
   eda.py                   exploration printout + figures
   evaluate_forecast.py     validation: first model, NB check, anomaly injection tests
   compare_models.py        validation: raw vs linear-tree vs baseline-offset LightGBM
+  compare_horizons.py      validation: 1-14 day forecasts, multi-day model vs baseline
   src/panel.py             transactions → daily branch × product panel, day-level split
   src/features.py          leak-safe features + baseline (level × weekday × growth)
   src/forecast.py          baselines, LightGBM model, negative binomial helpers, accuracy
+  src/horizon.py           1-14 day forecast rows (inputs as of the forecast day) + multi-day model
   src/anomaly.py           alert scoring, flags, profit impact, synthetic injection
   src/report.py            HTML report
   src/product_classes.csv  product type (fresh / made to order / packaged), used as a model input
-  tests/                   panel, no-leak features
+  tests/                   panel, no-leak features (next-day and 1-14 day)
   outputs/                 forecast + category forecast CSVs, test results, alerts, report
 ```
 
@@ -69,6 +71,7 @@ aya/
 | 6 | Alert validation with planted synthetic anomalies | ✅ |
 | 7 | HTML report per branch + test-period evaluation | ✅ |
 | 8 | Independent review for data leaks and bugs; fixes applied | ✅ |
+| 9 | 14-day forecast (one model across horizons), leak tests, second independent review | ✅ |
 
 ## How the model works
 
@@ -79,8 +82,10 @@ aya/
    135 series, learns product-specific adjustments on top of the baseline. Inputs
    are recent sales (lags 1/7/14/28, rolling means), branch traffic, calendar,
    price ratio and product type, all using data up to the previous day only.
-3. **Output:** expected units sold per product, branch and day, plus totals per
-   category and per branch.
+3. **Output:** expected units sold per product, branch and day for the next 14
+   days, plus totals per category and per branch. For a day *h* days ahead, the
+   sales inputs are taken as of the forecast day; the calendar belongs to the
+   target day.
 
 ## Results (test period, Jun 9 – 30)
 
@@ -91,6 +96,8 @@ aya/
 | Tuesday bias | — | −8.8% | **−1.1%** |
 
 - Error on each branch's daily total: Harbour 7%, Garden 11%, Uptown 16%.
+- 14 days ahead is as accurate as 1 day ahead: 49.2% vs 49.1% product error,
+  about 10% branch daily total error. A review confirmed this is not a leak.
 - Product-level error is near the floor. Even a perfect expected value would leave
   about 47–51% WAPE, because a product selling ~2.5 units/day swings by ±1–2 units by
   chance.
@@ -109,7 +116,9 @@ aya/
 | Baseline-offset LightGBM instead of raw | Raw tree models can't predict above training values, so they under-forecast a growing business on its busiest days. Offset removed the bias on validation. |
 | Prep recommendations removed | Scope narrowed to expected units sold. Prep quantities, two-batch prep and the waste/profit simulation were built, then removed (still in git history: commit `4f9aba8`). |
 | Alerts need both a low probability and a ≥ 3-unit gap | At ~2 units/day, one-unit swings are normal. This keeps false alerts below 1% of normal days. |
-| No tuning on test | All choices were made on validation. The test period was scored for the first model and again after the offset change; neither run tuned anything. |
+| One model for all 14 days | Same accuracy as the next-day model at 1 day ahead on validation (51.3% vs 51.4%), and consistent numbers across the 14-day table. |
+| Previous day's price as input | The day's own average price comes from that day's transactions; using it would leak same-day information. |
+| No tuning on test | All choices were made on validation. The test period has been scored after each model change; no run tuned anything. |
 
 ## Known limitations
 
@@ -125,6 +134,8 @@ aya/
 
 - Save the trained model and retrain weekly instead of on every run.
 - Retrain daily through the test period (rolling-origin evaluation).
+- Alerts still use the next-day model; they could be moved to the multi-day model
+  for a single model throughout.
 - Product-specific weekday patterns (small expected gain, ~0.5–1 point).
 - External data (weather, holidays, local events) for the biggest remaining gains.
 - Stock / waste records, to forecast true demand and to evaluate stockout alerts.

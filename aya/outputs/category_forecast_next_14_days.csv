@@ -1,0 +1,421 @@
+Branch,Date,Category,expected_units
+Garden,2026-07-01,ALL,125.8
+Garden,2026-07-01,Bakery,25.3
+Garden,2026-07-01,Hot Coffee,19.6
+Garden,2026-07-01,Cold Coffee,18.9
+Garden,2026-07-01,Matcha & Tea,17.1
+Garden,2026-07-01,Desserts,13.9
+Garden,2026-07-01,Cold Drinks,12.3
+Garden,2026-07-01,Sandwiches,8.8
+Garden,2026-07-01,Breakfast,6.1
+Garden,2026-07-01,Meals,3.8
+Garden,2026-07-02,ALL,116.0
+Garden,2026-07-02,Bakery,23.3
+Garden,2026-07-02,Hot Coffee,18.1
+Garden,2026-07-02,Cold Coffee,17.4
+Garden,2026-07-02,Matcha & Tea,15.7
+Garden,2026-07-02,Desserts,12.8
+Garden,2026-07-02,Cold Drinks,11.4
+Garden,2026-07-02,Sandwiches,8.1
+Garden,2026-07-02,Breakfast,5.7
+Garden,2026-07-02,Meals,3.5
+Garden,2026-07-03,ALL,130.6
+Garden,2026-07-03,Bakery,26.4
+Garden,2026-07-03,Hot Coffee,20.2
+Garden,2026-07-03,Cold Coffee,19.7
+Garden,2026-07-03,Matcha & Tea,17.8
+Garden,2026-07-03,Desserts,14.4
+Garden,2026-07-03,Cold Drinks,12.8
+Garden,2026-07-03,Sandwiches,9.1
+Garden,2026-07-03,Breakfast,6.4
+Garden,2026-07-03,Meals,3.9
+Garden,2026-07-04,ALL,83.6
+Garden,2026-07-04,Bakery,16.7
+Garden,2026-07-04,Hot Coffee,13.0
+Garden,2026-07-04,Cold Coffee,12.4
+Garden,2026-07-04,Matcha & Tea,11.4
+Garden,2026-07-04,Desserts,9.1
+Garden,2026-07-04,Cold Drinks,8.3
+Garden,2026-07-04,Sandwiches,5.8
+Garden,2026-07-04,Breakfast,4.1
+Garden,2026-07-04,Meals,2.7
+Garden,2026-07-05,ALL,105.1
+Garden,2026-07-05,Bakery,21.1
+Garden,2026-07-05,Hot Coffee,16.4
+Garden,2026-07-05,Cold Coffee,15.8
+Garden,2026-07-05,Matcha & Tea,14.2
+Garden,2026-07-05,Desserts,11.5
+Garden,2026-07-05,Cold Drinks,10.3
+Garden,2026-07-05,Sandwiches,7.3
+Garden,2026-07-05,Breakfast,5.2
+Garden,2026-07-05,Meals,3.3
+Garden,2026-07-06,ALL,115.5
+Garden,2026-07-06,Bakery,23.1
+Garden,2026-07-06,Hot Coffee,18.0
+Garden,2026-07-06,Cold Coffee,17.3
+Garden,2026-07-06,Matcha & Tea,15.7
+Garden,2026-07-06,Desserts,12.7
+Garden,2026-07-06,Cold Drinks,11.4
+Garden,2026-07-06,Sandwiches,8.1
+Garden,2026-07-06,Breakfast,5.7
+Garden,2026-07-06,Meals,3.5
+Garden,2026-07-07,ALL,191.6
+Garden,2026-07-07,Bakery,38.7
+Garden,2026-07-07,Hot Coffee,29.8
+Garden,2026-07-07,Cold Coffee,29.0
+Garden,2026-07-07,Matcha & Tea,26.1
+Garden,2026-07-07,Desserts,21.2
+Garden,2026-07-07,Cold Drinks,18.7
+Garden,2026-07-07,Sandwiches,13.3
+Garden,2026-07-07,Breakfast,9.3
+Garden,2026-07-07,Meals,5.7
+Garden,2026-07-08,ALL,127.1
+Garden,2026-07-08,Bakery,25.6
+Garden,2026-07-08,Hot Coffee,19.8
+Garden,2026-07-08,Cold Coffee,19.1
+Garden,2026-07-08,Matcha & Tea,17.3
+Garden,2026-07-08,Desserts,14.0
+Garden,2026-07-08,Cold Drinks,12.4
+Garden,2026-07-08,Sandwiches,8.9
+Garden,2026-07-08,Breakfast,6.2
+Garden,2026-07-08,Meals,3.8
+Garden,2026-07-09,ALL,117.3
+Garden,2026-07-09,Bakery,23.6
+Garden,2026-07-09,Hot Coffee,18.3
+Garden,2026-07-09,Cold Coffee,17.6
+Garden,2026-07-09,Matcha & Tea,15.9
+Garden,2026-07-09,Desserts,12.9
+Garden,2026-07-09,Cold Drinks,11.5
+Garden,2026-07-09,Sandwiches,8.2
+Garden,2026-07-09,Breakfast,5.7
+Garden,2026-07-09,Meals,3.5
+Garden,2026-07-10,ALL,131.2
+Garden,2026-07-10,Bakery,26.4
+Garden,2026-07-10,Hot Coffee,20.5
+Garden,2026-07-10,Cold Coffee,19.7
+Garden,2026-07-10,Matcha & Tea,17.8
+Garden,2026-07-10,Desserts,14.5
+Garden,2026-07-10,Cold Drinks,12.8
+Garden,2026-07-10,Sandwiches,9.2
+Garden,2026-07-10,Breakfast,6.4
+Garden,2026-07-10,Meals,3.9
+Garden,2026-07-11,ALL,84.4
+Garden,2026-07-11,Bakery,16.9
+Garden,2026-07-11,Hot Coffee,13.2
+Garden,2026-07-11,Cold Coffee,12.5
+Garden,2026-07-11,Matcha & Tea,11.5
+Garden,2026-07-11,Desserts,9.2
+Garden,2026-07-11,Cold Drinks,8.3
+Garden,2026-07-11,Sandwiches,5.9
+Garden,2026-07-11,Breakfast,4.1
+Garden,2026-07-11,Meals,2.7
+Garden,2026-07-12,ALL,106.1
+Garden,2026-07-12,Bakery,21.3
+Garden,2026-07-12,Hot Coffee,16.6
+Garden,2026-07-12,Cold Coffee,15.9
+Garden,2026-07-12,Matcha & Tea,14.4
+Garden,2026-07-12,Desserts,11.7
+Garden,2026-07-12,Cold Drinks,10.4
+Garden,2026-07-12,Sandwiches,7.4
+Garden,2026-07-12,Breakfast,5.2
+Garden,2026-07-12,Meals,3.3
+Garden,2026-07-13,ALL,116.8
+Garden,2026-07-13,Bakery,23.5
+Garden,2026-07-13,Hot Coffee,18.2
+Garden,2026-07-13,Cold Coffee,17.5
+Garden,2026-07-13,Matcha & Tea,15.8
+Garden,2026-07-13,Desserts,12.8
+Garden,2026-07-13,Cold Drinks,11.5
+Garden,2026-07-13,Sandwiches,8.2
+Garden,2026-07-13,Breakfast,5.7
+Garden,2026-07-13,Meals,3.5
+Garden,2026-07-14,ALL,191.5
+Garden,2026-07-14,Bakery,38.4
+Garden,2026-07-14,Hot Coffee,30.0
+Garden,2026-07-14,Cold Coffee,28.8
+Garden,2026-07-14,Matcha & Tea,26.0
+Garden,2026-07-14,Desserts,21.2
+Garden,2026-07-14,Cold Drinks,18.7
+Garden,2026-07-14,Sandwiches,13.4
+Garden,2026-07-14,Breakfast,9.2
+Garden,2026-07-14,Meals,5.8
+Harbour,2026-07-01,ALL,190.2
+Harbour,2026-07-01,Bakery,44.4
+Harbour,2026-07-01,Hot Coffee,30.4
+Harbour,2026-07-01,Cold Coffee,29.6
+Harbour,2026-07-01,Matcha & Tea,25.9
+Harbour,2026-07-01,Cold Drinks,18.6
+Harbour,2026-07-01,Desserts,15.3
+Harbour,2026-07-01,Sandwiches,12.5
+Harbour,2026-07-01,Breakfast,8.0
+Harbour,2026-07-01,Meals,5.6
+Harbour,2026-07-02,ALL,174.5
+Harbour,2026-07-02,Bakery,40.6
+Harbour,2026-07-02,Hot Coffee,27.8
+Harbour,2026-07-02,Cold Coffee,27.1
+Harbour,2026-07-02,Matcha & Tea,23.8
+Harbour,2026-07-02,Cold Drinks,17.1
+Harbour,2026-07-02,Desserts,14.1
+Harbour,2026-07-02,Sandwiches,11.5
+Harbour,2026-07-02,Breakfast,7.4
+Harbour,2026-07-02,Meals,5.1
+Harbour,2026-07-03,ALL,205.5
+Harbour,2026-07-03,Bakery,48.1
+Harbour,2026-07-03,Hot Coffee,32.9
+Harbour,2026-07-03,Cold Coffee,31.9
+Harbour,2026-07-03,Matcha & Tea,28.0
+Harbour,2026-07-03,Cold Drinks,20.0
+Harbour,2026-07-03,Desserts,16.5
+Harbour,2026-07-03,Sandwiches,13.5
+Harbour,2026-07-03,Breakfast,8.6
+Harbour,2026-07-03,Meals,6.0
+Harbour,2026-07-04,ALL,127.0
+Harbour,2026-07-04,Bakery,29.5
+Harbour,2026-07-04,Hot Coffee,20.2
+Harbour,2026-07-04,Cold Coffee,19.7
+Harbour,2026-07-04,Matcha & Tea,17.4
+Harbour,2026-07-04,Cold Drinks,12.5
+Harbour,2026-07-04,Desserts,10.2
+Harbour,2026-07-04,Sandwiches,8.3
+Harbour,2026-07-04,Breakfast,5.4
+Harbour,2026-07-04,Meals,3.8
+Harbour,2026-07-05,ALL,155.4
+Harbour,2026-07-05,Bakery,36.2
+Harbour,2026-07-05,Hot Coffee,24.8
+Harbour,2026-07-05,Cold Coffee,24.2
+Harbour,2026-07-05,Matcha & Tea,21.2
+Harbour,2026-07-05,Cold Drinks,15.2
+Harbour,2026-07-05,Desserts,12.5
+Harbour,2026-07-05,Sandwiches,10.2
+Harbour,2026-07-05,Breakfast,6.6
+Harbour,2026-07-05,Meals,4.6
+Harbour,2026-07-06,ALL,177.3
+Harbour,2026-07-06,Bakery,41.3
+Harbour,2026-07-06,Hot Coffee,28.2
+Harbour,2026-07-06,Cold Coffee,27.6
+Harbour,2026-07-06,Matcha & Tea,24.2
+Harbour,2026-07-06,Cold Drinks,17.4
+Harbour,2026-07-06,Desserts,14.3
+Harbour,2026-07-06,Sandwiches,11.7
+Harbour,2026-07-06,Breakfast,7.5
+Harbour,2026-07-06,Meals,5.2
+Harbour,2026-07-07,ALL,279.7
+Harbour,2026-07-07,Bakery,64.9
+Harbour,2026-07-07,Hot Coffee,44.8
+Harbour,2026-07-07,Cold Coffee,43.2
+Harbour,2026-07-07,Matcha & Tea,38.0
+Harbour,2026-07-07,Cold Drinks,27.4
+Harbour,2026-07-07,Desserts,22.7
+Harbour,2026-07-07,Sandwiches,18.5
+Harbour,2026-07-07,Breakfast,11.9
+Harbour,2026-07-07,Meals,8.3
+Harbour,2026-07-08,ALL,187.6
+Harbour,2026-07-08,Bakery,43.6
+Harbour,2026-07-08,Hot Coffee,30.0
+Harbour,2026-07-08,Cold Coffee,28.9
+Harbour,2026-07-08,Matcha & Tea,25.6
+Harbour,2026-07-08,Cold Drinks,18.4
+Harbour,2026-07-08,Desserts,15.2
+Harbour,2026-07-08,Sandwiches,12.4
+Harbour,2026-07-08,Breakfast,8.0
+Harbour,2026-07-08,Meals,5.6
+Harbour,2026-07-09,ALL,177.5
+Harbour,2026-07-09,Bakery,41.3
+Harbour,2026-07-09,Hot Coffee,28.3
+Harbour,2026-07-09,Cold Coffee,27.6
+Harbour,2026-07-09,Matcha & Tea,24.2
+Harbour,2026-07-09,Cold Drinks,17.4
+Harbour,2026-07-09,Desserts,14.3
+Harbour,2026-07-09,Sandwiches,11.7
+Harbour,2026-07-09,Breakfast,7.5
+Harbour,2026-07-09,Meals,5.2
+Harbour,2026-07-10,ALL,199.7
+Harbour,2026-07-10,Bakery,46.5
+Harbour,2026-07-10,Hot Coffee,31.9
+Harbour,2026-07-10,Cold Coffee,31.0
+Harbour,2026-07-10,Matcha & Tea,27.2
+Harbour,2026-07-10,Cold Drinks,19.5
+Harbour,2026-07-10,Desserts,16.1
+Harbour,2026-07-10,Sandwiches,13.2
+Harbour,2026-07-10,Breakfast,8.5
+Harbour,2026-07-10,Meals,5.9
+Harbour,2026-07-11,ALL,129.3
+Harbour,2026-07-11,Bakery,30.1
+Harbour,2026-07-11,Hot Coffee,20.7
+Harbour,2026-07-11,Cold Coffee,20.0
+Harbour,2026-07-11,Matcha & Tea,17.6
+Harbour,2026-07-11,Cold Drinks,12.6
+Harbour,2026-07-11,Desserts,10.4
+Harbour,2026-07-11,Sandwiches,8.5
+Harbour,2026-07-11,Breakfast,5.5
+Harbour,2026-07-11,Meals,3.8
+Harbour,2026-07-12,ALL,157.7
+Harbour,2026-07-12,Bakery,36.7
+Harbour,2026-07-12,Hot Coffee,25.2
+Harbour,2026-07-12,Cold Coffee,24.5
+Harbour,2026-07-12,Matcha & Tea,21.5
+Harbour,2026-07-12,Cold Drinks,15.4
+Harbour,2026-07-12,Desserts,12.7
+Harbour,2026-07-12,Sandwiches,10.4
+Harbour,2026-07-12,Breakfast,6.7
+Harbour,2026-07-12,Meals,4.6
+Harbour,2026-07-13,ALL,179.7
+Harbour,2026-07-13,Bakery,41.8
+Harbour,2026-07-13,Hot Coffee,28.7
+Harbour,2026-07-13,Cold Coffee,27.9
+Harbour,2026-07-13,Matcha & Tea,24.4
+Harbour,2026-07-13,Cold Drinks,17.6
+Harbour,2026-07-13,Desserts,14.5
+Harbour,2026-07-13,Sandwiches,11.9
+Harbour,2026-07-13,Breakfast,7.6
+Harbour,2026-07-13,Meals,5.3
+Harbour,2026-07-14,ALL,283.0
+Harbour,2026-07-14,Bakery,65.8
+Harbour,2026-07-14,Hot Coffee,45.3
+Harbour,2026-07-14,Cold Coffee,43.9
+Harbour,2026-07-14,Matcha & Tea,38.4
+Harbour,2026-07-14,Cold Drinks,27.7
+Harbour,2026-07-14,Desserts,22.9
+Harbour,2026-07-14,Sandwiches,18.7
+Harbour,2026-07-14,Breakfast,12.0
+Harbour,2026-07-14,Meals,8.4
+Uptown,2026-07-01,ALL,72.3
+Uptown,2026-07-01,Bakery,15.2
+Uptown,2026-07-01,Hot Coffee,11.6
+Uptown,2026-07-01,Matcha & Tea,11.0
+Uptown,2026-07-01,Cold Coffee,10.4
+Uptown,2026-07-01,Cold Drinks,7.3
+Uptown,2026-07-01,Sandwiches,6.6
+Uptown,2026-07-01,Desserts,5.0
+Uptown,2026-07-01,Breakfast,3.0
+Uptown,2026-07-01,Meals,2.1
+Uptown,2026-07-02,ALL,71.0
+Uptown,2026-07-02,Bakery,14.9
+Uptown,2026-07-02,Hot Coffee,11.4
+Uptown,2026-07-02,Matcha & Tea,10.9
+Uptown,2026-07-02,Cold Coffee,10.2
+Uptown,2026-07-02,Cold Drinks,7.3
+Uptown,2026-07-02,Sandwiches,6.4
+Uptown,2026-07-02,Desserts,5.0
+Uptown,2026-07-02,Breakfast,2.9
+Uptown,2026-07-02,Meals,2.0
+Uptown,2026-07-03,ALL,70.3
+Uptown,2026-07-03,Bakery,14.7
+Uptown,2026-07-03,Hot Coffee,11.3
+Uptown,2026-07-03,Matcha & Tea,10.7
+Uptown,2026-07-03,Cold Coffee,10.1
+Uptown,2026-07-03,Cold Drinks,7.2
+Uptown,2026-07-03,Sandwiches,6.4
+Uptown,2026-07-03,Desserts,4.9
+Uptown,2026-07-03,Breakfast,2.9
+Uptown,2026-07-03,Meals,2.0
+Uptown,2026-07-04,ALL,54.9
+Uptown,2026-07-04,Bakery,11.4
+Uptown,2026-07-04,Hot Coffee,8.8
+Uptown,2026-07-04,Matcha & Tea,8.3
+Uptown,2026-07-04,Cold Coffee,7.9
+Uptown,2026-07-04,Cold Drinks,5.6
+Uptown,2026-07-04,Sandwiches,5.1
+Uptown,2026-07-04,Desserts,4.0
+Uptown,2026-07-04,Breakfast,2.3
+Uptown,2026-07-04,Meals,1.5
+Uptown,2026-07-05,ALL,59.7
+Uptown,2026-07-05,Bakery,12.5
+Uptown,2026-07-05,Hot Coffee,9.6
+Uptown,2026-07-05,Matcha & Tea,9.0
+Uptown,2026-07-05,Cold Coffee,8.5
+Uptown,2026-07-05,Cold Drinks,6.1
+Uptown,2026-07-05,Sandwiches,5.5
+Uptown,2026-07-05,Desserts,4.3
+Uptown,2026-07-05,Breakfast,2.5
+Uptown,2026-07-05,Meals,1.7
+Uptown,2026-07-06,ALL,69.0
+Uptown,2026-07-06,Bakery,14.4
+Uptown,2026-07-06,Hot Coffee,11.1
+Uptown,2026-07-06,Matcha & Tea,10.5
+Uptown,2026-07-06,Cold Coffee,9.9
+Uptown,2026-07-06,Cold Drinks,7.2
+Uptown,2026-07-06,Sandwiches,6.2
+Uptown,2026-07-06,Desserts,4.9
+Uptown,2026-07-06,Breakfast,2.9
+Uptown,2026-07-06,Meals,2.0
+Uptown,2026-07-07,ALL,104.8
+Uptown,2026-07-07,Bakery,22.3
+Uptown,2026-07-07,Hot Coffee,16.7
+Uptown,2026-07-07,Matcha & Tea,16.1
+Uptown,2026-07-07,Cold Coffee,15.3
+Uptown,2026-07-07,Cold Drinks,10.5
+Uptown,2026-07-07,Sandwiches,9.5
+Uptown,2026-07-07,Desserts,7.2
+Uptown,2026-07-07,Breakfast,4.2
+Uptown,2026-07-07,Meals,3.0
+Uptown,2026-07-08,ALL,72.3
+Uptown,2026-07-08,Bakery,15.2
+Uptown,2026-07-08,Hot Coffee,11.6
+Uptown,2026-07-08,Matcha & Tea,11.1
+Uptown,2026-07-08,Cold Coffee,10.5
+Uptown,2026-07-08,Cold Drinks,7.3
+Uptown,2026-07-08,Sandwiches,6.6
+Uptown,2026-07-08,Desserts,5.0
+Uptown,2026-07-08,Breakfast,3.0
+Uptown,2026-07-08,Meals,2.1
+Uptown,2026-07-09,ALL,71.0
+Uptown,2026-07-09,Bakery,14.9
+Uptown,2026-07-09,Hot Coffee,11.4
+Uptown,2026-07-09,Matcha & Tea,10.8
+Uptown,2026-07-09,Cold Coffee,10.3
+Uptown,2026-07-09,Cold Drinks,7.2
+Uptown,2026-07-09,Sandwiches,6.5
+Uptown,2026-07-09,Desserts,4.9
+Uptown,2026-07-09,Breakfast,3.0
+Uptown,2026-07-09,Meals,2.0
+Uptown,2026-07-10,ALL,70.0
+Uptown,2026-07-10,Bakery,14.7
+Uptown,2026-07-10,Hot Coffee,11.3
+Uptown,2026-07-10,Matcha & Tea,10.7
+Uptown,2026-07-10,Cold Coffee,10.1
+Uptown,2026-07-10,Cold Drinks,7.1
+Uptown,2026-07-10,Sandwiches,6.4
+Uptown,2026-07-10,Desserts,4.8
+Uptown,2026-07-10,Breakfast,2.9
+Uptown,2026-07-10,Meals,2.0
+Uptown,2026-07-11,ALL,54.9
+Uptown,2026-07-11,Bakery,11.5
+Uptown,2026-07-11,Hot Coffee,8.8
+Uptown,2026-07-11,Matcha & Tea,8.3
+Uptown,2026-07-11,Cold Coffee,7.9
+Uptown,2026-07-11,Cold Drinks,5.4
+Uptown,2026-07-11,Sandwiches,5.1
+Uptown,2026-07-11,Desserts,4.0
+Uptown,2026-07-11,Breakfast,2.3
+Uptown,2026-07-11,Meals,1.6
+Uptown,2026-07-12,ALL,59.7
+Uptown,2026-07-12,Bakery,12.6
+Uptown,2026-07-12,Hot Coffee,9.6
+Uptown,2026-07-12,Matcha & Tea,9.1
+Uptown,2026-07-12,Cold Coffee,8.6
+Uptown,2026-07-12,Cold Drinks,6.0
+Uptown,2026-07-12,Sandwiches,5.5
+Uptown,2026-07-12,Desserts,4.2
+Uptown,2026-07-12,Breakfast,2.5
+Uptown,2026-07-12,Meals,1.7
+Uptown,2026-07-13,ALL,68.8
+Uptown,2026-07-13,Bakery,14.5
+Uptown,2026-07-13,Hot Coffee,11.1
+Uptown,2026-07-13,Matcha & Tea,10.5
+Uptown,2026-07-13,Cold Coffee,9.9
+Uptown,2026-07-13,Cold Drinks,6.9
+Uptown,2026-07-13,Sandwiches,6.3
+Uptown,2026-07-13,Desserts,4.8
+Uptown,2026-07-13,Breakfast,2.9
+Uptown,2026-07-13,Meals,2.0
+Uptown,2026-07-14,ALL,105.4
+Uptown,2026-07-14,Bakery,22.4
+Uptown,2026-07-14,Hot Coffee,16.9
+Uptown,2026-07-14,Matcha & Tea,16.1
+Uptown,2026-07-14,Cold Coffee,15.4
+Uptown,2026-07-14,Cold Drinks,10.5
+Uptown,2026-07-14,Sandwiches,9.7
+Uptown,2026-07-14,Desserts,7.2
+Uptown,2026-07-14,Breakfast,4.2
+Uptown,2026-07-14,Meals,3.0
