@@ -1,0 +1,31 @@
+Branch,Category,expected_units
+Garden,ALL,130.0
+Garden,Bakery,26.8
+Garden,Hot Coffee,20.2
+Garden,Cold Coffee,19.3
+Garden,Matcha & Tea,17.9
+Garden,Desserts,14.1
+Garden,Cold Drinks,12.9
+Garden,Sandwiches,8.7
+Garden,Breakfast,6.1
+Garden,Meals,3.9
+Harbour,ALL,189.4
+Harbour,Bakery,44.3
+Harbour,Hot Coffee,30.3
+Harbour,Cold Coffee,29.6
+Harbour,Matcha & Tea,24.9
+Harbour,Cold Drinks,18.9
+Harbour,Desserts,15.7
+Harbour,Sandwiches,12.2
+Harbour,Breakfast,8.1
+Harbour,Meals,5.5
+Uptown,ALL,76.4
+Uptown,Bakery,16.0
+Uptown,Hot Coffee,12.0
+Uptown,Matcha & Tea,11.4
+Uptown,Cold Coffee,11.0
+Uptown,Cold Drinks,8.2
+Uptown,Sandwiches,6.5
+Uptown,Desserts,5.7
+Uptown,Breakfast,3.3
+Uptown,Meals,2.3

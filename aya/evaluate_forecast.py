@@ -44,23 +44,7 @@ for name, al in [("train alpha", valid["Branch"].astype(str).map(alpha)), ("vali
 imp = pd.Series(model.booster.feature_importance("gain"), index=model.booster.feature_name()).sort_values(ascending=False)
 print("\nTop features (gain share):\n", (imp / imp.sum()).head(10).round(3).to_string())
 
-# Step 4: prep policies on validation (alpha from validation residuals; final run uses it on test).
-from inventory import critical_ratio, recommend, simulate, summarize  # noqa: E402
-
-valid["prep_naive"] = valid["naive"]
-valid["prep_mean"] = valid["lgbm"].round()
-valid["prep_nb"] = recommend(valid, "lgbm", a)
-print("\nCritical ratio by class:\n", critical_ratio(valid).groupby(valid["shelf_class"], observed=True).describe()[["min", "50%", "max"]].round(2))
-rows = []
-for policy in ["prep_naive", "prep_mean", "prep_nb"]:
-    s = summarize(simulate(valid, policy), ["shelf_class"])
-    s.loc["ALL"] = s.sum(numeric_only=True)
-    s.loc["ALL", "service_level"] = s.loc["ALL", "sold"] / (s.loc["ALL", "sold"] + s.loc["ALL", "missed"])
-    s["policy"] = policy
-    rows.append(s.reset_index())
-print(pd.concat(rows).set_index(["policy", "shelf_class"]).round(2).to_string())
-
-# Step 5: anomaly detection on validation, plus synthetic injection test.
+# Step 4: anomaly detection on validation, plus synthetic injection test.
 from anomaly import alerts, inject, inject_sustained, score_categories, score_products, score_sustained  # noqa: E402
 
 prod = score_products(valid, "lgbm", a)

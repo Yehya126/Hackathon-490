@@ -101,44 +101,15 @@
       }
     }
   },
-  "p10_p90_coverage": {
+  "branch_daily_total_wape": {
+    "Garden": 0.106,
+    "Harbour": 0.069,
+    "Uptown": 0.164
+  },
+  "alert_spread_check_p10_p90_coverage": {
     "Garden": 0.887,
     "Harbour": 0.892,
     "Uptown": 0.928
-  },
-  "inventory_totals": {
-    "Same weekday last week": {
-      "profit": 14002.9,
-      "waste_cost": 4236.5,
-      "missed_profit": 9204.6,
-      "sold": 5437.0,
-      "missed": 2735.0
-    },
-    "Forecast mean": {
-      "profit": 17639.9,
-      "waste_cost": 3012.9,
-      "missed_profit": 6791.2,
-      "sold": 6167.0,
-      "missed": 2005.0
-    },
-    "Recommended (NB quantile)": {
-      "profit": 20278.0,
-      "waste_cost": 3362.1,
-      "missed_profit": 3803.9,
-      "sold": 7074.0,
-      "missed": 1098.0
-    },
-    "Recommended + fresh two batches": {
-      "profit": 20533.7,
-      "waste_cost": 3877.3,
-      "missed_profit": 3033.0,
-      "sold": 7293.0,
-      "missed": 879.0
-    }
-  },
-  "two_batch": {
-    "cutoff_hour": 15,
-    "morning_level": 0.9
   },
   "alerts": {
     "count": 57,
