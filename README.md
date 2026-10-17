@@ -44,6 +44,18 @@ it does not train models. Simply opening the website uses the existing `data.js`
 
 Each folder's README explains how to run it.
 
+## How the decisions were generated
+
+Outputs from Marketing Expert, Merchandise, Pricing Optimization and Branch
+Analysis were provided to an LLM (Codex) for review. The LLM used this evidence
+to generate the proposed decisions shown on the website, including supporting
+reasons, limitations and suggested pilot steps.
+
+These recommendations are saved in `interface/manual_decisions.js`. They were
+generated during an assisted review, not by a live LLM service or the untrained
+PPO decision engine in `decision-model/`. They are proposals for the owner to
+review; no prices or business operations were changed automatically.
+
 ## Data
 
 - `stories_transactions.csv` — original data. Do not edit.

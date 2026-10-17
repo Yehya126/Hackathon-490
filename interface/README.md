@@ -1,5 +1,12 @@
 # Stories Studio
 
+The Decisions page shows LLM-generated recommendations: Codex reviewed the
+outputs of Marketing Expert, Merchandise, Pricing Optimization and Branch
+Analysis and proposed actions with source references, assumptions and pilot
+steps. These are saved in `manual_decisions.js`; they are not live LLM responses
+or PPO output. Importing Yehya's actual decisions replaces this temporary view.
+Do not treat scenario profit gains as measured outcomes.
+
 **Website entry point: `interface/index.html`.**
 
 From the repository root, run `python start_website.py`, then open
