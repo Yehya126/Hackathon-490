@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 from dataclasses import dataclass
+from math import isfinite
 from typing import Any, Callable
 
 import numpy as np
@@ -43,6 +44,8 @@ class EnvironmentConfig:
     planning_horizon_weeks: int = 8
     max_new_actions_per_week: int = 3
     minimum_actions_before_stop: int = 0
+    require_positive_marginal_net_profit: bool = False
+    minimum_marginal_net_profit_usd: float = 0.0
     seed: int = 42
 
     def __post_init__(self) -> None:
@@ -52,6 +55,13 @@ class EnvironmentConfig:
             raise ValueError("minimum_actions_before_stop must be nonnegative")
         if self.minimum_actions_before_stop > self.max_new_actions_per_week:
             raise ValueError("minimum_actions_before_stop cannot exceed max_new_actions_per_week")
+        if not isinstance(self.require_positive_marginal_net_profit, bool):
+            raise ValueError("require_positive_marginal_net_profit must be boolean")
+        if (
+            not isfinite(self.minimum_marginal_net_profit_usd)
+            or self.minimum_marginal_net_profit_usd < 0
+        ):
+            raise ValueError("minimum_marginal_net_profit_usd must be finite and nonnegative")
 
 
 ContextProvider = Callable[[BusinessState], ProposalContext]
@@ -113,16 +123,68 @@ class WeeklyDecisionEnv(_EnvironmentBase):
         self._pool: CandidatePool | None = None
         self._selected: list[CandidateAction] = []
         self._week_index = 0
+        self._profitability_rejected_count = 0
+        self._candidate_marginal_net_profit_usd: tuple[float, ...] = ()
+
+    def _filter_profitable_candidates(self, pool: CandidatePool) -> CandidatePool:
+        """Keep only candidates with positive marginal portfolio net profit.
+
+        Each candidate is evaluated jointly with the actions already selected
+        for the week. The paired simulator scenario and seed are identical for
+        the current and augmented portfolio.
+        """
+
+        assert self._state is not None
+        if not self.config.require_positive_marginal_net_profit:
+            self._profitability_rejected_count = 0
+            self._candidate_marginal_net_profit_usd = ()
+            return pool
+        scenario = self.scenario_provider(self._state, self._week_index)
+        seed = self._episode_seed + self._week_index
+        current = compare_portfolio(
+            self.simulator,
+            self._state,
+            tuple(self._selected),
+            scenario,
+            seed,
+            self.reward_config,
+        )
+        kept: list[CandidateAction] = []
+        marginals: list[float] = []
+        for candidate in pool.candidates:
+            augmented = compare_portfolio(
+                self.simulator,
+                self._state,
+                tuple((*self._selected, candidate)),
+                scenario,
+                seed,
+                self.reward_config,
+            )
+            marginal = (
+                augmented.net_incremental_profit_usd
+                - current.net_incremental_profit_usd
+            )
+            if marginal > self.config.minimum_marginal_net_profit_usd:
+                kept.append(candidate)
+                marginals.append(marginal)
+        self._profitability_rejected_count = len(pool.candidates) - len(kept)
+        self._candidate_marginal_net_profit_usd = tuple(marginals)
+        return CandidatePool(
+            candidates=tuple(kept),
+            coverage=pool.coverage,
+            rejected_count=pool.rejected_count + self._profitability_rejected_count,
+        )
 
     def _refresh(self) -> None:
         assert self._state is not None
         self._context = self.context_provider(self._state)
-        self._pool = self.candidate_generator.generate(
+        generated_pool = self.candidate_generator.generate(
             self._state,
             self._context,
             tuple(self._selected),
             step_number=self._week_index * self.config.max_new_actions_per_week + len(self._selected),
         )
+        self._pool = self._filter_profitable_candidates(generated_pool)
 
     def _observation(self):
         assert self._state is not None and self._context is not None and self._pool is not None
@@ -154,6 +216,8 @@ class WeeklyDecisionEnv(_EnvironmentBase):
         return self._observation(), {
             "week_start": self._state.week_start.isoformat(),
             "candidate_coverage": self._pool.coverage if self._pool else (),
+            "profitability_rejected_count": self._profitability_rejected_count,
+            "candidate_marginal_net_profit_usd": self._candidate_marginal_net_profit_usd,
             "simulator_support": getattr(self.simulator, "label", "action_conditioned"),
         }
 
@@ -197,6 +261,8 @@ class WeeklyDecisionEnv(_EnvironmentBase):
             "calendar_advanced": bool(stopped or reached_limit),
             "selected_action_count": len(comparison.new_actions) if comparison else len(self._selected),
             "portfolio_comparison": comparison,
+            "profitability_rejected_count": self._profitability_rejected_count,
+            "candidate_marginal_net_profit_usd": self._candidate_marginal_net_profit_usd,
         }
         return self._observation() if not terminated else self._terminal_observation(), reward, terminated, False, info
 

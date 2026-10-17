@@ -210,6 +210,8 @@ def make_environment(
             planning_horizon_weeks=1,
             max_new_actions_per_week=10,
             minimum_actions_before_stop=3,
+            require_positive_marginal_net_profit=True,
+            minimum_marginal_net_profit_usd=0.0,
             seed=seed,
         ),
     )
@@ -300,6 +302,11 @@ def main() -> None:
         "training_timesteps": 8192,
         "reward_scale_train_only_usd": scale,
         "minimum_actions_before_stop": 3,
+        "profitability_gate": {
+            "enabled": True,
+            "minimum_marginal_net_profit_usd": 0.0,
+            "stop_early_when_no_profitable_candidate_remains": True,
+        },
         "maximum_actions_per_week": 10,
         "assumptions": assumptions,
         "training_candidate_source": "Marketing_Expert TRAIN-only product_candidate_model",

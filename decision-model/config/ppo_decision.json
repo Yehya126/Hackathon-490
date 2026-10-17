@@ -20,6 +20,9 @@
     "positive_final_price": true,
     "valid_discount_rate": true,
     "no_conflicting_actions": true,
+    "require_positive_marginal_net_profit": true,
+    "minimum_marginal_net_profit_usd": 0.0,
+    "stop_early_when_no_profitable_candidate_remains": true,
     "action_budget_usd": null,
     "require_human_approval": true
   },

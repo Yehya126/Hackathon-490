@@ -24,6 +24,8 @@ class DecisionModelConfig:
     risk_aversion_lambda: float
     registry_file: Path
     require_human_approval: bool
+    require_positive_marginal_net_profit: bool
+    minimum_marginal_net_profit_usd: float
     raw: Mapping[str, Any]
 
 
@@ -62,6 +64,20 @@ def load_config(path: str | Path) -> DecisionModelConfig:
     constraints = raw["constraints"]
     if not isinstance(constraints, dict) or not isinstance(constraints.get("require_human_approval"), bool):
         raise ConfigurationError("constraints.require_human_approval must be boolean")
+    require_positive_profit = constraints.get("require_positive_marginal_net_profit", False)
+    if not isinstance(require_positive_profit, bool):
+        raise ConfigurationError(
+            "constraints.require_positive_marginal_net_profit must be boolean"
+        )
+    minimum_marginal_profit = constraints.get("minimum_marginal_net_profit_usd", 0.0)
+    if (
+        isinstance(minimum_marginal_profit, bool)
+        or not isinstance(minimum_marginal_profit, (int, float))
+        or minimum_marginal_profit < 0
+    ):
+        raise ConfigurationError(
+            "constraints.minimum_marginal_net_profit_usd must be nonnegative"
+        )
     registry_path = Path(raw["registry_file"])
     if not registry_path.is_absolute():
         registry_path = source.parent.parent / registry_path
@@ -76,5 +92,7 @@ def load_config(path: str | Path) -> DecisionModelConfig:
         risk_aversion_lambda=float(raw["risk_aversion_lambda"]),
         registry_file=registry_path.resolve(),
         require_human_approval=constraints["require_human_approval"],
+        require_positive_marginal_net_profit=require_positive_profit,
+        minimum_marginal_net_profit_usd=float(minimum_marginal_profit),
         raw=raw,
     )

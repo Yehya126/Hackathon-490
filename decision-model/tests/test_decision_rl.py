@@ -368,6 +368,53 @@ class EnvironmentTests(unittest.TestCase):
         config = load_config(ROOT / "config" / "ppo_decision.json")
         self.assertEqual(config.minimum_actions_before_stop, 3)
         self.assertEqual(config.max_new_actions_per_week, 10)
+        self.assertTrue(config.require_positive_marginal_net_profit)
+        self.assertEqual(config.minimum_marginal_net_profit_usd, 0.0)
+
+    def test_profitability_gate_rejects_loss_and_unlocks_stop_before_minimum(self) -> None:
+        registry = load_decisions(REGISTRY_PATH)
+        target = Target(branch_id="Garden", product_id="Iced Latte")
+        context = ProposalContext(
+            targets_by_scope={"product": (target,)},
+            integer_domains={
+                ("price_change", "change_pct"): IntegerDomain(7, 7, "toy"),
+            },
+            sourced_parameter_values={
+                ("price_change", "change_pct", target): (7,),
+            },
+            evidence_by_target={
+                ("price_change", "product", target): price_evidence(7),
+            },
+            implementation_costs_usd={
+                ("price_change", "product", target): 500.0,
+            },
+        )
+        simulator = SyntheticSimulator(SyntheticResponseProfile(price_elasticity=-1.0))
+        validator = ActionValidator(registry, simulator.supported_capabilities, {})
+        generator = CandidateGenerator(registry, validator, proposals_per_step=4, seed=3)
+        encoder = ObservationEncoder(ObservationSchema(1, 4, 2))
+        env = WeeklyDecisionEnv(
+            initial_state_provider=product_state,
+            context_provider=lambda _state: context,
+            scenario_provider=lambda _state, week: {"id": f"profit-gate-{week}"},
+            simulator=simulator,
+            candidate_generator=generator,
+            observation_encoder=encoder,
+            reward_config=RewardConfig(scale=100.0),
+            config=EnvironmentConfig(
+                planning_horizon_weeks=1,
+                max_new_actions_per_week=10,
+                minimum_actions_before_stop=3,
+                require_positive_marginal_net_profit=True,
+            ),
+        )
+        _observation, info = env.reset(seed=7)
+        self.assertEqual(info["profitability_rejected_count"], 1)
+        self.assertEqual(env.action_masks().tolist(), [True, False, False, False, False])
+        _observation, reward, terminated, _truncated, step_info = env.step(0)
+        self.assertTrue(terminated)
+        self.assertEqual(reward, 0.0)
+        self.assertEqual(step_info["selected_action_count"], 0)
 
 
 class SplitGuardTests(unittest.TestCase):
