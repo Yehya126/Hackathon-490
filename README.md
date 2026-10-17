@@ -18,12 +18,19 @@ Run from the repository root:
 ```powershell
 $env:PYTHONPATH = "src"
 python scripts/prepare_data.py
+python scripts/create_team_workspaces.py
 python -m unittest discover -s tests -v
 ```
 
-No split files are written. All models should call the same splitter once and
-reuse the returned transaction partitions. The test partition must remain
-untouched until final evaluation.
+`prepare_data.py` keeps splits in memory. All models should reuse those same
+transaction memberships. The test partition must remain untouched until final
+evaluation.
+
+For team development, `create_team_workspaces.py` writes byte-identical split
+files under `mohammad/data`, `yehya/data`, and `aya/data`. Each workspace has a
+checksum manifest. These files retain the original fields and a `Source Row ID`
+for alignment. Association models must use only product-presence baskets; IDs,
+dates, branches, quantities, and financial columns are not FP-Growth inputs.
 
 ## Structure
 
@@ -34,7 +41,9 @@ src/coffee_recommender/
   eda/profile.py          # non-mutating EDA summaries
   features/baskets.py     # training-fitted basket/profit transformers
 scripts/prepare_data.py   # executable preparation workflow
+scripts/create_team_workspaces.py # identical persisted team splits
 tests/                    # leakage, alignment, and transformer tests
+mohammad/, yehya/, aya/   # team workspaces with matching data splits
 ```
 
 FP-Growth will later consume only the boolean basket matrices. Identifiers,
