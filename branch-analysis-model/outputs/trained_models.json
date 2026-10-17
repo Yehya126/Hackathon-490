@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "generated_at_utc": "2026-10-17T13:58:08.494669+00:00",
+  "generated_at_utc": "2026-10-17T14:11:37.446807+00:00",
   "training_split": "train",
   "primary_method": "huber",
   "structural_fingerprint": "0016454a9deb4e80bfb7ba1b2412682a0019af82990c44e299e2a43d44087e1f",

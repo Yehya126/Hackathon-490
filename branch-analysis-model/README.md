@@ -29,7 +29,9 @@ python branch-analysis-model/main.py
 The primary downstream artifacts are:
 
 - `outputs/predictor_output.json`: versioned JSON payload for a future decision model.
+- `outputs/decision_model_input.json`: compact nested evidence contract intended for the downstream decision model.
 - `outputs/predictor_output.csv`: the same 135 branch-product records in tabular form.
+- `outputs/cleaned_predictor_results.csv`: clean flat handoff table.
 - `outputs/trained_models.json`: training-fitted Huber and OLS parameters and residuals.
 - `outputs/holdout_predictions.csv`: validation and test predictions for both methods.
 - `outputs/holdout_evaluation.json`: leakage checks and validation/test metrics.
@@ -46,6 +48,11 @@ Each predictor record contains financial context plus:
 
 It intentionally contains no recommendation, action, threshold, priority score,
 or management status.
+
+`decision_model_input.json` groups each record into `entity`, `observation`,
+`model_expectation`, `residual_signals`, and `prediction_quality`. Stable
+`evidence_id` values allow a later decision model to track the same
+branch-product evidence across runs.
 
 ## Interpretation
 

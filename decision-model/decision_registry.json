@@ -1,265 +1,180 @@
 [
   {
-    "id": "price_change",
-    "label": "Adjust listed selling price",
+    "id": "branch_price_variance_review",
+    "label": "Review a branch-product price difference",
     "enabled": true,
     "scopes": [
-      "product",
-      "category",
-      "branch",
-      "company"
+      "product"
+    ],
+    "parameters": [],
+    "simulator_capability": "branch_variance_review_workflow",
+    "interaction_group": "pricing_review",
+    "executor": "branch_price_variance_review",
+    "decision_kind": "review",
+    "required_target_fields": [
+      "branch_id",
+      "product_id"
+    ],
+    "evidence_sources": [
+      "branch_difference_analysis"
+    ],
+    "required_evidence": [
+      "observation.listed_unit_price_usd",
+      "model_expectation.expected_listed_unit_price_usd",
+      "residual_signals.price_residual_pct",
+      "prediction_quality.complete"
+    ],
+    "guardrails": [
+      "A difference is a review signal, not proof that either branch has the correct price.",
+      "Do not convert this review directly into a price change without within-store price/performance evidence.",
+      "Do not claim a demand, revenue, or profit effect from branch differences alone."
+    ]
+  },
+  {
+    "id": "branch_cost_variance_review",
+    "label": "Review a branch-product cost difference",
+    "enabled": true,
+    "scopes": [
+      "product"
+    ],
+    "parameters": [],
+    "simulator_capability": "branch_variance_review_workflow",
+    "interaction_group": "cost_review",
+    "executor": "branch_cost_variance_review",
+    "decision_kind": "review",
+    "required_target_fields": [
+      "branch_id",
+      "product_id"
+    ],
+    "evidence_sources": [
+      "branch_difference_analysis"
+    ],
+    "required_evidence": [
+      "observation.unit_cost_usd",
+      "model_expectation.expected_unit_cost_usd",
+      "residual_signals.cost_residual_pct",
+      "prediction_quality.complete"
+    ],
+    "guardrails": [
+      "A cost difference authorizes investigation only; it does not establish a supplier or procurement problem.",
+      "Do not invent supplier, inventory, waste, preparation, or staffing explanations.",
+      "Do not represent a possible cost reduction as achieved or guaranteed."
+    ]
+  },
+  {
+    "id": "price_change",
+    "label": "Adjust a product price within a branch",
+    "enabled": true,
+    "scopes": [
+      "product"
     ],
     "parameters": [
       {
         "name": "change_pct",
         "dtype": "int",
         "unit": "percent",
-        "validation": "resulting_price_must_be_positive_and_within_simulator_support"
-      },
-      {
-        "name": "duration_weeks",
-        "dtype": "int",
-        "unit": "weeks",
-        "validation": "positive"
+        "validation": "resulting_price_must_be_positive_and_within_simulator_support",
+        "value_source": "store_price_performance_analysis"
       }
     ],
     "simulator_capability": "action_conditioned_price_and_demand",
     "interaction_group": "pricing",
-    "executor": "price_change"
-  },
-  {
-    "id": "discount_change",
-    "label": "Adjust discount policy",
-    "enabled": true,
-    "scopes": [
-      "product",
-      "category",
-      "branch"
+    "executor": "price_change",
+    "decision_kind": "intervention",
+    "required_target_fields": [
+      "branch_id",
+      "product_id"
     ],
-    "parameters": [
-      {
-        "name": "change_percentage_points",
-        "dtype": "int",
-        "unit": "percentage_points",
-        "validation": "final_discount_between_0_and_100"
-      },
-      {
-        "name": "duration_weeks",
-        "dtype": "int",
-        "unit": "weeks",
-        "validation": "positive"
-      }
+    "evidence_sources": [
+      "store_price_performance_analysis"
     ],
-    "simulator_capability": "action_conditioned_discount_and_demand",
-    "interaction_group": "discount",
-    "executor": "discount_change"
+    "optional_context_sources": [
+      "branch_difference_analysis"
+    ],
+    "required_evidence": [
+      "branch_id",
+      "product_id",
+      "current_price",
+      "recommended_change_pct",
+      "within_store_performance",
+      "evidence_period",
+      "confidence_or_uncertainty"
+    ],
+    "guardrails": [
+      "The target must identify both a branch and a product; company-wide and category-wide price changes are not allowed.",
+      "The change percentage must come from the store price/performance model and must not be invented by the decision model.",
+      "The action is eligible for optimization only when an action-conditioned evaluator models both price and demand response.",
+      "Branch differences may provide context but cannot independently authorize the price change."
+    ]
   },
   {
     "id": "bundle_create",
-    "label": "Introduce a product bundle",
-    "enabled": true,
-    "scopes": [
-      "branch",
-      "category"
-    ],
-    "parameters": [
-      {
-        "name": "bundle_discount_pct",
-        "dtype": "int",
-        "unit": "percent",
-        "validation": "between_0_and_100"
-      },
-      {
-        "name": "duration_weeks",
-        "dtype": "int",
-        "unit": "weeks",
-        "validation": "positive"
-      }
-    ],
-    "simulator_capability": "bundle_uptake_substitution_and_price_response",
-    "interaction_group": "bundle",
-    "executor": "bundle_create"
-  },
-  {
-    "id": "bundle_modify",
-    "label": "Modify an existing bundle",
+    "label": "Recommend a product combination as a bundle",
     "enabled": true,
     "scopes": [
       "branch"
     ],
-    "parameters": [
-      {
-        "name": "bundle_discount_pct",
-        "dtype": "int",
-        "unit": "percent",
-        "validation": "between_0_and_100"
-      },
-      {
-        "name": "duration_weeks",
-        "dtype": "int",
-        "unit": "weeks",
-        "validation": "positive"
-      }
-    ],
+    "parameters": [],
     "simulator_capability": "bundle_uptake_substitution_and_price_response",
-    "interaction_group": "bundle",
-    "executor": "bundle_modify"
+    "interaction_group": "product_combination",
+    "executor": "bundle_create",
+    "decision_kind": "recommendation",
+    "required_target_fields": [
+      "branch_id",
+      "bundle_product_ids"
+    ],
+    "evidence_sources": [
+      "product_combination_recommender"
+    ],
+    "required_evidence": [
+      "support",
+      "confidence",
+      "lift",
+      "gross_profit_usd",
+      "assessment"
+    ],
+    "guardrails": [
+      "Only products explicitly returned together by the combination model may be bundled.",
+      "Do not invent a bundle discount, bundle price, uptake rate, duration, or profit forecast.",
+      "Historical combination frequency and gross profit do not prove incremental bundle demand or causal profitability.",
+      "The recommendation must remain owner-review-only unless a bundle-response evaluator is available."
+    ]
   },
   {
     "id": "cross_sell",
-    "label": "Cross-sell an additional product",
+    "label": "Recommend products together for cross-selling",
     "enabled": true,
     "scopes": [
-      "product",
       "branch"
     ],
-    "parameters": [
-      {
-        "name": "intensity_pct",
-        "dtype": "int",
-        "unit": "percent",
-        "validation": "between_0_and_100"
-      },
-      {
-        "name": "duration_weeks",
-        "dtype": "int",
-        "unit": "weeks",
-        "validation": "positive"
-      }
-    ],
+    "parameters": [],
     "simulator_capability": "cross_sell_response_and_cannibalization",
-    "interaction_group": "merchandising",
-    "executor": "cross_sell"
-  },
-  {
-    "id": "promotion",
-    "label": "Promote a product or category",
-    "enabled": true,
-    "scopes": [
-      "product",
-      "category",
-      "branch"
+    "interaction_group": "product_combination",
+    "executor": "cross_sell",
+    "decision_kind": "recommendation",
+    "required_target_fields": [
+      "branch_id",
+      "bundle_product_ids"
     ],
-    "parameters": [
-      {
-        "name": "intensity_pct",
-        "dtype": "int",
-        "unit": "percent",
-        "validation": "between_0_and_100"
-      },
-      {
-        "name": "duration_weeks",
-        "dtype": "int",
-        "unit": "weeks",
-        "validation": "positive"
-      }
+    "evidence_sources": [
+      "product_combination_recommender"
     ],
-    "simulator_capability": "promotion_response_and_cost",
-    "interaction_group": "merchandising",
-    "executor": "promotion"
-  },
-  {
-    "id": "assortment_change",
-    "label": "Change products offered in branch",
-    "enabled": true,
-    "scopes": [
-      "branch",
-      "product"
+    "required_evidence": [
+      "rule_direction",
+      "support",
+      "confidence",
+      "lift",
+      "assessment"
     ],
-    "parameters": [
-      {
-        "name": "duration_weeks",
-        "dtype": "int",
-        "unit": "weeks",
-        "validation": "positive"
-      }
-    ],
-    "simulator_capability": "assortment_substitution_and_supply",
-    "interaction_group": "assortment",
-    "executor": "assortment_change"
-  },
-  {
-    "id": "preparation_change",
-    "label": "Change prepared quantity",
-    "enabled": true,
-    "scopes": [
-      "branch",
-      "product"
-    ],
-    "parameters": [
-      {
-        "name": "units_delta",
-        "dtype": "int",
-        "unit": "units",
-        "validation": "final_preparation_nonnegative"
-      },
-      {
-        "name": "duration_weeks",
-        "dtype": "int",
-        "unit": "weeks",
-        "validation": "positive"
-      }
-    ],
-    "simulator_capability": "inventory_waste_and_stockout",
-    "interaction_group": "inventory",
-    "executor": "preparation_change"
-  },
-  {
-    "id": "staffing_change",
-    "label": "Change staffing level",
-    "enabled": true,
-    "scopes": [
-      "branch"
-    ],
-    "parameters": [
-      {
-        "name": "staff_delta",
-        "dtype": "int",
-        "unit": "people",
-        "validation": "resulting_staff_nonnegative"
-      },
-      {
-        "name": "duration_weeks",
-        "dtype": "int",
-        "unit": "weeks",
-        "validation": "positive"
-      }
-    ],
-    "simulator_capability": "service_capacity_and_labor_cost",
-    "interaction_group": "staffing",
-    "executor": "staffing_change"
-  },
-  {
-    "id": "procurement_scenario",
-    "label": "Investigate feasible procurement reduction",
-    "enabled": true,
-    "scopes": [
-      "product",
-      "category",
-      "branch",
-      "company"
-    ],
-    "parameters": [
-      {
-        "name": "target_cost_reduction_pct",
-        "dtype": "int",
-        "unit": "percent",
-        "validation": "between_0_and_100_and_feasible"
-      },
-      {
-        "name": "duration_weeks",
-        "dtype": "int",
-        "unit": "weeks",
-        "validation": "positive"
-      }
-    ],
-    "simulator_capability": "validated_operational_cost_intervention",
-    "interaction_group": "procurement",
-    "executor": "procurement_scenario"
+    "guardrails": [
+      "The source and add-on products must be an explicit rule returned by the combination model.",
+      "Do not invent campaign intensity, duration, acceptance, cannibalization, or financial impact.",
+      "The recommendation must remain owner-review-only unless a cross-sell response evaluator is available."
+    ]
   },
   {
     "id": "stop",
-    "label": "Stop adding decisions for this week",
+    "label": "Make no additional supported decision",
     "enabled": true,
     "scopes": [
       "company"
@@ -267,6 +182,12 @@
     "parameters": [],
     "simulator_capability": "none_required",
     "interaction_group": "none",
-    "executor": "stop"
+    "executor": "stop",
+    "decision_kind": "control",
+    "evidence_sources": [],
+    "required_evidence": [],
+    "guardrails": [
+      "Use this when none of the supplied model evidence supports another allowed decision."
+    ]
   }
 ]

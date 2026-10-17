@@ -11,7 +11,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from src.data_processing import DataValidationError, append_new_transactions, load_transaction_data, validate_transactions
 from src.feature_engineering import aggregate_features, branch_product_features, matched_product_table
 from src.fixed_effects import compare_models, evaluate_fixed_effects, fit_fixed_effects
-from src.pipeline import PREDICTOR_SCHEMA_VERSION, _predictor_records
+from src.pipeline import PREDICTOR_SCHEMA_VERSION, _predictor_records, build_decision_model_payload
 
 
 def transaction_frame() -> pd.DataFrame:
@@ -116,3 +116,32 @@ def test_predictor_contract_is_decision_neutral():
     assert {"predicted_unit_cost", "predicted_listed_unit_price", "cost_residual_pct", "price_residual_pct"}.issubset(output)
     forbidden = {"recommendation", "priority_score", "action", "status"}
     assert forbidden.isdisjoint(output.columns)
+
+
+def test_decision_input_contract_contains_evidence_but_no_decisions():
+    panel = branch_product_features(typed_frame())
+    models = {
+        "cost": compare_models(panel, "unit_cost"),
+        "price": compare_models(panel, "listed_unit_price"),
+    }
+    _, cost = evaluate_fixed_effects(models["cost"]["huber"], panel)
+    _, price = evaluate_fixed_effects(models["price"]["huber"], panel)
+    output = _predictor_records(panel, cost, price)
+    metric, _ = evaluate_fixed_effects(models["cost"]["huber"], panel)
+    price_metric, _ = evaluate_fixed_effects(models["price"]["huber"], panel)
+    report = {"date_min": "2026-01-01", "date_max": "2026-03-01", "rows": 12, "transactions": 12}
+    evaluation = {
+        "validation_metrics": {"cost": {"huber": metric}, "price": {"huber": price_metric}},
+        "test_metrics": {"cost": {"huber": metric}, "price": {"huber": price_metric}},
+        "split_validation": {"test": report},
+    }
+    payload = build_decision_model_payload(output, models, evaluation, "2026-01-01T00:00:00+00:00")
+    assert payload["contains_decisions"] is False
+    assert len(payload["records"]) == 4
+    assert payload["records"][0]["evidence_id"].startswith("EVD-")
+    assert set(payload["records"][0]) == {
+        "evidence_id", "entity", "observation", "model_expectation", "residual_signals", "prediction_quality"
+    }
+    serialized = str(payload).lower()
+    assert "recommended_action" not in serialized
+    assert "priority_score" not in serialized

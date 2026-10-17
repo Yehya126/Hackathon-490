@@ -1,0 +1,45 @@
+{
+  "frequency": "weekly",
+  "planning_horizon_weeks": 8,
+  "max_new_actions_per_week": 3,
+  "candidate_proposals_per_step": 64,
+  "integer_parameter_proposals": {
+    "method": "dynamic_feasible_sampling",
+    "static_value_grids": "forbidden",
+    "exploration": "stratified_plus_local_refinement",
+    "only_simulator_supported_values": true
+  },
+  "discount_factor_gamma": 0.99,
+  "reward_objective": "incremental_net_gross_profit",
+  "track_expected_revenue_as_primary_report_metric": true,
+  "reward_scale": null,
+  "risk_aversion_lambda": 0.0,
+  "registry_file": "config/decisions.json",
+  "constraints": {
+    "positive_final_price": true,
+    "valid_discount_rate": true,
+    "no_conflicting_actions": true,
+    "action_budget_usd": null,
+    "require_human_approval": true
+  },
+  "training": {
+    "enabled": false,
+    "split_manifest": "config/split_manifest.json",
+    "seed": 42,
+    "smoke_test_timesteps": 1000,
+    "full_training_timesteps": 100000,
+    "tuning_split": "validation",
+    "test_split": "test",
+    "forbid_test_in_training": true
+  },
+  "simulator": {
+    "mode": "unconfigured",
+    "report_synthetic_assumptions": true,
+    "require_action_conditioned_demand": true
+  },
+  "inputs": {
+    "business_state_provider": null,
+    "specialist_outputs": null,
+    "action_conditioned_simulator": null
+  }
+}

@@ -17,6 +17,7 @@ from .visualization import generate_predictor_report
 
 
 PREDICTOR_SCHEMA_VERSION = "1.0.0"
+DECISION_INPUT_SCHEMA_VERSION = "1.0.0"
 
 
 def _write_json(path: Path, value: Any) -> None:
@@ -64,6 +65,87 @@ def _predictor_records(
     output.insert(0, "schema_version", PREDICTOR_SCHEMA_VERSION)
     output.insert(1, "data_split", "test")
     return output.sort_values(keys).reset_index(drop=True)
+
+
+def build_decision_model_payload(
+    predictor: pd.DataFrame, models: dict[str, Any], evaluation: dict[str, Any], generated_at: str,
+) -> dict[str, Any]:
+    """Create a compact, versioned evidence contract without making decisions."""
+    records: list[dict[str, Any]] = []
+    for row in predictor.to_dict("records"):
+        evidence_key = f"{row['Branch']}\x1f{row['Product']}"
+        evidence_id = "EVD-" + hashlib.sha256(evidence_key.encode("utf-8")).hexdigest()[:16].upper()
+        records.append({
+            "evidence_id": evidence_id,
+            "entity": {
+                "branch": row["Branch"], "product": row["Product"], "category": row["Category"],
+            },
+            "observation": {
+                "data_split": row["data_split"], "periods_observed": int(row["periods"]),
+                "units": int(row["total_units"]), "revenue_usd": float(row["total_revenue"]),
+                "cogs_usd": float(row["total_cogs"]), "gross_profit_usd": float(row["total_gross_profit"]),
+                "gross_margin": float(row["gross_margin"]),
+                "listed_unit_price_usd": float(row["listed_unit_price"]),
+                "unit_cost_usd": float(row["unit_cost"]),
+                "realized_revenue_per_unit_usd": float(row["realized_revenue_per_unit"]),
+                "effective_discount_rate": float(row["effective_discount_rate"]),
+            },
+            "model_expectation": {
+                "expected_unit_cost_usd": float(row["predicted_unit_cost"]),
+                "expected_listed_unit_price_usd": float(row["predicted_listed_unit_price"]),
+            },
+            "residual_signals": {
+                "cost_log_residual": float(row["cost_log_residual"]),
+                "cost_residual_pct": float(row["cost_residual_pct"]),
+                "price_log_residual": float(row["price_log_residual"]),
+                "price_residual_pct": float(row["price_residual_pct"]),
+            },
+            "prediction_quality": {
+                "complete": bool(row["prediction_complete"]),
+                "cost_absolute_error_usd": float(row["cost_absolute_error"]),
+                "cost_absolute_percentage_error": float(row["cost_absolute_percentage_error"]),
+                "price_absolute_error_usd": float(row["price_absolute_error"]),
+                "price_absolute_percentage_error": float(row["price_absolute_percentage_error"]),
+            },
+        })
+    primary_metrics = {
+        split: {
+            target: evaluation[f"{split}_metrics"][target]["huber"]
+            for target in ("cost", "price")
+        }
+        for split in ("validation", "test")
+    }
+    return {
+        "schema_name": "stories.branch_product_predictor_evidence",
+        "schema_version": DECISION_INPUT_SCHEMA_VERSION,
+        "generated_at_utc": generated_at,
+        "purpose": "Neutral predictor evidence for a downstream decision model.",
+        "contains_decisions": False,
+        "model": {
+            "method": "huber_two_way_fixed_effects", "trained_on": "train",
+            "targets": ["unit_cost_usd", "listed_unit_price_usd"],
+            "transform": "natural_log", "record_count": len(records),
+            "branch_multipliers": {
+                "cost": models["cost"]["huber"]["branch_multipliers"],
+                "price": models["price"]["huber"]["branch_multipliers"],
+            },
+            "holdout_metrics": primary_metrics,
+        },
+        "data_window": {
+            "split": "test",
+            "start_date": evaluation["split_validation"]["test"]["date_min"],
+            "end_date": evaluation["split_validation"]["test"]["date_max"],
+            "source_rows": evaluation["split_validation"]["test"]["rows"],
+            "transactions": evaluation["split_validation"]["test"]["transactions"],
+        },
+        "limitations": [
+            "Unit cost and listed price are constant within each branch-product combination in the available data.",
+            "Residuals describe deviation from the training-fitted structural expectation; they are not causal effects.",
+            "The payload contains no recommendation, action, ranking, threshold, or predicted demand response.",
+            "The test split was examined by an earlier project version, so evaluation is retrospective rather than a pristine blind test.",
+        ],
+        "records": records,
+    }
 
 
 class PredictorEngine:
@@ -206,12 +288,17 @@ class PredictorEngine:
             },
             "records": predictor_frame.to_dict("records"),
         }
+        decision_input_payload = build_decision_model_payload(
+            predictor_frame, models, evaluation, generated_at
+        )
 
         pd.concat(prediction_frames, ignore_index=True).to_csv(
             self.output_dir / "holdout_predictions.csv", index=False
         )
         predictor_frame.to_csv(self.output_dir / "predictor_output.csv", index=False)
+        predictor_frame.to_csv(self.output_dir / "cleaned_predictor_results.csv", index=False)
         _write_json(self.output_dir / "predictor_output.json", predictor_payload)
+        _write_json(self.output_dir / "decision_model_input.json", decision_input_payload)
         _write_json(self.output_dir / "trained_models.json", model_artifact)
         _write_json(self.output_dir / "holdout_evaluation.json", evaluation)
         report_path = generate_predictor_report(
@@ -225,5 +312,6 @@ class PredictorEngine:
             "decision_policy_included": False,
             "output_dir": str(self.output_dir.resolve()),
             "predictor_output": str((self.output_dir / "predictor_output.json").resolve()),
+            "decision_model_input": str((self.output_dir / "decision_model_input.json").resolve()),
             "report": str(report_path.resolve()),
         }

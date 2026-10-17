@@ -1,0 +1,5232 @@
+{
+  "schema_name": "stories.branch_product_predictor_evidence",
+  "schema_version": "1.0.0",
+  "generated_at_utc": "2026-10-17T14:11:37.446807+00:00",
+  "purpose": "Neutral predictor evidence for a downstream decision model.",
+  "contains_decisions": false,
+  "model": {
+    "method": "huber_two_way_fixed_effects",
+    "trained_on": "train",
+    "targets": [
+      "unit_cost_usd",
+      "listed_unit_price_usd"
+    ],
+    "transform": "natural_log",
+    "record_count": 135,
+    "branch_multipliers": {
+      "cost": {
+        "Garden": 1.0,
+        "Harbour": 0.6992785898872419,
+        "Uptown": 0.6710752582897647
+      },
+      "price": {
+        "Garden": 1.0,
+        "Harbour": 1.0499467276920915,
+        "Uptown": 0.9597222020438072
+      }
+    },
+    "holdout_metrics": {
+      "validation": {
+        "cost": {
+          "observations": 135,
+          "scored_observations": 135,
+          "coverage": 1.0,
+          "log_rmse": 0.0015158079264153447,
+          "log_mae": 0.0008740596318425146,
+          "rmse_original_units": 0.0019427971756439172,
+          "mae_original_units": 0.0014401498824152454,
+          "mape_pct": 0.087435047862813,
+          "r_squared_log": 0.9999942565235674,
+          "unseen_branches": [],
+          "unseen_products": []
+        },
+        "price": {
+          "observations": 135,
+          "scored_observations": 135,
+          "coverage": 1.0,
+          "log_rmse": 0.00039833496552198184,
+          "log_mae": 0.0002851295648053967,
+          "rmse_original_units": 0.0018739834951210087,
+          "mae_original_units": 0.0014372597005720968,
+          "mape_pct": 0.02851090368368318,
+          "r_squared_log": 0.9999990697391641,
+          "unseen_branches": [],
+          "unseen_products": []
+        }
+      },
+      "test": {
+        "cost": {
+          "observations": 135,
+          "scored_observations": 135,
+          "coverage": 1.0,
+          "log_rmse": 0.001515807926415336,
+          "log_mae": 0.0008740596318425072,
+          "rmse_original_units": 0.001942797175643912,
+          "mae_original_units": 0.0014401498824152422,
+          "mape_pct": 0.08743504786281266,
+          "r_squared_log": 0.9999942565235674,
+          "unseen_branches": [],
+          "unseen_products": []
+        },
+        "price": {
+          "observations": 135,
+          "scored_observations": 135,
+          "coverage": 1.0,
+          "log_rmse": 0.00039833496552197023,
+          "log_mae": 0.00028512956480539176,
+          "rmse_original_units": 0.0018739834951209788,
+          "mae_original_units": 0.001437259700572105,
+          "mape_pct": 0.028510903683683152,
+          "r_squared_log": 0.9999990697391641,
+          "unseen_branches": [],
+          "unseen_products": []
+        }
+      }
+    }
+  },
+  "data_window": {
+    "split": "test",
+    "start_date": "2026-06-09",
+    "end_date": "2026-06-30",
+    "source_rows": 7698,
+    "transactions": 5084
+  },
+  "limitations": [
+    "Unit cost and listed price are constant within each branch-product combination in the available data.",
+    "Residuals describe deviation from the training-fitted structural expectation; they are not causal effects.",
+    "The payload contains no recommendation, action, ranking, threshold, or predicted demand response.",
+    "The test split was examined by an earlier project version, so evaluation is retrospective rather than a pristine blind test."
+  ],
+  "records": [
+    {
+      "evidence_id": "EVD-C4FF1148C8718FA5",
+      "entity": {
+        "branch": "Garden",
+        "product": "Almond Croissant",
+        "category": "Bakery"
+      },
+      "observation": {
+        "data_split": "test",
+        "periods_observed": 1,
+        "units": 47,
+        "revenue_usd": 225.5,
+        "cogs_usd": 128.31,
+        "gross_profit_usd": 97.19,
+        "gross_margin": 0.43099778270509975,
+        "listed_unit_price_usd": 4.85,
+        "unit_cost_usd": 2.73,
+        "realized_revenue_per_unit_usd": 4.797872340425532,
+        "effective_discount_rate": 0.010747971046282065
+      },
+      "model_expectation": {
+        "expected_unit_cost_usd": 2.729450453216696,
+        "expected_listed_unit_price_usd": 4.850001459919292
+      },
+      "residual_signals": {
+        "cost_log_residual": 0.00020131945142431995,
+        "cost_residual_pct": 0.02013397175451015,
+        "price_log_residual": -3.010142417547712e-07,
+        "price_residual_pct": -3.010141964576718e-05
+      },
+      "prediction_quality": {
+        "complete": true,
+        "cost_absolute_error_usd": 0.0005495467833038781,
+        "cost_absolute_percentage_error": 0.00020129918802339855,
+        "price_absolute_error_usd": 1.4599192921238568e-06,
+        "price_absolute_percentage_error": 3.010142870358468e-07
+      }
+    },
+    {
+      "evidence_id": "EVD-A5B3E11EFBF5008F",
+      "entity": {
+        "branch": "Garden",
+        "product": "Americano",
+        "category": "Hot Coffee"
+      },
+      "observation": {
+        "data_split": "test",
+        "periods_observed": 1,
+        "units": 44,
+        "revenue_usd": 137.97,
+        "cogs_usd": 45.32,
+        "gross_profit_usd": 92.65,
+        "gross_margin": 0.6715227948104661,
+        "listed_unit_price_usd": 3.15,
+        "unit_cost_usd": 1.03,
+        "realized_revenue_per_unit_usd": 3.1356818181818182,
+        "effective_discount_rate": 0.004545454545454545
+      },
+      "model_expectation": {
+        "expected_unit_cost_usd": 1.0293411272125508,
+        "expected_listed_unit_price_usd": 3.1500000009723643
+      },
+      "residual_signals": {
+        "cost_log_residual": 0.0006398870019388818,
+        "cost_residual_pct": 0.06400917733011546,
+        "price_log_residual": -3.086870759005933e-10,
+        "price_residual_pct": -3.086870759005933e-08
+      },
+      "prediction_quality": {
+        "complete": true,
+        "cost_absolute_error_usd": 0.0006588727874492495,
+        "cost_absolute_percentage_error": 0.0006396823179118927,
+        "price_absolute_error_usd": 9.723644112114016e-10,
+        "price_absolute_percentage_error": 3.0868711467028624e-10
+      }
+    },
+    {
+      "evidence_id": "EVD-55C4C3A56E913133",
+      "entity": {
+        "branch": "Garden",
+        "product": "Avocado Toast",
+        "category": "Breakfast"
+      },
+      "observation": {
+        "data_split": "test",
+        "periods_observed": 1,
+        "units": 46,
+        "revenue_usd": 429.01,
+        "cogs_usd": 275.08000000000004,
+        "gross_profit_usd": 153.93,
+        "gross_margin": 0.3588028251089718,
+        "listed_unit_price_usd": 9.45,
+        "unit_cost_usd": 5.980000000000001,
+        "realized_revenue_per_unit_usd": 9.326304347826087,
+        "effective_discount_rate": 0.013089487002530467
+      },
+      "model_expectation": {
+        "expected_unit_cost_usd": 5.97769097599499,
+        "expected_listed_unit_price_usd": 9.44958321482832
+      },
+      "residual_signals": {
+        "cost_log_residual": 0.0003861989807809607,
+        "cost_residual_pct": 0.038627356520848366,
+        "price_log_residual": 4.410522359243885e-05,
+        "price_residual_pct": 0.004410619624217738
+      },
+      "prediction_quality": {
+        "complete": true,
+        "cost_absolute_error_usd": 0.0023090240050116506,
+        "cost_absolute_percentage_error": 0.0003861244155537876,
+        "price_absolute_error_usd": 0.00041678517168008966,
+        "price_absolute_percentage_error": 4.4104250971438066e-05
+      }
+    },
+    {
+      "evidence_id": "EVD-95F2A2B0DAEC2294",
+      "entity": {
+        "branch": "Garden",
+        "product": "Banana Bread",
+        "category": "Bakery"
+      },
+      "observation": {
+        "data_split": "test",
+        "periods_observed": 1,
+        "units": 61,
+        "revenue_usd": 269.65000000000003,
+        "cogs_usd": 137.25,
+        "gross_profit_usd": 132.4,
+        "gross_margin": 0.49100686074541067,
+        "listed_unit_price_usd": 4.45,
+        "unit_cost_usd": 2.25,
+        "realized_revenue_per_unit_usd": 4.420491803278689,
+        "effective_discount_rate": 0.006631055442991345
+      },
+      "model_expectation": {
+        "expected_unit_cost_usd": 2.2490219785913035,
+        "expected_listed_unit_price_usd": 4.449016196679925
+      },
+      "residual_signals": {
+        "cost_log_residual": 0.00043477068071973157,
+        "cost_residual_pct": 0.04348652071906045,
+        "price_log_residual": 0.00022110383942197664,
+        "price_residual_pct": 0.02211282846777962
+      },
+      "prediction_quality": {
+        "complete": true,
+        "cost_absolute_error_usd": 0.0009780214086965167,
+        "cost_absolute_percentage_error": 0.0004346761816428963,
+        "price_absolute_error_usd": 0.0009838033200750829,
+        "price_absolute_percentage_error": 0.00022107939776968153
+      }
+    },
+    {
+      "evidence_id": "EVD-9FA9E0C62DD8E08A",
+      "entity": {
+        "branch": "Garden",
+        "product": "Blueberry Muffin",
+        "category": "Bakery"
+      },
+      "observation": {
+        "data_split": "test",
+        "periods_observed": 1,
+        "units": 46,
+        "revenue_usd": 180.13,
+        "cogs_usd": 86.02000000000001,
+        "gross_profit_usd": 94.11,
+        "gross_margin": 0.5224560039971132,
+        "listed_unit_price_usd": 3.95,
+        "unit_cost_usd": 1.8700000000000003,
+        "realized_revenue_per_unit_usd": 3.9158695652173914,
+        "effective_discount_rate": 0.00864061640066043
+      },
+      "model_expectation": {
+        "expected_unit_cost_usd": 1.8733592284560936,
+        "expected_listed_unit_price_usd": 3.950400458563428
+      },
+      "residual_signals": {
+        "cost_log_residual": -0.0017947672947244975,
+        "cost_residual_pct": -0.17931576630189072,
+        "price_log_residual": -0.00010137677599275641,
+        "price_residual_pct": -0.010137163754109224
+      },
+      "prediction_quality": {
+        "complete": true,
+        "cost_absolute_error_usd": 0.003359228456093266,
+        "cost_absolute_percentage_error": 0.0017963788535258105,
+        "price_absolute_error_usd": 0.0004004585634276303,
+        "price_absolute_percentage_error": 0.00010138191479180514
+      }
+    },
+    {
+      "evidence_id": "EVD-5FCF8F5B209C7D06",
+      "entity": {
+        "branch": "Garden",
+        "product": "Brownie",
+        "category": "Desserts"
+      },
+      "observation": {
+        "data_split": "test",
+        "periods_observed": 1,
+        "units": 90,
+        "revenue_usd": 459.41,
+        "cogs_usd": 305.1,
+        "gross_profit_usd": 154.31,
+        "gross_margin": 0.3358873337541629,
+        "listed_unit_price_usd": 5.15,
+        "unit_cost_usd": 3.39,
+        "realized_revenue_per_unit_usd": 5.104555555555556,
+        "effective_discount_rate": 0.008824163969795048
+      },
+      "model_expectation": {
+        "expected_unit_cost_usd": 3.3911681595814516,
+        "expected_listed_unit_price_usd": 5.150000005159035
+      },
+      "residual_signals": {
+        "cost_log_residual": -0.0003445304895899337,
+        "cost_residual_pct": -0.03444711457764038,
+        "price_log_residual": -1.0017544571638837e-09,
+        "price_residual_pct": -1.0017543461415812e-07
+      },
+      "prediction_quality": {
+        "complete": true,
+        "cost_absolute_error_usd": 0.0011681595814514445,
+        "cost_absolute_percentage_error": 0.0003445898470358243,
+        "price_absolute_error_usd": 5.1590349769981e-09,
+        "price_absolute_percentage_error": 1.0017543644656505e-09
+      }
+    },
+    {
+      "evidence_id": "EVD-A1E5E70DBA893379",
+      "entity": {
+        "branch": "Garden",
+        "product": "Butter Croissant",
+        "category": "Bakery"
+      },
+      "observation": {
+        "data_split": "test",
+        "periods_observed": 1,
+        "units": 113,
+        "revenue_usd": 410.96999999999997,
+        "cogs_usd": 184.19,
+        "gross_profit_usd": 226.78,
+        "gross_margin": 0.5518164342896076,
+        "listed_unit_price_usd": 3.65,
+        "unit_cost_usd": 1.63,
+        "realized_revenue_per_unit_usd": 3.6369026548672565,
+        "effective_discount_rate": 0.0035883137349981826
+      },
+      "model_expectation": {
+        "expected_unit_cost_usd": 1.6293736649267638,
+        "expected_listed_unit_price_usd": 3.648150506746823
+      },
+      "residual_signals": {
+        "cost_log_residual": 0.0003843284908910394,
+        "cost_residual_pct": 0.038440235454784144,
+        "price_log_residual": 0.000506838901461304,
+        "price_residual_pct": 0.05069673660000884
+      },
+      "prediction_quality": {
+        "complete": true,
+        "cost_absolute_error_usd": 0.0006263350732360617,
+        "cost_absolute_percentage_error": 0.0003842546461570931,
+        "price_absolute_error_usd": 0.0018494932531769592,
+        "price_absolute_percentage_error": 0.0005067104803224546
+      }
+    },
+    {
+      "evidence_id": "EVD-79744B810F261660",
+      "entity": {
+        "branch": "Garden",
+        "product": "Cappuccino",
+        "category": "Hot Coffee"
+      },
+      "observation": {
+        "data_split": "test",
+        "periods_observed": 1,
+        "units": 86,
+        "revenue_usd": 346.25,
+        "cogs_usd": 137.6,
+        "gross_profit_usd": 208.65,
+        "gross_margin": 0.6025992779783393,
+        "listed_unit_price_usd": 4.05,
+        "unit_cost_usd": 1.5999999999999999,
+        "realized_revenue_per_unit_usd": 4.026162790697675,
+        "effective_discount_rate": 0.005885730691932238
+      },
+      "model_expectation": {
+        "expected_unit_cost_usd": 1.6016506375980017,
+        "expected_listed_unit_price_usd": 4.050000002437749
+      },
+      "residual_signals": {
+        "cost_log_residual": -0.0010311167151497713,
+        "cost_residual_pct": -0.10305852969767493,
+        "price_log_residual": -6.019134080048616e-10,
+        "price_residual_pct": -6.01913519027164e-08
+      },
+      "prediction_quality": {
+        "complete": true,
+        "cost_absolute_error_usd": 0.0016506375980018806,
+        "cost_absolute_percentage_error": 0.0010316484987511754,
+        "price_absolute_error_usd": 2.437749557770985e-09,
+        "price_absolute_percentage_error": 6.019134710545643e-10
+      }
+    },
+    {
+      "evidence_id": "EVD-11CB860C6C260E14",
+      "entity": {
+        "branch": "Garden",
+        "product": "Caramel Latte",
+        "category": "Hot Coffee"
+      },
+      "observation": {
+        "data_split": "test",
+        "periods_observed": 1,
+        "units": 58,
+        "revenue_usd": 331.79,
+        "cogs_usd": 154.85999999999999,
+        "gross_profit_usd": 176.93,
+        "gross_margin": 0.5332589891196239,
+        "listed_unit_price_usd": 5.75,
+        "unit_cost_usd": 2.67,
+        "realized_revenue_per_unit_usd": 5.72051724137931,
+        "effective_discount_rate": 0.005127436281859073
+      },
+      "model_expectation": {
+        "expected_unit_cost_usd": 2.6741845474204884,
+        "expected_listed_unit_price_usd": 5.751445625384117
+      },
+      "residual_signals": {
+        "cost_log_residual": -0.001566019376219363,
+        "cost_residual_pct": -0.15647938077141266,
+        "price_log_residual": -0.0002513815113014406,
+        "price_residual_pct": -0.025134991761666114
+      },
+      "prediction_quality": {
+        "complete": true,
+        "cost_absolute_error_usd": 0.00418454742048846,
+        "cost_absolute_percentage_error": 0.0015672462249020451,
+        "price_absolute_error_usd": 0.0014456253841172995,
+        "price_absolute_percentage_error": 0.0002514131102812695
+      }
+    },
+    {
+      "evidence_id": "EVD-9C884DA005185D67",
+      "entity": {
+        "branch": "Garden",
+        "product": "Chai Latte",
+        "category": "Matcha & Tea"
+      },
+      "observation": {
+        "data_split": "test",
+        "periods_observed": 1,
+        "units": 47,
+        "revenue_usd": 245.71,
+        "cogs_usd": 99.64,
+        "gross_profit_usd": 146.07,
+        "gross_margin": 0.594481299092426,
+        "listed_unit_price_usd": 5.25,
+        "unit_cost_usd": 2.12,
+        "realized_revenue_per_unit_usd": 5.227872340425532,
+        "effective_discount_rate": 0.004214792299898679
+      },
+      "model_expectation": {
+        "expected_unit_cost_usd": 2.1172138193804675,
+        "expected_listed_unit_price_usd": 5.249801438181055
+      },
+      "residual_signals": {
+        "cost_log_residual": 0.001315100507009892,
+        "cost_residual_pct": 0.13159656308818768,
+        "price_log_residual": 3.7822014090194145e-05,
+        "price_residual_pct": 0.003782272935137776
+      },
+      "prediction_quality": {
+        "complete": true,
+        "cost_absolute_error_usd": 0.002786180619532619,
+        "cost_absolute_percentage_error": 0.001314236141288971,
+        "price_absolute_error_usd": 0.00019856181894528646,
+        "price_absolute_percentage_error": 3.782129884672123e-05
+      }
+    },
+    {
+      "evidence_id": "EVD-7A7AF92A774E2EBF",
+      "entity": {
+        "branch": "Garden",
+        "product": "Cheesecake Slice",
+        "category": "Desserts"
+      },
+      "observation": {
+        "data_split": "test",
+        "periods_observed": 1,
+        "units": 65,
+        "revenue_usd": 436.07,
+        "cogs_usd": 286.0,
+        "gross_profit_usd": 150.07,
+        "gross_margin": 0.344141995551173,
+        "listed_unit_price_usd": 6.75,
+        "unit_cost_usd": 4.4,
+        "realized_revenue_per_unit_usd": 6.708769230769231,
+        "effective_discount_rate": 0.006108262108262107
+      },
+      "model_expectation": {
+        "expected_unit_cost_usd": 4.404539251343145,
+        "expected_listed_unit_price_usd": 6.751559031891359
+      },
+      "residual_signals": {
+        "cost_log_residual": -0.0010311162494118786,
+        "cost_residual_pct": -0.1030584831718917,
+        "price_log_residual": -0.00023094101867870975,
+        "price_residual_pct": -0.023091435385447223
+      },
+      "prediction_quality": {
+        "complete": true,
+        "cost_absolute_error_usd": 0.004539251343144812,
+        "cost_absolute_percentage_error": 0.0010316480325329117,
+        "price_absolute_error_usd": 0.0015590318913591972,
+        "price_absolute_percentage_error": 0.00023096768760876994
+      }
+    },
+    {
+      "evidence_id": "EVD-1B5491A2D8F8AEB6",
+      "entity": {
+        "branch": "Garden",
+        "product": "Chicken Pesto Sandwich",
+        "category": "Sandwiches"
+      },
+      "observation": {
+        "data_split": "test",
+        "periods_observed": 1,
+        "units": 59,
+        "revenue_usd": 631.04,
+        "cogs_usd": 436.01,
+        "gross_profit_usd": 195.03,
+        "gross_margin": 0.3090612322515213,
+        "listed_unit_price_usd": 10.75,
+        "unit_cost_usd": 7.39,
+        "realized_revenue_per_unit_usd": 10.695593220338983,
+        "effective_discount_rate": 0.005061095782420182
+      },
+      "model_expectation": {
+        "expected_unit_cost_usd": 7.391485565074544,
+        "expected_listed_unit_price_usd": 10.752012627740314
+      },
+      "residual_signals": {
+        "cost_log_residual": -0.0002010034881818612,
+        "cost_residual_pct": -0.02009832883342888,
+        "price_log_residual": -0.00018720366144675538,
+        "price_residual_pct": -0.018718613993451427
+      },
+      "prediction_quality": {
+        "complete": true,
+        "cost_absolute_error_usd": 0.0014855650745442261,
+        "cost_absolute_percentage_error": 0.0002010236907367018,
+        "price_absolute_error_usd": 0.002012627740313633,
+        "price_absolute_percentage_error": 0.0001872211851454542
+      }
+    },
+    {
+      "evidence_id": "EVD-8E1087DB74871D92",
+      "entity": {
+        "branch": "Garden",
+        "product": "Chicken Salad Bowl",
+        "category": "Meals"
+      },
+      "observation": {
+        "data_split": "test",
+        "periods_observed": 1,
+        "units": 31,
+        "revenue_usd": 385.95,
+        "cogs_usd": 250.48,
+        "gross_profit_usd": 135.47,
+        "gross_margin": 0.351004016064257,
+        "listed_unit_price_usd": 12.45,
+        "unit_cost_usd": 8.08,
+        "realized_revenue_per_unit_usd": 12.45,
+        "effective_discount_rate": 0.0
+      },
+      "model_expectation": {
+        "expected_unit_cost_usd": 8.07878180740905,
+        "expected_listed_unit_price_usd": 12.44992339998763
+      },
+      "residual_signals": {
+        "cost_log_residual": 0.00015077777616889776,
+        "cost_residual_pct": 0.015078914370891816,
+        "price_log_residual": 6.1526303625214496e-06,
+        "price_residual_pct": 0.0006152649290047663
+      },
+      "prediction_quality": {
+        "complete": true,
+        "cost_absolute_error_usd": 0.0012181925909509062,
+        "cost_absolute_percentage_error": 0.00015076640977115176,
+        "price_absolute_error_usd": 7.660001236864389e-05,
+        "price_absolute_percentage_error": 6.152611435232441e-06
+      }
+    },
+    {
+      "evidence_id": "EVD-5A610364AA038F42",
+      "entity": {
+        "branch": "Garden",
+        "product": "Chocolate Cookie",
+        "category": "Bakery"
+      },
+      "observation": {
+        "data_split": "test",
+        "periods_observed": 1,
+        "units": 69,
+        "revenue_usd": 216.42,
+        "cogs_usd": 89.7,
+        "gross_profit_usd": 126.72,
+        "gross_margin": 0.5855281397283061,
+        "listed_unit_price_usd": 3.15,
+        "unit_cost_usd": 1.3,
+        "realized_revenue_per_unit_usd": 3.1365217391304347,
+        "effective_discount_rate": 0.004278812974465149
+      },
+      "model_expectation": {
+        "expected_unit_cost_usd": 1.3000000012731103,
+        "expected_listed_unit_price_usd": 3.150000000972362
+      },
+      "residual_signals": {
+        "cost_log_residual": -9.793156285908822e-10,
+        "cost_residual_pct": -9.793156285908822e-08,
+        "price_log_residual": -3.086864097667785e-10,
+        "price_residual_pct": -3.086864097667785e-08
+      },
+      "prediction_quality": {
+        "complete": true,
+        "cost_absolute_error_usd": 1.273110283861456e-09,
+        "cost_absolute_percentage_error": 9.793156029703507e-10,
+        "price_absolute_error_usd": 9.723621907653524e-10,
+        "price_absolute_percentage_error": 3.086864097667785e-10
+      }
+    },
+    {
+      "evidence_id": "EVD-ADE96AB99179BCC0",
+      "entity": {
+        "branch": "Garden",
+        "product": "Chocolate Croissant",
+        "category": "Bakery"
+      },
+      "observation": {
+        "data_split": "test",
+        "periods_observed": 1,
+        "units": 84,
+        "revenue_usd": 356.14,
+        "cogs_usd": 189.83999999999997,
+        "gross_profit_usd": 166.3,
+        "gross_margin": 0.46695119896669857,
+        "listed_unit_price_usd": 4.25,
+        "unit_cost_usd": 2.26,
+        "realized_revenue_per_unit_usd": 4.239761904761904,
+        "effective_discount_rate": 0.0024089635854341747
+      },
+      "model_expectation": {
+        "expected_unit_cost_usd": 2.2607787730542985,
+        "expected_listed_unit_price_usd": 4.249688019648477
+      },
+      "residual_signals": {
+        "cost_log_residual": -0.00034453048958915655,
+        "cost_residual_pct": -0.03444711457754046,
+        "price_log_residual": 7.340983597070583e-05,
+        "price_residual_pct": 0.007341253053883001
+      },
+      "prediction_quality": {
+        "complete": true,
+        "cost_absolute_error_usd": 0.0007787730542987426,
+        "cost_absolute_percentage_error": 0.00034458984703484186,
+        "price_absolute_error_usd": 0.0003119803515225783,
+        "price_absolute_percentage_error": 7.340714153472431e-05
+      }
+    },
+    {
+      "evidence_id": "EVD-B22D31086FD1DEEE",
+      "entity": {
+        "branch": "Garden",
+        "product": "Cinnamon Roll",
+        "category": "Bakery"
+      },
+      "observation": {
+        "data_split": "test",
+        "periods_observed": 1,
+        "units": 72,
+        "revenue_usd": 369.27000000000004,
+        "cogs_usd": 230.4,
+        "gross_profit_usd": 138.87,
+        "gross_margin": 0.37606629295637334,
+        "listed_unit_price_usd": 5.15,
+        "unit_cost_usd": 3.2,
+        "realized_revenue_per_unit_usd": 5.12875,
+        "effective_discount_rate": 0.004126213592233015
+      },
+      "model_expectation": {
+        "expected_unit_cost_usd": 3.2023711602239957,
+        "expected_listed_unit_price_usd": 5.150000005159043
+      },
+      "residual_signals": {
+        "cost_log_residual": -0.0007407131742500628,
+        "cost_residual_pct": -0.07404389139670231,
+        "price_log_residual": -1.0017560114761181e-09,
+        "price_residual_pct": -1.0017559004538157e-07
+      },
+      "prediction_quality": {
+        "complete": true,
+        "cost_absolute_error_usd": 0.0023711602239955276,
+        "cost_absolute_percentage_error": 0.0007409875699986024,
+        "price_absolute_error_usd": 5.159042970603878e-09,
+        "price_absolute_percentage_error": 1.001755916622112e-09
+      }
+    },
+    {
+      "evidence_id": "EVD-29EE4E4CE21AC3EC",
+      "entity": {
+        "branch": "Garden",
+        "product": "Classic Matcha",
+        "category": "Matcha & Tea"
+      },
+      "observation": {
+        "data_split": "test",
+        "periods_observed": 1,
+        "units": 95,
+        "revenue_usd": 608.9,
+        "cogs_usd": 308.75,
+        "gross_profit_usd": 300.15000000000003,
+        "gross_margin": 0.4929380850714404,
+        "listed_unit_price_usd": 6.45,
+        "unit_cost_usd": 3.25,
+        "realized_revenue_per_unit_usd": 6.409473684210526,
+        "effective_discount_rate": 0.006283149734802127
+      },
+      "model_expectation": {
+        "expected_unit_cost_usd": 3.2482398074637864,
+        "expected_listed_unit_price_usd": 6.449243016356306
+      },
+      "residual_signals": {
+        "cost_log_residual": 0.000541744420463397,
+        "cost_residual_pct": 0.05418911904746526,
+        "price_log_residual": 0.00011736869265943639,
+        "price_residual_pct": 0.01173755806340715
+      },
+      "prediction_quality": {
+        "complete": true,
+        "cost_absolute_error_usd": 0.0017601925362136228,
+        "cost_absolute_percentage_error": 0.0005415977034503455,
+        "price_absolute_error_usd": 0.0007569836436944755,
+        "price_absolute_percentage_error": 0.00011736180522394968
+      }
+    },
+    {
+      "evidence_id": "EVD-F50CAB3896647795",
+      "entity": {
+        "branch": "Garden",
+        "product": "Coffee Frappe",
+        "category": "Cold Coffee"
+      },
+      "observation": {
+        "data_split": "test",
+        "periods_observed": 1,
+        "units": 51,
+        "revenue_usd": 332.75,
+        "cogs_usd": 184.62,
+        "gross_profit_usd": 148.13,
+        "gross_margin": 0.44516904583020284,
+        "listed_unit_price_usd": 6.55,
+        "unit_cost_usd": 3.62,
+        "realized_revenue_per_unit_usd": 6.5245098039215685,
+        "effective_discount_rate": 0.003891632989073489
+      },
+      "model_expectation": {
+        "expected_unit_cost_usd": 3.619689368511616,
+        "expected_listed_unit_price_usd": 6.552230884686983
+      },
+      "residual_signals": {
+        "cost_log_residual": 8.581348529279609e-05,
+        "cost_residual_pct": 0.008581716737521283,
+        "price_log_residual": -0.00034053509332498955,
+        "price_residual_pct": -0.034047711783125045
+      },
+      "prediction_quality": {
+        "complete": true,
+        "cost_absolute_error_usd": 0.00031063148838406107,
+        "cost_absolute_percentage_error": 8.580980342101134e-05,
+        "price_absolute_error_usd": 0.002230884686983181,
+        "price_absolute_percentage_error": 0.00034059308198216507
+      }
+    },
+    {
+      "evidence_id": "EVD-F81AC4A8EE5057CA",
+      "entity": {
+        "branch": "Garden",
+        "product": "Cold Brew",
+        "category": "Cold Coffee"
+      },
+      "observation": {
+        "data_split": "test",
+        "periods_observed": 1,
+        "units": 75,
+        "revenue_usd": 384.21000000000004,
+        "cogs_usd": 124.5,
+        "gross_profit_usd": 259.71000000000004,
+        "gross_margin": 0.6759584602170688,
+        "listed_unit_price_usd": 5.15,
+        "unit_cost_usd": 1.66,
+        "realized_revenue_per_unit_usd": 5.122800000000001,
+        "effective_discount_rate": 0.0052815533980582596
+      },
+      "model_expectation": {
+        "expected_unit_cost_usd": 1.6586605042056632,
+        "expected_listed_unit_price_usd": 5.1500000051590415
+      },
+      "residual_signals": {
+        "cost_log_residual": 0.0008072509166754394,
+        "cost_residual_pct": 0.08075768313891007,
+        "price_log_residual": -1.0017555673869083e-09,
+        "price_residual_pct": -1.0017555673869083e-07
+      },
+      "prediction_quality": {
+        "complete": true,
+        "cost_absolute_error_usd": 0.0013394957943366759,
+        "cost_absolute_percentage_error": 0.0008069251773112505,
+        "price_absolute_error_usd": 5.159041194247038e-09,
+        "price_absolute_percentage_error": 1.0017555716984539e-09
+      }
+    },
+    {
+      "evidence_id": "EVD-72FAA3239C859496",
+      "entity": {
+        "branch": "Garden",
+        "product": "Egg Sandwich",
+        "category": "Breakfast"
+      },
+      "observation": {
+        "data_split": "test",
+        "periods_observed": 1,
+        "units": 63,
+        "revenue_usd": 512.64,
+        "cogs_usd": 280.35,
+        "gross_profit_usd": 232.29000000000002,
+        "gross_margin": 0.45312500000000006,
+        "listed_unit_price_usd": 8.15,
+        "unit_cost_usd": 4.45,
+        "realized_revenue_per_unit_usd": 8.137142857142857,
+        "effective_discount_rate": 0.0015775635407537256
+      },
+      "model_expectation": {
+        "expected_unit_cost_usd": 4.450773605206742,
+        "expected_listed_unit_price_usd": 8.150328375880031
+      },
+      "residual_signals": {
+        "cost_log_residual": -0.0001738287575898667,
+        "cost_residual_pct": -0.017381365024660145,
+        "price_log_residual": -4.0290707340684406e-05,
+        "price_residual_pct": -0.004028989568105601
+      },
+      "prediction_quality": {
+        "complete": true,
+        "cost_absolute_error_usd": 0.0007736052067421895,
+        "cost_absolute_percentage_error": 0.00017384386668363807,
+        "price_absolute_error_usd": 0.00032837588003076235,
+        "price_absolute_percentage_error": 4.0291519022179426e-05
+      }
+    },
+    {
+      "evidence_id": "EVD-1124791D5675B30F",
+      "entity": {
+        "branch": "Garden",
+        "product": "English Breakfast Tea",
+        "category": "Matcha & Tea"
+      },
+      "observation": {
+        "data_split": "test",
+        "periods_observed": 1,
+        "units": 16,
+        "revenue_usd": 54.86,
+        "cogs_usd": 13.12,
+        "gross_profit_usd": 41.739999999999995,
+        "gross_margin": 0.7608457892818081,
+        "listed_unit_price_usd": 3.45,
+        "unit_cost_usd": 0.82,
+        "realized_revenue_per_unit_usd": 3.42875,
+        "effective_discount_rate": 0.006159420289855078
+      },
+      "model_expectation": {
+        "expected_unit_cost_usd": 0.8194118454956132,
+        "expected_listed_unit_price_usd": 3.448902769832632
+      },
+      "residual_signals": {
+        "cost_log_residual": 0.0007175189458782649,
+        "cost_residual_pct": 0.07177764241752538,
+        "price_log_residual": 0.0003180883143960589,
+        "price_residual_pct": 0.03181389098485532
+      },
+      "prediction_quality": {
+        "complete": true,
+        "cost_absolute_error_usd": 0.000588154504386762,
+        "cost_absolute_percentage_error": 0.0007172615907155634,
+        "price_absolute_error_usd": 0.0010972301673679574,
+        "price_absolute_percentage_error": 0.0003180377296718717
+      }
+    },
+    {
+      "evidence_id": "EVD-EB08F3587EDAAB9A",
+      "entity": {
+        "branch": "Garden",
+        "product": "Espresso",
+        "category": "Hot Coffee"
+      },
+      "observation": {
+        "data_split": "test",
+        "periods_observed": 1,
+        "units": 32,
+        "revenue_usd": 84.8,
+        "cogs_usd": 29.76,
+        "gross_profit_usd": 55.04,
+        "gross_margin": 0.6490566037735849,
+        "listed_unit_price_usd": 2.65,
+        "unit_cost_usd": 0.93,
+        "realized_revenue_per_unit_usd": 2.65,
+        "effective_discount_rate": 0.0
+      },
+      "model_expectation": {
+        "expected_unit_cost_usd": 0.9293356929548159,
+        "expected_listed_unit_price_usd": 2.647759861394795
+      },
+      "residual_signals": {
+        "cost_log_residual": 0.0007145638907139346,
+        "cost_residual_pct": 0.07148192523112051,
+        "price_log_residual": 0.0008456928201071578,
+        "price_residual_pct": 0.08460505191074663
+      },
+      "prediction_quality": {
+        "complete": true,
+        "cost_absolute_error_usd": 0.0006643070451841648,
+        "cost_absolute_percentage_error": 0.0007143086507356611,
+        "price_absolute_error_usd": 0.002240138605205111,
+        "price_absolute_percentage_error": 0.0008453353227189098
+      }
+    },
+    {
+      "evidence_id": "EVD-1FC30E3B804D8AD2",
+      "entity": {
+        "branch": "Garden",
+        "product": "Flat White",
+        "category": "Hot Coffee"
+      },
+      "observation": {
+        "data_split": "test",
+        "periods_observed": 1,
+        "units": 72,
+        "revenue_usd": 311.88,
+        "cogs_usd": 127.44,
+        "gross_profit_usd": 184.44,
+        "gross_margin": 0.5913813005001923,
+        "listed_unit_price_usd": 4.35,
+        "unit_cost_usd": 1.77,
+        "realized_revenue_per_unit_usd": 4.331666666666667,
+        "effective_discount_rate": 0.004214559386973175
+      },
+      "model_expectation": {
+        "expected_unit_cost_usd": 1.772446659884505,
+        "expected_listed_unit_price_usd": 4.352601781539043
+      },
+      "residual_signals": {
+        "cost_log_residual": -0.00138133923158279,
+        "cost_residual_pct": -0.1380385621683189,
+        "price_log_residual": -0.0005979319017168638,
+        "price_residual_pct": -0.059775317606092226
+      },
+      "prediction_quality": {
+        "complete": true,
+        "cost_absolute_error_usd": 0.002446659884504987,
+        "cost_absolute_percentage_error": 0.0013822937200593146,
+        "price_absolute_error_usd": 0.0026017815390435572,
+        "price_absolute_percentage_error": 0.0005981106986307029
+      }
+    },
+    {
+      "evidence_id": "EVD-53BEF9933D8280B9",
+      "entity": {
+        "branch": "Garden",
+        "product": "Fresh Orange Juice",
+        "category": "Cold Drinks"
+      },
+      "observation": {
+        "data_split": "test",
+        "periods_observed": 1,
+        "units": 52,
+        "revenue_usd": 297.28,
+        "cogs_usd": 157.56,
+        "gross_profit_usd": 139.72,
+        "gross_margin": 0.469994617868676,
+        "listed_unit_price_usd": 5.75,
+        "unit_cost_usd": 3.0300000000000002,
+        "realized_revenue_per_unit_usd": 5.716923076923076,
+        "effective_discount_rate": 0.005752508361204015
+      },
+      "model_expectation": {
+        "expected_unit_cost_usd": 3.0322468145253803,
+        "expected_listed_unit_price_usd": 5.751445625384116
+      },
+      "residual_signals": {
+        "cost_log_residual": -0.0007412481533652926,
+        "cost_residual_pct": -0.07409734968198967,
+        "price_log_residual": -0.00025138151130121855,
+        "price_residual_pct": -0.025134991761655012
+      },
+      "prediction_quality": {
+        "complete": true,
+        "cost_absolute_error_usd": 0.002246814525380003,
+        "cost_absolute_percentage_error": 0.000741522945669968,
+        "price_absolute_error_usd": 0.0014456253841164113,
+        "price_absolute_percentage_error": 0.000251413110281115
+      }
+    },
+    {
+      "evidence_id": "EVD-16BED4C4B5F02C42",
+      "entity": {
+        "branch": "Garden",
+        "product": "Frozen Yoghurt Cup",
+        "category": "Desserts"
+      },
+      "observation": {
+        "data_split": "test",
+        "periods_observed": 1,
+        "units": 76,
+        "revenue_usd": 464.35,
+        "cogs_usd": 292.6,
+        "gross_profit_usd": 171.75,
+        "gross_margin": 0.36987186389576826,
+        "listed_unit_price_usd": 6.15,
+        "unit_cost_usd": 3.85,
+        "realized_revenue_per_unit_usd": 6.1098684210526315,
+        "effective_discount_rate": 0.006525459991442023
+      },
+      "model_expectation": {
+        "expected_unit_cost_usd": 3.8471319808621605,
+        "expected_listed_unit_price_usd": 6.150101449158087
+      },
+      "residual_signals": {
+        "cost_log_residual": 0.0007452176415059242,
+        "cost_residual_pct": 0.07454953851613322,
+        "price_log_residual": -1.6495662008564338e-05,
+        "price_residual_pct": -0.0016495525955950718
+      },
+      "prediction_quality": {
+        "complete": true,
+        "cost_absolute_error_usd": 0.002868019137839628,
+        "cost_absolute_percentage_error": 0.0007449400358025008,
+        "price_absolute_error_usd": 0.00010144915808663058,
+        "price_absolute_percentage_error": 1.6495798062866758e-05
+      }
+    },
+    {
+      "evidence_id": "EVD-EF9925CAEFBDB707",
+      "entity": {
+        "branch": "Garden",
+        "product": "Granola Yoghurt",
+        "category": "Breakfast"
+      },
+      "observation": {
+        "data_split": "test",
+        "periods_observed": 1,
+        "units": 18,
+        "revenue_usd": 141.29999999999998,
+        "cogs_usd": 85.5,
+        "gross_profit_usd": 55.800000000000004,
+        "gross_margin": 0.3949044585987262,
+        "listed_unit_price_usd": 7.849999999999999,
+        "unit_cost_usd": 4.75,
+        "realized_revenue_per_unit_usd": 7.849999999999999,
+        "effective_discount_rate": 0.0
+      },
+      "model_expectation": {
+        "expected_unit_cost_usd": 4.750437835213781,
+        "expected_listed_unit_price_usd": 7.85073906771447
+      },
+      "residual_signals": {
+        "cost_log_residual": -9.21715865489503e-05,
+        "cost_residual_pct": -0.009216733887873474,
+        "price_log_residual": -9.414432172016873e-05,
+        "price_residual_pct": -0.009413989028250747
+      },
+      "prediction_quality": {
+        "complete": true,
+        "cost_absolute_error_usd": 0.00043783521378060186,
+        "cost_absolute_percentage_error": 9.217583448012671e-05,
+        "price_absolute_error_usd": 0.0007390677144716307,
+        "price_absolute_percentage_error": 9.414875343587653e-05
+      }
+    },
+    {
+      "evidence_id": "EVD-0AA43729CB3AFF60",
+      "entity": {
+        "branch": "Garden",
+        "product": "Halloumi Wrap",
+        "category": "Sandwiches"
+      },
+      "observation": {
+        "data_split": "test",
+        "periods_observed": 1,
+        "units": 44,
+        "revenue_usd": 435.82,
+        "cogs_usd": 260.48,
+        "gross_profit_usd": 175.34,
+        "gross_margin": 0.40232205956587586,
+        "listed_unit_price_usd": 9.95,
+        "unit_cost_usd": 5.920000000000001,
+        "realized_revenue_per_unit_usd": 9.905,
+        "effective_discount_rate": 0.004522613065326627
+      },
+      "model_expectation": {
+        "expected_unit_cost_usd": 5.918755028380916,
+        "expected_listed_unit_price_usd": 9.951227283739344
+      },
+      "residual_signals": {
+        "cost_log_residual": 0.0002103213759705458,
+        "cost_residual_pct": 0.021034349506177108,
+        "price_log_residual": -0.00012333749305026842,
+        "price_residual_pct": -0.012332988729446548
+      },
+      "prediction_quality": {
+        "complete": true,
+        "cost_absolute_error_usd": 0.001244971619084545,
+        "cost_absolute_percentage_error": 0.00021029925998049744,
+        "price_absolute_error_usd": 0.0012272837393449976,
+        "price_absolute_percentage_error": 0.00012334509943165805
+      }
+    },
+    {
+      "evidence_id": "EVD-A50BD00A7717583E",
+      "entity": {
+        "branch": "Garden",
+        "product": "Iced Americano",
+        "category": "Cold Coffee"
+      },
+      "observation": {
+        "data_split": "test",
+        "periods_observed": 1,
+        "units": 93,
+        "revenue_usd": 356.15000000000003,
+        "cogs_usd": 114.39,
+        "gross_profit_usd": 241.76000000000002,
+        "gross_margin": 0.6788151059946652,
+        "listed_unit_price_usd": 3.85,
+        "unit_cost_usd": 1.23,
+        "realized_revenue_per_unit_usd": 3.8295698924731187,
+        "effective_discount_rate": 0.005306521435553692
+      },
+      "model_expectation": {
+        "expected_unit_cost_usd": 1.230487156715436,
+        "expected_listed_unit_price_usd": 3.8500000015697093
+      },
+      "residual_signals": {
+        "cost_log_residual": -0.0003959839582760305,
+        "cost_residual_pct": -0.03959055669759959,
+        "price_log_residual": -4.07716749251108e-10,
+        "price_residual_pct": -4.0771663822880555e-08
+      },
+      "prediction_quality": {
+        "complete": true,
+        "cost_absolute_error_usd": 0.00048715671543608785,
+        "cost_absolute_percentage_error": 0.00039606237027324217,
+        "price_absolute_error_usd": 1.5697092514699307e-09,
+        "price_absolute_percentage_error": 4.077166886934885e-10
+      }
+    },
+    {
+      "evidence_id": "EVD-73BFEA130802D229",
+      "entity": {
+        "branch": "Garden",
+        "product": "Iced Latte",
+        "category": "Cold Coffee"
+      },
+      "observation": {
+        "data_split": "test",
+        "periods_observed": 1,
+        "units": 111,
+        "revenue_usd": 591.15,
+        "cogs_usd": 263.07,
+        "gross_profit_usd": 328.08,
+        "gross_margin": 0.5549860441512307,
+        "listed_unit_price_usd": 5.349999999999999,
+        "unit_cost_usd": 2.37,
+        "realized_revenue_per_unit_usd": 5.325675675675676,
+        "effective_discount_rate": 0.0045466026774438
+      },
+      "model_expectation": {
+        "expected_unit_cost_usd": 2.370759727074983,
+        "expected_listed_unit_price_usd": 5.352652517671172
+      },
+      "residual_signals": {
+        "cost_log_residual": -0.0003205085788877682,
+        "cost_residual_pct": -0.032045722150009226,
+        "price_log_residual": -0.0004956748284787871,
+        "price_residual_pct": -0.04955520020056836
+      },
+      "prediction_quality": {
+        "complete": true,
+        "cost_absolute_error_usd": 0.0007597270749828411,
+        "cost_absolute_percentage_error": 0.00032055994725014393,
+        "price_absolute_error_usd": 0.002652517671172916,
+        "price_absolute_percentage_error": 0.0004957976955463396
+      }
+    },
+    {
+      "evidence_id": "EVD-3FB24BDA87B94A51",
+      "entity": {
+        "branch": "Garden",
+        "product": "Iced Matcha",
+        "category": "Matcha & Tea"
+      },
+      "observation": {
+        "data_split": "test",
+        "periods_observed": 1,
+        "units": 104,
+        "revenue_usd": 707.5699999999999,
+        "cogs_usd": 373.36,
+        "gross_profit_usd": 334.21,
+        "gross_margin": 0.4723348926607968,
+        "listed_unit_price_usd": 6.85,
+        "unit_cost_usd": 3.5900000000000003,
+        "realized_revenue_per_unit_usd": 6.803557692307692,
+        "effective_discount_rate": 0.0067798989331836
+      },
+      "model_expectation": {
+        "expected_unit_cost_usd": 3.5902215658092205,
+        "expected_listed_unit_price_usd": 6.850493203852407
+      },
+      "residual_signals": {
+        "cost_log_residual": -6.171559115819569e-05,
+        "cost_residual_pct": -0.0061713686790310085,
+        "price_log_residual": -7.199797047929835e-05,
+        "price_residual_pct": -0.007199537868751715
+      },
+      "prediction_quality": {
+        "complete": true,
+        "cost_absolute_error_usd": 0.00022156580922017,
+        "cost_absolute_percentage_error": 6.171749560450418e-05,
+        "price_absolute_error_usd": 0.0004932038524074756,
+        "price_absolute_percentage_error": 7.200056239525191e-05
+      }
+    },
+    {
+      "evidence_id": "EVD-C27E2253577D7DB2",
+      "entity": {
+        "branch": "Garden",
+        "product": "Iced Mocha",
+        "category": "Cold Coffee"
+      },
+      "observation": {
+        "data_split": "test",
+        "periods_observed": 1,
+        "units": 58,
+        "revenue_usd": 360.61,
+        "cogs_usd": 185.02,
+        "gross_profit_usd": 175.59,
+        "gross_margin": 0.48692493275283544,
+        "listed_unit_price_usd": 6.25,
+        "unit_cost_usd": 3.1900000000000004,
+        "realized_revenue_per_unit_usd": 6.217413793103448,
+        "effective_discount_rate": 0.005213793103448275
+      },
+      "model_expectation": {
+        "expected_unit_cost_usd": 3.1893042646163168,
+        "expected_listed_unit_price_usd": 6.24991484767201
+      },
+      "residual_signals": {
+        "cost_log_residual": 0.0002181226533748415,
+        "cost_residual_pct": 0.021814644385065307,
+        "price_log_residual": 1.3624465291073307e-05,
+        "price_residual_pct": 0.0013624558104385898
+      },
+      "prediction_quality": {
+        "complete": true,
+        "cost_absolute_error_usd": 0.0006957353836836155,
+        "cost_absolute_percentage_error": 0.00021809886635850014,
+        "price_absolute_error_usd": 8.515232798966821e-05,
+        "price_absolute_percentage_error": 1.3624372478346913e-05
+      }
+    },
+    {
+      "evidence_id": "EVD-F599E2BE0BA96519",
+      "entity": {
+        "branch": "Garden",
+        "product": "Lemonade",
+        "category": "Cold Drinks"
+      },
+      "observation": {
+        "data_split": "test",
+        "periods_observed": 1,
+        "units": 49,
+        "revenue_usd": 226.47000000000003,
+        "cogs_usd": 81.83,
+        "gross_profit_usd": 144.64,
+        "gross_margin": 0.6386717887578928,
+        "listed_unit_price_usd": 4.65,
+        "unit_cost_usd": 1.67,
+        "realized_revenue_per_unit_usd": 4.621836734693878,
+        "effective_discount_rate": 0.0060566161948650415
+      },
+      "model_expectation": {
+        "expected_unit_cost_usd": 1.670252201414799,
+        "expected_listed_unit_price_usd": 4.648344164239905
+      },
+      "residual_signals": {
+        "cost_log_residual": -0.00015100740906415222,
+        "cost_residual_pct": -0.015099600801926627,
+        "price_log_residual": 0.0003561571282695297,
+        "price_residual_pct": 0.035622055974982025
+      },
+      "prediction_quality": {
+        "complete": true,
+        "cost_absolute_error_usd": 0.0002522014147989804,
+        "cost_absolute_percentage_error": 0.0001510188112568745,
+        "price_absolute_error_usd": 0.0016558357600953144,
+        "price_absolute_percentage_error": 0.0003560937118484547
+      }
+    },
+    {
+      "evidence_id": "EVD-6D0D09115FB262BF",
+      "entity": {
+        "branch": "Garden",
+        "product": "Mint Tea",
+        "category": "Matcha & Tea"
+      },
+      "observation": {
+        "data_split": "test",
+        "periods_observed": 1,
+        "units": 35,
+        "revenue_usd": 126.64,
+        "cogs_usd": 31.5,
+        "gross_profit_usd": 95.14,
+        "gross_margin": 0.7512634238787113,
+        "listed_unit_price_usd": 3.65,
+        "unit_cost_usd": 0.9,
+        "realized_revenue_per_unit_usd": 3.6182857142857143,
+        "effective_discount_rate": 0.008688845401174171
+      },
+      "model_expectation": {
+        "expected_unit_cost_usd": 0.9000000005552684,
+        "expected_listed_unit_price_usd": 3.6481505067468154
+      },
+      "residual_signals": {
+        "cost_log_residual": -6.169648680831585e-10,
+        "cost_residual_pct": -6.169649235943098e-08,
+        "price_log_residual": 0.0005068389014633023,
+        "price_residual_pct": 0.05069673660020868
+      },
+      "prediction_quality": {
+        "complete": true,
+        "cost_absolute_error_usd": 5.552683868259578e-10,
+        "cost_absolute_percentage_error": 6.169648742510642e-10,
+        "price_absolute_error_usd": 0.0018494932531845087,
+        "price_absolute_percentage_error": 0.0005067104803245229
+      }
+    },
+    {
+      "evidence_id": "EVD-57D5E600C0039CB5",
+      "entity": {
+        "branch": "Garden",
+        "product": "Peach Iced Tea",
+        "category": "Cold Drinks"
+      },
+      "observation": {
+        "data_split": "test",
+        "periods_observed": 1,
+        "units": 57,
+        "revenue_usd": 252.75,
+        "cogs_usd": 93.47999999999999,
+        "gross_profit_usd": 159.27,
+        "gross_margin": 0.6301483679525223,
+        "listed_unit_price_usd": 4.45,
+        "unit_cost_usd": 1.64,
+        "realized_revenue_per_unit_usd": 4.434210526315789,
+        "effective_discount_rate": 0.0035481963335304567
+      },
+      "model_expectation": {
+        "expected_unit_cost_usd": 1.6403369675189985,
+        "expected_listed_unit_price_usd": 4.4490161966799295
+      },
+      "residual_signals": {
+        "cost_log_residual": -0.00020544689373097613,
+        "cost_residual_pct": -0.020542579096305413,
+        "price_log_residual": 0.00022110383942108847,
+        "price_residual_pct": 0.0221128284676686
+      },
+      "prediction_quality": {
+        "complete": true,
+        "cost_absolute_error_usd": 0.0003369675189985877,
+        "cost_absolute_percentage_error": 0.00020546799938938275,
+        "price_absolute_error_usd": 0.000983803320070642,
+        "price_absolute_percentage_error": 0.00022107939776868358
+      }
+    },
+    {
+      "evidence_id": "EVD-40A4A8B09475C429",
+      "entity": {
+        "branch": "Garden",
+        "product": "Pistachio Cookie",
+        "category": "Bakery"
+      },
+      "observation": {
+        "data_split": "test",
+        "periods_observed": 1,
+        "units": 63,
+        "revenue_usd": 216.33,
+        "cogs_usd": 106.47,
+        "gross_profit_usd": 109.86,
+        "gross_margin": 0.5078352516987935,
+        "listed_unit_price_usd": 3.45,
+        "unit_cost_usd": 1.69,
+        "realized_revenue_per_unit_usd": 3.433809523809524,
+        "effective_discount_rate": 0.004692891649413392
+      },
+      "model_expectation": {
+        "expected_unit_cost_usd": 1.6874533506546179,
+        "expected_listed_unit_price_usd": 3.44890276983263
+      },
+      "residual_signals": {
+        "cost_log_residual": 0.0015080296090610457,
+        "cost_residual_pct": 0.15091672575091586,
+        "price_log_residual": 0.000318088314396725,
+        "price_residual_pct": 0.03181389098492193
+      },
+      "prediction_quality": {
+        "complete": true,
+        "cost_absolute_error_usd": 0.0025466493453820682,
+        "cost_absolute_percentage_error": 0.0015068931037763719,
+        "price_absolute_error_usd": 0.0010972301673701779,
+        "price_absolute_percentage_error": 0.0003180377296725153
+      }
+    },
+    {
+      "evidence_id": "EVD-4A9D15E00B2772FA",
+      "entity": {
+        "branch": "Garden",
+        "product": "Quinoa Bowl",
+        "category": "Meals"
+      },
+      "observation": {
+        "data_split": "test",
+        "periods_observed": 1,
+        "units": 25,
+        "revenue_usd": 291.25,
+        "cogs_usd": 176.0,
+        "gross_profit_usd": 115.25000000000001,
+        "gross_margin": 0.3957081545064378,
+        "listed_unit_price_usd": 11.65,
+        "unit_cost_usd": 7.04,
+        "realized_revenue_per_unit_usd": 11.65,
+        "effective_discount_rate": 0.0
+      },
+      "model_expectation": {
+        "expected_unit_cost_usd": 7.036436411520729,
+        "expected_listed_unit_price_usd": 11.649138084575611
+      },
+      "residual_signals": {
+        "cost_log_residual": 0.0005063197035415357,
+        "cost_residual_pct": 0.05064479049987636,
+        "price_log_residual": 7.39868935628607e-05,
+        "price_residual_pct": 0.007398963066029829
+      },
+      "prediction_quality": {
+        "complete": true,
+        "cost_absolute_error_usd": 0.0035635884792712957,
+        "cost_absolute_percentage_error": 0.0005061915453510364,
+        "price_absolute_error_usd": 0.0008619154243891813,
+        "price_absolute_percentage_error": 7.398415659992972e-05
+      }
+    },
+    {
+      "evidence_id": "EVD-FBB85C80B5C79D6B",
+      "entity": {
+        "branch": "Garden",
+        "product": "Soup of the Day",
+        "category": "Meals"
+      },
+      "observation": {
+        "data_split": "test",
+        "periods_observed": 1,
+        "units": 26,
+        "revenue_usd": 185.9,
+        "cogs_usd": 103.74000000000001,
+        "gross_profit_usd": 82.16,
+        "gross_margin": 0.44195804195804195,
+        "listed_unit_price_usd": 7.15,
+        "unit_cost_usd": 3.99,
+        "realized_revenue_per_unit_usd": 7.15,
+        "effective_discount_rate": 0.0
+      },
+      "model_expectation": {
+        "expected_unit_cost_usd": 3.9911386154054056,
+        "expected_listed_unit_price_usd": 7.1502149227413625
+      },
+      "residual_signals": {
+        "cost_log_residual": -0.0002853265600304411,
+        "cost_residual_pct": -0.028528585827869435,
+        "price_log_residual": -3.0058672899624383e-05,
+        "price_residual_pct": -0.0030058221142215125
+      },
+      "prediction_quality": {
+        "complete": true,
+        "cost_absolute_error_usd": 0.0011386154054053854,
+        "cost_absolute_percentage_error": 0.0002853672695251592,
+        "price_absolute_error_usd": 0.00021492274136214462,
+        "price_absolute_percentage_error": 3.005912466603421e-05
+      }
+    },
+    {
+      "evidence_id": "EVD-7CBB647216F1D044",
+      "entity": {
+        "branch": "Garden",
+        "product": "Spanish Latte",
+        "category": "Hot Coffee"
+      },
+      "observation": {
+        "data_split": "test",
+        "periods_observed": 1,
+        "units": 49,
+        "revenue_usd": 290.37,
+        "cogs_usd": 138.67000000000002,
+        "gross_profit_usd": 151.70000000000002,
+        "gross_margin": 0.5224368908633813,
+        "listed_unit_price_usd": 5.95,
+        "unit_cost_usd": 2.8300000000000005,
+        "realized_revenue_per_unit_usd": 5.925918367346939,
+        "effective_discount_rate": 0.004047333219001885
+      },
+      "model_expectation": {
+        "expected_unit_cost_usd": 2.830922125236389,
+        "expected_listed_unit_price_usd": 5.950773610219534
+      },
+      "residual_signals": {
+        "cost_log_residual": -0.0003257862320464877,
+        "cost_residual_pct": -0.03257331694743737,
+        "price_log_residual": -0.00013001007261581599,
+        "price_residual_pct": -0.013000162167242646
+      },
+      "prediction_quality": {
+        "complete": true,
+        "cost_absolute_error_usd": 0.0009221252363884602,
+        "cost_absolute_percentage_error": 0.0003258393061443322,
+        "price_absolute_error_usd": 0.0007736102195341488,
+        "price_absolute_percentage_error": 0.00013001852429145357
+      }
+    },
+    {
+      "evidence_id": "EVD-F56360B987C4B66B",
+      "entity": {
+        "branch": "Garden",
+        "product": "Sparkling Water",
+        "category": "Cold Drinks"
+      },
+      "observation": {
+        "data_split": "test",
+        "periods_observed": 1,
+        "units": 49,
+        "revenue_usd": 133.94,
+        "cogs_usd": 94.57,
+        "gross_profit_usd": 39.37,
+        "gross_margin": 0.2939375839928326,
+        "listed_unit_price_usd": 2.75,
+        "unit_cost_usd": 1.93,
+        "realized_revenue_per_unit_usd": 2.733469387755102,
+        "effective_discount_rate": 0.00601113172541744
+      },
+      "model_expectation": {
+        "expected_unit_cost_usd": 1.931171495454095,
+        "expected_listed_unit_price_usd": 2.7510043717874666
+      },
+      "residual_signals": {
+        "cost_log_residual": -0.0006068083178493167,
+        "cost_residual_pct": -0.06066242469158212,
+        "price_log_residual": -0.00036515942571435644,
+        "price_residual_pct": -0.036509276312568506
+      },
+      "prediction_quality": {
+        "complete": true,
+        "cost_absolute_error_usd": 0.0011714954540951172,
+        "cost_absolute_percentage_error": 0.0006069924632617188,
+        "price_absolute_error_usd": 0.0010043717874665958,
+        "price_absolute_percentage_error": 0.0003652261045333076
+      }
+    },
+    {
+      "evidence_id": "EVD-BA77732645F9475F",
+      "entity": {
+        "branch": "Garden",
+        "product": "Still Water",
+        "category": "Cold Drinks"
+      },
+      "observation": {
+        "data_split": "test",
+        "periods_observed": 1,
+        "units": 51,
+        "revenue_usd": 98.5,
+        "cogs_usd": 47.43,
+        "gross_profit_usd": 51.07,
+        "gross_margin": 0.5184771573604061,
+        "listed_unit_price_usd": 1.95,
+        "unit_cost_usd": 0.93,
+        "realized_revenue_per_unit_usd": 1.9313725490196079,
+        "effective_discount_rate": 0.009552538964303667
+      },
+      "model_expectation": {
+        "expected_unit_cost_usd": 0.9293356929548161,
+        "expected_listed_unit_price_usd": 1.950000000492903
+      },
+      "residual_signals": {
+        "cost_log_residual": 0.0007145638907137125,
+        "cost_residual_pct": 0.07148192523109831,
+        "price_log_residual": -2.5277080428764975e-10,
+        "price_residual_pct": -2.5277080428764975e-08
+      },
+      "prediction_quality": {
+        "complete": true,
+        "cost_absolute_error_usd": 0.0006643070451839428,
+        "cost_absolute_percentage_error": 0.0007143086507354223,
+        "price_absolute_error_usd": 4.929030517075716e-10,
+        "price_absolute_percentage_error": 2.5277079574747263e-10
+      }
+    },
+    {
+      "evidence_id": "EVD-D32A896660C67886",
+      "entity": {
+        "branch": "Garden",
+        "product": "Strawberry Matcha",
+        "category": "Matcha & Tea"
+      },
+      "observation": {
+        "data_split": "test",
+        "periods_observed": 1,
+        "units": 65,
+        "revenue_usd": 494.97,
+        "cogs_usd": 295.75,
+        "gross_profit_usd": 199.22,
+        "gross_margin": 0.4024890397397822,
+        "listed_unit_price_usd": 7.65,
+        "unit_cost_usd": 4.55,
+        "realized_revenue_per_unit_usd": 7.614923076923077,
+        "effective_discount_rate": 0.004585218702865766
+      },
+      "model_expectation": {
+        "expected_unit_cost_usd": 4.547495721215971,
+        "expected_listed_unit_price_usd": 7.6486844580308855
+      },
+      "residual_signals": {
+        "cost_log_residual": 0.0005505424622387345,
+        "cost_residual_pct": 0.05506940385551218,
+        "price_log_residual": 0.00017198105836691013,
+        "price_residual_pct": 0.01719958479571293
+      },
+      "prediction_quality": {
+        "complete": true,
+        "cost_absolute_error_usd": 0.0025042787840288128,
+        "cost_absolute_percentage_error": 0.0005503909415447941,
+        "price_absolute_error_usd": 0.001315541969114875,
+        "price_absolute_percentage_error": 0.00017196627047253268
+      }
+    },
+    {
+      "evidence_id": "EVD-E57AE0A5E703D6AC",
+      "entity": {
+        "branch": "Garden",
+        "product": "Tiramisu Cup",
+        "category": "Desserts"
+      },
+      "observation": {
+        "data_split": "test",
+        "periods_observed": 1,
+        "units": 71,
+        "revenue_usd": 462.44,
+        "cogs_usd": 289.68,
+        "gross_profit_usd": 172.76000000000002,
+        "gross_margin": 0.3735836000345991,
+        "listed_unit_price_usd": 6.55,
+        "unit_cost_usd": 4.08,
+        "realized_revenue_per_unit_usd": 6.513239436619719,
+        "effective_discount_rate": 0.005612299752714761
+      },
+      "model_expectation": {
+        "expected_unit_cost_usd": 4.079616407972379,
+        "expected_listed_unit_price_usd": 6.552230884686984
+      },
+      "residual_signals": {
+        "cost_log_residual": 9.402207376529859e-05,
+        "cost_residual_pct": 0.009402649397904916,
+        "price_log_residual": -0.0003405350933252116,
+        "price_residual_pct": -0.03404771178313615
+      },
+      "prediction_quality": {
+        "complete": true,
+        "cost_absolute_error_usd": 0.00038359202762094924,
+        "cost_absolute_percentage_error": 9.401765382866403e-05,
+        "price_absolute_error_usd": 0.0022308846869840693,
+        "price_absolute_percentage_error": 0.00034059308198230065
+      }
+    },
+    {
+      "evidence_id": "EVD-30C1EB56F8E72863",
+      "entity": {
+        "branch": "Garden",
+        "product": "Tuna Sandwich",
+        "category": "Sandwiches"
+      },
+      "observation": {
+        "data_split": "test",
+        "periods_observed": 1,
+        "units": 35,
+        "revenue_usd": 308.86,
+        "cogs_usd": 186.55,
+        "gross_profit_usd": 122.31,
+        "gross_margin": 0.39600466230654663,
+        "listed_unit_price_usd": 8.85,
+        "unit_cost_usd": 5.33,
+        "realized_revenue_per_unit_usd": 8.82457142857143,
+        "effective_discount_rate": 0.002873284907183211
+      },
+      "model_expectation": {
+        "expected_unit_cost_usd": 5.332929833324274,
+        "expected_listed_unit_price_usd": 8.850984928633315
+      },
+      "residual_signals": {
+        "cost_log_residual": -0.0005495362801410941,
+        "cost_residual_pct": -0.054938531273474034,
+        "price_log_residual": -0.00011128517857095233,
+        "price_residual_pct": -0.011127898660501234
+      },
+      "prediction_quality": {
+        "complete": true,
+        "cost_absolute_error_usd": 0.0029298333242735453,
+        "cost_absolute_percentage_error": 0.0005496873028655807,
+        "price_absolute_error_usd": 0.0009849286333150076,
+        "price_absolute_percentage_error": 0.00011129137099604606
+      }
+    },
+    {
+      "evidence_id": "EVD-313200D15E2B9779",
+      "entity": {
+        "branch": "Garden",
+        "product": "Turkey & Cheese Sandwich",
+        "category": "Sandwiches"
+      },
+      "observation": {
+        "data_split": "test",
+        "periods_observed": 1,
+        "units": 49,
+        "revenue_usd": 470.91,
+        "cogs_usd": 330.75,
+        "gross_profit_usd": 140.16,
+        "gross_margin": 0.29763649104924506,
+        "listed_unit_price_usd": 9.65,
+        "unit_cost_usd": 6.75,
+        "realized_revenue_per_unit_usd": 9.610408163265307,
+        "effective_discount_rate": 0.00410278100877657
+      },
+      "model_expectation": {
+        "expected_unit_cost_usd": 6.750058006264272,
+        "expected_listed_unit_price_usd": 9.648911278082963
+      },
+      "residual_signals": {
+        "cost_log_residual": -8.59348370862989e-06,
+        "cost_residual_pct": -0.0008593446784943559,
+        "price_log_residual": 0.0001128272888046844,
+        "price_residual_pct": 0.011283365404235468
+      },
+      "prediction_quality": {
+        "complete": true,
+        "cost_absolute_error_usd": 5.800626427188149e-05,
+        "cost_absolute_percentage_error": 8.593520632871332e-06,
+        "price_absolute_error_usd": 0.0010887219170374607,
+        "price_absolute_percentage_error": 0.0001128209240453327
+      }
+    },
+    {
+      "evidence_id": "EVD-FD06BDC293FBAF36",
+      "entity": {
+        "branch": "Garden",
+        "product": "Vanilla Latte",
+        "category": "Hot Coffee"
+      },
+      "observation": {
+        "data_split": "test",
+        "periods_observed": 1,
+        "units": 82,
+        "revenue_usd": 444.70000000000005,
+        "cogs_usd": 201.72,
+        "gross_profit_usd": 242.98000000000002,
+        "gross_margin": 0.5463908252754666,
+        "listed_unit_price_usd": 5.45,
+        "unit_cost_usd": 2.46,
+        "realized_revenue_per_unit_usd": 5.423170731707318,
+        "effective_discount_rate": 0.004922801521593196
+      },
+      "model_expectation": {
+        "expected_unit_cost_usd": 2.4594727390940276,
+        "expected_listed_unit_price_usd": 5.449129610106804
+      },
+      "residual_signals": {
+        "cost_log_residual": 0.00021435667436520145,
+        "cost_residual_pct": 0.021437965039883267,
+        "price_log_residual": 0.0001597173216913994,
+        "price_residual_pct": 0.015973007718184107
+      },
+      "prediction_quality": {
+        "complete": true,
+        "cost_absolute_error_usd": 0.0005272609059723266,
+        "cost_absolute_percentage_error": 0.0002143337016147669,
+        "price_absolute_error_usd": 0.0008703898931958776,
+        "price_absolute_percentage_error": 0.00015970456755887662
+      }
+    },
+    {
+      "evidence_id": "EVD-C619E6AAB5E521FD",
+      "entity": {
+        "branch": "Harbour",
+        "product": "Almond Croissant",
+        "category": "Bakery"
+      },
+      "observation": {
+        "data_split": "test",
+        "periods_observed": 1,
+        "units": 114,
+        "revenue_usd": 576.6899999999999,
+        "cogs_usd": 217.73999999999998,
+        "gross_profit_usd": 358.95,
+        "gross_margin": 0.6224314623107736,
+        "listed_unit_price_usd": 5.09,
+        "unit_cost_usd": 1.91,
+        "realized_revenue_per_unit_usd": 5.058684210526315,
+        "effective_discount_rate": 0.006152414434908487
+      },
+      "model_expectation": {
+        "expected_unit_cost_usd": 1.9086462640924646,
+        "expected_listed_unit_price_usd": 5.092243162144127
+      },
+      "residual_signals": {
+        "cost_log_residual": 0.0007090135459651981,
+        "cost_residual_pct": 0.07092649554834018,
+        "price_log_residual": -0.00044060275220214606,
+        "price_residual_pct": -0.044050570106379805
+      },
+      "prediction_quality": {
+        "complete": true,
+        "cost_absolute_error_usd": 0.0013537359075352917,
+        "cost_absolute_percentage_error": 0.0007087622552540794,
+        "price_absolute_error_usd": 0.002243162144127453,
+        "price_absolute_percentage_error": 0.00044069983185215185
+      }
+    },
+    {
+      "evidence_id": "EVD-9F6381703CE42995",
+      "entity": {
+        "branch": "Harbour",
+        "product": "Americano",
+        "category": "Hot Coffee"
+      },
+      "observation": {
+        "data_split": "test",
+        "periods_observed": 1,
+        "units": 78,
+        "revenue_usd": 256.53000000000003,
+        "cogs_usd": 56.16,
+        "gross_profit_usd": 200.36999999999998,
+        "gross_margin": 0.7810782364635713,
+        "listed_unit_price_usd": 3.31,
+        "unit_cost_usd": 0.72,
+        "realized_revenue_per_unit_usd": 3.2888461538461544,
+        "effective_discount_rate": 0.006390890076690682
+      },
+      "model_expectation": {
+        "expected_unit_cost_usd": 0.7197962119501367,
+        "expected_listed_unit_price_usd": 3.3073321932510193
+      },
+      "residual_signals": {
+        "cost_log_residual": 0.0002830790212292045,
+        "cost_residual_pct": 0.028311909187639372,
+        "price_log_residual": 0.000806308891742713,
+        "price_residual_pct": 0.08066340461427846
+      },
+      "prediction_quality": {
+        "complete": true,
+        "cost_absolute_error_usd": 0.00020378804986331822,
+        "cost_absolute_percentage_error": 0.00028303895814349754,
+        "price_absolute_error_usd": 0.0026678067489807056,
+        "price_absolute_percentage_error": 0.000805983912078763
+      }
+    },
+    {
+      "evidence_id": "EVD-A44EB75D3B80DD4A",
+      "entity": {
+        "branch": "Harbour",
+        "product": "Avocado Toast",
+        "category": "Breakfast"
+      },
+      "observation": {
+        "data_split": "test",
+        "periods_observed": 1,
+        "units": 62,
+        "revenue_usd": 612.0699999999999,
+        "cogs_usd": 259.15999999999997,
+        "gross_profit_usd": 352.91,
+        "gross_margin": 0.5765843776038689,
+        "listed_unit_price_usd": 9.92,
+        "unit_cost_usd": 4.18,
+        "realized_revenue_per_unit_usd": 9.872096774193547,
+        "effective_discount_rate": 0.004828954214360043
+      },
+      "model_expectation": {
+        "expected_unit_cost_usd": 4.180071316475467,
+        "expected_listed_unit_price_usd": 9.921558974463107
+      },
+      "residual_signals": {
+        "cost_log_residual": -1.706121222389001e-05,
+        "cost_residual_pct": -0.0017061066682311221,
+        "price_log_residual": -0.00015714233627717178,
+        "price_residual_pct": -0.015712999006700645
+      },
+      "prediction_quality": {
+        "complete": true,
+        "cost_absolute_error_usd": 7.131647546732012e-05,
+        "cost_absolute_percentage_error": 1.7061357767301466e-05,
+        "price_absolute_error_usd": 0.0015589744631068214,
+        "price_absolute_percentage_error": 0.0001571546837809296
+      }
+    },
+    {
+      "evidence_id": "EVD-F96199A52FBC0DA5",
+      "entity": {
+        "branch": "Harbour",
+        "product": "Banana Bread",
+        "category": "Bakery"
+      },
+      "observation": {
+        "data_split": "test",
+        "periods_observed": 1,
+        "units": 87,
+        "revenue_usd": 403.94,
+        "cogs_usd": 136.59,
+        "gross_profit_usd": 267.35,
+        "gross_margin": 0.661855721146705,
+        "listed_unit_price_usd": 4.67,
+        "unit_cost_usd": 1.57,
+        "realized_revenue_per_unit_usd": 4.642988505747127,
+        "effective_discount_rate": 0.005784045878559646
+      },
+      "model_expectation": {
+        "expected_unit_cost_usd": 1.5726929178147413,
+        "expected_listed_unit_price_usd": 4.671229997153203
+      },
+      "residual_signals": {
+        "cost_log_residual": -0.0017137649425214563,
+        "cost_residual_pct": -0.17122972859081598,
+        "price_log_residual": -0.00026334800892091614,
+        "price_residual_pct": -0.02633133358778128
+      },
+      "prediction_quality": {
+        "complete": true,
+        "cost_absolute_error_usd": 0.002692917814741236,
+        "cost_absolute_percentage_error": 0.0017152342769052456,
+        "price_absolute_error_usd": 0.001229997153203044,
+        "price_absolute_percentage_error": 0.0002633826880520437
+      }
+    },
+    {
+      "evidence_id": "EVD-84C434623966936D",
+      "entity": {
+        "branch": "Harbour",
+        "product": "Blueberry Muffin",
+        "category": "Bakery"
+      },
+      "observation": {
+        "data_split": "test",
+        "periods_observed": 1,
+        "units": 82,
+        "revenue_usd": 337.42,
+        "cogs_usd": 107.42,
+        "gross_profit_usd": 230.0,
+        "gross_margin": 0.6816430561318239,
+        "listed_unit_price_usd": 4.15,
+        "unit_cost_usd": 1.31,
+        "realized_revenue_per_unit_usd": 4.114878048780488,
+        "effective_discount_rate": 0.008463120775786075
+      },
+      "model_expectation": {
+        "expected_unit_cost_usd": 1.3099999996270286,
+        "expected_listed_unit_price_usd": 4.147710034542009
+      },
+      "residual_signals": {
+        "cost_log_residual": 2.8471108803884704e-10,
+        "cost_residual_pct": 2.8471092150539334e-08,
+        "price_log_residual": 0.000551951202583556,
+        "price_residual_pct": 0.05521035556776965
+      },
+      "prediction_quality": {
+        "complete": true,
+        "cost_absolute_error_usd": 3.7297143151704404e-10,
+        "cost_absolute_percentage_error": 2.8471101642522446e-10,
+        "price_absolute_error_usd": 0.0022899654579910944,
+        "price_absolute_percentage_error": 0.0005517989055400227
+      }
+    },
+    {
+      "evidence_id": "EVD-360ED155FA9474BB",
+      "entity": {
+        "branch": "Harbour",
+        "product": "Brownie",
+        "category": "Desserts"
+      },
+      "observation": {
+        "data_split": "test",
+        "periods_observed": 1,
+        "units": 102,
+        "revenue_usd": 549.66,
+        "cogs_usd": 241.74,
+        "gross_profit_usd": 307.92,
+        "gross_margin": 0.5602008514354329,
+        "listed_unit_price_usd": 5.41,
+        "unit_cost_usd": 2.37,
+        "realized_revenue_per_unit_usd": 5.388823529411765,
+        "effective_discount_rate": 0.003914319886919647
+      },
+      "model_expectation": {
+        "expected_unit_cost_usd": 2.3713712887026306,
+        "expected_listed_unit_price_usd": 5.4072256530309835
+      },
+      "residual_signals": {
+        "cost_log_residual": -0.0005784355020382881,
+        "cost_residual_pct": -0.05782682404747996,
+        "price_log_residual": 0.0005129498299909496,
+        "price_residual_pct": 0.05130814112523918
+      },
+      "prediction_quality": {
+        "complete": true,
+        "cost_absolute_error_usd": 0.0013712887026304799,
+        "cost_absolute_percentage_error": 0.0005786028281141265,
+        "price_absolute_error_usd": 0.0027743469690166833,
+        "price_absolute_percentage_error": 0.0005128182937184257
+      }
+    },
+    {
+      "evidence_id": "EVD-56964CB2B3C0C8AD",
+      "entity": {
+        "branch": "Harbour",
+        "product": "Butter Croissant",
+        "category": "Bakery"
+      },
+      "observation": {
+        "data_split": "test",
+        "periods_observed": 1,
+        "units": 179,
+        "revenue_usd": 681.39,
+        "cogs_usd": 204.05999999999997,
+        "gross_profit_usd": 477.33,
+        "gross_margin": 0.7005239290274292,
+        "listed_unit_price_usd": 3.83,
+        "unit_cost_usd": 1.14,
+        "realized_revenue_per_unit_usd": 3.8066480446927375,
+        "effective_discount_rate": 0.006097116268214768
+      },
+      "model_expectation": {
+        "expected_unit_cost_usd": 1.1393861188093948,
+        "expected_listed_unit_price_usd": 3.8303636866870714
+      },
+      "residual_signals": {
+        "cost_log_residual": 0.0005386373114949772,
+        "cost_residual_pct": 0.0538782402621063,
+        "price_log_residual": -9.49528513838338e-05,
+        "price_residual_pct": -0.009494834350465275
+      },
+      "prediction_quality": {
+        "complete": true,
+        "cost_absolute_error_usd": 0.0006138811906051256,
+        "cost_absolute_percentage_error": 0.0005384922724606365,
+        "price_absolute_error_usd": 0.00036368668707131846,
+        "price_absolute_percentage_error": 9.495735954864711e-05
+      }
+    },
+    {
+      "evidence_id": "EVD-FF3C6553C72AA317",
+      "entity": {
+        "branch": "Harbour",
+        "product": "Cappuccino",
+        "category": "Hot Coffee"
+      },
+      "observation": {
+        "data_split": "test",
+        "periods_observed": 1,
+        "units": 117,
+        "revenue_usd": 495.1,
+        "cogs_usd": 131.04000000000002,
+        "gross_profit_usd": 364.06,
+        "gross_margin": 0.7353261967279338,
+        "listed_unit_price_usd": 4.25,
+        "unit_cost_usd": 1.12,
+        "realized_revenue_per_unit_usd": 4.231623931623932,
+        "effective_discount_rate": 0.004323780794369032
+      },
+      "model_expectation": {
+        "expected_unit_cost_usd": 1.1199999993515326,
+        "expected_listed_unit_price_usd": 4.252284249712478
+      },
+      "residual_signals": {
+        "cost_log_residual": 5.789888846141622e-10,
+        "cost_residual_pct": 5.789888568585866e-08,
+        "price_log_residual": -0.000537326135035876,
+        "price_residual_pct": -0.053718180120065906
+      },
+      "prediction_quality": {
+        "complete": true,
+        "cost_absolute_error_usd": 6.484675019180486e-10,
+        "cost_absolute_percentage_error": 5.789888409982576e-10,
+        "price_absolute_error_usd": 0.0022842497124777594,
+        "price_absolute_percentage_error": 0.0005374705205830022
+      }
+    },
+    {
+      "evidence_id": "EVD-CD200BFF97335BC1",
+      "entity": {
+        "branch": "Harbour",
+        "product": "Caramel Latte",
+        "category": "Hot Coffee"
+      },
+      "observation": {
+        "data_split": "test",
+        "periods_observed": 1,
+        "units": 97,
+        "revenue_usd": 583.48,
+        "cogs_usd": 181.39000000000001,
+        "gross_profit_usd": 402.09,
+        "gross_margin": 0.6891238774251045,
+        "listed_unit_price_usd": 6.04,
+        "unit_cost_usd": 1.87,
+        "realized_revenue_per_unit_usd": 6.015257731958763,
+        "effective_discount_rate": 0.004096401993582301
+      },
+      "model_expectation": {
+        "expected_unit_cost_usd": 1.8699999994184513,
+        "expected_listed_unit_price_usd": 6.038711513871049
+      },
+      "residual_signals": {
+        "cost_log_residual": 3.109886792529437e-10,
+        "cost_residual_pct": 3.1098856823064125e-08,
+        "price_log_residual": 0.00021334827516295007,
+        "price_residual_pct": 0.02133710355249896
+      },
+      "prediction_quality": {
+        "complete": true,
+        "cost_absolute_error_usd": 5.815488091087673e-10,
+        "cost_absolute_percentage_error": 3.109886679726028e-10,
+        "price_absolute_error_usd": 0.0012884861289510496,
+        "price_absolute_percentage_error": 0.00021332551803825324
+      }
+    },
+    {
+      "evidence_id": "EVD-6CA4DFB2F273F83F",
+      "entity": {
+        "branch": "Harbour",
+        "product": "Chai Latte",
+        "category": "Matcha & Tea"
+      },
+      "observation": {
+        "data_split": "test",
+        "periods_observed": 1,
+        "units": 81,
+        "revenue_usd": 441.90999999999997,
+        "cogs_usd": 119.88,
+        "gross_profit_usd": 322.03000000000003,
+        "gross_margin": 0.7287230431535834,
+        "listed_unit_price_usd": 5.51,
+        "unit_cost_usd": 1.48,
+        "realized_revenue_per_unit_usd": 5.455679012345678,
+        "effective_discount_rate": 0.009858618449060066
+      },
+      "model_expectation": {
+        "expected_unit_cost_usd": 1.480522294106155,
+        "expected_listed_unit_price_usd": 5.512011841051434
+      },
+      "residual_signals": {
+        "cost_log_residual": -0.00035283916801676085,
+        "cost_residual_pct": -0.0352776927598053,
+        "price_log_residual": -0.0003650587756192092,
+        "price_residual_pct": -0.03649921497720365
+      },
+      "prediction_quality": {
+        "complete": true,
+        "cost_absolute_error_usd": 0.000522294106155119,
+        "cost_absolute_percentage_error": 0.00035290142307778307,
+        "price_absolute_error_usd": 0.00201184105143426,
+        "price_absolute_percentage_error": 0.0003651254176831688
+      }
+    },
+    {
+      "evidence_id": "EVD-D9AEE201FA4B73AB",
+      "entity": {
+        "branch": "Harbour",
+        "product": "Cheesecake Slice",
+        "category": "Desserts"
+      },
+      "observation": {
+        "data_split": "test",
+        "periods_observed": 1,
+        "units": 78,
+        "revenue_usd": 548.76,
+        "cogs_usd": 240.24,
+        "gross_profit_usd": 308.52,
+        "gross_margin": 0.5622129892849332,
+        "listed_unit_price_usd": 7.09,
+        "unit_cost_usd": 3.08,
+        "realized_revenue_per_unit_usd": 7.035384615384615,
+        "effective_discount_rate": 0.007703157209504177
+      },
+      "model_expectation": {
+        "expected_unit_cost_usd": 3.0799999967822425,
+        "expected_listed_unit_price_usd": 7.088777312354319
+      },
+      "residual_signals": {
+        "cost_log_residual": 1.04472652751042e-09,
+        "cost_residual_pct": 1.04472652751042e-07,
+        "price_log_residual": 0.00017246728991882065,
+        "price_residual_pct": 0.017248216325693733
+      },
+      "prediction_quality": {
+        "complete": true,
+        "cost_absolute_error_usd": 3.217757615914252e-09,
+        "cost_absolute_percentage_error": 1.0447264986734584e-09,
+        "price_absolute_error_usd": 0.0012226876456811198,
+        "price_absolute_percentage_error": 0.000172452418290708
+      }
+    },
+    {
+      "evidence_id": "EVD-99252353BAF260CB",
+      "entity": {
+        "branch": "Harbour",
+        "product": "Chicken Pesto Sandwich",
+        "category": "Sandwiches"
+      },
+      "observation": {
+        "data_split": "test",
+        "periods_observed": 1,
+        "units": 72,
+        "revenue_usd": 807.2299999999999,
+        "cogs_usd": 372.24,
+        "gross_profit_usd": 434.99,
+        "gross_margin": 0.5388674851033783,
+        "listed_unit_price_usd": 11.29,
+        "unit_cost_usd": 5.17,
+        "realized_revenue_per_unit_usd": 11.211527777777777,
+        "effective_discount_rate": 0.006950595413837216
+      },
+      "model_expectation": {
+        "expected_unit_cost_usd": 5.168707603117232,
+        "expected_listed_unit_price_usd": 11.289040474599986
+      },
+      "residual_signals": {
+        "cost_log_residual": 0.0002500113049159758,
+        "cost_residual_pct": 0.025004256034688588,
+        "price_log_residual": 8.499257545224737e-05,
+        "price_residual_pct": 0.008499618742363602
+      },
+      "prediction_quality": {
+        "complete": true,
+        "cost_absolute_error_usd": 0.0012923968827678323,
+        "cost_absolute_percentage_error": 0.0002499800546939714,
+        "price_absolute_error_usd": 0.0009595254000132059,
+        "price_absolute_percentage_error": 8.498896368584641e-05
+      }
+    },
+    {
+      "evidence_id": "EVD-525AE3ADAB992158",
+      "entity": {
+        "branch": "Harbour",
+        "product": "Chicken Salad Bowl",
+        "category": "Meals"
+      },
+      "observation": {
+        "data_split": "test",
+        "periods_observed": 1,
+        "units": 46,
+        "revenue_usd": 595.98,
+        "cogs_usd": 259.90000000000003,
+        "gross_profit_usd": 336.08,
+        "gross_margin": 0.5639115406557267,
+        "listed_unit_price_usd": 13.07,
+        "unit_cost_usd": 5.65,
+        "realized_revenue_per_unit_usd": 12.95608695652174,
+        "effective_discount_rate": 0.008715611589767476
+      },
+      "model_expectation": {
+        "expected_unit_cost_usd": 5.649319150291703,
+        "expected_listed_unit_price_usd": 13.071756333834209
+      },
+      "residual_signals": {
+        "cost_log_residual": 0.0001205116343854229,
+        "cost_residual_pct": 0.012051889620412481,
+        "price_log_residual": -0.00013436999522298265,
+        "price_residual_pct": -0.013436096797969643
+      },
+      "prediction_quality": {
+        "complete": true,
+        "cost_absolute_error_usd": 0.0006808497082975151,
+        "cost_absolute_percentage_error": 0.00012050437315000267,
+        "price_absolute_error_usd": 0.00175633383420859,
+        "price_absolute_percentage_error": 0.00013437902327533206
+      }
+    },
+    {
+      "evidence_id": "EVD-3993EF91AFCCDF58",
+      "entity": {
+        "branch": "Harbour",
+        "product": "Chocolate Cookie",
+        "category": "Bakery"
+      },
+      "observation": {
+        "data_split": "test",
+        "periods_observed": 1,
+        "units": 113,
+        "revenue_usd": 373.37,
+        "cogs_usd": 102.83,
+        "gross_profit_usd": 270.53999999999996,
+        "gross_margin": 0.7245895492406995,
+        "listed_unit_price_usd": 3.31,
+        "unit_cost_usd": 0.91,
+        "realized_revenue_per_unit_usd": 3.3041592920353984,
+        "effective_discount_rate": 0.0017645643397588432
+      },
+      "model_expectation": {
+        "expected_unit_cost_usd": 0.9090621677436732,
+        "expected_listed_unit_price_usd": 3.307332193251017
+      },
+      "residual_signals": {
+        "cost_log_residual": 0.0010311163148228747,
+        "cost_residual_pct": 0.10316480980112619,
+        "price_log_residual": 0.0008063088917433792,
+        "price_residual_pct": 0.08066340461434507
+      },
+      "prediction_quality": {
+        "complete": true,
+        "cost_absolute_error_usd": 0.0009378322563268204,
+        "cost_absolute_percentage_error": 0.00103058489706244,
+        "price_absolute_error_usd": 0.002667806748982926,
+        "price_absolute_percentage_error": 0.0008059839120794338
+      }
+    },
+    {
+      "evidence_id": "EVD-6B8FA91111B103B2",
+      "entity": {
+        "branch": "Harbour",
+        "product": "Chocolate Croissant",
+        "category": "Bakery"
+      },
+      "observation": {
+        "data_split": "test",
+        "periods_observed": 1,
+        "units": 120,
+        "revenue_usd": 532.05,
+        "cogs_usd": 189.60000000000002,
+        "gross_profit_usd": 342.45,
+        "gross_margin": 0.6436425148012406,
+        "listed_unit_price_usd": 4.46,
+        "unit_cost_usd": 1.5800000000000003,
+        "realized_revenue_per_unit_usd": 4.43375,
+        "effective_discount_rate": 0.005885650224215249
+      },
+      "model_expectation": {
+        "expected_unit_cost_usd": 1.580914192468419,
+        "expected_listed_unit_price_usd": 4.461946029942204
+      },
+      "residual_signals": {
+        "cost_log_residual": -0.0005784355020370668,
+        "cost_residual_pct": -0.05782682404736894,
+        "price_log_residual": -0.0004362344193820089,
+        "price_residual_pct": -0.043613928298202875
+      },
+      "prediction_quality": {
+        "complete": true,
+        "cost_absolute_error_usd": 0.0009141924684186176,
+        "cost_absolute_percentage_error": 0.000578602828113049,
+        "price_absolute_error_usd": 0.0019460299422036087,
+        "price_absolute_percentage_error": 0.0004363295834537239
+      }
+    },
+    {
+      "evidence_id": "EVD-627A6B8B6E22EDFB",
+      "entity": {
+        "branch": "Harbour",
+        "product": "Cinnamon Roll",
+        "category": "Bakery"
+      },
+      "observation": {
+        "data_split": "test",
+        "periods_observed": 1,
+        "units": 133,
+        "revenue_usd": 716.83,
+        "cogs_usd": 297.92,
+        "gross_profit_usd": 418.90999999999997,
+        "gross_margin": 0.5843923942915334,
+        "listed_unit_price_usd": 5.41,
+        "unit_cost_usd": 2.24,
+        "realized_revenue_per_unit_usd": 5.389699248120301,
+        "effective_discount_rate": 0.0037524495156560536
+      },
+      "model_expectation": {
+        "expected_unit_cost_usd": 2.2393495892170066,
+        "expected_listed_unit_price_usd": 5.407225653030992
+      },
+      "residual_signals": {
+        "cost_log_residual": 0.00029040411988834336,
+        "cost_residual_pct": 0.029044629124697074,
+        "price_log_residual": 0.0005129498299893953,
+        "price_residual_pct": 0.051308141125061546
+      },
+      "prediction_quality": {
+        "complete": true,
+        "cost_absolute_error_usd": 0.0006504107829936601,
+        "cost_absolute_percentage_error": 0.0002903619566935982,
+        "price_absolute_error_usd": 0.0027743469690078015,
+        "price_absolute_percentage_error": 0.000512818293716784
+      }
+    },
+    {
+      "evidence_id": "EVD-15347359B291DCD6",
+      "entity": {
+        "branch": "Harbour",
+        "product": "Classic Matcha",
+        "category": "Matcha & Tea"
+      },
+      "observation": {
+        "data_split": "test",
+        "periods_observed": 1,
+        "units": 109,
+        "revenue_usd": 731.13,
+        "cogs_usd": 247.43,
+        "gross_profit_usd": 483.7,
+        "gross_margin": 0.6615786522232708,
+        "listed_unit_price_usd": 6.77,
+        "unit_cost_usd": 2.27,
+        "realized_revenue_per_unit_usd": 6.707614678899082,
+        "effective_discount_rate": 0.009214966189204934
+      },
+      "model_expectation": {
+        "expected_unit_cost_usd": 2.2714245521788827,
+        "expected_listed_unit_price_usd": 6.771361601114378
+      },
+      "residual_signals": {
+        "cost_log_residual": -0.0006273591950005653,
+        "cost_residual_pct": -0.06271624463670689,
+        "price_log_residual": -0.00020110254183802745,
+        "price_residual_pct": -0.020108232207738386
+      },
+      "prediction_quality": {
+        "complete": true,
+        "cost_absolute_error_usd": 0.0014245521788827098,
+        "cost_absolute_percentage_error": 0.0006275560259395198,
+        "price_absolute_error_usd": 0.0013616011143779971,
+        "price_absolute_percentage_error": 0.0002011227643098962
+      }
+    },
+    {
+      "evidence_id": "EVD-8CD5D7615D8EEB03",
+      "entity": {
+        "branch": "Harbour",
+        "product": "Coffee Frappe",
+        "category": "Cold Coffee"
+      },
+      "observation": {
+        "data_split": "test",
+        "periods_observed": 1,
+        "units": 74,
+        "revenue_usd": 504.98,
+        "cogs_usd": 187.21999999999997,
+        "gross_profit_usd": 317.76,
+        "gross_margin": 0.6292526436690562,
+        "listed_unit_price_usd": 6.88,
+        "unit_cost_usd": 2.53,
+        "realized_revenue_per_unit_usd": 6.824054054054054,
+        "effective_discount_rate": 0.008131678189817719
+      },
+      "model_expectation": {
+        "expected_unit_cost_usd": 2.5311712774426436,
+        "expected_listed_unit_price_usd": 6.879493376460156
+      },
+      "residual_signals": {
+        "cost_log_residual": -0.00046284838008714413,
+        "cost_residual_pct": -0.046274128229961686,
+        "price_log_residual": 7.363985376662718e-05,
+        "price_residual_pct": 0.007364256524722279
+      },
+      "prediction_quality": {
+        "complete": true,
+        "cost_absolute_error_usd": 0.001171277442643781,
+        "cost_absolute_percentage_error": 0.00046295551092639573,
+        "price_absolute_error_usd": 0.0005066235398443197,
+        "price_absolute_percentage_error": 7.363714241923252e-05
+      }
+    },
+    {
+      "evidence_id": "EVD-BA7E487FCCE908E6",
+      "entity": {
+        "branch": "Harbour",
+        "product": "Cold Brew",
+        "category": "Cold Coffee"
+      },
+      "observation": {
+        "data_split": "test",
+        "periods_observed": 1,
+        "units": 119,
+        "revenue_usd": 642.71,
+        "cogs_usd": 138.04,
+        "gross_profit_usd": 504.67,
+        "gross_margin": 0.7852219508020725,
+        "listed_unit_price_usd": 5.409999999999999,
+        "unit_cost_usd": 1.16,
+        "realized_revenue_per_unit_usd": 5.4009243697479,
+        "effective_discount_rate": 0.0016775656658227064
+      },
+      "model_expectation": {
+        "expected_unit_cost_usd": 1.1598657784825979,
+        "expected_listed_unit_price_usd": 5.40722565303099
+      },
+      "residual_signals": {
+        "cost_log_residual": 0.00011571489936759716,
+        "cost_residual_pct": 0.011572159459483089,
+        "price_log_residual": 0.0005129498299896174,
+        "price_residual_pct": 0.051308141125105955
+      },
+      "prediction_quality": {
+        "complete": true,
+        "cost_absolute_error_usd": 0.00013422151740205557,
+        "cost_absolute_percentage_error": 0.00011570820465694446,
+        "price_absolute_error_usd": 0.002774346969009578,
+        "price_absolute_percentage_error": 0.0005128182937171124
+      }
+    },
+    {
+      "evidence_id": "EVD-1FE4F445181EC62D",
+      "entity": {
+        "branch": "Harbour",
+        "product": "Egg Sandwich",
+        "category": "Breakfast"
+      },
+      "observation": {
+        "data_split": "test",
+        "periods_observed": 1,
+        "units": 62,
+        "revenue_usd": 529.0,
+        "cogs_usd": 192.82,
+        "gross_profit_usd": 336.18,
+        "gross_margin": 0.6355009451795841,
+        "listed_unit_price_usd": 8.56,
+        "unit_cost_usd": 3.11,
+        "realized_revenue_per_unit_usd": 8.53225806451613,
+        "effective_discount_rate": 0.003240880313536329
+      },
+      "model_expectation": {
+        "expected_unit_cost_usd": 3.112330690556327,
+        "expected_listed_unit_price_usd": 8.55741060787124
+      },
+      "residual_signals": {
+        "cost_log_residual": -0.0007491375117250065,
+        "cost_residual_pct": -0.07488569782764243,
+        "price_log_residual": 0.00030254484253822156,
+        "price_residual_pct": 0.030259061384496633
+      },
+      "prediction_quality": {
+        "complete": true,
+        "cost_absolute_error_usd": 0.002330690556326953,
+        "cost_absolute_percentage_error": 0.0007494181853141328,
+        "price_absolute_error_usd": 0.002589392128760082,
+        "price_absolute_percentage_error": 0.0003024990804626264
+      }
+    },
+    {
+      "evidence_id": "EVD-21B4DE53C7001477",
+      "entity": {
+        "branch": "Harbour",
+        "product": "English Breakfast Tea",
+        "category": "Matcha & Tea"
+      },
+      "observation": {
+        "data_split": "test",
+        "periods_observed": 1,
+        "units": 38,
+        "revenue_usd": 136.84,
+        "cogs_usd": 21.659999999999997,
+        "gross_profit_usd": 115.17999999999999,
+        "gross_margin": 0.8417129494299912,
+        "listed_unit_price_usd": 3.62,
+        "unit_cost_usd": 0.57,
+        "realized_revenue_per_unit_usd": 3.6010526315789475,
+        "effective_discount_rate": 0.005234079674323936
+      },
+      "model_expectation": {
+        "expected_unit_cost_usd": 0.5729971598550749,
+        "expected_listed_unit_price_usd": 3.621164177313963
+      },
+      "residual_signals": {
+        "cost_log_residual": -0.0052443992509538795,
+        "cost_residual_pct": -0.5230671397800757,
+        "price_log_residual": -0.00032154424219266176,
+        "price_residual_pct": -0.0321492552383118
+      },
+      "prediction_quality": {
+        "complete": true,
+        "cost_absolute_error_usd": 0.0029971598550749823,
+        "cost_absolute_percentage_error": 0.005258175184342075,
+        "price_absolute_error_usd": 0.0011641773139627887,
+        "price_absolute_percentage_error": 0.0003215959430836433
+      }
+    },
+    {
+      "evidence_id": "EVD-C797691654146232",
+      "entity": {
+        "branch": "Harbour",
+        "product": "Espresso",
+        "category": "Hot Coffee"
+      },
+      "observation": {
+        "data_split": "test",
+        "periods_observed": 1,
+        "units": 54,
+        "revenue_usd": 149.28,
+        "cogs_usd": 35.1,
+        "gross_profit_usd": 114.17999999999999,
+        "gross_margin": 0.7648713826366559,
+        "listed_unit_price_usd": 2.7799999999999994,
+        "unit_cost_usd": 0.65,
+        "realized_revenue_per_unit_usd": 2.7644444444444445,
+        "effective_discount_rate": 0.005595523581135089
+      },
+      "model_expectation": {
+        "expected_unit_cost_usd": 0.6498645529013264,
+        "expected_listed_unit_price_usd": 2.7800068021859303
+      },
+      "residual_signals": {
+        "cost_log_residual": 0.0002084018659659348,
+        "cost_residual_pct": 0.020842358314343556,
+        "price_log_residual": -2.4468264780974636e-06,
+        "price_residual_pct": -0.0002446823484603122
+      },
+      "prediction_quality": {
+        "complete": true,
+        "cost_absolute_error_usd": 0.00013544709867363558,
+        "cost_absolute_percentage_error": 0.0002083801518055932,
+        "price_absolute_error_usd": 6.8021859309652655e-06,
+        "price_absolute_percentage_error": 2.44682947157024e-06
+      }
+    },
+    {
+      "evidence_id": "EVD-4D305020EEFD4EA9",
+      "entity": {
+        "branch": "Harbour",
+        "product": "Flat White",
+        "category": "Hot Coffee"
+      },
+      "observation": {
+        "data_split": "test",
+        "periods_observed": 1,
+        "units": 99,
+        "revenue_usd": 448.77000000000004,
+        "cogs_usd": 122.76,
+        "gross_profit_usd": 326.01,
+        "gross_margin": 0.7264523029614278,
+        "listed_unit_price_usd": 4.57,
+        "unit_cost_usd": 1.24,
+        "realized_revenue_per_unit_usd": 4.533030303030303,
+        "effective_discount_rate": 0.008089649227504807
+      },
+      "model_expectation": {
+        "expected_unit_cost_usd": 1.2394340009743887,
+        "expected_listed_unit_price_usd": 4.569999997473687
+      },
+      "residual_signals": {
+        "cost_log_residual": 0.00045655503249569795,
+        "cost_residual_pct": 0.04566592696071403,
+        "price_log_residual": 5.528038027335924e-10,
+        "price_residual_pct": 5.528038027335924e-08
+      },
+      "prediction_quality": {
+        "complete": true,
+        "cost_absolute_error_usd": 0.0005659990256112746,
+        "cost_absolute_percentage_error": 0.0004564508271058666,
+        "price_absolute_error_usd": 2.5263133807129634e-09,
+        "price_absolute_percentage_error": 5.528038032194668e-10
+      }
+    },
+    {
+      "evidence_id": "EVD-CB14C763909C390F",
+      "entity": {
+        "branch": "Harbour",
+        "product": "Fresh Orange Juice",
+        "category": "Cold Drinks"
+      },
+      "observation": {
+        "data_split": "test",
+        "periods_observed": 1,
+        "units": 85,
+        "revenue_usd": 511.6,
+        "cogs_usd": 180.20000000000002,
+        "gross_profit_usd": 331.4,
+        "gross_margin": 0.6477716966379984,
+        "listed_unit_price_usd": 6.04,
+        "unit_cost_usd": 2.12,
+        "realized_revenue_per_unit_usd": 6.018823529411765,
+        "effective_discount_rate": 0.0035060381768601463
+      },
+      "model_expectation": {
+        "expected_unit_cost_usd": 2.120385276651389,
+        "expected_listed_unit_price_usd": 6.038711513871048
+      },
+      "residual_signals": {
+        "cost_log_residual": -0.00018171775785114086,
+        "cost_residual_pct": -0.018170124817951105,
+        "price_log_residual": 0.00021334827516317212,
+        "price_residual_pct": 0.02133710355249896
+      },
+      "prediction_quality": {
+        "complete": true,
+        "cost_absolute_error_usd": 0.00038527665138898826,
+        "cost_absolute_percentage_error": 0.00018173426952310765,
+        "price_absolute_error_usd": 0.0012884861289519378,
+        "price_absolute_percentage_error": 0.0002133255180384003
+      }
+    },
+    {
+      "evidence_id": "EVD-AD64ECF8371C52BC",
+      "entity": {
+        "branch": "Harbour",
+        "product": "Frozen Yoghurt Cup",
+        "category": "Desserts"
+      },
+      "observation": {
+        "data_split": "test",
+        "periods_observed": 1,
+        "units": 76,
+        "revenue_usd": 485.76,
+        "cogs_usd": 204.44,
+        "gross_profit_usd": 281.32,
+        "gross_margin": 0.5791337285902504,
+        "listed_unit_price_usd": 6.46,
+        "unit_cost_usd": 2.69,
+        "realized_revenue_per_unit_usd": 6.391578947368421,
+        "effective_discount_rate": 0.010591494215414703
+      },
+      "model_expectation": {
+        "expected_unit_cost_usd": 2.690217026687403,
+        "expected_listed_unit_price_usd": 6.457278891517923
+      },
+      "residual_signals": {
+        "cost_log_residual": -8.067581156834258e-05,
+        "cost_residual_pct": -0.008067255736254886,
+        "price_log_residual": 0.0004213129630752377,
+        "price_residual_pct": 0.042140172784721486
+      },
+      "prediction_quality": {
+        "complete": true,
+        "cost_absolute_error_usd": 0.00021702668740308795,
+        "cost_absolute_percentage_error": 8.067906594910333e-05,
+        "price_absolute_error_usd": 0.0027211084820768505,
+        "price_absolute_percentage_error": 0.0004212242232317106
+      }
+    },
+    {
+      "evidence_id": "EVD-B1586861822850F9",
+      "entity": {
+        "branch": "Harbour",
+        "product": "Granola Yoghurt",
+        "category": "Breakfast"
+      },
+      "observation": {
+        "data_split": "test",
+        "periods_observed": 1,
+        "units": 40,
+        "revenue_usd": 328.78000000000003,
+        "cogs_usd": 132.79999999999998,
+        "gross_profit_usd": 195.98,
+        "gross_margin": 0.5960824867692681,
+        "listed_unit_price_usd": 8.24,
+        "unit_cost_usd": 3.3199999999999994,
+        "realized_revenue_per_unit_usd": 8.2195,
+        "effective_discount_rate": 0.0024878640776699037
+      },
+      "model_expectation": {
+        "expected_unit_cost_usd": 3.321879470755294,
+        "expected_listed_unit_price_usd": 8.242857794111272
+      },
+      "residual_signals": {
+        "cost_log_residual": -0.0005659454718307533,
+        "cost_residual_pct": -0.0565785354899484,
+        "price_log_residual": -0.00034675954565699385,
+        "price_residual_pct": -0.034669943151433014
+      },
+      "prediction_quality": {
+        "complete": true,
+        "cost_absolute_error_usd": 0.0018794707552944878,
+        "cost_absolute_percentage_error": 0.0005661056491850868,
+        "price_absolute_error_usd": 0.0028577941112715166,
+        "price_absolute_percentage_error": 0.00034681967369799957
+      }
+    },
+    {
+      "evidence_id": "EVD-ADC2BEE72031416A",
+      "entity": {
+        "branch": "Harbour",
+        "product": "Halloumi Wrap",
+        "category": "Sandwiches"
+      },
+      "observation": {
+        "data_split": "test",
+        "periods_observed": 1,
+        "units": 49,
+        "revenue_usd": 510.99999999999994,
+        "cogs_usd": 202.85999999999999,
+        "gross_profit_usd": 308.14,
+        "gross_margin": 0.603013698630137,
+        "listed_unit_price_usd": 10.45,
+        "unit_cost_usd": 4.14,
+        "realized_revenue_per_unit_usd": 10.428571428571427,
+        "effective_discount_rate": 0.0020505809979494173
+      },
+      "model_expectation": {
+        "expected_unit_cost_usd": 4.13885867013423,
+        "expected_listed_unit_price_usd": 10.448258523082387
+      },
+      "residual_signals": {
+        "cost_log_residual": 0.0002757215501496546,
+        "cost_residual_pct": 0.027575956483016917,
+        "price_log_residual": 0.00016666239626816903,
+        "price_residual_pct": 0.016667628521682687
+      },
+      "prediction_quality": {
+        "complete": true,
+        "cost_absolute_error_usd": 0.001141329865769869,
+        "cost_absolute_percentage_error": 0.0002756835424564901,
+        "price_absolute_error_usd": 0.0017414769176120615,
+        "price_absolute_percentage_error": 0.00016664850886239824
+      }
+    },
+    {
+      "evidence_id": "EVD-CB91D2DAFC060B4D",
+      "entity": {
+        "branch": "Harbour",
+        "product": "Iced Americano",
+        "category": "Cold Coffee"
+      },
+      "observation": {
+        "data_split": "test",
+        "periods_observed": 1,
+        "units": 142,
+        "revenue_usd": 569.28,
+        "cogs_usd": 122.12,
+        "gross_profit_usd": 447.16,
+        "gross_margin": 0.7854834176503654,
+        "listed_unit_price_usd": 4.04,
+        "unit_cost_usd": 0.86,
+        "realized_revenue_per_unit_usd": 4.009014084507042,
+        "effective_discount_rate": 0.007669781062613301
+      },
+      "model_expectation": {
+        "expected_unit_cost_usd": 0.8604533238223318,
+        "expected_listed_unit_price_usd": 4.042294903262664
+      },
+      "residual_signals": {
+        "cost_log_residual": -0.000526981844314961,
+        "cost_residual_pct": -0.05268430137709279,
+        "price_log_residual": -0.0005678840853509115,
+        "price_residual_pct": -0.05677228697024139
+      },
+      "prediction_quality": {
+        "complete": true,
+        "cost_absolute_error_usd": 0.0004533238223317637,
+        "cost_absolute_percentage_error": 0.0005271207236415857,
+        "price_absolute_error_usd": 0.0022949032626637944,
+        "price_absolute_percentage_error": 0.0005680453620454936
+      }
+    },
+    {
+      "evidence_id": "EVD-CAAF710C866A8077",
+      "entity": {
+        "branch": "Harbour",
+        "product": "Iced Latte",
+        "category": "Cold Coffee"
+      },
+      "observation": {
+        "data_split": "test",
+        "periods_observed": 1,
+        "units": 188,
+        "revenue_usd": 1050.4,
+        "cogs_usd": 312.08,
+        "gross_profit_usd": 738.32,
+        "gross_margin": 0.7028941355674029,
+        "listed_unit_price_usd": 5.62,
+        "unit_cost_usd": 1.66,
+        "realized_revenue_per_unit_usd": 5.587234042553192,
+        "effective_discount_rate": 0.005830241538578032
+      },
+      "model_expectation": {
+        "expected_unit_cost_usd": 1.6578215189104566,
+        "expected_listed_unit_price_usd": 5.619999995401682
+      },
+      "residual_signals": {
+        "cost_log_residual": 0.0013131998753951324,
+        "cost_residual_pct": 0.13140624999095074,
+        "price_log_residual": 8.1820594743931e-10,
+        "price_residual_pct": 8.182061694839149e-08
+      },
+      "prediction_quality": {
+        "complete": true,
+        "cost_absolute_error_usd": 0.002178481089543327,
+        "cost_absolute_percentage_error": 0.0013123380057489923,
+        "price_absolute_error_usd": 4.5983181706787946e-09,
+        "price_absolute_percentage_error": 8.182060801919563e-10
+      }
+    },
+    {
+      "evidence_id": "EVD-B23E06339067F644",
+      "entity": {
+        "branch": "Harbour",
+        "product": "Iced Matcha",
+        "category": "Matcha & Tea"
+      },
+      "observation": {
+        "data_split": "test",
+        "periods_observed": 1,
+        "units": 146,
+        "revenue_usd": 1045.42,
+        "cogs_usd": 366.46,
+        "gross_profit_usd": 678.9599999999999,
+        "gross_margin": 0.64946146046565,
+        "listed_unit_price_usd": 7.19,
+        "unit_cost_usd": 2.51,
+        "realized_revenue_per_unit_usd": 7.1604109589041105,
+        "effective_discount_rate": 0.004115304742126625
+      },
+      "model_expectation": {
+        "expected_unit_cost_usd": 2.5105650739218373,
+        "expected_listed_unit_price_usd": 7.192652922461748
+      },
+      "residual_signals": {
+        "cost_log_residual": -0.00022510371478257074,
+        "cost_residual_pct": -0.02250783808422918,
+        "price_log_residual": -0.000368905862657698,
+        "price_residual_pct": -0.036883782525676256
+      },
+      "prediction_quality": {
+        "complete": true,
+        "cost_absolute_error_usd": 0.0005650739218374667,
+        "cost_absolute_percentage_error": 0.00022512905252488716,
+        "price_absolute_error_usd": 0.002652922461747309,
+        "price_absolute_percentage_error": 0.00036897391679378426
+      }
+    },
+    {
+      "evidence_id": "EVD-5C2624754FF0D8B8",
+      "entity": {
+        "branch": "Harbour",
+        "product": "Iced Mocha",
+        "category": "Cold Coffee"
+      },
+      "observation": {
+        "data_split": "test",
+        "periods_observed": 1,
+        "units": 85,
+        "revenue_usd": 555.62,
+        "cogs_usd": 189.55,
+        "gross_profit_usd": 366.07,
+        "gross_margin": 0.6588495734494798,
+        "listed_unit_price_usd": 6.5600000000000005,
+        "unit_cost_usd": 2.23,
+        "realized_revenue_per_unit_usd": 6.536705882352941,
+        "effective_discount_rate": 0.0035509325681492066
+      },
+      "model_expectation": {
+        "expected_unit_cost_usd": 2.230212188882265,
+        "expected_listed_unit_price_usd": 6.562077642667445
+      },
+      "residual_signals": {
+        "cost_log_residual": -9.514743848015872e-05,
+        "cost_residual_pct": -0.009514291210610537,
+        "price_log_residual": -0.00031666367802163364,
+        "price_residual_pct": -0.03166135453709362
+      },
+      "prediction_quality": {
+        "complete": true,
+        "cost_absolute_error_usd": 0.0002121888822648188,
+        "cost_absolute_percentage_error": 9.515196514117435e-05,
+        "price_absolute_error_usd": 0.0020776426674444792,
+        "price_absolute_percentage_error": 0.00031671382125678034
+      }
+    },
+    {
+      "evidence_id": "EVD-314553524EC4ECB7",
+      "entity": {
+        "branch": "Harbour",
+        "product": "Lemonade",
+        "category": "Cold Drinks"
+      },
+      "observation": {
+        "data_split": "test",
+        "periods_observed": 1,
+        "units": 72,
+        "revenue_usd": 350.38,
+        "cogs_usd": 84.24,
+        "gross_profit_usd": 266.14,
+        "gross_margin": 0.759575318225926,
+        "listed_unit_price_usd": 4.88,
+        "unit_cost_usd": 1.17,
+        "realized_revenue_per_unit_usd": 4.866388888888888,
+        "effective_discount_rate": 0.002789162112932606
+      },
+      "model_expectation": {
+        "expected_unit_cost_usd": 1.1679716041614023,
+        "expected_listed_unit_price_usd": 4.880513744430318
+      },
+      "residual_signals": {
+        "cost_log_residual": 0.0017351762048075925,
+        "cost_residual_pct": 0.17366824941382752,
+        "price_log_residual": -0.00010526995693971308,
+        "price_residual_pct": -0.010526441625213767
+      },
+      "prediction_quality": {
+        "complete": true,
+        "cost_absolute_error_usd": 0.0020283958385975964,
+        "cost_absolute_percentage_error": 0.0017336716569210228,
+        "price_absolute_error_usd": 0.0005137444303180416,
+        "price_absolute_percentage_error": 0.00010527549801599214
+      }
+    },
+    {
+      "evidence_id": "EVD-8BCCC7919E7CA540",
+      "entity": {
+        "branch": "Harbour",
+        "product": "Mint Tea",
+        "category": "Matcha & Tea"
+      },
+      "observation": {
+        "data_split": "test",
+        "periods_observed": 1,
+        "units": 47,
+        "revenue_usd": 177.73000000000002,
+        "cogs_usd": 29.61,
+        "gross_profit_usd": 148.12,
+        "gross_margin": 0.8333989759747932,
+        "listed_unit_price_usd": 3.8299999999999996,
+        "unit_cost_usd": 0.63,
+        "realized_revenue_per_unit_usd": 3.781489361702128,
+        "effective_discount_rate": 0.012665963002055438
+      },
+      "model_expectation": {
+        "expected_unit_cost_usd": 0.629350731286805,
+        "expected_listed_unit_price_usd": 3.8303636866870643
+      },
+      "residual_signals": {
+        "cost_log_residual": 0.0010311166771735936,
+        "cost_residual_pct": 0.1031648460736001,
+        "price_log_residual": -9.495285138227949e-05,
+        "price_residual_pct": -0.00949483435028764
+      },
+      "prediction_quality": {
+        "complete": true,
+        "cost_absolute_error_usd": 0.0006492687131950392,
+        "cost_absolute_percentage_error": 0.0010305852590397448,
+        "price_absolute_error_usd": 0.0003636866870646571,
+        "price_absolute_percentage_error": 9.495735954690788e-05
+      }
+    },
+    {
+      "evidence_id": "EVD-2594A3DD45A61DFF",
+      "entity": {
+        "branch": "Harbour",
+        "product": "Peach Iced Tea",
+        "category": "Cold Drinks"
+      },
+      "observation": {
+        "data_split": "test",
+        "periods_observed": 1,
+        "units": 81,
+        "revenue_usd": 375.92,
+        "cogs_usd": 93.14999999999999,
+        "gross_profit_usd": 282.77,
+        "gross_margin": 0.7522079165779952,
+        "listed_unit_price_usd": 4.67,
+        "unit_cost_usd": 1.15,
+        "realized_revenue_per_unit_usd": 4.640987654320988,
+        "effective_discount_rate": 0.006212493721415917
+      },
+      "model_expectation": {
+        "expected_unit_cost_usd": 1.1470525215865999,
+        "expected_listed_unit_price_usd": 4.6712299971532065
+      },
+      "residual_signals": {
+        "cost_log_residual": 0.0025663148781915057,
+        "cost_residual_pct": 0.25696106829729004,
+        "price_log_residual": -0.0002633480089218043,
+        "price_residual_pct": -0.026331333587858996
+      },
+      "prediction_quality": {
+        "complete": true,
+        "cost_absolute_error_usd": 0.00294747841340004,
+        "cost_absolute_percentage_error": 0.0025630247073043827,
+        "price_absolute_error_usd": 0.0012299971532065967,
+        "price_absolute_percentage_error": 0.00026338268805280445
+      }
+    },
+    {
+      "evidence_id": "EVD-1A0DEBD4CC1E5B49",
+      "entity": {
+        "branch": "Harbour",
+        "product": "Pistachio Cookie",
+        "category": "Bakery"
+      },
+      "observation": {
+        "data_split": "test",
+        "periods_observed": 1,
+        "units": 88,
+        "revenue_usd": 315.68,
+        "cogs_usd": 103.83999999999999,
+        "gross_profit_usd": 211.84,
+        "gross_margin": 0.6710593005575266,
+        "listed_unit_price_usd": 3.62,
+        "unit_cost_usd": 1.18,
+        "realized_revenue_per_unit_usd": 3.5872727272727274,
+        "effective_discount_rate": 0.009040683073832254
+      },
+      "model_expectation": {
+        "expected_unit_cost_usd": 1.1799999995462627,
+        "expected_listed_unit_price_usd": 3.6211641773139616
+      },
+      "residual_signals": {
+        "cost_log_residual": 3.845231077992395e-10,
+        "cost_residual_pct": 3.845230800436639e-08,
+        "price_log_residual": -0.00032154424219221767,
+        "price_residual_pct": -0.032149255238267394
+      },
+      "prediction_quality": {
+        "complete": true,
+        "cost_absolute_error_usd": 4.5373726997866015e-10,
+        "cost_absolute_percentage_error": 3.845231101514069e-10,
+        "price_absolute_error_usd": 0.0011641773139614564,
+        "price_absolute_percentage_error": 0.00032159594308327525
+      }
+    },
+    {
+      "evidence_id": "EVD-7C03AAD351035128",
+      "entity": {
+        "branch": "Harbour",
+        "product": "Quinoa Bowl",
+        "category": "Meals"
+      },
+      "observation": {
+        "data_split": "test",
+        "periods_observed": 1,
+        "units": 41,
+        "revenue_usd": 500.21000000000004,
+        "cogs_usd": 201.72,
+        "gross_profit_usd": 298.49,
+        "gross_margin": 0.5967293736630614,
+        "listed_unit_price_usd": 12.23,
+        "unit_cost_usd": 4.92,
+        "realized_revenue_per_unit_usd": 12.200243902439025,
+        "effective_discount_rate": 0.0024330415013062655
+      },
+      "model_expectation": {
+        "expected_unit_cost_usd": 4.920429331679459,
+        "expected_listed_unit_price_usd": 12.23097441233348
+      },
+      "residual_signals": {
+        "cost_log_residual": -8.725872932191514e-05,
+        "cost_residual_pct": -0.008725492238970123,
+        "price_log_residual": -7.967077006565404e-05,
+        "price_residual_pct": -0.00796675964341853
+      },
+      "prediction_quality": {
+        "complete": true,
+        "cost_absolute_error_usd": 0.00042933167945946593,
+        "cost_absolute_percentage_error": 8.726253647550121e-05,
+        "price_absolute_error_usd": 0.0009744123334787247,
+        "price_absolute_percentage_error": 7.967394386579923e-05
+      }
+    },
+    {
+      "evidence_id": "EVD-036B6602DF7E2435",
+      "entity": {
+        "branch": "Harbour",
+        "product": "Soup of the Day",
+        "category": "Meals"
+      },
+      "observation": {
+        "data_split": "test",
+        "periods_observed": 1,
+        "units": 31,
+        "revenue_usd": 232.81,
+        "cogs_usd": 86.49,
+        "gross_profit_usd": 146.32,
+        "gross_margin": 0.6284953395472702,
+        "listed_unit_price_usd": 7.51,
+        "unit_cost_usd": 2.79,
+        "realized_revenue_per_unit_usd": 7.51,
+        "effective_discount_rate": 0.0
+      },
+      "model_expectation": {
+        "expected_unit_cost_usd": 2.7909177830252108,
+        "expected_listed_unit_price_usd": 7.507344760427455
+      },
+      "residual_signals": {
+        "cost_log_residual": -0.0003289003956574721,
+        "cost_residual_pct": -0.03288463138515496,
+        "price_log_residual": 0.0003536230462275469,
+        "price_residual_pct": 0.03536855782275694
+      },
+      "prediction_quality": {
+        "complete": true,
+        "cost_absolute_error_usd": 0.0009177830252107277,
+        "cost_absolute_percentage_error": 0.0003289544893228415,
+        "price_absolute_error_usd": 0.0026552395725447653,
+        "price_absolute_percentage_error": 0.00035356052896734556
+      }
+    },
+    {
+      "evidence_id": "EVD-B5D0354D5DA0EFF3",
+      "entity": {
+        "branch": "Harbour",
+        "product": "Spanish Latte",
+        "category": "Hot Coffee"
+      },
+      "observation": {
+        "data_split": "test",
+        "periods_observed": 1,
+        "units": 89,
+        "revenue_usd": 552.47,
+        "cogs_usd": 176.22,
+        "gross_profit_usd": 376.24999999999994,
+        "gross_margin": 0.6810324542509094,
+        "listed_unit_price_usd": 6.25,
+        "unit_cost_usd": 1.98,
+        "realized_revenue_per_unit_usd": 6.20752808988764,
+        "effective_discount_rate": 0.006795505617977527
+      },
+      "model_expectation": {
+        "expected_unit_cost_usd": 1.979603231815896,
+        "expected_listed_unit_price_usd": 6.247995279286454
+      },
+      "residual_signals": {
+        "cost_log_residual": 0.00020040805212184765,
+        "cost_residual_pct": 0.020042813515708247,
+        "price_log_residual": 0.0003208067671560677,
+        "price_residual_pct": 0.0320858231150023
+      },
+      "prediction_quality": {
+        "complete": true,
+        "cost_absolute_error_usd": 0.0003967681841039461,
+        "cost_absolute_percentage_error": 0.00020038797176966976,
+        "price_absolute_error_usd": 0.002004720713546071,
+        "price_absolute_percentage_error": 0.00032075531416737136
+      }
+    },
+    {
+      "evidence_id": "EVD-68A947FBE241B33A",
+      "entity": {
+        "branch": "Harbour",
+        "product": "Sparkling Water",
+        "category": "Cold Drinks"
+      },
+      "observation": {
+        "data_split": "test",
+        "periods_observed": 1,
+        "units": 76,
+        "revenue_usd": 217.03,
+        "cogs_usd": 102.60000000000001,
+        "gross_profit_usd": 114.43,
+        "gross_margin": 0.5272542966410174,
+        "listed_unit_price_usd": 2.89,
+        "unit_cost_usd": 1.35,
+        "realized_revenue_per_unit_usd": 2.8556578947368423,
+        "effective_discount_rate": 0.011883081405936989
+      },
+      "model_expectation": {
+        "expected_unit_cost_usd": 1.3504268801715757,
+        "expected_listed_unit_price_usd": 2.8884080380248887
+      },
+      "residual_signals": {
+        "cost_log_residual": -0.00031615755143438173,
+        "cost_residual_pct": -0.03161075789023249,
+        "price_log_residual": 0.0005510036691465103,
+        "price_residual_pct": 0.0551155499553424
+      },
+      "prediction_quality": {
+        "complete": true,
+        "cost_absolute_error_usd": 0.00042688017157566094,
+        "cost_absolute_percentage_error": 0.00031620753450048954,
+        "price_absolute_error_usd": 0.0015919619751114666,
+        "price_absolute_percentage_error": 0.0005508518945022376
+      }
+    },
+    {
+      "evidence_id": "EVD-50B6B6B683B9DD3B",
+      "entity": {
+        "branch": "Harbour",
+        "product": "Still Water",
+        "category": "Cold Drinks"
+      },
+      "observation": {
+        "data_split": "test",
+        "periods_observed": 1,
+        "units": 83,
+        "revenue_usd": 169.30999999999997,
+        "cogs_usd": 53.95,
+        "gross_profit_usd": 115.36,
+        "gross_margin": 0.6813537298446637,
+        "listed_unit_price_usd": 2.05,
+        "unit_cost_usd": 0.65,
+        "realized_revenue_per_unit_usd": 2.0398795180722886,
+        "effective_discount_rate": 0.004936820452541869
+      },
+      "model_expectation": {
+        "expected_unit_cost_usd": 0.6498645529013266,
+        "expected_listed_unit_price_usd": 2.0473961195171007
+      },
+      "residual_signals": {
+        "cost_log_residual": 0.00020840186596571275,
+        "cost_residual_pct": 0.020842358314321352,
+        "price_log_residual": 0.0012709929708905054,
+        "price_residual_pct": 0.12718010247636524
+      },
+      "prediction_quality": {
+        "complete": true,
+        "cost_absolute_error_usd": 0.00013544709867341354,
+        "cost_absolute_percentage_error": 0.0002083801518052516,
+        "price_absolute_error_usd": 0.002603880482899168,
+        "price_absolute_percentage_error": 0.0012701856014142284
+      }
+    },
+    {
+      "evidence_id": "EVD-5E169F18C42CEB48",
+      "entity": {
+        "branch": "Harbour",
+        "product": "Strawberry Matcha",
+        "category": "Matcha & Tea"
+      },
+      "observation": {
+        "data_split": "test",
+        "periods_observed": 1,
+        "units": 120,
+        "revenue_usd": 959.5999999999999,
+        "cogs_usd": 381.6,
+        "gross_profit_usd": 578.0,
+        "gross_margin": 0.602334305960817,
+        "listed_unit_price_usd": 8.03,
+        "unit_cost_usd": 3.18,
+        "realized_revenue_per_unit_usd": 7.996666666666666,
+        "effective_discount_rate": 0.004151100041510996
+      },
+      "model_expectation": {
+        "expected_unit_cost_usd": 3.1799663954501707,
+        "expected_listed_unit_price_usd": 8.030711217858885
+      },
+      "residual_signals": {
+        "cost_log_residual": 1.0567524336035916e-05,
+        "cost_residual_pct": 0.0010567580172482494,
+        "price_log_residual": -8.856617240704523e-05,
+        "price_residual_pct": -0.008856225053943678
+      },
+      "prediction_quality": {
+        "complete": true,
+        "cost_absolute_error_usd": 3.3604549829480135e-05,
+        "cost_absolute_percentage_error": 1.056746849983652e-05,
+        "price_absolute_error_usd": 0.0007112178588855045,
+        "price_absolute_percentage_error": 8.857009450628949e-05
+      }
+    },
+    {
+      "evidence_id": "EVD-C7D48B4F22D048A1",
+      "entity": {
+        "branch": "Harbour",
+        "product": "Tiramisu Cup",
+        "category": "Desserts"
+      },
+      "observation": {
+        "data_split": "test",
+        "periods_observed": 1,
+        "units": 70,
+        "revenue_usd": 480.21999999999997,
+        "cogs_usd": 199.5,
+        "gross_profit_usd": 280.72,
+        "gross_margin": 0.5845654075215527,
+        "listed_unit_price_usd": 6.88,
+        "unit_cost_usd": 2.85,
+        "realized_revenue_per_unit_usd": 6.860285714285713,
+        "effective_discount_rate": 0.0028654485049833867
+      },
+      "model_expectation": {
+        "expected_unit_cost_usd": 2.8527884090477804,
+        "expected_listed_unit_price_usd": 6.879493376460157
+      },
+      "residual_signals": {
+        "cost_log_residual": -0.000977910828874995,
+        "cost_residual_pct": -0.09774328299065882,
+        "price_log_residual": 7.363985376640514e-05,
+        "price_residual_pct": 0.007364256524700075
+      },
+      "prediction_quality": {
+        "complete": true,
+        "cost_absolute_error_usd": 0.002788409047780327,
+        "cost_absolute_percentage_error": 0.0009783891395720445,
+        "price_absolute_error_usd": 0.0005066235398425434,
+        "price_absolute_percentage_error": 7.363714241897433e-05
+      }
+    },
+    {
+      "evidence_id": "EVD-B185E4ED7E43D665",
+      "entity": {
+        "branch": "Harbour",
+        "product": "Tuna Sandwich",
+        "category": "Sandwiches"
+      },
+      "observation": {
+        "data_split": "test",
+        "periods_observed": 1,
+        "units": 57,
+        "revenue_usd": 528.5999999999999,
+        "cogs_usd": 212.60999999999999,
+        "gross_profit_usd": 315.98999999999995,
+        "gross_margin": 0.5977866061293984,
+        "listed_unit_price_usd": 9.29,
+        "unit_cost_usd": 3.7299999999999995,
+        "realized_revenue_per_unit_usd": 9.273684210526314,
+        "effective_discount_rate": 0.0017562744320435099
+      },
+      "model_expectation": {
+        "expected_unit_cost_usd": 3.7292036538146016,
+        "expected_listed_unit_price_usd": 9.29306266267057
+      },
+      "residual_signals": {
+        "cost_log_residual": 0.00021352043070077542,
+        "cost_residual_pct": 0.021354322781030888,
+        "price_log_residual": -0.00032961872366188416,
+        "price_residual_pct": -0.03295644053787905
+      },
+      "prediction_quality": {
+        "complete": true,
+        "cost_absolute_error_usd": 0.0007963461853979226,
+        "cost_absolute_percentage_error": 0.0002134976368359042,
+        "price_absolute_error_usd": 0.0030626626705707594,
+        "price_absolute_percentage_error": 0.0003296730538827513
+      }
+    },
+    {
+      "evidence_id": "EVD-782E5CFF27690AC7",
+      "entity": {
+        "branch": "Harbour",
+        "product": "Turkey & Cheese Sandwich",
+        "category": "Sandwiches"
+      },
+      "observation": {
+        "data_split": "test",
+        "periods_observed": 1,
+        "units": 76,
+        "revenue_usd": 766.85,
+        "cogs_usd": 358.71999999999997,
+        "gross_profit_usd": 408.13,
+        "gross_margin": 0.532216209167373,
+        "listed_unit_price_usd": 10.13,
+        "unit_cost_usd": 4.72,
+        "realized_revenue_per_unit_usd": 10.09013157894737,
+        "effective_discount_rate": 0.003935678287525334
+      },
+      "model_expectation": {
+        "expected_unit_cost_usd": 4.720171044277567,
+        "expected_listed_unit_price_usd": 10.130842822214522
+      },
+      "residual_signals": {
+        "cost_log_residual": -3.6237537812455756e-05,
+        "cost_residual_pct": -0.0036236881240658825,
+        "price_log_residual": -8.319715249793802e-05,
+        "price_residual_pct": -0.008319369171072566
+      },
+      "prediction_quality": {
+        "complete": true,
+        "cost_absolute_error_usd": 0.00017104427756731155,
+        "cost_absolute_percentage_error": 3.6238194399854146e-05,
+        "price_absolute_error_usd": 0.0008428222145209219,
+        "price_absolute_percentage_error": 8.320061347689258e-05
+      }
+    },
+    {
+      "evidence_id": "EVD-6DFDD048513F9DE5",
+      "entity": {
+        "branch": "Harbour",
+        "product": "Vanilla Latte",
+        "category": "Hot Coffee"
+      },
+      "observation": {
+        "data_split": "test",
+        "periods_observed": 1,
+        "units": 101,
+        "revenue_usd": 576.01,
+        "cogs_usd": 173.72,
+        "gross_profit_usd": 402.29,
+        "gross_margin": 0.6984080137497614,
+        "listed_unit_price_usd": 5.720000000000001,
+        "unit_cost_usd": 1.72,
+        "realized_revenue_per_unit_usd": 5.703069306930693,
+        "effective_discount_rate": 0.0029599113757529565
+      },
+      "model_expectation": {
+        "expected_unit_cost_usd": 1.719856628859784,
+        "expected_listed_unit_price_usd": 5.721295802901722
+      },
+      "residual_signals": {
+        "cost_log_residual": 8.335878832632648e-05,
+        "cost_residual_pct": 0.008336226276650649,
+        "price_log_residual": -0.0002265133127548058,
+        "price_residual_pct": -0.022648766055122227
+      },
+      "prediction_quality": {
+        "complete": true,
+        "cost_absolute_error_usd": 0.0001433711402158977,
+        "cost_absolute_percentage_error": 8.33553140790103e-05,
+        "price_absolute_error_usd": 0.0012958029017209327,
+        "price_absolute_percentage_error": 0.00022653896883233088
+      }
+    },
+    {
+      "evidence_id": "EVD-F4AA4BEB1EBC4DFA",
+      "entity": {
+        "branch": "Uptown",
+        "product": "Almond Croissant",
+        "category": "Bakery"
+      },
+      "observation": {
+        "data_split": "test",
+        "periods_observed": 1,
+        "units": 31,
+        "revenue_usd": 143.99,
+        "cogs_usd": 56.730000000000004,
+        "gross_profit_usd": 87.26,
+        "gross_margin": 0.6060143065490659,
+        "listed_unit_price_usd": 4.66,
+        "unit_cost_usd": 1.83,
+        "realized_revenue_per_unit_usd": 4.64483870967742,
+        "effective_discount_rate": 0.003253495777377819
+      },
+      "model_expectation": {
+        "expected_unit_cost_usd": 1.8316666678815094,
+        "expected_listed_unit_price_usd": 4.654654081029423
+      },
+      "residual_signals": {
+        "cost_log_residual": -0.0009103329973899621,
+        "cost_residual_pct": -0.0909918770011231,
+        "price_log_residual": 0.0011478514416183305,
+        "price_residual_pct": 0.1148510475217801
+      },
+      "prediction_quality": {
+        "complete": true,
+        "cost_absolute_error_usd": 0.001666667881509376,
+        "cost_absolute_percentage_error": 0.0009107474762346316,
+        "price_absolute_error_usd": 0.005345918970577124,
+        "price_absolute_percentage_error": 0.0011471929121410135
+      }
+    },
+    {
+      "evidence_id": "EVD-17F512CCD7D55FE0",
+      "entity": {
+        "branch": "Uptown",
+        "product": "Americano",
+        "category": "Hot Coffee"
+      },
+      "observation": {
+        "data_split": "test",
+        "periods_observed": 1,
+        "units": 26,
+        "revenue_usd": 78.22,
+        "cogs_usd": 17.939999999999998,
+        "gross_profit_usd": 60.28,
+        "gross_margin": 0.7706468933776528,
+        "listed_unit_price_usd": 3.02,
+        "unit_cost_usd": 0.69,
+        "realized_revenue_per_unit_usd": 3.0084615384615385,
+        "effective_discount_rate": 0.0038206826286296463
+      },
+      "model_expectation": {
+        "expected_unit_cost_usd": 0.69076536281244,
+        "expected_listed_unit_price_usd": 3.023124937371193
+      },
+      "residual_signals": {
+        "cost_log_residual": -0.001108606735713058,
+        "cost_residual_pct": -0.11079924582841905,
+        "price_log_residual": -0.0010342124917532836,
+        "price_residual_pct": -0.10336778783314182
+      },
+      "prediction_quality": {
+        "complete": true,
+        "cost_absolute_error_usd": 0.0007653628124401068,
+        "cost_absolute_percentage_error": 0.0011092214673045027,
+        "price_absolute_error_usd": 0.003124937371192793,
+        "price_absolute_percentage_error": 0.0010347474739048983
+      }
+    },
+    {
+      "evidence_id": "EVD-A29CFF3FD26823B1",
+      "entity": {
+        "branch": "Uptown",
+        "product": "Avocado Toast",
+        "category": "Breakfast"
+      },
+      "observation": {
+        "data_split": "test",
+        "periods_observed": 1,
+        "units": 20,
+        "revenue_usd": 180.49,
+        "cogs_usd": 80.19999999999999,
+        "gross_profit_usd": 100.28999999999999,
+        "gross_margin": 0.5556540528561138,
+        "listed_unit_price_usd": 9.07,
+        "unit_cost_usd": 4.01,
+        "realized_revenue_per_unit_usd": 9.0245,
+        "effective_discount_rate": 0.005016538037486219
+      },
+      "model_expectation": {
+        "expected_unit_cost_usd": 4.011480515692233,
+        "expected_listed_unit_price_usd": 9.068974811331232
+      },
+      "residual_signals": {
+        "cost_log_residual": -0.00036913776855729274,
+        "cost_residual_pct": -0.03690696455938003,
+        "price_log_residual": 0.00011303711268384475,
+        "price_residual_pct": 0.011304350161900345
+      },
+      "prediction_quality": {
+        "complete": true,
+        "cost_absolute_error_usd": 0.0014805156922328422,
+        "cost_absolute_percentage_error": 0.0003692059082874918,
+        "price_absolute_error_usd": 0.0010251886687679956,
+        "price_absolute_percentage_error": 0.000113030724230209
+      }
+    },
+    {
+      "evidence_id": "EVD-717BEE7C341BBC6B",
+      "entity": {
+        "branch": "Uptown",
+        "product": "Banana Bread",
+        "category": "Bakery"
+      },
+      "observation": {
+        "data_split": "test",
+        "periods_observed": 1,
+        "units": 33,
+        "revenue_usd": 139.19,
+        "cogs_usd": 49.83,
+        "gross_profit_usd": 89.36,
+        "gross_margin": 0.6420001436884833,
+        "listed_unit_price_usd": 4.27,
+        "unit_cost_usd": 1.51,
+        "realized_revenue_per_unit_usd": 4.217878787878788,
+        "effective_discount_rate": 0.01220637286211056
+      },
+      "model_expectation": {
+        "expected_unit_cost_usd": 1.5092630051825164,
+        "expected_listed_unit_price_usd": 4.2698196212062225
+      },
+      "residual_signals": {
+        "cost_log_residual": 0.0004881951859485034,
+        "cost_residual_pct": 0.04883143726128747,
+        "price_log_residual": 4.224416950338039e-05,
+        "price_residual_pct": 0.004224506180094956
+      },
+      "prediction_quality": {
+        "complete": true,
+        "cost_absolute_error_usd": 0.0007369948174835717,
+        "cost_absolute_percentage_error": 0.0004880760380685905,
+        "price_absolute_error_usd": 0.00018037879377708066,
+        "price_absolute_percentage_error": 4.224327723116644e-05
+      }
+    },
+    {
+      "evidence_id": "EVD-7FBFF69684FF0793",
+      "entity": {
+        "branch": "Uptown",
+        "product": "Blueberry Muffin",
+        "category": "Bakery"
+      },
+      "observation": {
+        "data_split": "test",
+        "periods_observed": 1,
+        "units": 17,
+        "revenue_usd": 64.05,
+        "cogs_usd": 21.42,
+        "gross_profit_usd": 42.629999999999995,
+        "gross_margin": 0.6655737704918032,
+        "listed_unit_price_usd": 3.7900000000000005,
+        "unit_cost_usd": 1.26,
+        "realized_revenue_per_unit_usd": 3.7676470588235293,
+        "effective_discount_rate": 0.005897873661337883
+      },
+      "model_expectation": {
+        "expected_unit_cost_usd": 1.2571650281056872,
+        "expected_listed_unit_price_usd": 3.7912870270473595
+      },
+      "residual_signals": {
+        "cost_log_residual": 0.0022525126968912235,
+        "cost_residual_pct": 0.22550515094938994,
+        "price_log_residual": -0.0003395273269910515,
+        "price_residual_pct": -0.033946969411102756
+      },
+      "prediction_quality": {
+        "complete": true,
+        "cost_absolute_error_usd": 0.00283497189431281,
+        "cost_absolute_percentage_error": 0.0022499776938990556,
+        "price_absolute_error_usd": 0.0012870270473590573,
+        "price_absolute_percentage_error": 0.000339584972917957
+      }
+    },
+    {
+      "evidence_id": "EVD-602E9DF970F8768C",
+      "entity": {
+        "branch": "Uptown",
+        "product": "Brownie",
+        "category": "Desserts"
+      },
+      "observation": {
+        "data_split": "test",
+        "periods_observed": 1,
+        "units": 25,
+        "revenue_usd": 123.01,
+        "cogs_usd": 56.99999999999999,
+        "gross_profit_usd": 66.01,
+        "gross_margin": 0.5366230387773352,
+        "listed_unit_price_usd": 4.94,
+        "unit_cost_usd": 2.28,
+        "realized_revenue_per_unit_usd": 4.9204,
+        "effective_discount_rate": 0.00396761133603239
+      },
+      "model_expectation": {
+        "expected_unit_cost_usd": 2.2757290485951485,
+        "expected_listed_unit_price_usd": 4.942569345476849
+      },
+      "residual_signals": {
+        "cost_log_residual": 0.0018749809791249739,
+        "cost_residual_pct": 0.18767398550754155,
+        "price_log_residual": -0.0005199752098707933,
+        "price_residual_pct": -0.051984004618965685
+      },
+      "prediction_quality": {
+        "complete": true,
+        "cost_absolute_error_usd": 0.004270951404851342,
+        "cost_absolute_percentage_error": 0.0018732243003733958,
+        "price_absolute_error_usd": 0.0025693454768482837,
+        "price_absolute_percentage_error": 0.0005201104204146323
+      }
+    },
+    {
+      "evidence_id": "EVD-229E34708882D298",
+      "entity": {
+        "branch": "Uptown",
+        "product": "Butter Croissant",
+        "category": "Bakery"
+      },
+      "observation": {
+        "data_split": "test",
+        "periods_observed": 1,
+        "units": 52,
+        "revenue_usd": 180.6,
+        "cogs_usd": 56.68000000000001,
+        "gross_profit_usd": 123.92,
+        "gross_margin": 0.6861572535991141,
+        "listed_unit_price_usd": 3.5,
+        "unit_cost_usd": 1.09,
+        "realized_revenue_per_unit_usd": 3.473076923076923,
+        "effective_discount_rate": 0.0076923076923076945
+      },
+      "model_expectation": {
+        "expected_unit_cost_usd": 1.0934323530412684,
+        "expected_listed_unit_price_usd": 3.5012110377222916
+      },
+      "residual_signals": {
+        "cost_log_residual": -0.0031440001920029076,
+        "cost_residual_pct": -0.3139062998933184,
+        "price_log_residual": -0.00034595092987332876,
+        "price_residual_pct": -0.03458910957505612
+      },
+      "prediction_quality": {
+        "complete": true,
+        "cost_absolute_error_usd": 0.003432353041268321,
+        "cost_absolute_percentage_error": 0.0031489477442828632,
+        "price_absolute_error_usd": 0.0012110377222915858,
+        "price_absolute_percentage_error": 0.0003460107777975959
+      }
+    },
+    {
+      "evidence_id": "EVD-16B62970A558A62D",
+      "entity": {
+        "branch": "Uptown",
+        "product": "Cappuccino",
+        "category": "Hot Coffee"
+      },
+      "observation": {
+        "data_split": "test",
+        "periods_observed": 1,
+        "units": 42,
+        "revenue_usd": 162.21,
+        "cogs_usd": 45.36,
+        "gross_profit_usd": 116.85000000000001,
+        "gross_margin": 0.720362493064546,
+        "listed_unit_price_usd": 3.8899999999999997,
+        "unit_cost_usd": 1.08,
+        "realized_revenue_per_unit_usd": 3.8621428571428575,
+        "effective_discount_rate": 0.007161219243481457
+      },
+      "model_expectation": {
+        "expected_unit_cost_usd": 1.0748281153160453,
+        "expected_listed_unit_price_usd": 3.886874920616982
+      },
+      "residual_signals": {
+        "cost_log_residual": 0.0048002850699677135,
+        "cost_residual_pct": 0.48118248957733645,
+        "price_log_residual": 0.0008036851776906939,
+        "price_residual_pct": 0.08040082191587139
+      },
+      "prediction_quality": {
+        "complete": true,
+        "cost_absolute_error_usd": 0.005171884683954797,
+        "cost_absolute_percentage_error": 0.00478878211477296,
+        "price_absolute_error_usd": 0.0031250793830177592,
+        "price_absolute_percentage_error": 0.0008033623092590642
+      }
+    },
+    {
+      "evidence_id": "EVD-28AEE68DD325DD3D",
+      "entity": {
+        "branch": "Uptown",
+        "product": "Caramel Latte",
+        "category": "Hot Coffee"
+      },
+      "observation": {
+        "data_split": "test",
+        "periods_observed": 1,
+        "units": 36,
+        "revenue_usd": 198.17,
+        "cogs_usd": 64.8,
+        "gross_profit_usd": 133.37,
+        "gross_margin": 0.6730080234142404,
+        "listed_unit_price_usd": 5.52,
+        "unit_cost_usd": 1.7999999999999998,
+        "realized_revenue_per_unit_usd": 5.504722222222222,
+        "effective_discount_rate": 0.002767713365539452
+      },
+      "model_expectation": {
+        "expected_unit_cost_usd": 1.7945790858747017,
+        "expected_listed_unit_price_usd": 5.519790060528868
+      },
+      "residual_signals": {
+        "cost_log_residual": 0.0030161630084659663,
+        "cost_residual_pct": 0.30207162046891334,
+        "price_log_residual": 3.8033236140488924e-05,
+        "price_residual_pct": 0.003803395941326393
+      },
+      "prediction_quality": {
+        "complete": true,
+        "cost_absolute_error_usd": 0.005420914125298104,
+        "cost_absolute_percentage_error": 0.003011618958498947,
+        "price_absolute_error_usd": 0.0002099394711319036,
+        "price_absolute_percentage_error": 3.803251288621442e-05
+      }
+    },
+    {
+      "evidence_id": "EVD-120755F0E7000812",
+      "entity": {
+        "branch": "Uptown",
+        "product": "Chai Latte",
+        "category": "Matcha & Tea"
+      },
+      "observation": {
+        "data_split": "test",
+        "periods_observed": 1,
+        "units": 27,
+        "revenue_usd": 134.58,
+        "cogs_usd": 38.339999999999996,
+        "gross_profit_usd": 96.24000000000001,
+        "gross_margin": 0.7151136870263041,
+        "listed_unit_price_usd": 5.04,
+        "unit_cost_usd": 1.42,
+        "realized_revenue_per_unit_usd": 4.984444444444445,
+        "effective_discount_rate": 0.011022927689594356
+      },
+      "model_expectation": {
+        "expected_unit_cost_usd": 1.4208098106954063,
+        "expected_listed_unit_price_usd": 5.038350996543868
+      },
+      "residual_signals": {
+        "cost_log_residual": -0.0005701266690174012,
+        "cost_residual_pct": -0.056996417768961916,
+        "price_log_residual": 0.00032723676153212367,
+        "price_residual_pct": 0.03272903093221036
+      },
+      "prediction_quality": {
+        "complete": true,
+        "cost_absolute_error_usd": 0.000809810695406421,
+        "cost_absolute_percentage_error": 0.000570289222117198,
+        "price_absolute_error_usd": 0.0016490034561318367,
+        "price_absolute_percentage_error": 0.0003271832254229835
+      }
+    },
+    {
+      "evidence_id": "EVD-0A0750A90C62F783",
+      "entity": {
+        "branch": "Uptown",
+        "product": "Cheesecake Slice",
+        "category": "Desserts"
+      },
+      "observation": {
+        "data_split": "test",
+        "periods_observed": 1,
+        "units": 22,
+        "revenue_usd": 142.56,
+        "cogs_usd": 65.12,
+        "gross_profit_usd": 77.44,
+        "gross_margin": 0.5432098765432098,
+        "listed_unit_price_usd": 6.48,
+        "unit_cost_usd": 2.9600000000000004,
+        "realized_revenue_per_unit_usd": 6.48,
+        "effective_discount_rate": 0.0
+      },
+      "model_expectation": {
+        "expected_unit_cost_usd": 2.9557773157425076,
+        "expected_listed_unit_price_usd": 6.479621101315532
+      },
+      "residual_signals": {
+        "cost_log_residual": 0.0014276010570661857,
+        "cost_residual_pct": 0.14286205645475114,
+        "price_log_residual": 5.847372876321977e-05,
+        "price_residual_pct": 0.005847543838499725
+      },
+      "prediction_quality": {
+        "complete": true,
+        "cost_absolute_error_usd": 0.004222684257492837,
+        "cost_absolute_percentage_error": 0.0014265825194232555,
+        "price_absolute_error_usd": 0.0003788986844686093,
+        "price_absolute_percentage_error": 5.8472019208118716e-05
+      }
+    },
+    {
+      "evidence_id": "EVD-196FA38FBEFB5BDD",
+      "entity": {
+        "branch": "Uptown",
+        "product": "Chicken Pesto Sandwich",
+        "category": "Sandwiches"
+      },
+      "observation": {
+        "data_split": "test",
+        "periods_observed": 1,
+        "units": 38,
+        "revenue_usd": 392.16,
+        "cogs_usd": 188.48,
+        "gross_profit_usd": 203.68,
+        "gross_margin": 0.5193798449612403,
+        "listed_unit_price_usd": 10.32,
+        "unit_cost_usd": 4.96,
+        "realized_revenue_per_unit_usd": 10.32,
+        "effective_discount_rate": 0.0
+      },
+      "model_expectation": {
+        "expected_unit_cost_usd": 4.960243084727467,
+        "expected_listed_unit_price_usd": 10.318945235497754
+      },
+      "residual_signals": {
+        "cost_log_residual": -4.900781673189414e-05,
+        "cost_residual_pct": -0.00490066158683744,
+        "price_log_residual": 0.00010221108599584028,
+        "price_residual_pct": 0.010221630972684359
+      },
+      "prediction_quality": {
+        "complete": true,
+        "cost_absolute_error_usd": 0.00024308472746703558,
+        "cost_absolute_percentage_error": 4.900901763448298e-05,
+        "price_absolute_error_usd": 0.001054764502246286,
+        "price_absolute_percentage_error": 0.00010220586262076414
+      }
+    },
+    {
+      "evidence_id": "EVD-A6015FCDBC85C526",
+      "entity": {
+        "branch": "Uptown",
+        "product": "Chicken Salad Bowl",
+        "category": "Meals"
+      },
+      "observation": {
+        "data_split": "test",
+        "periods_observed": 1,
+        "units": 17,
+        "revenue_usd": 201.95999999999998,
+        "cogs_usd": 92.14,
+        "gross_profit_usd": 109.82000000000001,
+        "gross_margin": 0.5437710437710439,
+        "listed_unit_price_usd": 11.95,
+        "unit_cost_usd": 5.42,
+        "realized_revenue_per_unit_usd": 11.879999999999999,
+        "effective_discount_rate": 0.005857740585774057
+      },
+      "model_expectation": {
+        "expected_unit_cost_usd": 5.42147058807368,
+        "expected_listed_unit_price_usd": 11.948467900712853
+      },
+      "residual_signals": {
+        "cost_log_residual": -0.00027128941055587497,
+        "cost_residual_pct": -0.027125261491134367,
+        "price_log_residual": 0.00012821736486312574,
+        "price_residual_pct": 0.012822558506053738
+      },
+      "prediction_quality": {
+        "complete": true,
+        "cost_absolute_error_usd": 0.001470588073679835,
+        "cost_absolute_percentage_error": 0.0002713262128560581,
+        "price_absolute_error_usd": 0.0015320992871465933,
+        "price_absolute_percentage_error": 0.00012820914536791576
+      }
+    },
+    {
+      "evidence_id": "EVD-0832ABADB2B747D4",
+      "entity": {
+        "branch": "Uptown",
+        "product": "Chocolate Cookie",
+        "category": "Bakery"
+      },
+      "observation": {
+        "data_split": "test",
+        "periods_observed": 1,
+        "units": 38,
+        "revenue_usd": 114.46000000000001,
+        "cogs_usd": 33.06,
+        "gross_profit_usd": 81.39999999999999,
+        "gross_margin": 0.7111654726542023,
+        "listed_unit_price_usd": 3.02,
+        "unit_cost_usd": 0.8700000000000001,
+        "realized_revenue_per_unit_usd": 3.012105263157895,
+        "effective_discount_rate": 0.002614151272220284
+      },
+      "model_expectation": {
+        "expected_unit_cost_usd": 0.8723978366310469,
+        "expected_listed_unit_price_usd": 3.0231249373711906
+      },
+      "residual_signals": {
+        "cost_log_residual": -0.002752342885589648,
+        "cost_residual_pct": -0.2748558662532319,
+        "price_log_residual": -0.0010342124917526174,
+        "price_residual_pct": -0.10336778783307521
+      },
+      "prediction_quality": {
+        "complete": true,
+        "cost_absolute_error_usd": 0.002397836631046757,
+        "cost_absolute_percentage_error": 0.002756134058674433,
+        "price_absolute_error_usd": 0.0031249373711905726,
+        "price_absolute_percentage_error": 0.001034747473904163
+      }
+    },
+    {
+      "evidence_id": "EVD-0C53062F056944E2",
+      "entity": {
+        "branch": "Uptown",
+        "product": "Chocolate Croissant",
+        "category": "Bakery"
+      },
+      "observation": {
+        "data_split": "test",
+        "periods_observed": 1,
+        "units": 49,
+        "revenue_usd": 199.51,
+        "cogs_usd": 74.48,
+        "gross_profit_usd": 125.03,
+        "gross_margin": 0.6266853791789886,
+        "listed_unit_price_usd": 4.08,
+        "unit_cost_usd": 1.52,
+        "realized_revenue_per_unit_usd": 4.071632653061224,
+        "effective_discount_rate": 0.002050820328131253
+      },
+      "model_expectation": {
+        "expected_unit_cost_usd": 1.5171526990634308,
+        "expected_listed_unit_price_usd": 4.078519944216223
+      },
+      "residual_signals": {
+        "cost_log_residual": 0.0018749809791260286,
+        "cost_residual_pct": 0.18767398550765257,
+        "price_log_residual": 0.0003628245834128574,
+        "price_residual_pct": 0.03628904122132681
+      },
+      "prediction_quality": {
+        "complete": true,
+        "cost_absolute_error_usd": 0.0028473009365692636,
+        "cost_absolute_percentage_error": 0.0018732243003745156,
+        "price_absolute_error_usd": 0.0014800557837766348,
+        "price_absolute_percentage_error": 0.00036275877053348893
+      }
+    },
+    {
+      "evidence_id": "EVD-6DFC175FC4222358",
+      "entity": {
+        "branch": "Uptown",
+        "product": "Cinnamon Roll",
+        "category": "Bakery"
+      },
+      "observation": {
+        "data_split": "test",
+        "periods_observed": 1,
+        "units": 38,
+        "revenue_usd": 186.25000000000003,
+        "cogs_usd": 81.7,
+        "gross_profit_usd": 104.55,
+        "gross_margin": 0.5613422818791945,
+        "listed_unit_price_usd": 4.94,
+        "unit_cost_usd": 2.15,
+        "realized_revenue_per_unit_usd": 4.901315789473685,
+        "effective_discount_rate": 0.007830811847432348
+      },
+      "model_expectation": {
+        "expected_unit_cost_usd": 2.1490320534870113,
+        "expected_listed_unit_price_usd": 4.942569345476857
+      },
+      "residual_signals": {
+        "cost_log_residual": 0.00045030905436493907,
+        "cost_residual_pct": 0.045041045870775065,
+        "price_log_residual": -0.0005199752098723476,
+        "price_residual_pct": -0.05198400461913222
+      },
+      "prediction_quality": {
+        "complete": true,
+        "cost_absolute_error_usd": 0.0009679465129885934,
+        "cost_absolute_percentage_error": 0.0004502076804598109,
+        "price_absolute_error_usd": 0.0025693454768562773,
+        "price_absolute_percentage_error": 0.0005201104204162505
+      }
+    },
+    {
+      "evidence_id": "EVD-56279C5C7644CB0E",
+      "entity": {
+        "branch": "Uptown",
+        "product": "Classic Matcha",
+        "category": "Matcha & Tea"
+      },
+      "observation": {
+        "data_split": "test",
+        "periods_observed": 1,
+        "units": 58,
+        "revenue_usd": 358.40000000000003,
+        "cogs_usd": 126.44000000000001,
+        "gross_profit_usd": 231.95999999999998,
+        "gross_margin": 0.6472098214285713,
+        "listed_unit_price_usd": 6.19,
+        "unit_cost_usd": 2.18,
+        "realized_revenue_per_unit_usd": 6.179310344827587,
+        "effective_discount_rate": 0.0017269232911815498
+      },
+      "model_expectation": {
+        "expected_unit_cost_usd": 2.1798133677808558,
+        "expected_listed_unit_price_usd": 6.18948170917312
+      },
+      "residual_signals": {
+        "cost_log_residual": 8.561477453949973e-05,
+        "cost_residual_pct": 0.008561843958898585,
+        "price_log_residual": 8.373384918036741e-05,
+        "price_residual_pct": 0.008373735495692536
+      },
+      "prediction_quality": {
+        "complete": true,
+        "cost_absolute_error_usd": 0.0001866322191443892,
+        "cost_absolute_percentage_error": 8.56111096992611e-05,
+        "price_absolute_error_usd": 0.0005182908268803743,
+        "price_absolute_percentage_error": 8.373034359941426e-05
+      }
+    },
+    {
+      "evidence_id": "EVD-68ED9A92FDBA8D32",
+      "entity": {
+        "branch": "Uptown",
+        "product": "Coffee Frappe",
+        "category": "Cold Coffee"
+      },
+      "observation": {
+        "data_split": "test",
+        "periods_observed": 1,
+        "units": 26,
+        "revenue_usd": 162.91,
+        "cogs_usd": 63.18000000000001,
+        "gross_profit_usd": 99.72999999999999,
+        "gross_margin": 0.6121785034681726,
+        "listed_unit_price_usd": 6.29,
+        "unit_cost_usd": 2.43,
+        "realized_revenue_per_unit_usd": 6.265769230769231,
+        "effective_discount_rate": 0.0038522685581509107
+      },
+      "model_expectation": {
+        "expected_unit_cost_usd": 2.4290839779026476,
+        "expected_listed_unit_price_usd": 6.288321452951235
+      },
+      "residual_signals": {
+        "cost_log_residual": 0.00037703489479490315,
+        "cost_residual_pct": 0.03771059813846289,
+        "price_log_residual": 0.00026689523956080485,
+        "price_residual_pct": 0.02669308592642139
+      },
+      "prediction_quality": {
+        "complete": true,
+        "cost_absolute_error_usd": 0.0009160220973525313,
+        "cost_absolute_percentage_error": 0.0003769638260710005,
+        "price_absolute_error_usd": 0.0016785470487654663,
+        "price_absolute_percentage_error": 0.0002668596261948277
+      }
+    },
+    {
+      "evidence_id": "EVD-F120A00A478BA15F",
+      "entity": {
+        "branch": "Uptown",
+        "product": "Cold Brew",
+        "category": "Cold Coffee"
+      },
+      "observation": {
+        "data_split": "test",
+        "periods_observed": 1,
+        "units": 44,
+        "revenue_usd": 215.39000000000001,
+        "cogs_usd": 48.84,
+        "gross_profit_usd": 166.55,
+        "gross_margin": 0.7732485259297089,
+        "listed_unit_price_usd": 4.94,
+        "unit_cost_usd": 1.11,
+        "realized_revenue_per_unit_usd": 4.895227272727273,
+        "effective_discount_rate": 0.009063305115936697
+      },
+      "model_expectation": {
+        "expected_unit_cost_usd": 1.1130860262748468,
+        "expected_listed_unit_price_usd": 4.942569345476854
+      },
+      "residual_signals": {
+        "cost_log_residual": -0.0027763462328090627,
+        "cost_residual_pct": -0.27724957478575396,
+        "price_log_residual": -0.0005199752098719035,
+        "price_residual_pct": -0.05198400461907671
+      },
+      "prediction_quality": {
+        "complete": true,
+        "cost_absolute_error_usd": 0.003086026274846665,
+        "cost_absolute_percentage_error": 0.002780203851213211,
+        "price_absolute_error_usd": 0.002569345476853613,
+        "price_absolute_percentage_error": 0.0005201104204157111
+      }
+    },
+    {
+      "evidence_id": "EVD-6B1D172D09F37321",
+      "entity": {
+        "branch": "Uptown",
+        "product": "Egg Sandwich",
+        "category": "Breakfast"
+      },
+      "observation": {
+        "data_split": "test",
+        "periods_observed": 1,
+        "units": 26,
+        "revenue_usd": 201.76000000000002,
+        "cogs_usd": 77.74000000000001,
+        "gross_profit_usd": 124.02,
+        "gross_margin": 0.6146907216494845,
+        "listed_unit_price_usd": 7.819999999999999,
+        "unit_cost_usd": 2.99,
+        "realized_revenue_per_unit_usd": 7.760000000000001,
+        "effective_discount_rate": 0.007672634271099747
+      },
+      "model_expectation": {
+        "expected_unit_cost_usd": 2.9868040467033823,
+        "expected_listed_unit_price_usd": 7.822051096279713
+      },
+      "residual_signals": {
+        "cost_log_residual": 0.0010694523615808471,
+        "cost_residual_pct": 0.10700244296726336,
+        "price_log_residual": -0.0002622541351957608,
+        "price_residual_pct": -0.026221974958584582
+      },
+      "prediction_quality": {
+        "complete": true,
+        "cost_absolute_error_usd": 0.003195953296617926,
+        "cost_absolute_percentage_error": 0.0010688807012100086,
+        "price_absolute_error_usd": 0.002051096279713782,
+        "price_absolute_percentage_error": 0.0002622885268176192
+      }
+    },
+    {
+      "evidence_id": "EVD-8A8F4427EC81FEF0",
+      "entity": {
+        "branch": "Uptown",
+        "product": "English Breakfast Tea",
+        "category": "Matcha & Tea"
+      },
+      "observation": {
+        "data_split": "test",
+        "periods_observed": 1,
+        "units": 12,
+        "revenue_usd": 39.72,
+        "cogs_usd": 6.6000000000000005,
+        "gross_profit_usd": 33.12,
+        "gross_margin": 0.8338368580060422,
+        "listed_unit_price_usd": 3.31,
+        "unit_cost_usd": 0.55,
+        "realized_revenue_per_unit_usd": 3.31,
+        "effective_discount_rate": 0.0
+      },
+      "model_expectation": {
+        "expected_unit_cost_usd": 0.5498870158616613,
+        "expected_listed_unit_price_usd": 3.3099885608987605
+      },
+      "residual_signals": {
+        "cost_log_residual": 0.00020544680882073063,
+        "cost_residual_pct": 0.02054679144618543,
+        "price_log_residual": 3.45592779638082e-06,
+        "price_residual_pct": 0.0003455933768048425
+      },
+      "prediction_quality": {
+        "complete": true,
+        "cost_absolute_error_usd": 0.00011298413833871201,
+        "cost_absolute_percentage_error": 0.00020542570607038547,
+        "price_absolute_error_usd": 1.1439101239574256e-05,
+        "price_absolute_percentage_error": 3.4559218246447905e-06
+      }
+    },
+    {
+      "evidence_id": "EVD-961A52B5D635000E",
+      "entity": {
+        "branch": "Uptown",
+        "product": "Espresso",
+        "category": "Hot Coffee"
+      },
+      "observation": {
+        "data_split": "test",
+        "periods_observed": 1,
+        "units": 20,
+        "revenue_usd": 50.3,
+        "cogs_usd": 12.4,
+        "gross_profit_usd": 37.9,
+        "gross_margin": 0.7534791252485089,
+        "listed_unit_price_usd": 2.54,
+        "unit_cost_usd": 0.62,
+        "realized_revenue_per_unit_usd": 2.5149999999999997,
+        "effective_discount_rate": 0.00984251968503937
+      },
+      "model_expectation": {
+        "expected_unit_cost_usd": 0.6236541901875504,
+        "expected_listed_unit_price_usd": 2.5411139246610186
+      },
+      "residual_signals": {
+        "cost_log_residual": -0.005876554322725935,
+        "cost_residual_pct": -0.5859321151119867,
+        "price_log_residual": -0.0004384568798811994,
+        "price_residual_pct": -0.04383607717104443
+      },
+      "prediction_quality": {
+        "complete": true,
+        "cost_absolute_error_usd": 0.0036541901875504212,
+        "cost_absolute_percentage_error": 0.005893855141210357,
+        "price_absolute_error_usd": 0.0011139246610185616,
+        "price_absolute_percentage_error": 0.00043855301614904
+      }
+    },
+    {
+      "evidence_id": "EVD-DF3AB415C0479C37",
+      "entity": {
+        "branch": "Uptown",
+        "product": "Flat White",
+        "category": "Hot Coffee"
+      },
+      "observation": {
+        "data_split": "test",
+        "periods_observed": 1,
+        "units": 45,
+        "revenue_usd": 188.1,
+        "cogs_usd": 53.55,
+        "gross_profit_usd": 134.55,
+        "gross_margin": 0.7153110047846891,
+        "listed_unit_price_usd": 4.18,
+        "unit_cost_usd": 1.19,
+        "realized_revenue_per_unit_usd": 4.18,
+        "effective_discount_rate": 0.0
+      },
+      "model_expectation": {
+        "expected_unit_cost_usd": 1.189445100086825,
+        "expected_listed_unit_price_usd": 4.17728856639845
+      },
+      "residual_signals": {
+        "cost_log_residual": 0.0004664112008418986,
+        "cost_residual_pct": 0.04665199874585024,
+        "price_log_residual": 0.0006488788020526659,
+        "price_residual_pct": 0.0649089369444189
+      },
+      "prediction_quality": {
+        "complete": true,
+        "cost_absolute_error_usd": 0.0005548999131750332,
+        "cost_absolute_percentage_error": 0.0004663024480462464,
+        "price_absolute_error_usd": 0.0027114336015499063,
+        "price_absolute_percentage_error": 0.0006486683257296427
+      }
+    },
+    {
+      "evidence_id": "EVD-C488DA640B340F3C",
+      "entity": {
+        "branch": "Uptown",
+        "product": "Fresh Orange Juice",
+        "category": "Cold Drinks"
+      },
+      "observation": {
+        "data_split": "test",
+        "periods_observed": 1,
+        "units": 26,
+        "revenue_usd": 141.32,
+        "cogs_usd": 53.04,
+        "gross_profit_usd": 88.28,
+        "gross_margin": 0.6246815737333711,
+        "listed_unit_price_usd": 5.52,
+        "unit_cost_usd": 2.04,
+        "realized_revenue_per_unit_usd": 5.435384615384615,
+        "effective_discount_rate": 0.015328874024526195
+      },
+      "model_expectation": {
+        "expected_unit_cost_usd": 2.0348658142559355,
+        "expected_listed_unit_price_usd": 5.519790060528867
+      },
+      "residual_signals": {
+        "cost_log_residual": 0.0025199300762064336,
+        "cost_residual_pct": 0.25231077686278525,
+        "price_log_residual": 3.803323614071097e-05,
+        "price_residual_pct": 0.0038033959413485974
+      },
+      "prediction_quality": {
+        "complete": true,
+        "cost_absolute_error_usd": 0.0051341857440645455,
+        "cost_absolute_percentage_error": 0.0025167577176786987,
+        "price_absolute_error_usd": 0.00020993947113279177,
+        "price_absolute_percentage_error": 3.803251288637532e-05
+      }
+    },
+    {
+      "evidence_id": "EVD-1E9FF046DE652C0A",
+      "entity": {
+        "branch": "Uptown",
+        "product": "Frozen Yoghurt Cup",
+        "category": "Desserts"
+      },
+      "observation": {
+        "data_split": "test",
+        "periods_observed": 1,
+        "units": 20,
+        "revenue_usd": 117.41000000000001,
+        "cogs_usd": 51.6,
+        "gross_profit_usd": 65.81,
+        "gross_margin": 0.5605144365897282,
+        "listed_unit_price_usd": 5.9,
+        "unit_cost_usd": 2.58,
+        "realized_revenue_per_unit_usd": 5.870500000000001,
+        "effective_discount_rate": 0.005000000000000006
+      },
+      "model_expectation": {
+        "expected_unit_cost_usd": 2.5817150877318884,
+        "expected_listed_unit_price_usd": 5.9023889055788095
+      },
+      "residual_signals": {
+        "cost_log_residual": -0.0006645418299363604,
+        "cost_residual_pct": -0.06643210709184055,
+        "price_log_residual": -0.00040481730106423086,
+        "price_residual_pct": -0.04047353735960879
+      },
+      "prediction_quality": {
+        "complete": true,
+        "cost_absolute_error_usd": 0.0017150877318883317,
+        "cost_absolute_percentage_error": 0.0006647626867784231,
+        "price_absolute_error_usd": 0.0023889055788091085,
+        "price_absolute_percentage_error": 0.0004048992506456116
+      }
+    },
+    {
+      "evidence_id": "EVD-DD6AB3C8562D6381",
+      "entity": {
+        "branch": "Uptown",
+        "product": "Granola Yoghurt",
+        "category": "Breakfast"
+      },
+      "observation": {
+        "data_split": "test",
+        "periods_observed": 1,
+        "units": 13,
+        "revenue_usd": 98.02,
+        "cogs_usd": 41.47,
+        "gross_profit_usd": 56.55,
+        "gross_margin": 0.5769230769230769,
+        "listed_unit_price_usd": 7.54,
+        "unit_cost_usd": 3.19,
+        "realized_revenue_per_unit_usd": 7.54,
+        "effective_discount_rate": 0.0
+      },
+      "model_expectation": {
+        "expected_unit_cost_usd": 3.187901297255558,
+        "expected_listed_unit_price_usd": 7.53452858573828
+      },
+      "residual_signals": {
+        "cost_log_residual": 0.0006581170583790374,
+        "cost_residual_pct": 0.06583336649250704,
+        "price_log_residual": 0.0007259151715248713,
+        "price_residual_pct": 0.07261787117081031
+      },
+      "prediction_quality": {
+        "complete": true,
+        "cost_absolute_error_usd": 0.002098702744441905,
+        "cost_absolute_percentage_error": 0.0006579005468469922,
+        "price_absolute_error_usd": 0.005471414261720042,
+        "price_absolute_percentage_error": 0.0007256517588488119
+      }
+    },
+    {
+      "evidence_id": "EVD-1EF0E1FB006CD942",
+      "entity": {
+        "branch": "Uptown",
+        "product": "Halloumi Wrap",
+        "category": "Sandwiches"
+      },
+      "observation": {
+        "data_split": "test",
+        "periods_observed": 1,
+        "units": 35,
+        "revenue_usd": 334.25,
+        "cogs_usd": 138.95000000000002,
+        "gross_profit_usd": 195.3,
+        "gross_margin": 0.5842931937172775,
+        "listed_unit_price_usd": 9.55,
+        "unit_cost_usd": 3.9700000000000006,
+        "realized_revenue_per_unit_usd": 9.55,
+        "effective_discount_rate": 0.0
+      },
+      "model_expectation": {
+        "expected_unit_cost_usd": 3.9719300594245666,
+        "expected_listed_unit_price_usd": 9.550413761788741
+      },
+      "residual_signals": {
+        "cost_log_residual": -0.0004860429261202004,
+        "cost_residual_pct": -0.04859248263917593,
+        "price_log_residual": -4.3324903215680166e-05,
+        "price_residual_pct": -0.004332396470574373
+      },
+      "prediction_quality": {
+        "complete": true,
+        "cost_absolute_error_usd": 0.001930059424565922,
+        "cost_absolute_percentage_error": 0.0004861610641223984,
+        "price_absolute_error_usd": 0.0004137617887405298,
+        "price_absolute_percentage_error": 4.332584175293506e-05
+      }
+    },
+    {
+      "evidence_id": "EVD-BB0F762C2D15B959",
+      "entity": {
+        "branch": "Uptown",
+        "product": "Iced Americano",
+        "category": "Cold Coffee"
+      },
+      "observation": {
+        "data_split": "test",
+        "periods_observed": 1,
+        "units": 40,
+        "revenue_usd": 146.52,
+        "cogs_usd": 33.199999999999996,
+        "gross_profit_usd": 113.32000000000001,
+        "gross_margin": 0.7734097734097735,
+        "listed_unit_price_usd": 3.7,
+        "unit_cost_usd": 0.8299999999999998,
+        "realized_revenue_per_unit_usd": 3.6630000000000003,
+        "effective_discount_rate": 0.010000000000000004
+      },
+      "model_expectation": {
+        "expected_unit_cost_usd": 0.8257494865150494,
+        "expected_listed_unit_price_usd": 3.6949304793751434
+      },
+      "residual_signals": {
+        "cost_log_residual": 0.0051342583606287795,
+        "cost_residual_pct": 0.5147461251098218,
+        "price_log_residual": 0.001371080210466502,
+        "price_residual_pct": 0.13720205706586608
+      },
+      "prediction_quality": {
+        "complete": true,
+        "cost_absolute_error_usd": 0.0042505134849504245,
+        "cost_absolute_percentage_error": 0.005121100584277621,
+        "price_absolute_error_usd": 0.0050695206248567715,
+        "price_absolute_percentage_error": 0.001370140709420749
+      }
+    },
+    {
+      "evidence_id": "EVD-AC1476C0F427C6DF",
+      "entity": {
+        "branch": "Uptown",
+        "product": "Iced Latte",
+        "category": "Cold Coffee"
+      },
+      "observation": {
+        "data_split": "test",
+        "periods_observed": 1,
+        "units": 67,
+        "revenue_usd": 339.27,
+        "cogs_usd": 106.53,
+        "gross_profit_usd": 232.73999999999998,
+        "gross_margin": 0.6860022990538509,
+        "listed_unit_price_usd": 5.14,
+        "unit_cost_usd": 1.59,
+        "realized_revenue_per_unit_usd": 5.063731343283582,
+        "effective_discount_rate": 0.014838260061559898
+      },
+      "model_expectation": {
+        "expected_unit_cost_usd": 1.590958196189816,
+        "expected_listed_unit_price_usd": 5.137059461034707
+      },
+      "residual_signals": {
+        "cost_log_residual": -0.0006024575990628,
+        "cost_residual_pct": -0.0602276157922188,
+        "price_log_residual": 0.000572252998377154,
+        "price_residual_pct": 0.05724167663616608
+      },
+      "prediction_quality": {
+        "complete": true,
+        "cost_absolute_error_usd": 0.000958196189815963,
+        "cost_absolute_percentage_error": 0.0006026391130918005,
+        "price_absolute_error_usd": 0.0029405389652925606,
+        "price_absolute_percentage_error": 0.0005720892928584749
+      }
+    },
+    {
+      "evidence_id": "EVD-A86A5E27F82CB400",
+      "entity": {
+        "branch": "Uptown",
+        "product": "Iced Matcha",
+        "category": "Matcha & Tea"
+      },
+      "observation": {
+        "data_split": "test",
+        "periods_observed": 1,
+        "units": 67,
+        "revenue_usd": 438.88,
+        "cogs_usd": 161.47,
+        "gross_profit_usd": 277.40999999999997,
+        "gross_margin": 0.632086219467736,
+        "listed_unit_price_usd": 6.58,
+        "unit_cost_usd": 2.41,
+        "realized_revenue_per_unit_usd": 6.55044776119403,
+        "effective_discount_rate": 0.0044912217030349776
+      },
+      "model_expectation": {
+        "expected_unit_cost_usd": 2.4093088645929055,
+        "expected_listed_unit_price_usd": 6.574570422687369
+      },
+      "residual_signals": {
+        "cost_log_residual": 0.00028681930594243177,
+        "cost_residual_pct": 0.028686044253256604,
+        "price_log_residual": 0.0008255043603100365,
+        "price_residual_pct": 0.08258451828113689
+      },
+      "prediction_quality": {
+        "complete": true,
+        "cost_absolute_error_usd": 0.0006911354070946452,
+        "cost_absolute_percentage_error": 0.00028677817721769507,
+        "price_absolute_error_usd": 0.00542957731263094,
+        "price_absolute_percentage_error": 0.0008251637253238511
+      }
+    },
+    {
+      "evidence_id": "EVD-F2D3E8CC1CB0A39D",
+      "entity": {
+        "branch": "Uptown",
+        "product": "Iced Mocha",
+        "category": "Cold Coffee"
+      },
+      "observation": {
+        "data_split": "test",
+        "periods_observed": 1,
+        "units": 38,
+        "revenue_usd": 225.0,
+        "cogs_usd": 81.32000000000001,
+        "gross_profit_usd": 143.68,
+        "gross_margin": 0.6385777777777778,
+        "listed_unit_price_usd": 6.0,
+        "unit_cost_usd": 2.14,
+        "realized_revenue_per_unit_usd": 5.921052631578948,
+        "effective_discount_rate": 0.013157894736842098
+      },
+      "model_expectation": {
+        "expected_unit_cost_usd": 2.140263183142043,
+        "expected_listed_unit_price_usd": 5.998182040194069
+      },
+      "residual_signals": {
+        "cost_log_residual": -0.0001229752148937946,
+        "cost_residual_pct": -0.012296765375197083,
+        "price_log_residual": 0.0003030392127327808,
+        "price_residual_pct": 0.03030851337535445
+      },
+      "prediction_quality": {
+        "complete": true,
+        "cost_absolute_error_usd": 0.0002631831420427666,
+        "cost_absolute_percentage_error": 0.0001229827766554984,
+        "price_absolute_error_usd": 0.0018179598059306912,
+        "price_absolute_percentage_error": 0.0003029933009884485
+      }
+    },
+    {
+      "evidence_id": "EVD-24714094BB2FDEA9",
+      "entity": {
+        "branch": "Uptown",
+        "product": "Lemonade",
+        "category": "Cold Drinks"
+      },
+      "observation": {
+        "data_split": "test",
+        "periods_observed": 1,
+        "units": 28,
+        "revenue_usd": 122.63,
+        "cogs_usd": 31.360000000000003,
+        "gross_profit_usd": 91.27,
+        "gross_margin": 0.7442713854684824,
+        "listed_unit_price_usd": 4.46,
+        "unit_cost_usd": 1.12,
+        "realized_revenue_per_unit_usd": 4.379642857142857,
+        "effective_discount_rate": 0.01801729660474056
+      },
+      "model_expectation": {
+        "expected_unit_cost_usd": 1.1208649274734843,
+        "expected_listed_unit_price_usd": 4.461119097161802
+      },
+      "residual_signals": {
+        "cost_log_residual": -0.0007719586360001307,
+        "cost_residual_pct": -0.07716607525884989,
+        "price_log_residual": -0.0002508871713255978,
+        "price_residual_pct": -0.025085570177096894
+      },
+      "prediction_quality": {
+        "complete": true,
+        "cost_absolute_error_usd": 0.0008649274734842116,
+        "cost_absolute_percentage_error": 0.0007722566727537603,
+        "price_absolute_error_usd": 0.0011190971618022516,
+        "price_absolute_percentage_error": 0.0002509186461440026
+      }
+    },
+    {
+      "evidence_id": "EVD-2B4DD653C3F45258",
+      "entity": {
+        "branch": "Uptown",
+        "product": "Mint Tea",
+        "category": "Matcha & Tea"
+      },
+      "observation": {
+        "data_split": "test",
+        "periods_observed": 1,
+        "units": 16,
+        "revenue_usd": 55.3,
+        "cogs_usd": 9.6,
+        "gross_profit_usd": 45.699999999999996,
+        "gross_margin": 0.8264014466546111,
+        "listed_unit_price_usd": 3.5,
+        "unit_cost_usd": 0.6,
+        "realized_revenue_per_unit_usd": 3.45625,
+        "effective_discount_rate": 0.012500000000000002
+      },
+      "model_expectation": {
+        "expected_unit_cost_usd": 0.6039677328334151,
+        "expected_listed_unit_price_usd": 3.5012110377222854
+      },
+      "residual_signals": {
+        "cost_log_residual": -0.006591118830404752,
+        "cost_residual_pct": -0.656944505098167,
+        "price_log_residual": -0.0003459509298715524,
+        "price_residual_pct": -0.034589109574878485
+      },
+      "prediction_quality": {
+        "complete": true,
+        "cost_absolute_error_usd": 0.003967732833415116,
+        "cost_absolute_percentage_error": 0.006612888055691861,
+        "price_absolute_error_usd": 0.0012110377222853685,
+        "price_absolute_percentage_error": 0.00034601077779581956
+      }
+    },
+    {
+      "evidence_id": "EVD-F97A892EE2372CB3",
+      "entity": {
+        "branch": "Uptown",
+        "product": "Peach Iced Tea",
+        "category": "Cold Drinks"
+      },
+      "observation": {
+        "data_split": "test",
+        "periods_observed": 1,
+        "units": 33,
+        "revenue_usd": 140.48,
+        "cogs_usd": 36.300000000000004,
+        "gross_profit_usd": 104.17999999999999,
+        "gross_margin": 0.7416002277904328,
+        "listed_unit_price_usd": 4.27,
+        "unit_cost_usd": 1.1,
+        "realized_revenue_per_unit_usd": 4.256969696969697,
+        "effective_discount_rate": 0.00305159321552764
+      },
+      "model_expectation": {
+        "expected_unit_cost_usd": 1.1007895541600612,
+        "expected_listed_unit_price_usd": 4.269819621206227
+      },
+      "residual_signals": {
+        "cost_log_residual": -0.0007175190307884827,
+        "cost_residual_pct": -0.07172616755648509,
+        "price_log_residual": 4.224416950249221e-05,
+        "price_residual_pct": 0.004224506180006138
+      },
+      "prediction_quality": {
+        "complete": true,
+        "cost_absolute_error_usd": 0.0007895541600611011,
+        "cost_absolute_percentage_error": 0.0007177765091464555,
+        "price_absolute_error_usd": 0.00018037879377263977,
+        "price_absolute_percentage_error": 4.224327723012641e-05
+      }
+    },
+    {
+      "evidence_id": "EVD-398F68918B9ADA64",
+      "entity": {
+        "branch": "Uptown",
+        "product": "Pistachio Cookie",
+        "category": "Bakery"
+      },
+      "observation": {
+        "data_split": "test",
+        "periods_observed": 1,
+        "units": 53,
+        "revenue_usd": 173.12,
+        "cogs_usd": 59.88999999999999,
+        "gross_profit_usd": 113.23,
+        "gross_margin": 0.6540549907578558,
+        "listed_unit_price_usd": 3.31,
+        "unit_cost_usd": 1.13,
+        "realized_revenue_per_unit_usd": 3.2664150943396226,
+        "effective_discount_rate": 0.013167645214615518
+      },
+      "model_expectation": {
+        "expected_unit_cost_usd": 1.1324081931424763,
+        "expected_listed_unit_price_usd": 3.3099885608987587
+      },
+      "residual_signals": {
+        "cost_log_residual": -0.002128876706947405,
+        "cost_residual_pct": -0.21266122561278689,
+        "price_log_residual": 3.455927796824909e-06,
+        "price_residual_pct": 0.00034559337687145586
+      },
+      "prediction_quality": {
+        "complete": true,
+        "cost_absolute_error_usd": 0.0024081931424764225,
+        "cost_absolute_percentage_error": 0.0021311443738729406,
+        "price_absolute_error_usd": 1.1439101241350613e-05,
+        "price_absolute_percentage_error": 3.455921825181454e-06
+      }
+    },
+    {
+      "evidence_id": "EVD-60AB26208A19B598",
+      "entity": {
+        "branch": "Uptown",
+        "product": "Quinoa Bowl",
+        "category": "Meals"
+      },
+      "observation": {
+        "data_split": "test",
+        "periods_observed": 1,
+        "units": 18,
+        "revenue_usd": 200.12,
+        "cogs_usd": 84.96,
+        "gross_profit_usd": 115.16,
+        "gross_margin": 0.5754547271637017,
+        "listed_unit_price_usd": 11.18,
+        "unit_cost_usd": 4.72,
+        "realized_revenue_per_unit_usd": 11.117777777777778,
+        "effective_discount_rate": 0.005565493937586956
+      },
+      "model_expectation": {
+        "expected_unit_cost_usd": 4.721978382300777,
+        "expected_listed_unit_price_usd": 11.179936454441282
+      },
+      "residual_signals": {
+        "cost_log_residual": -0.0004190609742209528,
+        "cost_residual_pct": -0.04189731804348229,
+        "price_log_residual": 5.6838765036815175e-06,
+        "price_residual_pct": 0.0005683892656760392
+      },
+      "prediction_quality": {
+        "complete": true,
+        "cost_absolute_error_usd": 0.0019783823007770707,
+        "cost_absolute_percentage_error": 0.000419148792537515,
+        "price_absolute_error_usd": 6.354555871723733e-05,
+        "price_absolute_percentage_error": 5.683860350379009e-06
+      }
+    },
+    {
+      "evidence_id": "EVD-191FC290478FCD1B",
+      "entity": {
+        "branch": "Uptown",
+        "product": "Soup of the Day",
+        "category": "Meals"
+      },
+      "observation": {
+        "data_split": "test",
+        "periods_observed": 1,
+        "units": 9,
+        "revenue_usd": 61.050000000000004,
+        "cogs_usd": 24.12,
+        "gross_profit_usd": 36.93,
+        "gross_margin": 0.6049140049140048,
+        "listed_unit_price_usd": 6.86,
+        "unit_cost_usd": 2.68,
+        "realized_revenue_per_unit_usd": 6.783333333333334,
+        "effective_discount_rate": 0.011175898931000978
+      },
+      "model_expectation": {
+        "expected_unit_cost_usd": 2.678354377203436,
+        "expected_listed_unit_price_usd": 6.862220010739832
+      },
+      "residual_signals": {
+        "cost_log_residual": 0.0006142269556873581,
+        "cost_residual_pct": 0.06144156316918448,
+        "price_log_residual": -0.0003235643733248139,
+        "price_residual_pct": -0.03235120320184137
+      },
+      "prediction_quality": {
+        "complete": true,
+        "cost_absolute_error_usd": 0.0016456227965639947,
+        "cost_absolute_percentage_error": 0.0006140383569268636,
+        "price_absolute_error_usd": 0.0022200107398315794,
+        "price_absolute_percentage_error": 0.00032361672592297075
+      }
+    },
+    {
+      "evidence_id": "EVD-90BA445071073D1A",
+      "entity": {
+        "branch": "Uptown",
+        "product": "Spanish Latte",
+        "category": "Hot Coffee"
+      },
+      "observation": {
+        "data_split": "test",
+        "periods_observed": 1,
+        "units": 26,
+        "revenue_usd": 148.46,
+        "cogs_usd": 49.4,
+        "gross_profit_usd": 99.06,
+        "gross_margin": 0.6672504378283712,
+        "listed_unit_price_usd": 5.71,
+        "unit_cost_usd": 1.9,
+        "realized_revenue_per_unit_usd": 5.71,
+        "effective_discount_rate": 0.0
+      },
+      "model_expectation": {
+        "expected_unit_cost_usd": 1.8997617963912192,
+        "expected_listed_unit_price_usd": 5.711089553064069
+      },
+      "residual_signals": {
+        "cost_log_residual": 0.00012537817992641642,
+        "cost_residual_pct": 0.012538604009892929,
+        "price_log_residual": -0.00019079669453803128,
+        "price_residual_pct": -0.01907784940062829
+      },
+      "prediction_quality": {
+        "complete": true,
+        "cost_absolute_error_usd": 0.00023820360878068492,
+        "cost_absolute_percentage_error": 0.00012537032041088682,
+        "price_absolute_error_usd": 0.0010895530640686601,
+        "price_absolute_percentage_error": 0.00019081489738505432
+      }
+    },
+    {
+      "evidence_id": "EVD-9F7B2B8B8B859489",
+      "entity": {
+        "branch": "Uptown",
+        "product": "Sparkling Water",
+        "category": "Cold Drinks"
+      },
+      "observation": {
+        "data_split": "test",
+        "periods_observed": 1,
+        "units": 28,
+        "revenue_usd": 73.92,
+        "cogs_usd": 36.4,
+        "gross_profit_usd": 37.52,
+        "gross_margin": 0.5075757575757576,
+        "listed_unit_price_usd": 2.64,
+        "unit_cost_usd": 1.3,
+        "realized_revenue_per_unit_usd": 2.64,
+        "effective_discount_rate": 0.0
+      },
+      "model_expectation": {
+        "expected_unit_cost_usd": 1.2959614101136878,
+        "expected_listed_unit_price_usd": 2.640199973524008
+      },
+      "residual_signals": {
+        "cost_log_residual": 0.003111443127572222,
+        "cost_residual_pct": 0.31162886910018894,
+        "price_log_residual": -7.574467827220488e-05,
+        "price_residual_pct": -0.007574180971636757
+      },
+      "prediction_quality": {
+        "complete": true,
+        "cost_absolute_error_usd": 0.004038589886312227,
+        "cost_absolute_percentage_error": 0.0031066076048555592,
+        "price_absolute_error_usd": 0.00019997352400791257,
+        "price_absolute_percentage_error": 7.574754697269415e-05
+      }
+    },
+    {
+      "evidence_id": "EVD-830E6799067BEE40",
+      "entity": {
+        "branch": "Uptown",
+        "product": "Still Water",
+        "category": "Cold Drinks"
+      },
+      "observation": {
+        "data_split": "test",
+        "periods_observed": 1,
+        "units": 33,
+        "revenue_usd": 60.95,
+        "cogs_usd": 20.46,
+        "gross_profit_usd": 40.49,
+        "gross_margin": 0.6643150123051682,
+        "listed_unit_price_usd": 1.87,
+        "unit_cost_usd": 0.62,
+        "realized_revenue_per_unit_usd": 1.8469696969696972,
+        "effective_discount_rate": 0.012315670069680776
+      },
+      "model_expectation": {
+        "expected_unit_cost_usd": 0.6236541901875506,
+        "expected_listed_unit_price_usd": 1.8714582944584743
+      },
+      "residual_signals": {
+        "cost_log_residual": -0.005876554322726157,
+        "cost_residual_pct": -0.58593211511202,
+        "price_log_residual": -0.0007795326942336978,
+        "price_residual_pct": -0.07792289375575523
+      },
+      "prediction_quality": {
+        "complete": true,
+        "cost_absolute_error_usd": 0.0036541901875506433,
+        "cost_absolute_percentage_error": 0.005893855141210715,
+        "price_absolute_error_usd": 0.0014582944584742297,
+        "price_absolute_percentage_error": 0.0007798366088097484
+      }
+    },
+    {
+      "evidence_id": "EVD-661435C3BB7E16A5",
+      "entity": {
+        "branch": "Uptown",
+        "product": "Strawberry Matcha",
+        "category": "Matcha & Tea"
+      },
+      "observation": {
+        "data_split": "test",
+        "periods_observed": 1,
+        "units": 57,
+        "revenue_usd": 417.65,
+        "cogs_usd": 173.85,
+        "gross_profit_usd": 243.8,
+        "gross_margin": 0.5837423680114929,
+        "listed_unit_price_usd": 7.34,
+        "unit_cost_usd": 3.05,
+        "realized_revenue_per_unit_usd": 7.32719298245614,
+        "effective_discount_rate": 0.001744825278454992
+      },
+      "model_expectation": {
+        "expected_unit_cost_usd": 3.051711865686607,
+        "expected_listed_unit_price_usd": 7.340612290799645
+      },
+      "residual_signals": {
+        "cost_log_residual": -0.0005611099865754365,
+        "cost_residual_pct": -0.05609525938065074,
+        "price_log_residual": -8.34148859558681e-05,
+        "price_residual_pct": -0.00834114070310532
+      },
+      "prediction_quality": {
+        "complete": true,
+        "cost_absolute_error_usd": 0.0017118656866070836,
+        "cost_absolute_percentage_error": 0.0005612674382318308,
+        "price_absolute_error_usd": 0.0006122907996450877,
+        "price_absolute_percentage_error": 8.341836507426263e-05
+      }
+    },
+    {
+      "evidence_id": "EVD-F0025FE23F007546",
+      "entity": {
+        "branch": "Uptown",
+        "product": "Tiramisu Cup",
+        "category": "Desserts"
+      },
+      "observation": {
+        "data_split": "test",
+        "periods_observed": 1,
+        "units": 33,
+        "revenue_usd": 206.94,
+        "cogs_usd": 90.42,
+        "gross_profit_usd": 116.52,
+        "gross_margin": 0.5630617570310235,
+        "listed_unit_price_usd": 6.29,
+        "unit_cost_usd": 2.74,
+        "realized_revenue_per_unit_usd": 6.2709090909090905,
+        "effective_discount_rate": 0.0030351206821795053
+      },
+      "model_expectation": {
+        "expected_unit_cost_usd": 2.7377296347032263,
+        "expected_listed_unit_price_usd": 6.288321452951236
+      },
+      "residual_signals": {
+        "cost_log_residual": 0.0008289439523982978,
+        "cost_residual_pct": 0.0829287621390673,
+        "price_log_residual": 0.0002668952395605828,
+        "price_residual_pct": 0.02669308592637698
+      },
+      "prediction_quality": {
+        "complete": true,
+        "cost_absolute_error_usd": 0.002270365296773935,
+        "cost_absolute_percentage_error": 0.0008286004732751587,
+        "price_absolute_error_usd": 0.00167854704876369,
+        "price_absolute_percentage_error": 0.0002668596261945453
+      }
+    },
+    {
+      "evidence_id": "EVD-AB573364F3B130DC",
+      "entity": {
+        "branch": "Uptown",
+        "product": "Tuna Sandwich",
+        "category": "Sandwiches"
+      },
+      "observation": {
+        "data_split": "test",
+        "periods_observed": 1,
+        "units": 25,
+        "revenue_usd": 212.5,
+        "cogs_usd": 89.5,
+        "gross_profit_usd": 123.0,
+        "gross_margin": 0.5788235294117647,
+        "listed_unit_price_usd": 8.5,
+        "unit_cost_usd": 3.58,
+        "realized_revenue_per_unit_usd": 8.5,
+        "effective_discount_rate": 0.0
+      },
+      "model_expectation": {
+        "expected_unit_cost_usd": 3.578797265339278,
+        "expected_listed_unit_price_usd": 8.494486745964517
+      },
+      "residual_signals": {
+        "cost_log_residual": 0.0003360158494394305,
+        "cost_residual_pct": 0.03360723090886086,
+        "price_log_residual": 0.0006488285655588122,
+        "price_residual_pct": 0.06490391003437512
+      },
+      "prediction_quality": {
+        "complete": true,
+        "cost_absolute_error_usd": 0.0012027346607221823,
+        "cost_absolute_percentage_error": 0.00033595940243636373,
+        "price_absolute_error_usd": 0.005513254035482973,
+        "price_absolute_percentage_error": 0.0006486181218215262
+      }
+    },
+    {
+      "evidence_id": "EVD-57F0CD65EC81903E",
+      "entity": {
+        "branch": "Uptown",
+        "product": "Turkey & Cheese Sandwich",
+        "category": "Sandwiches"
+      },
+      "observation": {
+        "data_split": "test",
+        "periods_observed": 1,
+        "units": 40,
+        "revenue_usd": 366.69,
+        "cogs_usd": 181.20000000000002,
+        "gross_profit_usd": 185.49,
+        "gross_margin": 0.5058496277509613,
+        "listed_unit_price_usd": 9.26,
+        "unit_cost_usd": 4.53,
+        "realized_revenue_per_unit_usd": 9.16725,
+        "effective_discount_rate": 0.010016198704103665
+      },
+      "model_expectation": {
+        "expected_unit_cost_usd": 4.5297969200246895,
+        "expected_listed_unit_price_usd": 9.260274379127106
+      },
+      "residual_signals": {
+        "cost_log_residual": 4.483102152019747e-05,
+        "cost_residual_pct": 0.004483202644545159,
+        "price_log_residual": -2.9630136304525934e-05,
+        "price_residual_pct": -0.002962969733644183
+      },
+      "prediction_quality": {
+        "complete": true,
+        "cost_absolute_error_usd": 0.0002030799753107715,
+        "cost_absolute_percentage_error": 4.483001662489437e-05,
+        "price_absolute_error_usd": 0.00027437912710581713,
+        "price_absolute_percentage_error": 2.963057528140574e-05
+      }
+    },
+    {
+      "evidence_id": "EVD-856C841138D70E86",
+      "entity": {
+        "branch": "Uptown",
+        "product": "Vanilla Latte",
+        "category": "Hot Coffee"
+      },
+      "observation": {
+        "data_split": "test",
+        "periods_observed": 1,
+        "units": 38,
+        "revenue_usd": 196.65,
+        "cogs_usd": 62.699999999999996,
+        "gross_profit_usd": 133.95000000000002,
+        "gross_margin": 0.6811594202898551,
+        "listed_unit_price_usd": 5.23,
+        "unit_cost_usd": 1.65,
+        "realized_revenue_per_unit_usd": 5.175,
+        "effective_discount_rate": 0.010516252390057369
+      },
+      "model_expectation": {
+        "expected_unit_cost_usd": 1.6504913036441597,
+        "expected_listed_unit_price_usd": 5.229650668633815
+      },
+      "residual_signals": {
+        "cost_log_residual": -0.00029771546269263816,
+        "cost_residual_pct": -0.0297671149841916,
+        "price_log_residual": 6.679599106740319e-05,
+        "price_residual_pct": 0.0066798221969310845
+      },
+      "prediction_quality": {
+        "complete": true,
+        "cost_absolute_error_usd": 0.0004913036441598351,
+        "cost_absolute_percentage_error": 0.000297759784339294,
+        "price_absolute_error_usd": 0.00034933136618509053,
+        "price_absolute_percentage_error": 6.679376026483566e-05
+      }
+    }
+  ]
+}
