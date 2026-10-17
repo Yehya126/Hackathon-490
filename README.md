@@ -37,3 +37,7 @@ Modeling rules:
 - Fit preprocessing on training data only.
 - Feed only boolean product baskets to FP-Growth.
 - Use branch and profit after rule generation for filtering and ranking.
+
+Mohammad's model implementation and commands are documented in
+[mohammad/README.md](mohammad/README.md). Training and final test evaluation are
+separate, explicit commands.
