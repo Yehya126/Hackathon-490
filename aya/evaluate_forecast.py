@@ -16,18 +16,18 @@ df = add_features(build_daily_panel(load_transactions()))
 train, valid, _ = split_by_date(df)
 valid = valid.copy()
 
-model, best = fit_lgbm(train, valid)
+model, best = fit_lgbm(train, valid, mode="raw")  # original experiment; see compare_models.py
 print("Best rounds:", best)
 valid["naive"] = seasonal_naive(valid)
 valid["wd_avg"] = weekday_average(valid)
-valid["lgbm"] = model.predict(valid[[c for c in model.feature_name()]], num_iteration=best)
+valid["lgbm"] = model.predict(valid)
 
 for col in ["naive", "wd_avg", "lgbm"]:
     print(f"\n== {col} (validation) ==\n", accuracy(valid, col).to_string())
 
 # Distribution: fit alpha on train in-sample residuals, check coverage on validation.
 train_fit = train.dropna(subset=["lag_28"]).copy()
-train_fit["lgbm"] = model.predict(train_fit[model.feature_name()], num_iteration=best)
+train_fit["lgbm"] = model.predict(train_fit)
 alpha = fit_dispersion(train_fit["units"], train_fit["lgbm"], train_fit["Branch"])
 alpha_valid = fit_dispersion(valid["units"], valid["lgbm"], valid["Branch"])
 print("\nNB alpha per branch (train / validation):\n", pd.concat([alpha, alpha_valid], axis=1).round(3))
@@ -41,7 +41,7 @@ for name, al in [("train alpha", valid["Branch"].astype(str).map(alpha)), ("vali
     below = (valid["units"] <= nb_quantile(valid["lgbm"], al, 0.5)).mean()
     print(f"{name}: P10-P90 coverage {inside:.3f}, share <= P50 {below:.3f}")
 
-imp = pd.Series(model.feature_importance("gain"), index=model.feature_name()).sort_values(ascending=False)
+imp = pd.Series(model.booster.feature_importance("gain"), index=model.booster.feature_name()).sort_values(ascending=False)
 print("\nTop features (gain share):\n", (imp / imp.sum()).head(10).round(3).to_string())
 
 # Step 4: prep policies on validation (alpha from validation residuals; final run uses it on test).

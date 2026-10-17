@@ -4,11 +4,12 @@
     "2026-06-30"
   ],
   "forecast_for": "2026-07-01",
-  "boosting_rounds": 316,
+  "model": "LightGBM (offset mode) + negative binomial",
+  "boosting_rounds": 416,
   "nb_alpha": {
-    "Garden": 0.0224,
-    "Harbour": 0.0838,
-    "Uptown": 0.0828
+    "Garden": 0.0315,
+    "Harbour": 0.0572,
+    "Uptown": 0.0995
   },
   "accuracy": {
     "Same weekday last week": {
@@ -55,7 +56,7 @@
         "bias": -0.015
       }
     },
-    "LightGBM + NB": {
+    "Previous model (raw LightGBM)": {
       "Garden": {
         "MAE": 1.338,
         "WAPE": 0.491,
@@ -76,12 +77,34 @@
         "WAPE": 0.492,
         "bias": -0.033
       }
+    },
+    "LightGBM + NB": {
+      "Garden": {
+        "MAE": 1.341,
+        "WAPE": 0.492,
+        "bias": -0.007
+      },
+      "Harbour": {
+        "MAE": 1.661,
+        "WAPE": 0.413,
+        "bias": 0.001
+      },
+      "Uptown": {
+        "MAE": 1.04,
+        "WAPE": 0.69,
+        "bias": -0.006
+      },
+      "ALL": {
+        "MAE": 1.347,
+        "WAPE": 0.49,
+        "bias": -0.003
+      }
     }
   },
   "p10_p90_coverage": {
-    "Garden": 0.874,
-    "Harbour": 0.886,
-    "Uptown": 0.931
+    "Garden": 0.887,
+    "Harbour": 0.892,
+    "Uptown": 0.928
   },
   "inventory_totals": {
     "Same weekday last week": {
@@ -92,27 +115,39 @@
       "missed": 2735.0
     },
     "Forecast mean": {
-      "profit": 17373.9,
-      "waste_cost": 2905.5,
-      "missed_profit": 7164.6,
-      "sold": 6049.0,
-      "missed": 2123.0
+      "profit": 17639.9,
+      "waste_cost": 3012.9,
+      "missed_profit": 6791.2,
+      "sold": 6167.0,
+      "missed": 2005.0
     },
     "Recommended (NB quantile)": {
-      "profit": 20152.8,
-      "waste_cost": 3299.1,
-      "missed_profit": 3992.1,
-      "sold": 7011.0,
-      "missed": 1161.0
+      "profit": 20278.0,
+      "waste_cost": 3362.1,
+      "missed_profit": 3803.9,
+      "sold": 7074.0,
+      "missed": 1098.0
+    },
+    "Recommended + fresh two batches": {
+      "profit": 20533.7,
+      "waste_cost": 3877.3,
+      "missed_profit": 3033.0,
+      "sold": 7293.0,
+      "missed": 879.0
     }
   },
+  "two_batch": {
+    "cutoff_hour": 15,
+    "morning_level": 0.9
+  },
   "alerts": {
-    "count": 49,
+    "count": 57,
     "by_flag": {
-      "demand_spike": 33,
+      "demand_spike": 32,
+      "sustained_drop": 11,
       "sustained_rise": 7,
-      "sustained_drop": 7,
-      "demand_drop": 2
+      "demand_drop": 4,
+      "possible_stockout": 3
     }
   }
 }

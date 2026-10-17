@@ -7,7 +7,7 @@ import numpy as np
 import pandas as pd
 from scipy import stats
 
-from features import FEATURES
+from features import FEATURES, OFFSET_FEATURES
 
 LGBM_PARAMS = dict(
     objective="poisson", learning_rate=0.03, num_leaves=15, min_child_samples=40,
@@ -26,16 +26,52 @@ def weekday_average(df: pd.DataFrame) -> pd.Series:
     return df["same_weekday_mean_4"] * trend
 
 
-def fit_lgbm(train: pd.DataFrame, valid: pd.DataFrame | None = None, rounds: int | None = None):
-    """Fit on rows with full history. With `valid`, early-stop and return the best round count."""
-    train = train.dropna(subset=["lag_28"])
-    dtrain = lgb.Dataset(train[FEATURES], train["units"])
-    if valid is not None:
-        dvalid = lgb.Dataset(valid[FEATURES], valid["units"], reference=dtrain)
-        model = lgb.train(LGBM_PARAMS, dtrain, num_boost_round=3000, valid_sets=[dvalid],
-                          callbacks=[lgb.early_stopping(100, verbose=False)])
-        return model, model.best_iteration
-    return lgb.train(LGBM_PARAMS, dtrain, num_boost_round=rounds), rounds
+class DemandModel:
+    """LightGBM with a Poisson objective.
+
+    mode="raw":      predicts units directly from the features.
+    mode="offset":   predicts a multiplier on the baseline (log(baseline) is the starting score),
+                     so growth and the weekday pattern come from the baseline and the trees only
+                     learn adjustments; forecasts can exceed anything seen in training.
+    mode="linear":   raw mode with linear trees, which can extend trends.
+    """
+
+    def __init__(self, mode: str = "offset"):
+        self.mode = mode
+        self.features = OFFSET_FEATURES if mode == "offset" else FEATURES
+        self.params = dict(LGBM_PARAMS, linear_tree=True, linear_lambda=1.0) if mode == "linear" else LGBM_PARAMS
+        self.booster, self.rounds = None, None
+
+    def _dataset(self, df, reference=None):
+        init = np.log(df["baseline"]) if self.mode == "offset" else None
+        return lgb.Dataset(df[self.features], df["units"], init_score=init, reference=reference)
+
+    def fit(self, train: pd.DataFrame, valid: pd.DataFrame | None = None, rounds: int | None = None):
+        """Fit on rows with full history. With `valid`, early-stop to pick the round count."""
+        train = train.dropna(subset=["lag_28"])
+        dtrain = self._dataset(train)
+        if valid is not None:
+            self.booster = lgb.train(self.params, dtrain, num_boost_round=3000,
+                                     valid_sets=[self._dataset(valid, dtrain)],
+                                     callbacks=[lgb.early_stopping(100, verbose=False)])
+            self.rounds = self.booster.best_iteration
+        else:
+            self.rounds = rounds
+            self.booster = lgb.train(self.params, dtrain, num_boost_round=rounds)
+        return self
+
+    def predict(self, df: pd.DataFrame) -> np.ndarray:
+        raw = self.booster.predict(df[self.features], num_iteration=self.rounds, raw_score=True)
+        if self.mode == "offset":
+            raw = raw + np.log(df["baseline"].to_numpy())
+        return np.exp(raw)
+
+
+def fit_lgbm(train: pd.DataFrame, valid: pd.DataFrame | None = None, rounds: int | None = None,
+             mode: str = "offset"):
+    """Convenience wrapper: returns (model, rounds)."""
+    model = DemandModel(mode).fit(train, valid, rounds)
+    return model, model.rounds
 
 
 def fit_dispersion(y: pd.Series, mu: pd.Series, groups: pd.Series) -> pd.Series:
