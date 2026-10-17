@@ -202,6 +202,9 @@ def make_environment(
             # The PPO objective is financial once candidates enter this environment.
             evidence_utility_weight=0.0,
             action_count_penalty=float(assumptions["action_count_penalty"]),
+            negative_net_profit_penalty_multiplier=float(
+                assumptions["negative_net_profit_penalty_multiplier"]
+            ),
         ),
         config=EnvironmentConfig(
             planning_horizon_weeks=1,

@@ -56,7 +56,7 @@ it does not train models. Simply opening the website uses the existing `data.js`
 | [Merchandise](Merchandise/README.md) | 14-day sales forecast per branch and product, plus unusual-sales alerts |
 | [PricingOptimization](PricingOptimization/README.md) | Suggested price per product at each branch |
 | [branch-analysis-model](branch-analysis-model/README.md) | Compares how each product performs across branches |
-| [decision-model](decision-model/README_decision_rl.md) | Turns model outputs into proposed actions (in progress) |
+| [decision-model](decision-model/README_decision_rl.md) | Turns model outputs into proposed actions (in progress) | //decision model was not used as implementation wasnt finalized on time
 | [interface](interface/README.md) | Local web page that shows the results |
 
 Each folder's README explains how to run it.

@@ -16,6 +16,7 @@ class RewardConfig:
     risk_aversion_lambda: float = 0.0
     evidence_utility_weight: float = 0.0
     action_count_penalty: float = 0.0
+    negative_net_profit_penalty_multiplier: float = 1.0
 
     def __post_init__(self) -> None:
         if not isfinite(self.scale) or self.scale <= 0:
@@ -26,6 +27,13 @@ class RewardConfig:
             raise ValueError("evidence_utility_weight must be finite and nonnegative")
         if not isfinite(self.action_count_penalty) or self.action_count_penalty < 0:
             raise ValueError("action_count_penalty must be finite and nonnegative")
+        if (
+            not isfinite(self.negative_net_profit_penalty_multiplier)
+            or self.negative_net_profit_penalty_multiplier < 1
+        ):
+            raise ValueError(
+                "negative_net_profit_penalty_multiplier must be finite and at least 1"
+            )
 
 
 @dataclass(frozen=True)
@@ -67,8 +75,11 @@ def compare_portfolio(
     evidence_utility = sum(
         float(action.evidence.get("learning_value_score", 0.0)) for action in new_actions
     )
+    financial_reward = net_profit / reward_config.scale
+    if net_profit < 0:
+        financial_reward *= reward_config.negative_net_profit_penalty_multiplier
     reward = (
-        net_profit / reward_config.scale
+        financial_reward
         - reward_config.risk_aversion_lambda * risk
         + reward_config.evidence_utility_weight * evidence_utility
         - reward_config.action_count_penalty * len(new_actions)

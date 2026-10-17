@@ -16,7 +16,8 @@
     "cross_sell_implementation_cost_usd": 10.0,
     "review_implementation_cost_usd": 0.0,
     "evidence_utility_weight": 0.0,
-    "action_count_penalty": 0.005,
+    "action_count_penalty": 0.05,
+    "negative_net_profit_penalty_multiplier": 25.0,
     "notes": [
       "Rates and costs are demonstration assumptions, not effects learned from Stories transactions.",
       "Branch variance reviews are excluded because they do not change revenue.",
@@ -124,7 +125,7 @@
     "synthetic_implementation_costs_usd": 60.0,
     "synthetic_net_incremental_profit_usd": -49.575348000000304,
     "evidence_utility": 1.4179327415500174,
-    "reward": -0.023023796560352493,
+    "reward": -0.3505949140088124,
     "simulator_support": "synthetic_only_unvalidated_intervention_effects"
   },
   "final_test_synthetic": {
@@ -224,7 +225,7 @@
     "synthetic_implementation_costs_usd": 60.0,
     "synthetic_net_incremental_profit_usd": -48.052527272728184,
     "evidence_utility": 1.4179327415500174,
-    "reward": -0.022777327212048185,
+    "reward": -0.3444331803012046,
     "simulator_support": "synthetic_only_unvalidated_intervention_effects"
   },
   "limitations": [

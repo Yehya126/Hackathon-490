@@ -9,7 +9,8 @@
   "cross_sell_implementation_cost_usd": 10.0,
   "review_implementation_cost_usd": 0.0,
   "evidence_utility_weight": 0.0,
-  "action_count_penalty": 0.005,
+  "action_count_penalty": 0.05,
+  "negative_net_profit_penalty_multiplier": 25.0,
   "notes": [
     "Rates and costs are demonstration assumptions, not effects learned from Stories transactions.",
     "Branch variance reviews are excluded because they do not change revenue.",

@@ -213,6 +213,34 @@ class SimulatorAndRewardTests(unittest.TestCase):
         self.assertAlmostEqual(comparison.reward, 0.0)
         self.assertEqual(comparison.baseline, comparison.policy)
 
+    def test_negative_net_profit_receives_asymmetric_penalty(self) -> None:
+        costly_action = CandidateAction(
+            decision_id="price_change",
+            scope="product",
+            target=Target(branch_id="Garden", product_id="Iced Latte"),
+            parameters={"change_pct": 7},
+            evidence=price_evidence(7),
+            implementation_cost_usd=10_000.0,
+        )
+        normal = compare_portfolio(
+            self.simulator,
+            self.state,
+            (costly_action,),
+            {"id": "penalty"},
+            5,
+            RewardConfig(scale=100.0),
+        )
+        strong = compare_portfolio(
+            self.simulator,
+            self.state,
+            (costly_action,),
+            {"id": "penalty"},
+            5,
+            RewardConfig(scale=100.0, negative_net_profit_penalty_multiplier=25.0),
+        )
+        self.assertLess(strong.reward, normal.reward)
+        self.assertAlmostEqual(strong.reward, normal.reward * 25.0)
+
     def test_reporting_reconciles_product_and_company_totals(self) -> None:
         comparison = compare_portfolio(
             self.simulator,

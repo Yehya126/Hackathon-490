@@ -18,9 +18,9 @@ Latest sync: `Merchandise` replaces `aya`. Pricing reads the 135 published rows
 in `PricingOptimization/outputs/price_recommendations.csv`; its gains are
 scenario estimates based on assumed price sensitivity, not measured uplift.
 Branch comparisons read `branch-analysis-model/outputs/predictor_output.csv`.
-Decisions read the frozen real evaluation and the separately labeled synthetic
-review report. Regenerate `data.js` with `python interface/build_data.py` after
-any model output changes.
+Decisions read the frozen real evaluation and currently display the review-only
+candidates in `fallback_decisions.json`. Regenerate `data.js` with
+`python interface/build_data.py` after any model output changes.
 
 The build reads Marketing_Expert, Merchandise, PricingOptimization, the branch
 predictor, and the decision model's exported results. `synced.js` adapts their
@@ -66,6 +66,8 @@ the source model supplies them.
   for the real frozen status and measured business-as-usual totals.
 - `decision-model/outputs/synthetic_demo/synthetic_policy_report.json` for
   explicitly synthetic review proposals and their assumptions.
+- `fallback_decisions.json` for the currently displayed deterministic fallback
+  candidates, exact statuses, evidence, and limitations.
 - `decision-model/config/decisions.json` only for matching labels and guardrails.
 
 The adapter writes `window.STORIES_DATA.decision_output` with this shape:
@@ -80,12 +82,17 @@ decision_output
 │   ├── simulated_* metrics, assumptions, limitations
 │   └── each action: branch, products, explanation, evidence,
 │       optional expected_impact/period, guardrails, next_step
+├── fallback
+│   ├── name, generated_on, purpose, action_count, actions
+│   ├── activation, freshness_policy, explicitly_disallowed
+│   └── each action: branch, products, proposed_action, status,
+│       evidence, limitations, next_step
 └── artifact_sources
 ```
 
 Null impact or period fields are omitted from the visible decision card. The UI
-labels synthetic proposals and never treats simulated uplift as a measured
-result. Refresh and launch with:
+labels fallback candidates, preserves pending/stale statuses, and never treats
+historical evidence as measured uplift. Refresh and launch with:
 
 ```powershell
 python interface/build_data.py
