@@ -1,0 +1,5186 @@
+{
+  "version": 2,
+  "mining_support": 0.001,
+  "scopes": {
+    "Overall": {
+      "transactions": 23720,
+      "combinations": [
+        {
+          "products": [
+            "Cold Drinks",
+            "Matcha & Tea"
+          ],
+          "price": 11.219999999999999,
+          "cost": 3.8099999999999996,
+          "support": 0.014671163575042159,
+          "count": 348,
+          "rules": [
+            {
+              "antecedent": [
+                "Matcha & Tea"
+              ],
+              "target": "Cold Drinks",
+              "confidence": 0.06711668273866925,
+              "lift": 0.44656597883905597
+            },
+            {
+              "antecedent": [
+                "Cold Drinks"
+              ],
+              "target": "Matcha & Tea",
+              "confidence": 0.09761570827489481,
+              "lift": 0.4465659788390559
+            }
+          ]
+        },
+        {
+          "products": [
+            "Cold Coffee",
+            "Cold Drinks"
+          ],
+          "price": 9.86,
+          "cost": 2.96,
+          "support": 0.014629005059021923,
+          "count": 347,
+          "rules": [
+            {
+              "antecedent": [
+                "Cold Drinks"
+              ],
+              "target": "Cold Coffee",
+              "confidence": 0.09733520336605891,
+              "lift": 0.4784067600171814
+            },
+            {
+              "antecedent": [
+                "Cold Coffee"
+              ],
+              "target": "Cold Drinks",
+              "confidence": 0.07190219643597183,
+              "lift": 0.4784067600171814
+            }
+          ]
+        },
+        {
+          "products": [
+            "Bakery",
+            "Cold Drinks"
+          ],
+          "price": 8.530000000000001,
+          "cost": 2.87,
+          "support": 0.017327150084317032,
+          "count": 411,
+          "rules": [
+            {
+              "antecedent": [
+                "Cold Drinks"
+              ],
+              "target": "Bakery",
+              "confidence": 0.1152875175315568,
+              "lift": 0.3724118093216025
+            },
+            {
+              "antecedent": [
+                "Bakery"
+              ],
+              "target": "Cold Drinks",
+              "confidence": 0.055971673702846246,
+              "lift": 0.3724118093216025
+            }
+          ]
+        },
+        {
+          "products": [
+            "Cold Drinks",
+            "Hot Coffee"
+          ],
+          "price": 9.02,
+          "cost": 2.9000000000000004,
+          "support": 0.017833052276559864,
+          "count": 423,
+          "rules": [
+            {
+              "antecedent": [
+                "Hot Coffee"
+              ],
+              "target": "Cold Drinks",
+              "confidence": 0.07852236866530536,
+              "lift": 0.5224545819750471
+            },
+            {
+              "antecedent": [
+                "Cold Drinks"
+              ],
+              "target": "Hot Coffee",
+              "confidence": 0.11865357643758764,
+              "lift": 0.5224545819750471
+            }
+          ]
+        },
+        {
+          "products": [
+            "Bakery",
+            "Cold Drinks",
+            "Matcha & Tea"
+          ],
+          "price": 15.3,
+          "cost": 5.38,
+          "support": 0.001011804384485666,
+          "count": 24,
+          "rules": [
+            {
+              "antecedent": [
+                "Cold Drinks",
+                "Matcha & Tea"
+              ],
+              "target": "Bakery",
+              "confidence": 0.0689655172413793,
+              "lift": 0.22277843782725273
+            },
+            {
+              "antecedent": [
+                "Bakery",
+                "Matcha & Tea"
+              ],
+              "target": "Cold Drinks",
+              "confidence": 0.016889514426460236,
+              "lift": 0.11237567523019265
+            },
+            {
+              "antecedent": [
+                "Bakery",
+                "Cold Drinks"
+              ],
+              "target": "Matcha & Tea",
+              "confidence": 0.0583941605839416,
+              "lift": 0.2671377992383982
+            }
+          ]
+        },
+        {
+          "products": [
+            "Bakery",
+            "Cold Drinks",
+            "Hot Coffee"
+          ],
+          "price": 13.100000000000001,
+          "cost": 4.470000000000001,
+          "support": 0.001011804384485666,
+          "count": 24,
+          "rules": [
+            {
+              "antecedent": [
+                "Cold Drinks",
+                "Hot Coffee"
+              ],
+              "target": "Bakery",
+              "confidence": 0.05673758865248227,
+              "lift": 0.18327871480823632
+            },
+            {
+              "antecedent": [
+                "Bakery",
+                "Hot Coffee"
+              ],
+              "target": "Cold Drinks",
+              "confidence": 0.02168021680216802,
+              "lift": 0.1442509796766972
+            },
+            {
+              "antecedent": [
+                "Bakery",
+                "Cold Drinks"
+              ],
+              "target": "Hot Coffee",
+              "confidence": 0.0583941605839416,
+              "lift": 0.25712075163376547
+            }
+          ]
+        },
+        {
+          "products": [
+            "Bakery",
+            "Breakfast"
+          ],
+          "price": 12.64,
+          "cost": 5.75,
+          "support": 0.008263069139966273,
+          "count": 196,
+          "rules": [
+            {
+              "antecedent": [
+                "Breakfast"
+              ],
+              "target": "Bakery",
+              "confidence": 0.1222707423580786,
+              "lift": 0.3949696321304132
+            },
+            {
+              "antecedent": [
+                "Bakery"
+              ],
+              "target": "Breakfast",
+              "confidence": 0.026692087702573877,
+              "lift": 0.39496963213041325
+            }
+          ]
+        },
+        {
+          "products": [
+            "Breakfast",
+            "Desserts"
+          ],
+          "price": 15.02,
+          "cost": 7.26,
+          "support": 0.004595278246205733,
+          "count": 109,
+          "rules": [
+            {
+              "antecedent": [
+                "Desserts"
+              ],
+              "target": "Breakfast",
+              "confidence": 0.035985473753714095,
+              "lift": 0.5324862367049896
+            },
+            {
+              "antecedent": [
+                "Breakfast"
+              ],
+              "target": "Desserts",
+              "confidence": 0.06799750467872738,
+              "lift": 0.5324862367049896
+            }
+          ]
+        },
+        {
+          "products": [
+            "Breakfast",
+            "Sandwiches"
+          ],
+          "price": 18.69,
+          "cost": 9.14,
+          "support": 0.0042158516020236085,
+          "count": 100,
+          "rules": [
+            {
+              "antecedent": [
+                "Sandwiches"
+              ],
+              "target": "Breakfast",
+              "confidence": 0.0396039603960396,
+              "lift": 0.5860299067960445
+            },
+            {
+              "antecedent": [
+                "Breakfast"
+              ],
+              "target": "Sandwiches",
+              "confidence": 0.06238303181534623,
+              "lift": 0.5860299067960445
+            }
+          ]
+        },
+        {
+          "products": [
+            "Breakfast",
+            "Cold Drinks"
+          ],
+          "price": 13.010000000000002,
+          "cost": 5.4799999999999995,
+          "support": 0.006028667790893761,
+          "count": 143,
+          "rules": [
+            {
+              "antecedent": [
+                "Cold Drinks"
+              ],
+              "target": "Breakfast",
+              "confidence": 0.040112201963534364,
+              "lift": 0.5935504869463725
+            },
+            {
+              "antecedent": [
+                "Breakfast"
+              ],
+              "target": "Cold Drinks",
+              "confidence": 0.08920773549594511,
+              "lift": 0.5935504869463726
+            }
+          ]
+        },
+        {
+          "products": [
+            "Breakfast",
+            "Cold Coffee"
+          ],
+          "price": 13.97,
+          "cost": 5.84,
+          "support": 0.007166947723440135,
+          "count": 170,
+          "rules": [
+            {
+              "antecedent": [
+                "Cold Coffee"
+              ],
+              "target": "Breakfast",
+              "confidence": 0.035225859925404064,
+              "lift": 0.5212460370746004
+            },
+            {
+              "antecedent": [
+                "Breakfast"
+              ],
+              "target": "Cold Coffee",
+              "confidence": 0.10605115408608859,
+              "lift": 0.5212460370746004
+            }
+          ]
+        },
+        {
+          "products": [
+            "Breakfast",
+            "Hot Coffee"
+          ],
+          "price": 13.13,
+          "cost": 5.779999999999999,
+          "support": 0.008052276559865092,
+          "count": 191,
+          "rules": [
+            {
+              "antecedent": [
+                "Hot Coffee"
+              ],
+              "target": "Breakfast",
+              "confidence": 0.03545572674958233,
+              "lift": 0.5246474351217049
+            },
+            {
+              "antecedent": [
+                "Breakfast"
+              ],
+              "target": "Hot Coffee",
+              "confidence": 0.11915159076731129,
+              "lift": 0.5246474351217048
+            }
+          ]
+        },
+        {
+          "products": [
+            "Breakfast",
+            "Matcha & Tea"
+          ],
+          "price": 15.33,
+          "cost": 6.6899999999999995,
+          "support": 0.0060708263069139965,
+          "count": 144,
+          "rules": [
+            {
+              "antecedent": [
+                "Matcha & Tea"
+              ],
+              "target": "Breakfast",
+              "confidence": 0.02777242044358727,
+              "lift": 0.4109555913424143
+            },
+            {
+              "antecedent": [
+                "Breakfast"
+              ],
+              "target": "Matcha & Tea",
+              "confidence": 0.08983156581409857,
+              "lift": 0.4109555913424143
+            }
+          ]
+        },
+        {
+          "products": [
+            "Desserts",
+            "Matcha & Tea"
+          ],
+          "price": 13.23,
+          "cost": 5.59,
+          "support": 0.013069139966273187,
+          "count": 310,
+          "rules": [
+            {
+              "antecedent": [
+                "Matcha & Tea"
+              ],
+              "target": "Desserts",
+              "confidence": 0.05978784956605593,
+              "lift": 0.46819669584247164
+            },
+            {
+              "antecedent": [
+                "Desserts"
+              ],
+              "target": "Matcha & Tea",
+              "confidence": 0.10234400792340706,
+              "lift": 0.46819669584247164
+            }
+          ]
+        },
+        {
+          "products": [
+            "Bakery",
+            "Desserts"
+          ],
+          "price": 10.54,
+          "cost": 4.65,
+          "support": 0.0153035413153457,
+          "count": 363,
+          "rules": [
+            {
+              "antecedent": [
+                "Desserts"
+              ],
+              "target": "Bakery",
+              "confidence": 0.11984153185869924,
+              "lift": 0.38712258418743645
+            },
+            {
+              "antecedent": [
+                "Bakery"
+              ],
+              "target": "Desserts",
+              "confidence": 0.04943483589813427,
+              "lift": 0.3871225841874364
+            }
+          ]
+        },
+        {
+          "products": [
+            "Cold Drinks",
+            "Desserts"
+          ],
+          "price": 10.91,
+          "cost": 4.38,
+          "support": 0.008979763912310286,
+          "count": 213,
+          "rules": [
+            {
+              "antecedent": [
+                "Desserts"
+              ],
+              "target": "Cold Drinks",
+              "confidence": 0.07032023770221195,
+              "lift": 0.4678810766610007
+            },
+            {
+              "antecedent": [
+                "Cold Drinks"
+              ],
+              "target": "Desserts",
+              "confidence": 0.05974754558204768,
+              "lift": 0.46788107666100065
+            }
+          ]
+        },
+        {
+          "products": [
+            "Cold Coffee",
+            "Desserts"
+          ],
+          "price": 11.870000000000001,
+          "cost": 4.74,
+          "support": 0.013827993254637436,
+          "count": 328,
+          "rules": [
+            {
+              "antecedent": [
+                "Desserts"
+              ],
+              "target": "Cold Coffee",
+              "confidence": 0.10828656322218554,
+              "lift": 0.5322331702507752
+            },
+            {
+              "antecedent": [
+                "Cold Coffee"
+              ],
+              "target": "Desserts",
+              "confidence": 0.06796518856195607,
+              "lift": 0.5322331702507752
+            }
+          ]
+        },
+        {
+          "products": [
+            "Desserts",
+            "Hot Coffee"
+          ],
+          "price": 11.030000000000001,
+          "cost": 4.68,
+          "support": 0.013322091062394605,
+          "count": 316,
+          "rules": [
+            {
+              "antecedent": [
+                "Hot Coffee"
+              ],
+              "target": "Desserts",
+              "confidence": 0.05865973640245035,
+              "lift": 0.45936247852958806
+            },
+            {
+              "antecedent": [
+                "Desserts"
+              ],
+              "target": "Hot Coffee",
+              "confidence": 0.10432485968966657,
+              "lift": 0.45936247852958806
+            }
+          ]
+        },
+        {
+          "products": [
+            "Bakery",
+            "Cold Coffee"
+          ],
+          "price": 9.49,
+          "cost": 3.23,
+          "support": 0.037478920741989885,
+          "count": 889,
+          "rules": [
+            {
+              "antecedent": [
+                "Cold Coffee"
+              ],
+              "target": "Bakery",
+              "confidence": 0.1842105263157895,
+              "lift": 0.5950529326175305
+            },
+            {
+              "antecedent": [
+                "Bakery"
+              ],
+              "target": "Cold Coffee",
+              "confidence": 0.12106768350810296,
+              "lift": 0.5950529326175306
+            }
+          ]
+        },
+        {
+          "products": [
+            "Cold Coffee",
+            "Matcha & Tea"
+          ],
+          "price": 12.18,
+          "cost": 4.17,
+          "support": 0.018591905564924113,
+          "count": 441,
+          "rules": [
+            {
+              "antecedent": [
+                "Matcha & Tea"
+              ],
+              "target": "Cold Coffee",
+              "confidence": 0.08505303760848601,
+              "lift": 0.4180393808688952
+            },
+            {
+              "antecedent": [
+                "Cold Coffee"
+              ],
+              "target": "Matcha & Tea",
+              "confidence": 0.09138002486531288,
+              "lift": 0.4180393808688952
+            }
+          ]
+        },
+        {
+          "products": [
+            "Cold Coffee",
+            "Hot Coffee"
+          ],
+          "price": 9.98,
+          "cost": 3.26,
+          "support": 0.020615514333895447,
+          "count": 489,
+          "rules": [
+            {
+              "antecedent": [
+                "Hot Coffee"
+              ],
+              "target": "Cold Coffee",
+              "confidence": 0.09077408576201969,
+              "lift": 0.4461585814909049
+            },
+            {
+              "antecedent": [
+                "Cold Coffee"
+              ],
+              "target": "Hot Coffee",
+              "confidence": 0.10132615002072111,
+              "lift": 0.4461585814909049
+            }
+          ]
+        },
+        {
+          "products": [
+            "Bakery",
+            "Cold Coffee",
+            "Matcha & Tea"
+          ],
+          "price": 16.259999999999998,
+          "cost": 5.74,
+          "support": 0.0016020236087689714,
+          "count": 38,
+          "rules": [
+            {
+              "antecedent": [
+                "Cold Coffee",
+                "Matcha & Tea"
+              ],
+              "target": "Bakery",
+              "confidence": 0.08616780045351474,
+              "lift": 0.2783467556526446
+            },
+            {
+              "antecedent": [
+                "Bakery",
+                "Matcha & Tea"
+              ],
+              "target": "Cold Coffee",
+              "confidence": 0.02674173117522871,
+              "lift": 0.13143677237389662
+            },
+            {
+              "antecedent": [
+                "Bakery",
+                "Cold Coffee"
+              ],
+              "target": "Matcha & Tea",
+              "confidence": 0.04274465691788526,
+              "lift": 0.19554547002743267
+            }
+          ]
+        },
+        {
+          "products": [
+            "Bakery",
+            "Cold Coffee",
+            "Hot Coffee"
+          ],
+          "price": 14.06,
+          "cost": 4.83,
+          "support": 0.001854974704890388,
+          "count": 44,
+          "rules": [
+            {
+              "antecedent": [
+                "Cold Coffee",
+                "Hot Coffee"
+              ],
+              "target": "Bakery",
+              "confidence": 0.08997955010224949,
+              "lift": 0.2906598023185834
+            },
+            {
+              "antecedent": [
+                "Bakery",
+                "Hot Coffee"
+              ],
+              "target": "Cold Coffee",
+              "confidence": 0.039747064137308045,
+              "lift": 0.19535854980044487
+            },
+            {
+              "antecedent": [
+                "Bakery",
+                "Cold Coffee"
+              ],
+              "target": "Hot Coffee",
+              "confidence": 0.04949381327334083,
+              "lift": 0.2179308057998226
+            }
+          ]
+        },
+        {
+          "products": [
+            "Bakery",
+            "Matcha & Tea"
+          ],
+          "price": 10.85,
+          "cost": 4.08,
+          "support": 0.05990725126475548,
+          "count": 1421,
+          "rules": [
+            {
+              "antecedent": [
+                "Matcha & Tea"
+              ],
+              "target": "Bakery",
+              "confidence": 0.2740597878495661,
+              "lift": 0.8852918654217223
+            },
+            {
+              "antecedent": [
+                "Bakery"
+              ],
+              "target": "Matcha & Tea",
+              "confidence": 0.1935176358436606,
+              "lift": 0.8852918654217222
+            }
+          ]
+        },
+        {
+          "products": [
+            "Hot Coffee",
+            "Matcha & Tea"
+          ],
+          "price": 11.34,
+          "cost": 4.109999999999999,
+          "support": 0.02272344013490725,
+          "count": 539,
+          "rules": [
+            {
+              "antecedent": [
+                "Matcha & Tea"
+              ],
+              "target": "Hot Coffee",
+              "confidence": 0.10395371263259401,
+              "lift": 0.4577282464535233
+            },
+            {
+              "antecedent": [
+                "Hot Coffee"
+              ],
+              "target": "Matcha & Tea",
+              "confidence": 0.10005568962316688,
+              "lift": 0.45772824645352334
+            }
+          ]
+        },
+        {
+          "products": [
+            "Bakery",
+            "Hot Coffee",
+            "Matcha & Tea"
+          ],
+          "price": 15.42,
+          "cost": 5.68,
+          "support": 0.00193929173693086,
+          "count": 46,
+          "rules": [
+            {
+              "antecedent": [
+                "Hot Coffee",
+                "Matcha & Tea"
+              ],
+              "target": "Bakery",
+              "confidence": 0.08534322820037106,
+              "lift": 0.2756831503353944
+            },
+            {
+              "antecedent": [
+                "Bakery",
+                "Matcha & Tea"
+              ],
+              "target": "Hot Coffee",
+              "confidence": 0.03237156931738212,
+              "lift": 0.1425382632649534
+            },
+            {
+              "antecedent": [
+                "Bakery",
+                "Hot Coffee"
+              ],
+              "target": "Matcha & Tea",
+              "confidence": 0.04155374887082204,
+              "lift": 0.19009738152669214
+            }
+          ]
+        },
+        {
+          "products": [
+            "Bakery",
+            "Hot Coffee"
+          ],
+          "price": 8.65,
+          "cost": 3.17,
+          "support": 0.046669477234401346,
+          "count": 1107,
+          "rules": [
+            {
+              "antecedent": [
+                "Hot Coffee"
+              ],
+              "target": "Bakery",
+              "confidence": 0.20549470948579915,
+              "lift": 0.6638069602346665
+            },
+            {
+              "antecedent": [
+                "Bakery"
+              ],
+              "target": "Hot Coffee",
+              "confidence": 0.1507558218711698,
+              "lift": 0.6638069602346663
+            }
+          ]
+        },
+        {
+          "products": [
+            "Cold Drinks",
+            "Meals"
+          ],
+          "price": 16.4,
+          "cost": 6.22,
+          "support": 0.005564924114671164,
+          "count": 132,
+          "rules": [
+            {
+              "antecedent": [
+                "Meals"
+              ],
+              "target": "Cold Drinks",
+              "confidence": 0.13894736842105265,
+              "lift": 0.9244969365911273
+            },
+            {
+              "antecedent": [
+                "Cold Drinks"
+              ],
+              "target": "Meals",
+              "confidence": 0.037026647966339414,
+              "lift": 0.9244969365911273
+            }
+          ]
+        },
+        {
+          "products": [
+            "Bakery",
+            "Meals"
+          ],
+          "price": 16.03,
+          "cost": 6.49,
+          "support": 0.005185497470489039,
+          "count": 123,
+          "rules": [
+            {
+              "antecedent": [
+                "Meals"
+              ],
+              "target": "Bakery",
+              "confidence": 0.12947368421052632,
+              "lift": 0.41823720406832143
+            },
+            {
+              "antecedent": [
+                "Bakery"
+              ],
+              "target": "Meals",
+              "confidence": 0.016750646874574424,
+              "lift": 0.41823720406832143
+            }
+          ]
+        },
+        {
+          "products": [
+            "Cold Coffee",
+            "Meals"
+          ],
+          "price": 17.36,
+          "cost": 6.58,
+          "support": 0.004890387858347387,
+          "count": 116,
+          "rules": [
+            {
+              "antecedent": [
+                "Meals"
+              ],
+              "target": "Cold Coffee",
+              "confidence": 0.12210526315789476,
+              "lift": 0.6001526817458068
+            },
+            {
+              "antecedent": [
+                "Cold Coffee"
+              ],
+              "target": "Meals",
+              "confidence": 0.024036469125569834,
+              "lift": 0.6001526817458068
+            }
+          ]
+        },
+        {
+          "products": [
+            "Matcha & Tea",
+            "Meals"
+          ],
+          "price": 18.72,
+          "cost": 7.43,
+          "support": 0.00387858347386172,
+          "count": 92,
+          "rules": [
+            {
+              "antecedent": [
+                "Meals"
+              ],
+              "target": "Matcha & Tea",
+              "confidence": 0.0968421052631579,
+              "lift": 0.4430269502106278
+            },
+            {
+              "antecedent": [
+                "Matcha & Tea"
+              ],
+              "target": "Meals",
+              "confidence": 0.017743490838958535,
+              "lift": 0.4430269502106279
+            }
+          ]
+        },
+        {
+          "products": [
+            "Hot Coffee",
+            "Meals"
+          ],
+          "price": 16.52,
+          "cost": 6.52,
+          "support": 0.0051433389544688025,
+          "count": 122,
+          "rules": [
+            {
+              "antecedent": [
+                "Meals"
+              ],
+              "target": "Hot Coffee",
+              "confidence": 0.12842105263157894,
+              "lift": 0.5654626635272049
+            },
+            {
+              "antecedent": [
+                "Hot Coffee"
+              ],
+              "target": "Meals",
+              "confidence": 0.022647113421199183,
+              "lift": 0.5654626635272049
+            }
+          ]
+        },
+        {
+          "products": [
+            "Desserts",
+            "Meals"
+          ],
+          "price": 18.41,
+          "cost": 8.0,
+          "support": 0.002782462057335582,
+          "count": 66,
+          "rules": [
+            {
+              "antecedent": [
+                "Meals"
+              ],
+              "target": "Desserts",
+              "confidence": 0.06947368421052633,
+              "lift": 0.5440461503709754
+            },
+            {
+              "antecedent": [
+                "Desserts"
+              ],
+              "target": "Meals",
+              "confidence": 0.021789369428854406,
+              "lift": 0.5440461503709753
+            }
+          ]
+        },
+        {
+          "products": [
+            "Meals",
+            "Sandwiches"
+          ],
+          "price": 22.08,
+          "cost": 9.879999999999999,
+          "support": 0.002360876897133221,
+          "count": 56,
+          "rules": [
+            {
+              "antecedent": [
+                "Sandwiches"
+              ],
+              "target": "Meals",
+              "confidence": 0.022178217821782177,
+              "lift": 0.553755080771235
+            },
+            {
+              "antecedent": [
+                "Meals"
+              ],
+              "target": "Sandwiches",
+              "confidence": 0.05894736842105264,
+              "lift": 0.553755080771235
+            }
+          ]
+        },
+        {
+          "products": [
+            "Breakfast",
+            "Meals"
+          ],
+          "price": 20.509999999999998,
+          "cost": 9.1,
+          "support": 0.001391231028667791,
+          "count": 33,
+          "rules": [
+            {
+              "antecedent": [
+                "Meals"
+              ],
+              "target": "Breakfast",
+              "confidence": 0.03473684210526316,
+              "lift": 0.5140099156187413
+            },
+            {
+              "antecedent": [
+                "Breakfast"
+              ],
+              "target": "Meals",
+              "confidence": 0.020586400499064256,
+              "lift": 0.5140099156187412
+            }
+          ]
+        },
+        {
+          "products": [
+            "Cold Drinks",
+            "Sandwiches"
+          ],
+          "price": 14.580000000000002,
+          "cost": 6.26,
+          "support": 0.015430016863406408,
+          "count": 366,
+          "rules": [
+            {
+              "antecedent": [
+                "Sandwiches"
+              ],
+              "target": "Cold Drinks",
+              "confidence": 0.14495049504950494,
+              "lift": 0.9644391984780525
+            },
+            {
+              "antecedent": [
+                "Cold Drinks"
+              ],
+              "target": "Sandwiches",
+              "confidence": 0.1026647966339411,
+              "lift": 0.9644391984780526
+            }
+          ]
+        },
+        {
+          "products": [
+            "Bakery",
+            "Sandwiches"
+          ],
+          "price": 14.21,
+          "cost": 6.53,
+          "support": 0.01412310286677909,
+          "count": 335,
+          "rules": [
+            {
+              "antecedent": [
+                "Sandwiches"
+              ],
+              "target": "Bakery",
+              "confidence": 0.13267326732673268,
+              "lift": 0.42857277692906154
+            },
+            {
+              "antecedent": [
+                "Bakery"
+              ],
+              "target": "Sandwiches",
+              "confidence": 0.045621680512052294,
+              "lift": 0.42857277692906154
+            }
+          ]
+        },
+        {
+          "products": [
+            "Cold Coffee",
+            "Sandwiches"
+          ],
+          "price": 15.540000000000001,
+          "cost": 6.62,
+          "support": 0.010961214165261383,
+          "count": 260,
+          "rules": [
+            {
+              "antecedent": [
+                "Sandwiches"
+              ],
+              "target": "Cold Coffee",
+              "confidence": 0.10297029702970296,
+              "lift": 0.5061034905811344
+            },
+            {
+              "antecedent": [
+                "Cold Coffee"
+              ],
+              "target": "Sandwiches",
+              "confidence": 0.05387484459179445,
+              "lift": 0.5061034905811344
+            }
+          ]
+        },
+        {
+          "products": [
+            "Hot Coffee",
+            "Sandwiches"
+          ],
+          "price": 14.700000000000001,
+          "cost": 6.5600000000000005,
+          "support": 0.012774030354131535,
+          "count": 303,
+          "rules": [
+            {
+              "antecedent": [
+                "Sandwiches"
+              ],
+              "target": "Hot Coffee",
+              "confidence": 0.12,
+              "lift": 0.5283831446073881
+            },
+            {
+              "antecedent": [
+                "Hot Coffee"
+              ],
+              "target": "Sandwiches",
+              "confidence": 0.056246519398552075,
+              "lift": 0.5283831446073882
+            }
+          ]
+        },
+        {
+          "products": [
+            "Matcha & Tea",
+            "Sandwiches"
+          ],
+          "price": 16.9,
+          "cost": 7.47,
+          "support": 0.010202360876897134,
+          "count": 242,
+          "rules": [
+            {
+              "antecedent": [
+                "Sandwiches"
+              ],
+              "target": "Matcha & Tea",
+              "confidence": 0.09584158415841584,
+              "lift": 0.43844983148266614
+            },
+            {
+              "antecedent": [
+                "Matcha & Tea"
+              ],
+              "target": "Sandwiches",
+              "confidence": 0.046673095467695276,
+              "lift": 0.4384498314826661
+            }
+          ]
+        },
+        {
+          "products": [
+            "Desserts",
+            "Sandwiches"
+          ],
+          "price": 16.59,
+          "cost": 8.04,
+          "support": 0.006829679595278246,
+          "count": 162,
+          "rules": [
+            {
+              "antecedent": [
+                "Sandwiches"
+              ],
+              "target": "Desserts",
+              "confidence": 0.06415841584158415,
+              "lift": 0.5024224574983083
+            },
+            {
+              "antecedent": [
+                "Desserts"
+              ],
+              "target": "Sandwiches",
+              "confidence": 0.053482997689006266,
+              "lift": 0.5024224574983084
+            }
+          ]
+        }
+      ]
+    },
+    "Garden": {
+      "transactions": 7825,
+      "combinations": [
+        {
+          "products": [
+            "Breakfast",
+            "Sandwiches"
+          ],
+          "price": 18.1,
+          "cost": 11.5,
+          "support": 0.0030670926517571886,
+          "count": 24,
+          "rules": [
+            {
+              "antecedent": [
+                "Sandwiches"
+              ],
+              "target": "Breakfast",
+              "confidence": 0.03187250996015936,
+              "lift": 0.4679219332800132
+            },
+            {
+              "antecedent": [
+                "Breakfast"
+              ],
+              "target": "Sandwiches",
+              "confidence": 0.045028142589118206,
+              "lift": 0.46792193328001325
+            }
+          ]
+        },
+        {
+          "products": [
+            "Bakery",
+            "Breakfast"
+          ],
+          "price": 12.100000000000001,
+          "cost": 6.62,
+          "support": 0.008690095846645367,
+          "count": 68,
+          "rules": [
+            {
+              "antecedent": [
+                "Breakfast"
+              ],
+              "target": "Bakery",
+              "confidence": 0.1275797373358349,
+              "lift": 0.41665753115730714
+            },
+            {
+              "antecedent": [
+                "Bakery"
+              ],
+              "target": "Breakfast",
+              "confidence": 0.02838063439065108,
+              "lift": 0.41665753115730714
+            }
+          ]
+        },
+        {
+          "products": [
+            "Breakfast",
+            "Desserts"
+          ],
+          "price": 14.3,
+          "cost": 8.6,
+          "support": 0.00549520766773163,
+          "count": 43,
+          "rules": [
+            {
+              "antecedent": [
+                "Desserts"
+              ],
+              "target": "Breakfast",
+              "confidence": 0.03346303501945525,
+              "lift": 0.4912725122462239
+            },
+            {
+              "antecedent": [
+                "Breakfast"
+              ],
+              "target": "Desserts",
+              "confidence": 0.08067542213883679,
+              "lift": 0.491272512246224
+            }
+          ]
+        },
+        {
+          "products": [
+            "Breakfast",
+            "Cold Drinks"
+          ],
+          "price": 12.600000000000001,
+          "cost": 6.42,
+          "support": 0.005878594249201278,
+          "count": 46,
+          "rules": [
+            {
+              "antecedent": [
+                "Cold Drinks"
+              ],
+              "target": "Breakfast",
+              "confidence": 0.039895923677363394,
+              "lift": 0.5857140765016297
+            },
+            {
+              "antecedent": [
+                "Breakfast"
+              ],
+              "target": "Cold Drinks",
+              "confidence": 0.08630393996247655,
+              "lift": 0.5857140765016297
+            }
+          ]
+        },
+        {
+          "products": [
+            "Breakfast",
+            "Matcha & Tea"
+          ],
+          "price": 14.600000000000001,
+          "cost": 8.0,
+          "support": 0.005750798722044728,
+          "count": 45,
+          "rules": [
+            {
+              "antecedent": [
+                "Matcha & Tea"
+              ],
+              "target": "Breakfast",
+              "confidence": 0.02640845070422535,
+              "lift": 0.38770380255265174
+            },
+            {
+              "antecedent": [
+                "Breakfast"
+              ],
+              "target": "Matcha & Tea",
+              "confidence": 0.08442776735459663,
+              "lift": 0.38770380255265174
+            }
+          ]
+        },
+        {
+          "products": [
+            "Breakfast",
+            "Cold Coffee"
+          ],
+          "price": 13.5,
+          "cost": 7.12,
+          "support": 0.008434504792332268,
+          "count": 66,
+          "rules": [
+            {
+              "antecedent": [
+                "Cold Coffee"
+              ],
+              "target": "Breakfast",
+              "confidence": 0.042801556420233464,
+              "lift": 0.6283718179893563
+            },
+            {
+              "antecedent": [
+                "Breakfast"
+              ],
+              "target": "Cold Coffee",
+              "confidence": 0.12382739212007506,
+              "lift": 0.6283718179893563
+            }
+          ]
+        },
+        {
+          "products": [
+            "Breakfast",
+            "Hot Coffee"
+          ],
+          "price": 12.5,
+          "cost": 6.52,
+          "support": 0.00817891373801917,
+          "count": 64,
+          "rules": [
+            {
+              "antecedent": [
+                "Hot Coffee"
+              ],
+              "target": "Breakfast",
+              "confidence": 0.03680276020701553,
+              "lift": 0.540303186904121
+            },
+            {
+              "antecedent": [
+                "Breakfast"
+              ],
+              "target": "Hot Coffee",
+              "confidence": 0.12007504690431521,
+              "lift": 0.540303186904121
+            }
+          ]
+        },
+        {
+          "products": [
+            "Cold Drinks",
+            "Matcha & Tea"
+          ],
+          "price": 10.9,
+          "cost": 4.92,
+          "support": 0.014057507987220448,
+          "count": 110,
+          "rules": [
+            {
+              "antecedent": [
+                "Matcha & Tea"
+              ],
+              "target": "Cold Drinks",
+              "confidence": 0.06455399061032864,
+              "lift": 0.43810492326610717
+            },
+            {
+              "antecedent": [
+                "Cold Drinks"
+              ],
+              "target": "Matcha & Tea",
+              "confidence": 0.09540329575021683,
+              "lift": 0.4381049232661072
+            }
+          ]
+        },
+        {
+          "products": [
+            "Bakery",
+            "Cold Drinks"
+          ],
+          "price": 8.4,
+          "cost": 3.54,
+          "support": 0.017507987220447285,
+          "count": 137,
+          "rules": [
+            {
+              "antecedent": [
+                "Cold Drinks"
+              ],
+              "target": "Bakery",
+              "confidence": 0.11882046834345186,
+              "lift": 0.3880509869730846
+            },
+            {
+              "antecedent": [
+                "Bakery"
+              ],
+              "target": "Cold Drinks",
+              "confidence": 0.057178631051752915,
+              "lift": 0.3880509869730846
+            }
+          ]
+        },
+        {
+          "products": [
+            "Cold Coffee",
+            "Cold Drinks"
+          ],
+          "price": 9.8,
+          "cost": 4.04,
+          "support": 0.014057507987220448,
+          "count": 110,
+          "rules": [
+            {
+              "antecedent": [
+                "Cold Drinks"
+              ],
+              "target": "Cold Coffee",
+              "confidence": 0.09540329575021683,
+              "lift": 0.4841315105353091
+            },
+            {
+              "antecedent": [
+                "Cold Coffee"
+              ],
+              "target": "Cold Drinks",
+              "confidence": 0.07133592736705577,
+              "lift": 0.48413151053530906
+            }
+          ]
+        },
+        {
+          "products": [
+            "Cold Drinks",
+            "Desserts"
+          ],
+          "price": 10.600000000000001,
+          "cost": 5.52,
+          "support": 0.010223642172523962,
+          "count": 80,
+          "rules": [
+            {
+              "antecedent": [
+                "Desserts"
+              ],
+              "target": "Cold Drinks",
+              "confidence": 0.0622568093385214,
+              "lift": 0.42251477283081523
+            },
+            {
+              "antecedent": [
+                "Cold Drinks"
+              ],
+              "target": "Desserts",
+              "confidence": 0.06938421509106678,
+              "lift": 0.4225147728308152
+            }
+          ]
+        },
+        {
+          "products": [
+            "Cold Drinks",
+            "Hot Coffee"
+          ],
+          "price": 8.8,
+          "cost": 3.44,
+          "support": 0.01674121405750799,
+          "count": 131,
+          "rules": [
+            {
+              "antecedent": [
+                "Hot Coffee"
+              ],
+              "target": "Cold Drinks",
+              "confidence": 0.07533064979873491,
+              "lift": 0.5112422677147447
+            },
+            {
+              "antecedent": [
+                "Cold Drinks"
+              ],
+              "target": "Hot Coffee",
+              "confidence": 0.11361665221162186,
+              "lift": 0.5112422677147447
+            }
+          ]
+        },
+        {
+          "products": [
+            "Bakery",
+            "Cold Drinks",
+            "Hot Coffee"
+          ],
+          "price": 12.75,
+          "cost": 5.3100000000000005,
+          "support": 0.0011501597444089457,
+          "count": 9,
+          "rules": [
+            {
+              "antecedent": [
+                "Cold Drinks",
+                "Hot Coffee"
+              ],
+              "target": "Bakery",
+              "confidence": 0.06870229007633587,
+              "lift": 0.22437204501140573
+            },
+            {
+              "antecedent": [
+                "Bakery",
+                "Hot Coffee"
+              ],
+              "target": "Cold Drinks",
+              "confidence": 0.02368421052631579,
+              "lift": 0.16073629433514403
+            },
+            {
+              "antecedent": [
+                "Bakery",
+                "Cold Drinks"
+              ],
+              "target": "Hot Coffee",
+              "confidence": 0.06569343065693431,
+              "lift": 0.2956015496782697
+            }
+          ]
+        },
+        {
+          "products": [
+            "Bakery",
+            "Hot Coffee"
+          ],
+          "price": 8.3,
+          "cost": 3.64,
+          "support": 0.04856230031948882,
+          "count": 380,
+          "rules": [
+            {
+              "antecedent": [
+                "Hot Coffee"
+              ],
+              "target": "Bakery",
+              "confidence": 0.21851638872915471,
+              "lift": 0.7136438822227194
+            },
+            {
+              "antecedent": [
+                "Bakery"
+              ],
+              "target": "Hot Coffee",
+              "confidence": 0.15859766277128548,
+              "lift": 0.7136438822227194
+            }
+          ]
+        },
+        {
+          "products": [
+            "Hot Coffee",
+            "Matcha & Tea"
+          ],
+          "price": 10.8,
+          "cost": 5.02,
+          "support": 0.022364217252396165,
+          "count": 175,
+          "rules": [
+            {
+              "antecedent": [
+                "Matcha & Tea"
+              ],
+              "target": "Hot Coffee",
+              "confidence": 0.10269953051643192,
+              "lift": 0.4621183589942955
+            },
+            {
+              "antecedent": [
+                "Hot Coffee"
+              ],
+              "target": "Matcha & Tea",
+              "confidence": 0.10063254744105808,
+              "lift": 0.46211835899429543
+            }
+          ]
+        },
+        {
+          "products": [
+            "Bakery",
+            "Matcha & Tea"
+          ],
+          "price": 10.4,
+          "cost": 5.12,
+          "support": 0.057380191693290734,
+          "count": 449,
+          "rules": [
+            {
+              "antecedent": [
+                "Matcha & Tea"
+              ],
+              "target": "Bakery",
+              "confidence": 0.2634976525821596,
+              "lift": 0.8605463820765438
+            },
+            {
+              "antecedent": [
+                "Bakery"
+              ],
+              "target": "Matcha & Tea",
+              "confidence": 0.18739565943238728,
+              "lift": 0.8605463820765437
+            }
+          ]
+        },
+        {
+          "products": [
+            "Bakery",
+            "Hot Coffee",
+            "Matcha & Tea"
+          ],
+          "price": 14.75,
+          "cost": 6.890000000000001,
+          "support": 0.0012779552715654952,
+          "count": 10,
+          "rules": [
+            {
+              "antecedent": [
+                "Hot Coffee",
+                "Matcha & Tea"
+              ],
+              "target": "Bakery",
+              "confidence": 0.05714285714285715,
+              "lift": 0.18662055807297878
+            },
+            {
+              "antecedent": [
+                "Bakery",
+                "Matcha & Tea"
+              ],
+              "target": "Hot Coffee",
+              "confidence": 0.022271714922048998,
+              "lift": 0.10021631355091053
+            },
+            {
+              "antecedent": [
+                "Bakery",
+                "Hot Coffee"
+              ],
+              "target": "Matcha & Tea",
+              "confidence": 0.02631578947368421,
+              "lift": 0.12084568816407214
+            }
+          ]
+        },
+        {
+          "products": [
+            "Cold Drinks",
+            "Meals"
+          ],
+          "price": 16.1,
+          "cost": 8.71,
+          "support": 0.005623003194888179,
+          "count": 44,
+          "rules": [
+            {
+              "antecedent": [
+                "Meals"
+              ],
+              "target": "Cold Drinks",
+              "confidence": 0.14285714285714288,
+              "lift": 0.9695205055135672
+            },
+            {
+              "antecedent": [
+                "Cold Drinks"
+              ],
+              "target": "Meals",
+              "confidence": 0.038161318300086726,
+              "lift": 0.969520505513567
+            }
+          ]
+        },
+        {
+          "products": [
+            "Bakery",
+            "Meals"
+          ],
+          "price": 15.600000000000001,
+          "cost": 8.91,
+          "support": 0.004089456869009585,
+          "count": 32,
+          "rules": [
+            {
+              "antecedent": [
+                "Meals"
+              ],
+              "target": "Bakery",
+              "confidence": 0.1038961038961039,
+              "lift": 0.3393101055872341
+            },
+            {
+              "antecedent": [
+                "Bakery"
+              ],
+              "target": "Meals",
+              "confidence": 0.013355592654424039,
+              "lift": 0.3393101055872341
+            }
+          ]
+        },
+        {
+          "products": [
+            "Cold Coffee",
+            "Meals"
+          ],
+          "price": 17.0,
+          "cost": 9.41,
+          "support": 0.0044728434504792336,
+          "count": 35,
+          "rules": [
+            {
+              "antecedent": [
+                "Meals"
+              ],
+              "target": "Cold Coffee",
+              "confidence": 0.11363636363636366,
+              "lift": 0.5766566442636483
+            },
+            {
+              "antecedent": [
+                "Cold Coffee"
+              ],
+              "target": "Meals",
+              "confidence": 0.022697795071335927,
+              "lift": 0.5766566442636482
+            }
+          ]
+        },
+        {
+          "products": [
+            "Matcha & Tea",
+            "Meals"
+          ],
+          "price": 18.1,
+          "cost": 10.29,
+          "support": 0.0044728434504792336,
+          "count": 35,
+          "rules": [
+            {
+              "antecedent": [
+                "Meals"
+              ],
+              "target": "Matcha & Tea",
+              "confidence": 0.11363636363636366,
+              "lift": 0.5218336534357662
+            },
+            {
+              "antecedent": [
+                "Matcha & Tea"
+              ],
+              "target": "Meals",
+              "confidence": 0.020539906103286387,
+              "lift": 0.5218336534357662
+            }
+          ]
+        },
+        {
+          "products": [
+            "Breakfast",
+            "Meals"
+          ],
+          "price": 19.8,
+          "cost": 11.79,
+          "support": 0.0017891373801916933,
+          "count": 14,
+          "rules": [
+            {
+              "antecedent": [
+                "Meals"
+              ],
+              "target": "Breakfast",
+              "confidence": 0.04545454545454546,
+              "lift": 0.6673204843936553
+            },
+            {
+              "antecedent": [
+                "Breakfast"
+              ],
+              "target": "Meals",
+              "confidence": 0.02626641651031895,
+              "lift": 0.6673204843936552
+            }
+          ]
+        },
+        {
+          "products": [
+            "Meals",
+            "Sandwiches"
+          ],
+          "price": 21.6,
+          "cost": 13.79,
+          "support": 0.00268370607028754,
+          "count": 21,
+          "rules": [
+            {
+              "antecedent": [
+                "Sandwiches"
+              ],
+              "target": "Meals",
+              "confidence": 0.027888446215139442,
+              "lift": 0.7085295182904745
+            },
+            {
+              "antecedent": [
+                "Meals"
+              ],
+              "target": "Sandwiches",
+              "confidence": 0.06818181818181819,
+              "lift": 0.7085295182904746
+            }
+          ]
+        },
+        {
+          "products": [
+            "Hot Coffee",
+            "Meals"
+          ],
+          "price": 16.0,
+          "cost": 8.81,
+          "support": 0.00536741214057508,
+          "count": 42,
+          "rules": [
+            {
+              "antecedent": [
+                "Meals"
+              ],
+              "target": "Hot Coffee",
+              "confidence": 0.13636363636363638,
+              "lift": 0.6135971561503477
+            },
+            {
+              "antecedent": [
+                "Hot Coffee"
+              ],
+              "target": "Meals",
+              "confidence": 0.024151811385853938,
+              "lift": 0.6135971561503477
+            }
+          ]
+        },
+        {
+          "products": [
+            "Desserts",
+            "Meals"
+          ],
+          "price": 17.8,
+          "cost": 10.89,
+          "support": 0.003706070287539936,
+          "count": 29,
+          "rules": [
+            {
+              "antecedent": [
+                "Meals"
+              ],
+              "target": "Desserts",
+              "confidence": 0.09415584415584416,
+              "lift": 0.5733614634392845
+            },
+            {
+              "antecedent": [
+                "Desserts"
+              ],
+              "target": "Meals",
+              "confidence": 0.022568093385214007,
+              "lift": 0.5733614634392845
+            }
+          ]
+        },
+        {
+          "products": [
+            "Desserts",
+            "Matcha & Tea"
+          ],
+          "price": 12.600000000000001,
+          "cost": 7.1,
+          "support": 0.01610223642172524,
+          "count": 126,
+          "rules": [
+            {
+              "antecedent": [
+                "Matcha & Tea"
+              ],
+              "target": "Desserts",
+              "confidence": 0.07394366197183098,
+              "lift": 0.45027949799967115
+            },
+            {
+              "antecedent": [
+                "Desserts"
+              ],
+              "target": "Matcha & Tea",
+              "confidence": 0.0980544747081712,
+              "lift": 0.45027949799967115
+            }
+          ]
+        },
+        {
+          "products": [
+            "Bakery",
+            "Desserts"
+          ],
+          "price": 10.100000000000001,
+          "cost": 5.720000000000001,
+          "support": 0.020063897763578274,
+          "count": 157,
+          "rules": [
+            {
+              "antecedent": [
+                "Desserts"
+              ],
+              "target": "Bakery",
+              "confidence": 0.12217898832684825,
+              "lift": 0.3990194422610966
+            },
+            {
+              "antecedent": [
+                "Bakery"
+              ],
+              "target": "Desserts",
+              "confidence": 0.06552587646076793,
+              "lift": 0.39901944226109654
+            }
+          ]
+        },
+        {
+          "products": [
+            "Desserts",
+            "Hot Coffee"
+          ],
+          "price": 10.5,
+          "cost": 5.62,
+          "support": 0.015846645367412142,
+          "count": 124,
+          "rules": [
+            {
+              "antecedent": [
+                "Hot Coffee"
+              ],
+              "target": "Desserts",
+              "confidence": 0.0713053479010926,
+              "lift": 0.43421349986463
+            },
+            {
+              "antecedent": [
+                "Desserts"
+              ],
+              "target": "Hot Coffee",
+              "confidence": 0.09649805447470818,
+              "lift": 0.43421349986463
+            }
+          ]
+        },
+        {
+          "products": [
+            "Cold Coffee",
+            "Desserts"
+          ],
+          "price": 11.5,
+          "cost": 6.220000000000001,
+          "support": 0.016613418530351438,
+          "count": 130,
+          "rules": [
+            {
+              "antecedent": [
+                "Desserts"
+              ],
+              "target": "Cold Coffee",
+              "confidence": 0.10116731517509728,
+              "lift": 0.5133814794067031
+            },
+            {
+              "antecedent": [
+                "Cold Coffee"
+              ],
+              "target": "Desserts",
+              "confidence": 0.08430609597924772,
+              "lift": 0.5133814794067031
+            }
+          ]
+        },
+        {
+          "products": [
+            "Bakery",
+            "Desserts",
+            "Matcha & Tea"
+          ],
+          "price": 16.55,
+          "cost": 8.97,
+          "support": 0.0010223642172523962,
+          "count": 8,
+          "rules": [
+            {
+              "antecedent": [
+                "Desserts",
+                "Matcha & Tea"
+              ],
+              "target": "Bakery",
+              "confidence": 0.06349206349206349,
+              "lift": 0.20735617563664305
+            },
+            {
+              "antecedent": [
+                "Bakery",
+                "Matcha & Tea"
+              ],
+              "target": "Desserts",
+              "confidence": 0.017817371937639197,
+              "lift": 0.10849878242181067
+            },
+            {
+              "antecedent": [
+                "Bakery",
+                "Desserts"
+              ],
+              "target": "Matcha & Tea",
+              "confidence": 0.050955414012738856,
+              "lift": 0.233994198738076
+            }
+          ]
+        },
+        {
+          "products": [
+            "Bakery",
+            "Cold Coffee",
+            "Desserts"
+          ],
+          "price": 15.450000000000001,
+          "cost": 8.09,
+          "support": 0.0014057507987220448,
+          "count": 11,
+          "rules": [
+            {
+              "antecedent": [
+                "Cold Coffee",
+                "Desserts"
+              ],
+              "target": "Bakery",
+              "confidence": 0.08461538461538462,
+              "lift": 0.27634198022344936
+            },
+            {
+              "antecedent": [
+                "Bakery",
+                "Desserts"
+              ],
+              "target": "Cold Coffee",
+              "confidence": 0.07006369426751592,
+              "lift": 0.3555437144249754
+            },
+            {
+              "antecedent": [
+                "Bakery",
+                "Cold Coffee"
+              ],
+              "target": "Desserts",
+              "confidence": 0.03754266211604096,
+              "lift": 0.2286158218350354
+            }
+          ]
+        },
+        {
+          "products": [
+            "Bakery",
+            "Cold Coffee"
+          ],
+          "price": 9.3,
+          "cost": 4.24,
+          "support": 0.03744408945686901,
+          "count": 293,
+          "rules": [
+            {
+              "antecedent": [
+                "Cold Coffee"
+              ],
+              "target": "Bakery",
+              "confidence": 0.19001297016861218,
+              "lift": 0.6205557143444868
+            },
+            {
+              "antecedent": [
+                "Bakery"
+              ],
+              "target": "Cold Coffee",
+              "confidence": 0.1222871452420701,
+              "lift": 0.6205557143444868
+            }
+          ]
+        },
+        {
+          "products": [
+            "Cold Coffee",
+            "Matcha & Tea"
+          ],
+          "price": 11.8,
+          "cost": 5.62,
+          "support": 0.017891373801916934,
+          "count": 140,
+          "rules": [
+            {
+              "antecedent": [
+                "Matcha & Tea"
+              ],
+              "target": "Cold Coffee",
+              "confidence": 0.08215962441314555,
+              "lift": 0.41692546111080664
+            },
+            {
+              "antecedent": [
+                "Cold Coffee"
+              ],
+              "target": "Matcha & Tea",
+              "confidence": 0.0907911802853437,
+              "lift": 0.4169254611108066
+            }
+          ]
+        },
+        {
+          "products": [
+            "Cold Coffee",
+            "Hot Coffee"
+          ],
+          "price": 9.7,
+          "cost": 4.140000000000001,
+          "support": 0.02095846645367412,
+          "count": 164,
+          "rules": [
+            {
+              "antecedent": [
+                "Hot Coffee"
+              ],
+              "target": "Cold Coffee",
+              "confidence": 0.09430707303047729,
+              "lift": 0.4785686423239201
+            },
+            {
+              "antecedent": [
+                "Cold Coffee"
+              ],
+              "target": "Hot Coffee",
+              "confidence": 0.10635538261997406,
+              "lift": 0.4785686423239201
+            }
+          ]
+        },
+        {
+          "products": [
+            "Bakery",
+            "Cold Coffee",
+            "Matcha & Tea"
+          ],
+          "price": 15.75,
+          "cost": 7.49,
+          "support": 0.0012779552715654952,
+          "count": 10,
+          "rules": [
+            {
+              "antecedent": [
+                "Cold Coffee",
+                "Matcha & Tea"
+              ],
+              "target": "Bakery",
+              "confidence": 0.07142857142857142,
+              "lift": 0.23327569759122344
+            },
+            {
+              "antecedent": [
+                "Bakery",
+                "Matcha & Tea"
+              ],
+              "target": "Cold Coffee",
+              "confidence": 0.022271714922048998,
+              "lift": 0.11301956502271945
+            },
+            {
+              "antecedent": [
+                "Bakery",
+                "Cold Coffee"
+              ],
+              "target": "Matcha & Tea",
+              "confidence": 0.034129692832764506,
+              "lift": 0.15672819625374546
+            }
+          ]
+        },
+        {
+          "products": [
+            "Cold Coffee",
+            "Hot Coffee",
+            "Matcha & Tea"
+          ],
+          "price": 16.15,
+          "cost": 7.390000000000001,
+          "support": 0.0010223642172523962,
+          "count": 8,
+          "rules": [
+            {
+              "antecedent": [
+                "Hot Coffee",
+                "Matcha & Tea"
+              ],
+              "target": "Cold Coffee",
+              "confidence": 0.045714285714285714,
+              "lift": 0.23198073003520472
+            },
+            {
+              "antecedent": [
+                "Cold Coffee",
+                "Matcha & Tea"
+              ],
+              "target": "Hot Coffee",
+              "confidence": 0.05714285714285714,
+              "lift": 0.2571264273391933
+            },
+            {
+              "antecedent": [
+                "Cold Coffee",
+                "Hot Coffee"
+              ],
+              "target": "Matcha & Tea",
+              "confidence": 0.04878048780487805,
+              "lift": 0.22400664147486546
+            }
+          ]
+        },
+        {
+          "products": [
+            "Bakery",
+            "Cold Coffee",
+            "Hot Coffee"
+          ],
+          "price": 13.65,
+          "cost": 6.01,
+          "support": 0.0021725239616613417,
+          "count": 17,
+          "rules": [
+            {
+              "antecedent": [
+                "Cold Coffee",
+                "Hot Coffee"
+              ],
+              "target": "Bakery",
+              "confidence": 0.10365853658536585,
+              "lift": 0.3385342440653121
+            },
+            {
+              "antecedent": [
+                "Bakery",
+                "Hot Coffee"
+              ],
+              "target": "Cold Coffee",
+              "confidence": 0.04473684210526315,
+              "lift": 0.2270206157416888
+            },
+            {
+              "antecedent": [
+                "Bakery",
+                "Cold Coffee"
+              ],
+              "target": "Hot Coffee",
+              "confidence": 0.058020477815699655,
+              "lift": 0.26107546803211606
+            }
+          ]
+        },
+        {
+          "products": [
+            "Cold Drinks",
+            "Sandwiches"
+          ],
+          "price": 14.399999999999999,
+          "cost": 8.42,
+          "support": 0.01597444089456869,
+          "count": 125,
+          "rules": [
+            {
+              "antecedent": [
+                "Sandwiches"
+              ],
+              "target": "Cold Drinks",
+              "confidence": 0.16600265604249667,
+              "lift": 1.1266008530204132
+            },
+            {
+              "antecedent": [
+                "Cold Drinks"
+              ],
+              "target": "Sandwiches",
+              "confidence": 0.10841283607979184,
+              "lift": 1.1266008530204132
+            }
+          ]
+        },
+        {
+          "products": [
+            "Hot Coffee",
+            "Sandwiches"
+          ],
+          "price": 14.299999999999999,
+          "cost": 8.52,
+          "support": 0.01047923322683706,
+          "count": 82,
+          "rules": [
+            {
+              "antecedent": [
+                "Sandwiches"
+              ],
+              "target": "Hot Coffee",
+              "confidence": 0.10889774236387782,
+              "lift": 0.4900085301882369
+            },
+            {
+              "antecedent": [
+                "Hot Coffee"
+              ],
+              "target": "Sandwiches",
+              "confidence": 0.047153536515238646,
+              "lift": 0.4900085301882369
+            }
+          ]
+        },
+        {
+          "products": [
+            "Bakery",
+            "Sandwiches"
+          ],
+          "price": 13.899999999999999,
+          "cost": 8.620000000000001,
+          "support": 0.012396166134185304,
+          "count": 97,
+          "rules": [
+            {
+              "antecedent": [
+                "Sandwiches"
+              ],
+              "target": "Bakery",
+              "confidence": 0.12881806108897742,
+              "lift": 0.42070172288032065
+            },
+            {
+              "antecedent": [
+                "Bakery"
+              ],
+              "target": "Sandwiches",
+              "confidence": 0.04048414023372287,
+              "lift": 0.42070172288032065
+            }
+          ]
+        },
+        {
+          "products": [
+            "Desserts",
+            "Sandwiches"
+          ],
+          "price": 16.1,
+          "cost": 10.6,
+          "support": 0.009329073482428115,
+          "count": 73,
+          "rules": [
+            {
+              "antecedent": [
+                "Sandwiches"
+              ],
+              "target": "Desserts",
+              "confidence": 0.09694555112881806,
+              "lift": 0.5903493677688726
+            },
+            {
+              "antecedent": [
+                "Desserts"
+              ],
+              "target": "Sandwiches",
+              "confidence": 0.05680933852140078,
+              "lift": 0.5903493677688726
+            }
+          ]
+        },
+        {
+          "products": [
+            "Cold Coffee",
+            "Sandwiches"
+          ],
+          "price": 15.299999999999999,
+          "cost": 9.120000000000001,
+          "support": 0.008690095846645367,
+          "count": 68,
+          "rules": [
+            {
+              "antecedent": [
+                "Sandwiches"
+              ],
+              "target": "Cold Coffee",
+              "confidence": 0.09030544488711818,
+              "lift": 0.45826206630460425
+            },
+            {
+              "antecedent": [
+                "Cold Coffee"
+              ],
+              "target": "Sandwiches",
+              "confidence": 0.044098573281452655,
+              "lift": 0.4582620663046043
+            }
+          ]
+        },
+        {
+          "products": [
+            "Matcha & Tea",
+            "Sandwiches"
+          ],
+          "price": 16.4,
+          "cost": 10.0,
+          "support": 0.008434504792332268,
+          "count": 66,
+          "rules": [
+            {
+              "antecedent": [
+                "Sandwiches"
+              ],
+              "target": "Matcha & Tea",
+              "confidence": 0.08764940239043825,
+              "lift": 0.40249798926360286
+            },
+            {
+              "antecedent": [
+                "Matcha & Tea"
+              ],
+              "target": "Sandwiches",
+              "confidence": 0.03873239436619718,
+              "lift": 0.40249798926360286
+            }
+          ]
+        }
+      ]
+    },
+    "Harbour": {
+      "transactions": 11383,
+      "combinations": [
+        {
+          "products": [
+            "Cold Coffee",
+            "Cold Drinks"
+          ],
+          "price": 10.29,
+          "cost": 2.83,
+          "support": 0.015022401827286305,
+          "count": 171,
+          "rules": [
+            {
+              "antecedent": [
+                "Cold Drinks"
+              ],
+              "target": "Cold Coffee",
+              "confidence": 0.09959231217239373,
+              "lift": 0.47354189200432656
+            },
+            {
+              "antecedent": [
+                "Cold Coffee"
+              ],
+              "target": "Cold Drinks",
+              "confidence": 0.07142857142857144,
+              "lift": 0.47354189200432656
+            }
+          ]
+        },
+        {
+          "products": [
+            "Cold Drinks",
+            "Hot Coffee"
+          ],
+          "price": 9.24,
+          "cost": 2.41,
+          "support": 0.018975665466045857,
+          "count": 216,
+          "rules": [
+            {
+              "antecedent": [
+                "Hot Coffee"
+              ],
+              "target": "Cold Drinks",
+              "confidence": 0.08241129339946585,
+              "lift": 0.5463527971846941
+            },
+            {
+              "antecedent": [
+                "Cold Drinks"
+              ],
+              "target": "Hot Coffee",
+              "confidence": 0.1258008153756552,
+              "lift": 0.5463527971846941
+            }
+          ]
+        },
+        {
+          "products": [
+            "Bakery",
+            "Cold Drinks"
+          ],
+          "price": 8.82,
+          "cost": 2.48,
+          "support": 0.017306509707458492,
+          "count": 197,
+          "rules": [
+            {
+              "antecedent": [
+                "Cold Drinks"
+              ],
+              "target": "Bakery",
+              "confidence": 0.11473500291205593,
+              "lift": 0.3614803592991787
+            },
+            {
+              "antecedent": [
+                "Bakery"
+              ],
+              "target": "Cold Drinks",
+              "confidence": 0.05452532521450319,
+              "lift": 0.3614803592991787
+            }
+          ]
+        },
+        {
+          "products": [
+            "Cold Drinks",
+            "Matcha & Tea"
+          ],
+          "price": 11.44,
+          "cost": 3.44,
+          "support": 0.015022401827286305,
+          "count": 171,
+          "rules": [
+            {
+              "antecedent": [
+                "Matcha & Tea"
+              ],
+              "target": "Cold Drinks",
+              "confidence": 0.0673228346456693,
+              "lift": 0.4463225549048652
+            },
+            {
+              "antecedent": [
+                "Cold Drinks"
+              ],
+              "target": "Matcha & Tea",
+              "confidence": 0.09959231217239373,
+              "lift": 0.4463225549048653
+            }
+          ]
+        },
+        {
+          "products": [
+            "Cold Drinks",
+            "Desserts"
+          ],
+          "price": 11.129999999999999,
+          "cost": 3.86,
+          "support": 0.008697180005271019,
+          "count": 99,
+          "rules": [
+            {
+              "antecedent": [
+                "Desserts"
+              ],
+              "target": "Cold Drinks",
+              "confidence": 0.07722308892355695,
+              "lift": 0.5119571468939131
+            },
+            {
+              "antecedent": [
+                "Cold Drinks"
+              ],
+              "target": "Desserts",
+              "confidence": 0.05765870704717531,
+              "lift": 0.511957146893913
+            }
+          ]
+        },
+        {
+          "products": [
+            "Bakery",
+            "Desserts"
+          ],
+          "price": 10.61,
+          "cost": 4.0,
+          "support": 0.012913994553281209,
+          "count": 147,
+          "rules": [
+            {
+              "antecedent": [
+                "Desserts"
+              ],
+              "target": "Bakery",
+              "confidence": 0.11466458658346335,
+              "lift": 0.361258507910203
+            },
+            {
+              "antecedent": [
+                "Bakery"
+              ],
+              "target": "Desserts",
+              "confidence": 0.04068641018544146,
+              "lift": 0.3612585079102029
+            }
+          ]
+        },
+        {
+          "products": [
+            "Desserts",
+            "Matcha & Tea"
+          ],
+          "price": 13.23,
+          "cost": 4.96,
+          "support": 0.012562593340947026,
+          "count": 143,
+          "rules": [
+            {
+              "antecedent": [
+                "Matcha & Tea"
+              ],
+              "target": "Desserts",
+              "confidence": 0.05629921259842519,
+              "lift": 0.49988606630879406
+            },
+            {
+              "antecedent": [
+                "Desserts"
+              ],
+              "target": "Matcha & Tea",
+              "confidence": 0.11154446177847115,
+              "lift": 0.4998860663087941
+            }
+          ]
+        },
+        {
+          "products": [
+            "Desserts",
+            "Hot Coffee"
+          ],
+          "price": 11.030000000000001,
+          "cost": 3.9299999999999997,
+          "support": 0.012650443644030573,
+          "count": 144,
+          "rules": [
+            {
+              "antecedent": [
+                "Hot Coffee"
+              ],
+              "target": "Desserts",
+              "confidence": 0.05494086226631057,
+              "lift": 0.4878251444441601
+            },
+            {
+              "antecedent": [
+                "Desserts"
+              ],
+              "target": "Hot Coffee",
+              "confidence": 0.1123244929797192,
+              "lift": 0.48782514444416014
+            }
+          ]
+        },
+        {
+          "products": [
+            "Cold Coffee",
+            "Desserts"
+          ],
+          "price": 12.08,
+          "cost": 4.35,
+          "support": 0.012913994553281209,
+          "count": 147,
+          "rules": [
+            {
+              "antecedent": [
+                "Desserts"
+              ],
+              "target": "Cold Coffee",
+              "confidence": 0.11466458658346335,
+              "lift": 0.5452075977775954
+            },
+            {
+              "antecedent": [
+                "Cold Coffee"
+              ],
+              "target": "Desserts",
+              "confidence": 0.06140350877192983,
+              "lift": 0.5452075977775954
+            }
+          ]
+        },
+        {
+          "products": [
+            "Bakery",
+            "Desserts",
+            "Matcha & Tea"
+          ],
+          "price": 17.38,
+          "cost": 6.27,
+          "support": 0.0010542036370025476,
+          "count": 12,
+          "rules": [
+            {
+              "antecedent": [
+                "Desserts",
+                "Matcha & Tea"
+              ],
+              "target": "Bakery",
+              "confidence": 0.0839160839160839,
+              "lift": 0.26438327794541466
+            },
+            {
+              "antecedent": [
+                "Bakery",
+                "Matcha & Tea"
+              ],
+              "target": "Desserts",
+              "confidence": 0.016830294530154277,
+              "lift": 0.1494377867681327
+            },
+            {
+              "antecedent": [
+                "Bakery",
+                "Desserts"
+              ],
+              "target": "Matcha & Tea",
+              "confidence": 0.08163265306122448,
+              "lift": 0.3658364133054796
+            }
+          ]
+        },
+        {
+          "products": [
+            "Bakery",
+            "Matcha & Tea"
+          ],
+          "price": 10.92,
+          "cost": 3.58,
+          "support": 0.06263726609856804,
+          "count": 713,
+          "rules": [
+            {
+              "antecedent": [
+                "Matcha & Tea"
+              ],
+              "target": "Bakery",
+              "confidence": 0.2807086614173228,
+              "lift": 0.8843915563004112
+            },
+            {
+              "antecedent": [
+                "Bakery"
+              ],
+              "target": "Matcha & Tea",
+              "confidence": 0.19734292831442016,
+              "lift": 0.8843915563004112
+            }
+          ]
+        },
+        {
+          "products": [
+            "Hot Coffee",
+            "Matcha & Tea"
+          ],
+          "price": 11.34,
+          "cost": 3.51,
+          "support": 0.023016779407888956,
+          "count": 262,
+          "rules": [
+            {
+              "antecedent": [
+                "Matcha & Tea"
+              ],
+              "target": "Hot Coffee",
+              "confidence": 0.10314960629921259,
+              "lift": 0.4479786220923071
+            },
+            {
+              "antecedent": [
+                "Hot Coffee"
+              ],
+              "target": "Matcha & Tea",
+              "confidence": 0.09996184662342616,
+              "lift": 0.4479786220923071
+            }
+          ]
+        },
+        {
+          "products": [
+            "Bakery",
+            "Hot Coffee",
+            "Matcha & Tea"
+          ],
+          "price": 15.49,
+          "cost": 4.82,
+          "support": 0.002196257577088641,
+          "count": 25,
+          "rules": [
+            {
+              "antecedent": [
+                "Hot Coffee",
+                "Matcha & Tea"
+              ],
+              "target": "Bakery",
+              "confidence": 0.09541984732824427,
+              "lift": 0.3006266598774992
+            },
+            {
+              "antecedent": [
+                "Bakery",
+                "Matcha & Tea"
+              ],
+              "target": "Hot Coffee",
+              "confidence": 0.03506311360448808,
+              "lift": 0.1522790622510064
+            },
+            {
+              "antecedent": [
+                "Bakery",
+                "Hot Coffee"
+              ],
+              "target": "Matcha & Tea",
+              "confidence": 0.04716981132075471,
+              "lift": 0.21139132372604366
+            }
+          ]
+        },
+        {
+          "products": [
+            "Bakery",
+            "Cold Coffee"
+          ],
+          "price": 9.77,
+          "cost": 2.9699999999999998,
+          "support": 0.0383027321444259,
+          "count": 436,
+          "rules": [
+            {
+              "antecedent": [
+                "Cold Coffee"
+              ],
+              "target": "Bakery",
+              "confidence": 0.18212197159565582,
+              "lift": 0.5737875457163992
+            },
+            {
+              "antecedent": [
+                "Bakery"
+              ],
+              "target": "Cold Coffee",
+              "confidence": 0.12067533905341822,
+              "lift": 0.5737875457163992
+            }
+          ]
+        },
+        {
+          "products": [
+            "Cold Coffee",
+            "Matcha & Tea"
+          ],
+          "price": 12.39,
+          "cost": 3.9299999999999997,
+          "support": 0.019239216375296495,
+          "count": 219,
+          "rules": [
+            {
+              "antecedent": [
+                "Matcha & Tea"
+              ],
+              "target": "Cold Coffee",
+              "confidence": 0.08622047244094488,
+              "lift": 0.4099614192962722
+            },
+            {
+              "antecedent": [
+                "Cold Coffee"
+              ],
+              "target": "Matcha & Tea",
+              "confidence": 0.09147869674185465,
+              "lift": 0.4099614192962722
+            }
+          ]
+        },
+        {
+          "products": [
+            "Cold Coffee",
+            "Hot Coffee"
+          ],
+          "price": 10.190000000000001,
+          "cost": 2.9,
+          "support": 0.020556970921549678,
+          "count": 234,
+          "rules": [
+            {
+              "antecedent": [
+                "Hot Coffee"
+              ],
+              "target": "Cold Coffee",
+              "confidence": 0.08927890118275467,
+              "lift": 0.42450364752017394
+            },
+            {
+              "antecedent": [
+                "Cold Coffee"
+              ],
+              "target": "Hot Coffee",
+              "confidence": 0.09774436090225563,
+              "lift": 0.4245036475201739
+            }
+          ]
+        },
+        {
+          "products": [
+            "Bakery",
+            "Cold Coffee",
+            "Matcha & Tea"
+          ],
+          "price": 16.54,
+          "cost": 5.24,
+          "support": 0.0017570060616709127,
+          "count": 20,
+          "rules": [
+            {
+              "antecedent": [
+                "Cold Coffee",
+                "Matcha & Tea"
+              ],
+              "target": "Bakery",
+              "confidence": 0.091324200913242,
+              "lift": 0.2877230498188303
+            },
+            {
+              "antecedent": [
+                "Bakery",
+                "Matcha & Tea"
+              ],
+              "target": "Cold Coffee",
+              "confidence": 0.028050490883590462,
+              "lift": 0.13337457716286977
+            },
+            {
+              "antecedent": [
+                "Bakery",
+                "Cold Coffee"
+              ],
+              "target": "Matcha & Tea",
+              "confidence": 0.04587155963302752,
+              "lift": 0.20557321389872135
+            }
+          ]
+        },
+        {
+          "products": [
+            "Bakery",
+            "Cold Coffee",
+            "Hot Coffee"
+          ],
+          "price": 14.34,
+          "cost": 4.21,
+          "support": 0.0018448563647544584,
+          "count": 21,
+          "rules": [
+            {
+              "antecedent": [
+                "Cold Coffee",
+                "Hot Coffee"
+              ],
+              "target": "Bakery",
+              "confidence": 0.08974358974358974,
+              "lift": 0.28274322780273514
+            },
+            {
+              "antecedent": [
+                "Bakery",
+                "Hot Coffee"
+              ],
+              "target": "Cold Coffee",
+              "confidence": 0.03962264150943396,
+              "lift": 0.1883978814961933
+            },
+            {
+              "antecedent": [
+                "Bakery",
+                "Cold Coffee"
+              ],
+              "target": "Hot Coffee",
+              "confidence": 0.048165137614678895,
+              "lift": 0.20918113753067144
+            }
+          ]
+        },
+        {
+          "products": [
+            "Bakery",
+            "Hot Coffee"
+          ],
+          "price": 8.72,
+          "cost": 2.55,
+          "support": 0.04656066063427919,
+          "count": 530,
+          "rules": [
+            {
+              "antecedent": [
+                "Hot Coffee"
+              ],
+              "target": "Bakery",
+              "confidence": 0.20221289584128194,
+              "lift": 0.6370853565904546
+            },
+            {
+              "antecedent": [
+                "Bakery"
+              ],
+              "target": "Hot Coffee",
+              "confidence": 0.14669249930805425,
+              "lift": 0.6370853565904546
+            }
+          ]
+        },
+        {
+          "products": [
+            "Bakery",
+            "Meals"
+          ],
+          "price": 16.380000000000003,
+          "cost": 6.23,
+          "support": 0.005798120003514012,
+          "count": 66,
+          "rules": [
+            {
+              "antecedent": [
+                "Meals"
+              ],
+              "target": "Bakery",
+              "confidence": 0.1527777777777778,
+              "lift": 0.4813366854260849
+            },
+            {
+              "antecedent": [
+                "Bakery"
+              ],
+              "target": "Meals",
+              "confidence": 0.018267367838361474,
+              "lift": 0.4813366854260849
+            }
+          ]
+        },
+        {
+          "products": [
+            "Cold Coffee",
+            "Meals"
+          ],
+          "price": 17.85,
+          "cost": 6.58,
+          "support": 0.004656066063427919,
+          "count": 53,
+          "rules": [
+            {
+              "antecedent": [
+                "Meals"
+              ],
+              "target": "Cold Coffee",
+              "confidence": 0.12268518518518519,
+              "lift": 0.5833439694916304
+            },
+            {
+              "antecedent": [
+                "Cold Coffee"
+              ],
+              "target": "Meals",
+              "confidence": 0.022138680033416874,
+              "lift": 0.5833439694916303
+            }
+          ]
+        },
+        {
+          "products": [
+            "Matcha & Tea",
+            "Meals"
+          ],
+          "price": 19.0,
+          "cost": 7.1899999999999995,
+          "support": 0.0034261618202582798,
+          "count": 39,
+          "rules": [
+            {
+              "antecedent": [
+                "Meals"
+              ],
+              "target": "Matcha & Tea",
+              "confidence": 0.09027777777777778,
+              "lift": 0.40457950568678913
+            },
+            {
+              "antecedent": [
+                "Matcha & Tea"
+              ],
+              "target": "Meals",
+              "confidence": 0.015354330708661415,
+              "lift": 0.40457950568678913
+            }
+          ]
+        },
+        {
+          "products": [
+            "Desserts",
+            "Meals"
+          ],
+          "price": 18.69,
+          "cost": 7.609999999999999,
+          "support": 0.0022841078801721865,
+          "count": 26,
+          "rules": [
+            {
+              "antecedent": [
+                "Meals"
+              ],
+              "target": "Desserts",
+              "confidence": 0.06018518518518518,
+              "lift": 0.5343899867105796
+            },
+            {
+              "antecedent": [
+                "Desserts"
+              ],
+              "target": "Meals",
+              "confidence": 0.0202808112324493,
+              "lift": 0.5343899867105796
+            }
+          ]
+        },
+        {
+          "products": [
+            "Meals",
+            "Sandwiches"
+          ],
+          "price": 22.68,
+          "cost": 9.64,
+          "support": 0.0020205569709215495,
+          "count": 23,
+          "rules": [
+            {
+              "antecedent": [
+                "Sandwiches"
+              ],
+              "target": "Meals",
+              "confidence": 0.021296296296296296,
+              "lift": 0.5611475480109739
+            },
+            {
+              "antecedent": [
+                "Meals"
+              ],
+              "target": "Sandwiches",
+              "confidence": 0.053240740740740734,
+              "lift": 0.5611475480109739
+            }
+          ]
+        },
+        {
+          "products": [
+            "Cold Drinks",
+            "Meals"
+          ],
+          "price": 16.9,
+          "cost": 6.09,
+          "support": 0.00544671879117983,
+          "count": 62,
+          "rules": [
+            {
+              "antecedent": [
+                "Meals"
+              ],
+              "target": "Cold Drinks",
+              "confidence": 0.14351851851851852,
+              "lift": 0.9514684311568412
+            },
+            {
+              "antecedent": [
+                "Cold Drinks"
+              ],
+              "target": "Meals",
+              "confidence": 0.03610949330227141,
+              "lift": 0.9514684311568413
+            }
+          ]
+        },
+        {
+          "products": [
+            "Hot Coffee",
+            "Meals"
+          ],
+          "price": 16.8,
+          "cost": 6.16,
+          "support": 0.004304664851093736,
+          "count": 49,
+          "rules": [
+            {
+              "antecedent": [
+                "Meals"
+              ],
+              "target": "Hot Coffee",
+              "confidence": 0.11342592592592592,
+              "lift": 0.4926086664688343
+            },
+            {
+              "antecedent": [
+                "Hot Coffee"
+              ],
+              "target": "Meals",
+              "confidence": 0.018695154521175122,
+              "lift": 0.49260866646883433
+            }
+          ]
+        },
+        {
+          "products": [
+            "Breakfast",
+            "Meals"
+          ],
+          "price": 20.79,
+          "cost": 8.24,
+          "support": 0.001229904243169639,
+          "count": 14,
+          "rules": [
+            {
+              "antecedent": [
+                "Meals"
+              ],
+              "target": "Breakfast",
+              "confidence": 0.032407407407407406,
+              "lift": 0.4803301022376543
+            },
+            {
+              "antecedent": [
+                "Breakfast"
+              ],
+              "target": "Meals",
+              "confidence": 0.018229166666666668,
+              "lift": 0.4803301022376544
+            }
+          ]
+        },
+        {
+          "products": [
+            "Bakery",
+            "Sandwiches"
+          ],
+          "price": 14.6,
+          "cost": 6.029999999999999,
+          "support": 0.0130896951594483,
+          "count": 149,
+          "rules": [
+            {
+              "antecedent": [
+                "Sandwiches"
+              ],
+              "target": "Bakery",
+              "confidence": 0.13796296296296295,
+              "lift": 0.434661612899919
+            },
+            {
+              "antecedent": [
+                "Bakery"
+              ],
+              "target": "Sandwiches",
+              "confidence": 0.04123996678660393,
+              "lift": 0.43466161289991906
+            }
+          ]
+        },
+        {
+          "products": [
+            "Cold Coffee",
+            "Sandwiches"
+          ],
+          "price": 16.07,
+          "cost": 6.38,
+          "support": 0.010542036370025477,
+          "count": 120,
+          "rules": [
+            {
+              "antecedent": [
+                "Sandwiches"
+              ],
+              "target": "Cold Coffee",
+              "confidence": 0.11111111111111112,
+              "lift": 0.5283115195395898
+            },
+            {
+              "antecedent": [
+                "Cold Coffee"
+              ],
+              "target": "Sandwiches",
+              "confidence": 0.050125313283208024,
+              "lift": 0.5283115195395898
+            }
+          ]
+        },
+        {
+          "products": [
+            "Matcha & Tea",
+            "Sandwiches"
+          ],
+          "price": 17.22,
+          "cost": 6.99,
+          "support": 0.009312132126855837,
+          "count": 106,
+          "rules": [
+            {
+              "antecedent": [
+                "Sandwiches"
+              ],
+              "target": "Matcha & Tea",
+              "confidence": 0.09814814814814815,
+              "lift": 0.43985053951589387
+            },
+            {
+              "antecedent": [
+                "Matcha & Tea"
+              ],
+              "target": "Sandwiches",
+              "confidence": 0.04173228346456693,
+              "lift": 0.43985053951589387
+            }
+          ]
+        },
+        {
+          "products": [
+            "Hot Coffee",
+            "Sandwiches"
+          ],
+          "price": 15.02,
+          "cost": 5.96,
+          "support": 0.011947641219362207,
+          "count": 136,
+          "rules": [
+            {
+              "antecedent": [
+                "Sandwiches"
+              ],
+              "target": "Hot Coffee",
+              "confidence": 0.12592592592592594,
+              "lift": 0.5468961521613181
+            },
+            {
+              "antecedent": [
+                "Hot Coffee"
+              ],
+              "target": "Sandwiches",
+              "confidence": 0.05188859214040443,
+              "lift": 0.5468961521613181
+            }
+          ]
+        },
+        {
+          "products": [
+            "Cold Drinks",
+            "Sandwiches"
+          ],
+          "price": 15.12,
+          "cost": 5.89,
+          "support": 0.013001844856364754,
+          "count": 148,
+          "rules": [
+            {
+              "antecedent": [
+                "Sandwiches"
+              ],
+              "target": "Cold Drinks",
+              "confidence": 0.13703703703703704,
+              "lift": 0.9084988891045969
+            },
+            {
+              "antecedent": [
+                "Cold Drinks"
+              ],
+              "target": "Sandwiches",
+              "confidence": 0.08619685497961561,
+              "lift": 0.9084988891045969
+            }
+          ]
+        },
+        {
+          "products": [
+            "Desserts",
+            "Sandwiches"
+          ],
+          "price": 16.91,
+          "cost": 7.41,
+          "support": 0.005095317578845647,
+          "count": 58,
+          "rules": [
+            {
+              "antecedent": [
+                "Sandwiches"
+              ],
+              "target": "Desserts",
+              "confidence": 0.053703703703703705,
+              "lift": 0.4768402958340556
+            },
+            {
+              "antecedent": [
+                "Desserts"
+              ],
+              "target": "Sandwiches",
+              "confidence": 0.0452418096723869,
+              "lift": 0.4768402958340556
+            }
+          ]
+        },
+        {
+          "products": [
+            "Bakery",
+            "Matcha & Tea",
+            "Sandwiches"
+          ],
+          "price": 21.369999999999997,
+          "cost": 8.3,
+          "support": 0.0011420539400860933,
+          "count": 13,
+          "rules": [
+            {
+              "antecedent": [
+                "Matcha & Tea",
+                "Sandwiches"
+              ],
+              "target": "Bakery",
+              "confidence": 0.12264150943396226,
+              "lift": 0.38639034095953295
+            },
+            {
+              "antecedent": [
+                "Bakery",
+                "Sandwiches"
+              ],
+              "target": "Matcha & Tea",
+              "confidence": 0.087248322147651,
+              "lift": 0.39100301220736666
+            },
+            {
+              "antecedent": [
+                "Bakery",
+                "Matcha & Tea"
+              ],
+              "target": "Sandwiches",
+              "confidence": 0.0182328190743338,
+              "lift": 0.19217053659550154
+            }
+          ]
+        },
+        {
+          "products": [
+            "Bakery",
+            "Breakfast"
+          ],
+          "price": 12.71,
+          "cost": 4.63,
+          "support": 0.0076429763682684705,
+          "count": 87,
+          "rules": [
+            {
+              "antecedent": [
+                "Breakfast"
+              ],
+              "target": "Bakery",
+              "confidence": 0.11328125000000001,
+              "lift": 0.3569002127733186
+            },
+            {
+              "antecedent": [
+                "Bakery"
+              ],
+              "target": "Breakfast",
+              "confidence": 0.024079712150567395,
+              "lift": 0.35690021277331857
+            }
+          ]
+        },
+        {
+          "products": [
+            "Breakfast",
+            "Desserts"
+          ],
+          "price": 15.02,
+          "cost": 6.01,
+          "support": 0.004128964244926645,
+          "count": 47,
+          "rules": [
+            {
+              "antecedent": [
+                "Desserts"
+              ],
+              "target": "Breakfast",
+              "confidence": 0.036661466458658344,
+              "lift": 0.5433821259100364
+            },
+            {
+              "antecedent": [
+                "Breakfast"
+              ],
+              "target": "Desserts",
+              "confidence": 0.061197916666666664,
+              "lift": 0.5433821259100364
+            }
+          ]
+        },
+        {
+          "products": [
+            "Breakfast",
+            "Cold Drinks"
+          ],
+          "price": 13.23,
+          "cost": 4.49,
+          "support": 0.006149521215848195,
+          "count": 70,
+          "rules": [
+            {
+              "antecedent": [
+                "Cold Drinks"
+              ],
+              "target": "Breakfast",
+              "confidence": 0.04076878276062901,
+              "lift": 0.6042591851096876
+            },
+            {
+              "antecedent": [
+                "Breakfast"
+              ],
+              "target": "Cold Drinks",
+              "confidence": 0.09114583333333334,
+              "lift": 0.6042591851096876
+            }
+          ]
+        },
+        {
+          "products": [
+            "Breakfast",
+            "Cold Coffee"
+          ],
+          "price": 14.18,
+          "cost": 4.9799999999999995,
+          "support": 0.007028024246683651,
+          "count": 80,
+          "rules": [
+            {
+              "antecedent": [
+                "Cold Coffee"
+              ],
+              "target": "Breakfast",
+              "confidence": 0.03341687552213868,
+              "lift": 0.49529204956836537
+            },
+            {
+              "antecedent": [
+                "Breakfast"
+              ],
+              "target": "Cold Coffee",
+              "confidence": 0.10416666666666667,
+              "lift": 0.4952920495683654
+            }
+          ]
+        },
+        {
+          "products": [
+            "Breakfast",
+            "Hot Coffee"
+          ],
+          "price": 13.13,
+          "cost": 4.56,
+          "support": 0.008521479399103927,
+          "count": 97,
+          "rules": [
+            {
+              "antecedent": [
+                "Hot Coffee"
+              ],
+              "target": "Breakfast",
+              "confidence": 0.03700877527661198,
+              "lift": 0.5485298033511382
+            },
+            {
+              "antecedent": [
+                "Breakfast"
+              ],
+              "target": "Hot Coffee",
+              "confidence": 0.12630208333333334,
+              "lift": 0.5485298033511382
+            }
+          ]
+        },
+        {
+          "products": [
+            "Breakfast",
+            "Matcha & Tea"
+          ],
+          "price": 15.33,
+          "cost": 5.59,
+          "support": 0.007203724852850742,
+          "count": 82,
+          "rules": [
+            {
+              "antecedent": [
+                "Matcha & Tea"
+              ],
+              "target": "Breakfast",
+              "confidence": 0.03228346456692913,
+              "lift": 0.4784930692257218
+            },
+            {
+              "antecedent": [
+                "Breakfast"
+              ],
+              "target": "Matcha & Tea",
+              "confidence": 0.10677083333333334,
+              "lift": 0.4784930692257218
+            }
+          ]
+        },
+        {
+          "products": [
+            "Breakfast",
+            "Sandwiches"
+          ],
+          "price": 19.009999999999998,
+          "cost": 8.04,
+          "support": 0.004392515154177282,
+          "count": 50,
+          "rules": [
+            {
+              "antecedent": [
+                "Sandwiches"
+              ],
+              "target": "Breakfast",
+              "confidence": 0.046296296296296294,
+              "lift": 0.6861858603395062
+            },
+            {
+              "antecedent": [
+                "Breakfast"
+              ],
+              "target": "Sandwiches",
+              "confidence": 0.06510416666666667,
+              "lift": 0.6861858603395062
+            }
+          ]
+        }
+      ]
+    },
+    "Uptown": {
+      "transactions": 4512,
+      "combinations": [
+        {
+          "products": [
+            "Bakery",
+            "Cold Coffee"
+          ],
+          "price": 8.93,
+          "cost": 2.85,
+          "support": 0.03546099290780142,
+          "count": 160,
+          "rules": [
+            {
+              "antecedent": [
+                "Cold Coffee"
+              ],
+              "target": "Bakery",
+              "confidence": 0.17977528089887643,
+              "lift": 0.6080555228003975
+            },
+            {
+              "antecedent": [
+                "Bakery"
+              ],
+              "target": "Cold Coffee",
+              "confidence": 0.1199400299850075,
+              "lift": 0.6080555228003975
+            }
+          ]
+        },
+        {
+          "products": [
+            "Cold Coffee",
+            "Matcha & Tea"
+          ],
+          "price": 11.33,
+          "cost": 3.7700000000000005,
+          "support": 0.018173758865248225,
+          "count": 82,
+          "rules": [
+            {
+              "antecedent": [
+                "Matcha & Tea"
+              ],
+              "target": "Cold Coffee",
+              "confidence": 0.08714133900106269,
+              "lift": 0.4417772152503313
+            },
+            {
+              "antecedent": [
+                "Cold Coffee"
+              ],
+              "target": "Matcha & Tea",
+              "confidence": 0.09213483146067415,
+              "lift": 0.4417772152503313
+            }
+          ]
+        },
+        {
+          "products": [
+            "Cold Coffee",
+            "Hot Coffee"
+          ],
+          "price": 9.32,
+          "cost": 2.7800000000000002,
+          "support": 0.020168439716312058,
+          "count": 91,
+          "rules": [
+            {
+              "antecedent": [
+                "Hot Coffee"
+              ],
+              "target": "Cold Coffee",
+              "confidence": 0.08860759493670886,
+              "lift": 0.44921063860048355
+            },
+            {
+              "antecedent": [
+                "Cold Coffee"
+              ],
+              "target": "Hot Coffee",
+              "confidence": 0.10224719101123596,
+              "lift": 0.44921063860048355
+            }
+          ]
+        },
+        {
+          "products": [
+            "Bakery",
+            "Cold Coffee",
+            "Matcha & Tea"
+          ],
+          "price": 15.120000000000001,
+          "cost": 5.03,
+          "support": 0.0017730496453900709,
+          "count": 8,
+          "rules": [
+            {
+              "antecedent": [
+                "Cold Coffee",
+                "Matcha & Tea"
+              ],
+              "target": "Bakery",
+              "confidence": 0.0975609756097561,
+              "lift": 0.3299813507880206
+            },
+            {
+              "antecedent": [
+                "Bakery",
+                "Matcha & Tea"
+              ],
+              "target": "Cold Coffee",
+              "confidence": 0.030888030888030885,
+              "lift": 0.15659190490651165
+            },
+            {
+              "antecedent": [
+                "Bakery",
+                "Cold Coffee"
+              ],
+              "target": "Matcha & Tea",
+              "confidence": 0.049999999999999996,
+              "lift": 0.23974495217853345
+            }
+          ]
+        },
+        {
+          "products": [
+            "Bakery",
+            "Cold Coffee",
+            "Hot Coffee"
+          ],
+          "price": 13.11,
+          "cost": 4.04,
+          "support": 0.0013297872340425532,
+          "count": 6,
+          "rules": [
+            {
+              "antecedent": [
+                "Cold Coffee",
+                "Hot Coffee"
+              ],
+              "target": "Bakery",
+              "confidence": 0.06593406593406592,
+              "lift": 0.22300937443366223
+            },
+            {
+              "antecedent": [
+                "Bakery",
+                "Hot Coffee"
+              ],
+              "target": "Cold Coffee",
+              "confidence": 0.030456852791878174,
+              "lift": 0.15440597729994868
+            },
+            {
+              "antecedent": [
+                "Bakery",
+                "Cold Coffee"
+              ],
+              "target": "Hot Coffee",
+              "confidence": 0.0375,
+              "lift": 0.1647517039922103
+            }
+          ]
+        },
+        {
+          "products": [
+            "Bakery",
+            "Breakfast"
+          ],
+          "price": 11.61,
+          "cost": 4.45,
+          "support": 0.009086879432624113,
+          "count": 41,
+          "rules": [
+            {
+              "antecedent": [
+                "Breakfast"
+              ],
+              "target": "Bakery",
+              "confidence": 0.13576158940397348,
+              "lift": 0.4591876247306809
+            },
+            {
+              "antecedent": [
+                "Bakery"
+              ],
+              "target": "Breakfast",
+              "confidence": 0.030734632683658166,
+              "lift": 0.4591876247306809
+            }
+          ]
+        },
+        {
+          "products": [
+            "Breakfast",
+            "Desserts"
+          ],
+          "price": 13.72,
+          "cost": 5.77,
+          "support": 0.0042109929078014184,
+          "count": 19,
+          "rules": [
+            {
+              "antecedent": [
+                "Desserts"
+              ],
+              "target": "Breakfast",
+              "confidence": 0.04112554112554113,
+              "lift": 0.6144319256902038
+            },
+            {
+              "antecedent": [
+                "Breakfast"
+              ],
+              "target": "Desserts",
+              "confidence": 0.0629139072847682,
+              "lift": 0.6144319256902037
+            }
+          ]
+        },
+        {
+          "products": [
+            "Breakfast",
+            "Matcha & Tea"
+          ],
+          "price": 14.010000000000002,
+          "cost": 5.37,
+          "support": 0.0037677304964539005,
+          "count": 17,
+          "rules": [
+            {
+              "antecedent": [
+                "Matcha & Tea"
+              ],
+              "target": "Breakfast",
+              "confidence": 0.018065887353878853,
+              "lift": 0.26991153556523634
+            },
+            {
+              "antecedent": [
+                "Breakfast"
+              ],
+              "target": "Matcha & Tea",
+              "confidence": 0.05629139072847681,
+              "lift": 0.2699115355652363
+            }
+          ]
+        },
+        {
+          "products": [
+            "Breakfast",
+            "Cold Drinks"
+          ],
+          "price": 12.09,
+          "cost": 4.3100000000000005,
+          "support": 0.005984042553191489,
+          "count": 27,
+          "rules": [
+            {
+              "antecedent": [
+                "Cold Drinks"
+              ],
+              "target": "Breakfast",
+              "confidence": 0.03884892086330935,
+              "lift": 0.5804183143551384
+            },
+            {
+              "antecedent": [
+                "Breakfast"
+              ],
+              "target": "Cold Drinks",
+              "confidence": 0.08940397350993376,
+              "lift": 0.5804183143551382
+            }
+          ]
+        },
+        {
+          "products": [
+            "Breakfast",
+            "Hot Coffee"
+          ],
+          "price": 12.0,
+          "cost": 4.38,
+          "support": 0.006648936170212766,
+          "count": 30,
+          "rules": [
+            {
+              "antecedent": [
+                "Hot Coffee"
+              ],
+              "target": "Breakfast",
+              "confidence": 0.02921129503407984,
+              "lift": 0.43642835494625243
+            },
+            {
+              "antecedent": [
+                "Breakfast"
+              ],
+              "target": "Hot Coffee",
+              "confidence": 0.09933774834437085,
+              "lift": 0.43642835494625243
+            }
+          ]
+        },
+        {
+          "products": [
+            "Breakfast",
+            "Sandwiches"
+          ],
+          "price": 17.37,
+          "cost": 7.720000000000001,
+          "support": 0.00576241134751773,
+          "count": 26,
+          "rules": [
+            {
+              "antecedent": [
+                "Sandwiches"
+              ],
+              "target": "Breakfast",
+              "confidence": 0.03757225433526011,
+              "lift": 0.5613444091413695
+            },
+            {
+              "antecedent": [
+                "Breakfast"
+              ],
+              "target": "Sandwiches",
+              "confidence": 0.08609271523178806,
+              "lift": 0.5613444091413695
+            }
+          ]
+        },
+        {
+          "products": [
+            "Breakfast",
+            "Cold Coffee"
+          ],
+          "price": 12.96,
+          "cost": 4.78,
+          "support": 0.005319148936170213,
+          "count": 24,
+          "rules": [
+            {
+              "antecedent": [
+                "Cold Coffee"
+              ],
+              "target": "Breakfast",
+              "confidence": 0.02696629213483146,
+              "lift": 0.40288711957734946
+            },
+            {
+              "antecedent": [
+                "Breakfast"
+              ],
+              "target": "Cold Coffee",
+              "confidence": 0.07947019867549668,
+              "lift": 0.40288711957734946
+            }
+          ]
+        },
+        {
+          "products": [
+            "Cold Drinks",
+            "Sandwiches"
+          ],
+          "price": 13.82,
+          "cost": 5.65,
+          "support": 0.020611702127659573,
+          "count": 93,
+          "rules": [
+            {
+              "antecedent": [
+                "Sandwiches"
+              ],
+              "target": "Cold Drinks",
+              "confidence": 0.134393063583815,
+              "lift": 0.8724913710649975
+            },
+            {
+              "antecedent": [
+                "Cold Drinks"
+              ],
+              "target": "Sandwiches",
+              "confidence": 0.13381294964028775,
+              "lift": 0.8724913710649975
+            }
+          ]
+        },
+        {
+          "products": [
+            "Hot Coffee",
+            "Sandwiches"
+          ],
+          "price": 13.73,
+          "cost": 5.720000000000001,
+          "support": 0.018838652482269503,
+          "count": 85,
+          "rules": [
+            {
+              "antecedent": [
+                "Sandwiches"
+              ],
+              "target": "Hot Coffee",
+              "confidence": 0.12283236994219651,
+              "lift": 0.5396491267567581
+            },
+            {
+              "antecedent": [
+                "Hot Coffee"
+              ],
+              "target": "Sandwiches",
+              "confidence": 0.08276533592989288,
+              "lift": 0.5396491267567581
+            }
+          ]
+        },
+        {
+          "products": [
+            "Matcha & Tea",
+            "Sandwiches"
+          ],
+          "price": 15.740000000000002,
+          "cost": 6.710000000000001,
+          "support": 0.01551418439716312,
+          "count": 70,
+          "rules": [
+            {
+              "antecedent": [
+                "Sandwiches"
+              ],
+              "target": "Matcha & Tea",
+              "confidence": 0.10115606936416184,
+              "lift": 0.4850331402455879
+            },
+            {
+              "antecedent": [
+                "Matcha & Tea"
+              ],
+              "target": "Sandwiches",
+              "confidence": 0.07438894792773645,
+              "lift": 0.4850331402455879
+            }
+          ]
+        },
+        {
+          "products": [
+            "Bakery",
+            "Sandwiches"
+          ],
+          "price": 13.34,
+          "cost": 5.79,
+          "support": 0.01972517730496454,
+          "count": 89,
+          "rules": [
+            {
+              "antecedent": [
+                "Sandwiches"
+              ],
+              "target": "Bakery",
+              "confidence": 0.12861271676300579,
+              "lift": 0.4350079295612309
+            },
+            {
+              "antecedent": [
+                "Bakery"
+              ],
+              "target": "Sandwiches",
+              "confidence": 0.06671664167916042,
+              "lift": 0.43500792956123085
+            }
+          ]
+        },
+        {
+          "products": [
+            "Cold Coffee",
+            "Sandwiches"
+          ],
+          "price": 14.690000000000001,
+          "cost": 6.12,
+          "support": 0.015957446808510637,
+          "count": 72,
+          "rules": [
+            {
+              "antecedent": [
+                "Sandwiches"
+              ],
+              "target": "Cold Coffee",
+              "confidence": 0.10404624277456646,
+              "lift": 0.5274793790998246
+            },
+            {
+              "antecedent": [
+                "Cold Coffee"
+              ],
+              "target": "Sandwiches",
+              "confidence": 0.08089887640449438,
+              "lift": 0.5274793790998246
+            }
+          ]
+        },
+        {
+          "products": [
+            "Cold Drinks",
+            "Hot Coffee",
+            "Sandwiches"
+          ],
+          "price": 18.0,
+          "cost": 6.84,
+          "support": 0.0015514184397163121,
+          "count": 7,
+          "rules": [
+            {
+              "antecedent": [
+                "Hot Coffee",
+                "Sandwiches"
+              ],
+              "target": "Cold Drinks",
+              "confidence": 0.0823529411764706,
+              "lift": 0.5346424037240797
+            },
+            {
+              "antecedent": [
+                "Cold Drinks",
+                "Sandwiches"
+              ],
+              "target": "Hot Coffee",
+              "confidence": 0.07526881720430108,
+              "lift": 0.33068442378364793
+            },
+            {
+              "antecedent": [
+                "Cold Drinks",
+                "Hot Coffee"
+              ],
+              "target": "Sandwiches",
+              "confidence": 0.09210526315789475,
+              "lift": 0.6005476118040767
+            }
+          ]
+        },
+        {
+          "products": [
+            "Bakery",
+            "Matcha & Tea",
+            "Sandwiches"
+          ],
+          "price": 19.53,
+          "cost": 7.970000000000001,
+          "support": 0.0011081560283687944,
+          "count": 5,
+          "rules": [
+            {
+              "antecedent": [
+                "Matcha & Tea",
+                "Sandwiches"
+              ],
+              "target": "Bakery",
+              "confidence": 0.07142857142857144,
+              "lift": 0.24159348896980085
+            },
+            {
+              "antecedent": [
+                "Bakery",
+                "Sandwiches"
+              ],
+              "target": "Matcha & Tea",
+              "confidence": 0.05617977528089888,
+              "lift": 0.2693763507623972
+            },
+            {
+              "antecedent": [
+                "Bakery",
+                "Matcha & Tea"
+              ],
+              "target": "Sandwiches",
+              "confidence": 0.019305019305019305,
+              "lift": 0.1258731894570045
+            }
+          ]
+        },
+        {
+          "products": [
+            "Bakery",
+            "Cold Drinks",
+            "Sandwiches"
+          ],
+          "price": 17.61,
+          "cost": 6.91,
+          "support": 0.0013297872340425532,
+          "count": 6,
+          "rules": [
+            {
+              "antecedent": [
+                "Cold Drinks",
+                "Sandwiches"
+              ],
+              "target": "Bakery",
+              "confidence": 0.06451612903225806,
+              "lift": 0.21821347390820717
+            },
+            {
+              "antecedent": [
+                "Bakery",
+                "Sandwiches"
+              ],
+              "target": "Cold Drinks",
+              "confidence": 0.06741573033707865,
+              "lift": 0.43766874141136525
+            },
+            {
+              "antecedent": [
+                "Bakery",
+                "Cold Drinks"
+              ],
+              "target": "Sandwiches",
+              "confidence": 0.07792207792207792,
+              "lift": 0.5080699647173635
+            }
+          ]
+        },
+        {
+          "products": [
+            "Cold Coffee",
+            "Cold Drinks",
+            "Sandwiches"
+          ],
+          "price": 18.96,
+          "cost": 7.24,
+          "support": 0.0011081560283687944,
+          "count": 5,
+          "rules": [
+            {
+              "antecedent": [
+                "Cold Drinks",
+                "Sandwiches"
+              ],
+              "target": "Cold Coffee",
+              "confidence": 0.05376344086021506,
+              "lift": 0.27256252265313524
+            },
+            {
+              "antecedent": [
+                "Cold Coffee",
+                "Sandwiches"
+              ],
+              "target": "Cold Drinks",
+              "confidence": 0.06944444444444446,
+              "lift": 0.45083932853717035
+            },
+            {
+              "antecedent": [
+                "Cold Coffee",
+                "Cold Drinks"
+              ],
+              "target": "Sandwiches",
+              "confidence": 0.07575757575757576,
+              "lift": 0.4939569101418812
+            }
+          ]
+        },
+        {
+          "products": [
+            "Cold Coffee",
+            "Desserts"
+          ],
+          "price": 11.04,
+          "cost": 4.17,
+          "support": 0.011303191489361703,
+          "count": 51,
+          "rules": [
+            {
+              "antecedent": [
+                "Desserts"
+              ],
+              "target": "Cold Coffee",
+              "confidence": 0.1103896103896104,
+              "lift": 0.5596381146942945
+            },
+            {
+              "antecedent": [
+                "Cold Coffee"
+              ],
+              "target": "Desserts",
+              "confidence": 0.05730337078651686,
+              "lift": 0.5596381146942945
+            }
+          ]
+        },
+        {
+          "products": [
+            "Bakery",
+            "Desserts"
+          ],
+          "price": 9.690000000000001,
+          "cost": 3.84,
+          "support": 0.013076241134751773,
+          "count": 59,
+          "rules": [
+            {
+              "antecedent": [
+                "Desserts"
+              ],
+              "target": "Bakery",
+              "confidence": 0.1277056277056277,
+              "lift": 0.4319398742187348
+            },
+            {
+              "antecedent": [
+                "Bakery"
+              ],
+              "target": "Desserts",
+              "confidence": 0.04422788605697151,
+              "lift": 0.43193987421873475
+            }
+          ]
+        },
+        {
+          "products": [
+            "Desserts",
+            "Matcha & Tea"
+          ],
+          "price": 12.09,
+          "cost": 4.76,
+          "support": 0.009086879432624113,
+          "count": 41,
+          "rules": [
+            {
+              "antecedent": [
+                "Matcha & Tea"
+              ],
+              "target": "Desserts",
+              "confidence": 0.043570669500531345,
+              "lift": 0.4255213436935009
+            },
+            {
+              "antecedent": [
+                "Desserts"
+              ],
+              "target": "Matcha & Tea",
+              "confidence": 0.08874458874458874,
+              "lift": 0.4255213436935009
+            }
+          ]
+        },
+        {
+          "products": [
+            "Cold Drinks",
+            "Desserts"
+          ],
+          "price": 10.17,
+          "cost": 3.7,
+          "support": 0.007535460992907801,
+          "count": 34,
+          "rules": [
+            {
+              "antecedent": [
+                "Desserts"
+              ],
+              "target": "Cold Drinks",
+              "confidence": 0.07359307359307359,
+              "lift": 0.47777258712510506
+            },
+            {
+              "antecedent": [
+                "Cold Drinks"
+              ],
+              "target": "Desserts",
+              "confidence": 0.04892086330935251,
+              "lift": 0.477772587125105
+            }
+          ]
+        },
+        {
+          "products": [
+            "Desserts",
+            "Hot Coffee"
+          ],
+          "price": 10.08,
+          "cost": 3.77,
+          "support": 0.010638297872340425,
+          "count": 48,
+          "rules": [
+            {
+              "antecedent": [
+                "Hot Coffee"
+              ],
+              "target": "Desserts",
+              "confidence": 0.04673807205452775,
+              "lift": 0.4564549374675957
+            },
+            {
+              "antecedent": [
+                "Desserts"
+              ],
+              "target": "Hot Coffee",
+              "confidence": 0.10389610389610389,
+              "lift": 0.45645493746759563
+            }
+          ]
+        },
+        {
+          "products": [
+            "Desserts",
+            "Sandwiches"
+          ],
+          "price": 15.450000000000001,
+          "cost": 7.11,
+          "support": 0.006870567375886525,
+          "count": 31,
+          "rules": [
+            {
+              "antecedent": [
+                "Sandwiches"
+              ],
+              "target": "Desserts",
+              "confidence": 0.044797687861271675,
+              "lift": 0.43750469183995194
+            },
+            {
+              "antecedent": [
+                "Desserts"
+              ],
+              "target": "Sandwiches",
+              "confidence": 0.0670995670995671,
+              "lift": 0.43750469183995194
+            }
+          ]
+        },
+        {
+          "products": [
+            "Bakery",
+            "Desserts",
+            "Hot Coffee"
+          ],
+          "price": 13.870000000000001,
+          "cost": 5.029999999999999,
+          "support": 0.0011081560283687944,
+          "count": 5,
+          "rules": [
+            {
+              "antecedent": [
+                "Desserts",
+                "Hot Coffee"
+              ],
+              "target": "Bakery",
+              "confidence": 0.10416666666666667,
+              "lift": 0.3523238380809595
+            },
+            {
+              "antecedent": [
+                "Bakery",
+                "Hot Coffee"
+              ],
+              "target": "Desserts",
+              "confidence": 0.02538071065989848,
+              "lift": 0.24787395345770982
+            },
+            {
+              "antecedent": [
+                "Bakery",
+                "Desserts"
+              ],
+              "target": "Hot Coffee",
+              "confidence": 0.08474576271186442,
+              "lift": 0.3723202350106448
+            }
+          ]
+        },
+        {
+          "products": [
+            "Bakery",
+            "Matcha & Tea"
+          ],
+          "price": 9.98,
+          "cost": 3.4400000000000004,
+          "support": 0.05740248226950355,
+          "count": 259,
+          "rules": [
+            {
+              "antecedent": [
+                "Matcha & Tea"
+              ],
+              "target": "Bakery",
+              "confidence": 0.27523910733262485,
+              "lift": 0.9309436673799125
+            },
+            {
+              "antecedent": [
+                "Bakery"
+              ],
+              "target": "Matcha & Tea",
+              "confidence": 0.19415292353823088,
+              "lift": 0.9309436673799125
+            }
+          ]
+        },
+        {
+          "products": [
+            "Hot Coffee",
+            "Matcha & Tea"
+          ],
+          "price": 10.370000000000001,
+          "cost": 3.37,
+          "support": 0.022606382978723406,
+          "count": 102,
+          "rules": [
+            {
+              "antecedent": [
+                "Matcha & Tea"
+              ],
+              "target": "Hot Coffee",
+              "confidence": 0.10839532412327312,
+              "lift": 0.4762217161092583
+            },
+            {
+              "antecedent": [
+                "Hot Coffee"
+              ],
+              "target": "Matcha & Tea",
+              "confidence": 0.09931840311587146,
+              "lift": 0.4762217161092583
+            }
+          ]
+        },
+        {
+          "products": [
+            "Bakery",
+            "Hot Coffee",
+            "Matcha & Tea"
+          ],
+          "price": 14.16,
+          "cost": 4.630000000000001,
+          "support": 0.0024379432624113476,
+          "count": 11,
+          "rules": [
+            {
+              "antecedent": [
+                "Hot Coffee",
+                "Matcha & Tea"
+              ],
+              "target": "Bakery",
+              "confidence": 0.10784313725490195,
+              "lift": 0.36475879707205217
+            },
+            {
+              "antecedent": [
+                "Bakery",
+                "Matcha & Tea"
+              ],
+              "target": "Hot Coffee",
+              "confidence": 0.04247104247104247,
+              "lift": 0.18659137646479418
+            },
+            {
+              "antecedent": [
+                "Bakery",
+                "Hot Coffee"
+              ],
+              "target": "Matcha & Tea",
+              "confidence": 0.05583756345177666,
+              "lift": 0.26773547959024047
+            }
+          ]
+        },
+        {
+          "products": [
+            "Cold Coffee",
+            "Cold Drinks"
+          ],
+          "price": 9.41,
+          "cost": 2.71,
+          "support": 0.014627659574468085,
+          "count": 66,
+          "rules": [
+            {
+              "antecedent": [
+                "Cold Drinks"
+              ],
+              "target": "Cold Coffee",
+              "confidence": 0.09496402877697842,
+              "lift": 0.4814356155525018
+            },
+            {
+              "antecedent": [
+                "Cold Coffee"
+              ],
+              "target": "Cold Drinks",
+              "confidence": 0.07415730337078652,
+              "lift": 0.4814356155525018
+            }
+          ]
+        },
+        {
+          "products": [
+            "Bakery",
+            "Cold Drinks"
+          ],
+          "price": 8.059999999999999,
+          "cost": 2.38,
+          "support": 0.017065602836879433,
+          "count": 77,
+          "rules": [
+            {
+              "antecedent": [
+                "Cold Drinks"
+              ],
+              "target": "Bakery",
+              "confidence": 0.11079136690647481,
+              "lift": 0.37473062030136006
+            },
+            {
+              "antecedent": [
+                "Bakery"
+              ],
+              "target": "Cold Drinks",
+              "confidence": 0.057721139430284854,
+              "lift": 0.37473062030136006
+            }
+          ]
+        },
+        {
+          "products": [
+            "Cold Drinks",
+            "Hot Coffee"
+          ],
+          "price": 8.45,
+          "cost": 2.31,
+          "support": 0.016843971631205674,
+          "count": 76,
+          "rules": [
+            {
+              "antecedent": [
+                "Hot Coffee"
+              ],
+              "target": "Cold Drinks",
+              "confidence": 0.07400194741966894,
+              "lift": 0.4804270313058219
+            },
+            {
+              "antecedent": [
+                "Cold Drinks"
+              ],
+              "target": "Hot Coffee",
+              "confidence": 0.1093525179856115,
+              "lift": 0.48042703130582187
+            }
+          ]
+        },
+        {
+          "products": [
+            "Cold Drinks",
+            "Matcha & Tea"
+          ],
+          "price": 10.46,
+          "cost": 3.3000000000000003,
+          "support": 0.014849290780141845,
+          "count": 67,
+          "rules": [
+            {
+              "antecedent": [
+                "Matcha & Tea"
+              ],
+              "target": "Cold Drinks",
+              "confidence": 0.07120085015940489,
+              "lift": 0.4622420660708415
+            },
+            {
+              "antecedent": [
+                "Cold Drinks"
+              ],
+              "target": "Matcha & Tea",
+              "confidence": 0.09640287769784173,
+              "lift": 0.4622420660708415
+            }
+          ]
+        },
+        {
+          "products": [
+            "Bakery",
+            "Cold Drinks",
+            "Hot Coffee"
+          ],
+          "price": 12.239999999999998,
+          "cost": 3.57,
+          "support": 0.0011081560283687944,
+          "count": 5,
+          "rules": [
+            {
+              "antecedent": [
+                "Cold Drinks",
+                "Hot Coffee"
+              ],
+              "target": "Bakery",
+              "confidence": 0.06578947368421054,
+              "lift": 0.22252031878797446
+            },
+            {
+              "antecedent": [
+                "Bakery",
+                "Hot Coffee"
+              ],
+              "target": "Cold Drinks",
+              "confidence": 0.02538071065989848,
+              "lift": 0.16477376474454955
+            },
+            {
+              "antecedent": [
+                "Bakery",
+                "Cold Drinks"
+              ],
+              "target": "Hot Coffee",
+              "confidence": 0.06493506493506494,
+              "lift": 0.28528433591724733
+            }
+          ]
+        },
+        {
+          "products": [
+            "Cold Drinks",
+            "Hot Coffee",
+            "Matcha & Tea"
+          ],
+          "price": 14.64,
+          "cost": 4.49,
+          "support": 0.0015514184397163121,
+          "count": 7,
+          "rules": [
+            {
+              "antecedent": [
+                "Hot Coffee",
+                "Matcha & Tea"
+              ],
+              "target": "Cold Drinks",
+              "confidence": 0.06862745098039215,
+              "lift": 0.44553533643673293
+            },
+            {
+              "antecedent": [
+                "Cold Drinks",
+                "Matcha & Tea"
+              ],
+              "target": "Hot Coffee",
+              "confidence": 0.1044776119402985,
+              "lift": 0.45900972256536204
+            },
+            {
+              "antecedent": [
+                "Cold Drinks",
+                "Hot Coffee"
+              ],
+              "target": "Matcha & Tea",
+              "confidence": 0.09210526315789475,
+              "lift": 0.44163543822361434
+            }
+          ]
+        },
+        {
+          "products": [
+            "Bakery",
+            "Cold Drinks",
+            "Matcha & Tea"
+          ],
+          "price": 14.25,
+          "cost": 4.5600000000000005,
+          "support": 0.0015514184397163121,
+          "count": 7,
+          "rules": [
+            {
+              "antecedent": [
+                "Cold Drinks",
+                "Matcha & Tea"
+              ],
+              "target": "Bakery",
+              "confidence": 0.1044776119402985,
+              "lift": 0.35337555103045487
+            },
+            {
+              "antecedent": [
+                "Bakery",
+                "Matcha & Tea"
+              ],
+              "target": "Cold Drinks",
+              "confidence": 0.02702702702702703,
+              "lift": 0.1754617927279798
+            },
+            {
+              "antecedent": [
+                "Bakery",
+                "Cold Drinks"
+              ],
+              "target": "Matcha & Tea",
+              "confidence": 0.09090909090909091,
+              "lift": 0.43589991305187903
+            }
+          ]
+        },
+        {
+          "products": [
+            "Bakery",
+            "Hot Coffee"
+          ],
+          "price": 7.97,
+          "cost": 2.45,
+          "support": 0.043661347517730494,
+          "count": 197,
+          "rules": [
+            {
+              "antecedent": [
+                "Hot Coffee"
+              ],
+              "target": "Bakery",
+              "confidence": 0.19182083739045763,
+              "lift": 0.6487973150717727
+            },
+            {
+              "antecedent": [
+                "Bakery"
+              ],
+              "target": "Hot Coffee",
+              "confidence": 0.14767616191904046,
+              "lift": 0.6487973150717726
+            }
+          ]
+        },
+        {
+          "products": [
+            "Cold Coffee",
+            "Meals"
+          ],
+          "price": 16.32,
+          "cost": 6.31,
+          "support": 0.0062056737588652485,
+          "count": 28,
+          "rules": [
+            {
+              "antecedent": [
+                "Meals"
+              ],
+              "target": "Cold Coffee",
+              "confidence": 0.13333333333333336,
+              "lift": 0.6759550561797754
+            },
+            {
+              "antecedent": [
+                "Cold Coffee"
+              ],
+              "target": "Meals",
+              "confidence": 0.03146067415730337,
+              "lift": 0.6759550561797754
+            }
+          ]
+        },
+        {
+          "products": [
+            "Hot Coffee",
+            "Meals"
+          ],
+          "price": 15.36,
+          "cost": 5.91,
+          "support": 0.006870567375886525,
+          "count": 31,
+          "rules": [
+            {
+              "antecedent": [
+                "Meals"
+              ],
+              "target": "Hot Coffee",
+              "confidence": 0.14761904761904762,
+              "lift": 0.6485463903185422
+            },
+            {
+              "antecedent": [
+                "Hot Coffee"
+              ],
+              "target": "Meals",
+              "confidence": 0.03018500486854917,
+              "lift": 0.6485463903185422
+            }
+          ]
+        },
+        {
+          "products": [
+            "Meals",
+            "Sandwiches"
+          ],
+          "price": 20.73,
+          "cost": 9.25,
+          "support": 0.0026595744680851063,
+          "count": 12,
+          "rules": [
+            {
+              "antecedent": [
+                "Sandwiches"
+              ],
+              "target": "Meals",
+              "confidence": 0.017341040462427744,
+              "lift": 0.37258464079273323
+            },
+            {
+              "antecedent": [
+                "Meals"
+              ],
+              "target": "Sandwiches",
+              "confidence": 0.05714285714285714,
+              "lift": 0.37258464079273323
+            }
+          ]
+        },
+        {
+          "products": [
+            "Desserts",
+            "Meals"
+          ],
+          "price": 17.08,
+          "cost": 7.3,
+          "support": 0.0024379432624113476,
+          "count": 11,
+          "rules": [
+            {
+              "antecedent": [
+                "Meals"
+              ],
+              "target": "Desserts",
+              "confidence": 0.05238095238095238,
+              "lift": 0.5115646258503401
+            },
+            {
+              "antecedent": [
+                "Desserts"
+              ],
+              "target": "Meals",
+              "confidence": 0.023809523809523808,
+              "lift": 0.5115646258503401
+            }
+          ]
+        },
+        {
+          "products": [
+            "Breakfast",
+            "Meals"
+          ],
+          "price": 19.0,
+          "cost": 7.91,
+          "support": 0.0011081560283687944,
+          "count": 5,
+          "rules": [
+            {
+              "antecedent": [
+                "Meals"
+              ],
+              "target": "Breakfast",
+              "confidence": 0.02380952380952381,
+              "lift": 0.35572374645222327
+            },
+            {
+              "antecedent": [
+                "Breakfast"
+              ],
+              "target": "Meals",
+              "confidence": 0.016556291390728478,
+              "lift": 0.3557237464522233
+            }
+          ]
+        },
+        {
+          "products": [
+            "Bakery",
+            "Meals"
+          ],
+          "price": 14.969999999999999,
+          "cost": 5.9799999999999995,
+          "support": 0.005540780141843972,
+          "count": 25,
+          "rules": [
+            {
+              "antecedent": [
+                "Meals"
+              ],
+              "target": "Bakery",
+              "confidence": 0.11904761904761905,
+              "lift": 0.402655814949668
+            },
+            {
+              "antecedent": [
+                "Bakery"
+              ],
+              "target": "Meals",
+              "confidence": 0.018740629685157422,
+              "lift": 0.40265581494966807
+            }
+          ]
+        },
+        {
+          "products": [
+            "Cold Drinks",
+            "Meals"
+          ],
+          "price": 15.45,
+          "cost": 5.84,
+          "support": 0.00576241134751773,
+          "count": 26,
+          "rules": [
+            {
+              "antecedent": [
+                "Meals"
+              ],
+              "target": "Cold Drinks",
+              "confidence": 0.12380952380952381,
+              "lift": 0.8037821171634122
+            },
+            {
+              "antecedent": [
+                "Cold Drinks"
+              ],
+              "target": "Meals",
+              "confidence": 0.03741007194244604,
+              "lift": 0.8037821171634121
+            }
+          ]
+        },
+        {
+          "products": [
+            "Matcha & Tea",
+            "Meals"
+          ],
+          "price": 17.37,
+          "cost": 6.9,
+          "support": 0.003989361702127659,
+          "count": 18,
+          "rules": [
+            {
+              "antecedent": [
+                "Meals"
+              ],
+              "target": "Matcha & Tea",
+              "confidence": 0.08571428571428572,
+              "lift": 0.41099134659177167
+            },
+            {
+              "antecedent": [
+                "Matcha & Tea"
+              ],
+              "target": "Meals",
+              "confidence": 0.01912858660998937,
+              "lift": 0.41099134659177167
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "skipped_branches": [],
+  "thresholds": {
+    "support": 0.001,
+    "count": 10,
+    "confidence": 0.0,
+    "lift": 0.0,
+    "profit": 0.0
+  }
+}
