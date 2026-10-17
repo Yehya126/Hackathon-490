@@ -3,12 +3,10 @@
 **For Yehya:** see [INTEGRATION.md](INTEGRATION.md) for current output locations,
 CSV field meanings, loading examples and how to consume these signals in the
 decision model. Outputs are now under `Marketing_Expert/artifacts/full_data/`.
-The commands below retain older `mohammad` paths; update rename references before
-using them to rerun training.
 
 ## Current workflow: full-data descriptive suggestions
 
-Run `python mohammad/train_all.py` from the repository root. This fits on the
+Run `python Marketing_Expert/train_all.py` from the repository root. This fits on the
 entire original dataset and creates `artifacts/full_data/report.html`, three
 CSV tables, and product/category models. The page shows ten rows per table,
 branch selection, observed confidence, review tiers and adjustable filters.
@@ -27,7 +25,7 @@ The older workflow and artifacts below are retained as historical experiments.
 To generate an exploratory side-by-side validation report:
 
 ```powershell
-python mohammad/validation_report.py
+python Marketing_Expert/validation_report.py
 ```
 
 Open `artifacts/validation_review/report.html`. This mines training candidates
@@ -49,9 +47,9 @@ on import. No model has been trained as part of this implementation.
 From the repository root, when ready:
 
 ```powershell
-python -m pip install -r mohammad/requirements.txt
-python mohammad/run.py train
-python mohammad/run.py validate
+python -m pip install -r Marketing_Expert/requirements.txt
+python Marketing_Expert/run.py train
+python Marketing_Expert/run.py validate
 ```
 
 Training writes `artifacts/model.json`, `combinations.csv`, and a readable
@@ -79,7 +77,7 @@ business break-even points. All passing pairs/triples are exported. Adjust using
 validation evidence and owner priorities, for example:
 
 ```powershell
-python mohammad/run.py train --min-count 30 --min-profit 4 --min-support 0.01 --min-confidence 0.3 --min-lift 1.2 --max-length 3
+python Marketing_Expert/run.py train --min-count 30 --min-profit 4 --min-support 0.01 --min-confidence 0.3 --min-lift 1.2 --max-length 3
 ```
 
 Archive an existing artifacts folder before a new training experiment. Shared
@@ -92,12 +90,12 @@ represents the owner's objective. Review validation stability to choose filters.
 After choices are final, explicitly run the untouched test evaluation once:
 
 ```powershell
-python mohammad/run.py evaluate-test
+python Marketing_Expert/run.py evaluate-test
 ```
 
 Reports contain one entry per selected combination/scope. Undefined metrics are
 null when a scope or antecedent is absent. Test evidence must not be used to tune
-filters. `python mohammad/run.py export` regenerates tables from the saved model.
+filters. `python Marketing_Expert/run.py export` regenerates tables from the saved model.
 
 Duplicate lines remain preserved: basket presence collapses them, but they can
 affect price medians. Confirm duplicate semantics before training. Financial

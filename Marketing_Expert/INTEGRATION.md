@@ -51,9 +51,7 @@ dine_in_candidates["dine_in_orders_per_month"] = (
 Six months is correct for this export only. Recalculate the period if the source
 data changes. Check JSON `provenance.source_sha256` to identify the input snapshot.
 The current local folder is exactly `Marketing_Expert` (case matters on Linux).
-Some scripts still import `mohammad` and write to that old path after the folder
-rename. Fix those references before retraining; reading these existing exports
-does not require running or importing the model code.
+Reading these existing exports does not require running or importing the model code.
 
 ## Product and category fields
 

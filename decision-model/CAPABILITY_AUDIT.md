@@ -25,7 +25,7 @@ timestamps remain ordered: TRAIN ends 2026-05-16 11:18:42, VALIDATION starts
   `outputs/decision_model_input.json` identifies its data window as TEST, so it
   must not be consumed by PPO training; a TRAIN-only export would be needed for
   training-time state features.
-- `mohammad/` provides basket association evidence. Its historical split-safe
+- `Marketing_Expert/` provides basket association evidence. Its historical split-safe
   workflow may provide signals, but its current full-data descriptive workflow
   includes former validation/test observations and must not be used to fit PPO
   training features.

@@ -8,9 +8,9 @@ import sys
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 import pandas as pd
-from mohammad.model import fit_model, combination_table
-from mohammad.dine_in import summarize
-from mohammad.run import save
+from Marketing_Expert.model import fit_model, combination_table
+from Marketing_Expert.dine_in import summarize
+from Marketing_Expert.run import save
 
 
 def grade(count, confidence, lift):
@@ -91,7 +91,7 @@ def section(title, data, kind, months, multi_item_orders=None):
 def main():
     source = ROOT / 'stories_transactions.csv'
     data = pd.read_csv(source)
-    output = ROOT / 'mohammad' / 'artifacts' / 'full_data'
+    output = ROOT / 'Marketing_Expert' / 'artifacts' / 'full_data'
     model, products = combinations(data)
     category_data = data.copy()
     if category_data['Category'].isna().any():
